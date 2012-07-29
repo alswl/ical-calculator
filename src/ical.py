@@ -67,7 +67,6 @@ class ics:
         self.debug_level = debug_level
         self.LogFilePath = LogPath
         log = open(self.LogFilePath,'w')
-#        print self.LogFilePath
         log.close()
     def _log(self,title,list,level=0):
         if self.debug_mode == True:
@@ -110,16 +109,25 @@ class ics:
         self.local_path = path
         #here check local path
         string = open(self.local_path,'r').readlines()
-        self.string_load(string,conformance)
+        self.strings_load(string,conformance)
+    def strings_load(self,strings,conformance=False):
+        """@param conformance: optional parameter when True the ical checker 
+            will be run before loading the ics
+        @param strings: array of strings each item being a line from the ical 
+            file
+        """
+        self.ical_data = strings
+        self.ical_loaded = 1
+        self.events = []
+        self.flat_events = []
+        if conformance:
+            self.validate()
     def string_load(self,string,conformance=False):
         line = ""
-        print 'line is',string
         for char in string:
-            print string
             if char == "\n":
                 line+=char
                 self.ical_data.append(line)
-                print 'sd',self.ical_data
                 line =""
             else:
                 line += char
@@ -183,6 +191,7 @@ class ics:
         loads self.event which is a string into 
         self.events which is an array of python types
         """
+        #TODO: add a byeaster
         self._log("\t\tentering event_load",[])
         rules = {}
         dtstart = ""
@@ -332,6 +341,11 @@ class ics:
         #@param end: optionnal parameter to decide until when the event should be displayed (note the earlier from this and calendar end will be used   
         #@param dates: list of days i.e. [datetime, datetime,...] of days where this event will occur 
         #@param list_dates: list of days i.e. [datetime, datetime, ...] of days where this event will occur
+        #TODO: add handling of bycal=GREG, LUN-CHIN, ORTH
+        #TODO: add handling of byeasterday = +/- integer
+        #TODO: add handling of exrule - move exrule out of flatten so flatten becomes rrule only
+        #TODO: add handling of exrule:rrule;altrule:altrule is same as rrule and exrule but freq must be the same and when rrule and exrule are equal then 
+        #date becomes the instance of altrule. assume 1 for 1 replacement
         [dtstart,dtend,rules, summary,uid,rdates] = event
         increment = "NONE"
         check_dow = False
@@ -459,7 +473,7 @@ class ics:
 #   +----------+--------+--------+-------+-------+------+-------+------+
 #   |BYMONTH   |Limit   |Limit   |Limit  |Limit  |Limit |Limit  |Expand|
 #   +----------+--------+--------+-------+-------+------+-------+------+
-#   |BYWEEKNO  |N/A     |N/A         |N/A    |N/A    |N/A   |N/A    |Expand|
+#   |BYWEEKNO  |N/A     |N/A     |N/A    |N/A    |N/A   |N/A    |Expand|
 #   +----------+--------+--------+-------+-------+------+-------+------+
 #   |BYYEARDAY |Limit   |Limit   |Limit  |N/A    |N/A   |N/A    |Expand|
 #   +----------+--------+--------+-------+-------+------+-------+------+
