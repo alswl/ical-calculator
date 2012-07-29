@@ -87,12 +87,12 @@ testvectors = [
 
 def Run_Test_Vectors():
     print "entering test vectors"
-    for vect in testvectors:
-        [file,start,end,reference] = vect
+    for vect in testvectors[0:]:
+        [locfile,start,end,reference] = vect
         #print "file is:\t",file
         mycal = ical.ics(start,end)
-        mycal.debug(False,"C:/sw/ical2xcal/out/log.txt")
-        mycal.local_load(testvector_path+file)
+        mycal.debug(False,"../out/log.txt")
+        mycal.local_load(testvector_path+locfile)
         mycal.parse_loaded()
         mycal.flatten()
         dates = sorted(mycal.flat_events)
@@ -100,7 +100,7 @@ def Run_Test_Vectors():
         res = open(tmp,'w')
         for event in  dates:
             [date, info,uid] =event
-            line = date.strftime("%Y%m%d")+":\t"+info+"\n"
+            line = "{datetime-start: "+date.strftime("%Y%m%d")+", summary: "+info+", uid: "+uid+"}\n"
             res.write(line)
             #print line
         res.close()
@@ -116,30 +116,29 @@ def see():
     print "Entering see"
     useTestVect = True
     if useTestVect:
-        [file,start,end,reference] = testvectors[-1]
+        [locfile,start,end,reference] = testvectors[-1]
     else:
-        [file,start,end,reference] = ["u2012.ics","20120101","20121231","u2012.txt"]        
+        [locfile,start,end,reference] = ["u2012.ics","20120101","20121231","u2012.txt"]        
     mycal = ical.ics(start,end)
-    mycal.debug(True,LogPath="e:/sw/ics2json/out/log.txt",debug_level=0)
+    mycal.debug(True,LogPath="../out/log.txt",debug_level=0)
     #mycal.local_load(testvector_path+file)
-    string = open(testvector_path+file,'r').readlines()
 
-    mycal.local_load(testvector_path+file,'r')
+    mycal.local_load(testvector_path+locfile,'r')
 
     mycal.parse_loaded()
     mycal.flatten()
     dates = sorted(mycal.flat_events)
-    print "ics file is",file
-    print "dates are",dates
-    print 'mycal is',mycal.ical_data
+#    print "ics file is",file
+#    print "dates are",dates
+#    print 'mycal is',mycal.ical_data
     
     for event in dates:
         [date,info,uid] = event
         print date.strftime("%Y%m%d-%a")+" cw:"+str(date.isocalendar()[1])+" :\t"+info+"\t, "+uid+""
 
-log = open('e:\sw\ics2json\out\log2.txt','w')
+log = open('..\out\log2.txt','w')
 log.write('test')
 log.close()
 
-see()
-#Run_Test_Vectors()          
+#see()
+Run_Test_Vectors()          
