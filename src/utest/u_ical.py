@@ -5,10 +5,11 @@ Created on Jul 13, 2012
 @author: Oberron
 """
 
-from test_vect import testvectors,testvector_path
-import ical
+from test_vect import testvectors, testvector_path
 import filecmp
 import sys
+sys.path.append("../")
+import ical #@UnresolvedImport
 
 
 def Run_Test_Vectors():
