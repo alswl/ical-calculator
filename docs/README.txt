@@ -46,3 +46,4 @@ Thanks
 -------
 * http://www.tele3.cz/jbar/rest/rest.html: reST to HTML & reST validator
 * http://guide.python-distribute.org/creation.html: uploading a package to pypi
+* http://blog.msbbc.co.uk/2007/06/using-googles-free-svn-repository-with.html: how to use google codes, subclipse and eclipse
