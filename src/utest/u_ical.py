@@ -15,11 +15,11 @@ import ical #@UnresolvedImport
 def Run_Test_Vectors():
     print "entering test vectors"
     for vect in testvectors[0:]:
-        [file,start,end,reference] = vect
+        [locfile,start,end,reference] = vect
         #print "file is:\t",file
         mycal = ical.ics(start,end)
         mycal.debug(False,"C:/sw/ical2xcal/out/log.txt")
-        mycal.local_load(testvector_path+file)
+        mycal.local_load(testvector_path+locfile)
         mycal.parse_loaded()
         mycal.flatten()
         dates = sorted(mycal.flat_events)
@@ -43,20 +43,20 @@ def see():
     print "Entering see"
     useTestVect = True
     if useTestVect:
-        [file,start,end,reference] = testvectors[-1]
+        [locfile,start,end,reference] = testvectors[-1] #@UnusedVariable
     else:
-        [file,start,end,reference] = ["calconnect/ical/02.ics","20110101","20110130","calconnect/ical/02.txt"]
+        [locfile,start,end,reference] = ["calconnect/ical/02.ics","20110101","20110130","calconnect/ical/02.txt"] #@UnusedVariable
     mycal = ical.ics(start,end)
     mycal.debug(True,LogPath="C:/sw/ical2xcal/out/log.txt",debug_level=0)
     #mycal.local_load(testvector_path+file)
 #    string = open(testvector_path+file,'r').readlines()
 
-    mycal.local_load(testvector_path+file)
+    mycal.local_load(testvector_path+locfile)
 
     mycal.parse_loaded()
     mycal.flatten()
     dates = sorted(mycal.flat_events)
-    print "ics file is",file
+    print "ics file is",locfile
     print "dates are",dates
     for event in dates:
         [date,info,uid] = event
