@@ -1,0 +1,4 @@
+{datetime-start: 19970805, summary: WKST test(1997 EDT) August 5,17,19,31, uid: wkst1-test}
+{datetime-start: 19970817, summary: WKST test(1997 EDT) August 5,17,19,31, uid: wkst1-test}
+{datetime-start: 19970819, summary: WKST test(1997 EDT) August 5,17,19,31, uid: wkst1-test}
+{datetime-start: 19970831, summary: WKST test(1997 EDT) August 5,17,19,31, uid: wkst1-test}

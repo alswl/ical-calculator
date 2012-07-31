@@ -1,0 +1,6 @@
+{datetime-start: 19970922, summary: Monthly on the second to last Monday of the month for 6 months, uid: php3f_utest}
+{datetime-start: 19971020, summary: Monthly on the second to last Monday of the month for 6 months, uid: php3f_utest}
+{datetime-start: 19971117, summary: Monthly on the second to last Monday of the month for 6 months, uid: php3f_utest}
+{datetime-start: 19971222, summary: Monthly on the second to last Monday of the month for 6 months, uid: php3f_utest}
+{datetime-start: 19980119, summary: Monthly on the second to last Monday of the month for 6 months, uid: php3f_utest}
+{datetime-start: 19980216, summary: Monthly on the second to last Monday of the month for 6 months, uid: php3f_utest}

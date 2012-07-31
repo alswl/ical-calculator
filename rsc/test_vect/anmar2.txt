@@ -1,0 +1,5 @@
+{datetime-start: 20050411, summary: 5 day daily repeating meeting, uid: E88157FE01BE8A5C85256FDB006EBCC3-Lotus_Notes_Generated}
+{datetime-start: 20050412, summary: 5 day daily repeating meeting, uid: E88157FE01BE8A5C85256FDB006EBCC3-Lotus_Notes_Generated}
+{datetime-start: 20050413, summary: 5 day daily repeating meeting, uid: E88157FE01BE8A5C85256FDB006EBCC3-Lotus_Notes_Generated}
+{datetime-start: 20050414, summary: 5 day daily repeating meeting, uid: E88157FE01BE8A5C85256FDB006EBCC3-Lotus_Notes_Generated}
+{datetime-start: 20050415, summary: 5 day daily repeating meeting, uid: E88157FE01BE8A5C85256FDB006EBCC3-Lotus_Notes_Generated}
