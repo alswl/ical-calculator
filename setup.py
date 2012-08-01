@@ -2,13 +2,13 @@
 """
 Created on Jan 6, 2012
 
-@author: oberron
+@author: Oberron
 """
 from setuptools import setup
 
 setup(
     name = "pyICSParser",
-    version = "0.4.7",
+    version = "0.4.8",
     author = "Oberron",
     author_email = "one.annum@gmail.com",
     description = ("Parses ics files and converts into python array of dates "
