@@ -8,7 +8,7 @@ Created on Jul 13, 2012
 from test_vect import testvectors, testvector_path
 import filecmp
 import sys
-sys.path.append("../")
+sys.path.append("../../src/")
 import ical #@UnresolvedImport
 
 
@@ -18,7 +18,7 @@ def Run_Test_Vectors():
         [locfile,start,end,reference] = vect
         #print "file is:\t",file
         mycal = ical.ics(start,end)
-        mycal.debug(False,"C:/sw/ical2xcal/out/log.txt")
+        mycal.debug(False,"../../out/log.txt")
         mycal.local_load(testvector_path+locfile)
         mycal.parse_loaded()
         mycal.flatten()
@@ -47,7 +47,7 @@ def see():
     else:
         [locfile,start,end,reference] = ["calconnect/ical/02.ics","20110101","20110130","calconnect/ical/02.txt"] #@UnusedVariable
     mycal = ical.ics(start,end)
-    mycal.debug(True,LogPath="C:/sw/ical2xcal/out/log.txt",debug_level=0)
+    mycal.debug(True,LogPath="../../out/log.txt",debug_level=0)
     #mycal.local_load(testvector_path+file)
 #    string = open(testvector_path+file,'r').readlines()
 
