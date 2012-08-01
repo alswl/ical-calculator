@@ -8,7 +8,7 @@ Created on Jul 28, 2011
 @attention:http://icalevents.com/2555-paydays-last-working-days-and-why-bysetpos-is-useful/
 @attention:http://icalevents.com/2559-week-numbers-and-week-starts/
 """
-testvector_path = "../../rsc/test_vect/"
+testvector_path = "./test_vect/"
 
 testvectors = [
                ["by_ferie.ics","20110101","20121231","by_ferie_res.txt"],
