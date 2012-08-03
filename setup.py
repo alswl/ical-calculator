@@ -8,7 +8,7 @@ from setuptools import setup
 
 setup(
     name = "pyICSParser",
-    version = "0.4.8",
+    version = "0.4.11",
     author = "Oberron",
     author_email = "one.annum@gmail.com",
     description = ("Parses ics files and converts into python array of dates "
@@ -16,7 +16,7 @@ setup(
     license = "LICENSE.txt",
     keywords = "ICS parser",
     url = "http://ical2list.appspot.com",
-    packages=['icalParser'],
+    packages=['src'],
     scripts=['bin/ical_test.py','bin/test_vect.py','test/u_dateutil_rrul.py'],
     long_description=open('docs/README.txt','rt').read(),
     classifiers=[
