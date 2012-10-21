@@ -11,8 +11,8 @@ import datetime
 import filecmp, sys
 from dateutil.rrule import *
 from dateutil.parser import *
-from test_vect import testvectors,testvector_path
-import ical
+from test_vect import testvectors,testvector_path #@UnresolvedImport
+import ical #@UnresolvedImport
 
 _freq_map = {"YEARLY": YEARLY,
              "MONTHLY": MONTHLY,
