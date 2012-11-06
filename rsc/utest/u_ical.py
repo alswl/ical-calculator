@@ -8,7 +8,7 @@ Created on Jul 13, 2012
 from test_vect import testvectors, testvector_path #@UnresolvedImport
 import filecmp
 import sys
-sys.path.append("../../src/")
+sys.path.append("../../src/") #to overide previous installs
 import ical #@UnresolvedImport
 
 
