@@ -9,7 +9,7 @@ Typical usage often looks like this::
 
 	#!/usr/bin/env python
 	
-	import ical
+	from pyICSParser import ical
 	
 	mycal = ical.ics(start,end)
 	#start and end are string objects of yyyymmdd type
@@ -35,11 +35,11 @@ Versions
 * alpha
 	-0.4.x: first fully tested handling days - remains to be done is handling of
 	time of events
+	-0.5.x: added support for EXDATE
 	
 Future developments
 --------------------
 1. handle of datetime (currently only handles date)
-
 2. handle of EXRULE
 
 Thanks
