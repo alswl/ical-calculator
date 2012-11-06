@@ -10,7 +10,9 @@ then: flatten
 Created on Aug 4, 2011
 
 @author: oberron
-@version: 0.4 passes all unit test in ical_test v0.1
+@change: to 0.4 - passes all unit test in ical_test v0.1
+@change: 0.4 to 0.5 adds EXDATE support
+@version: 0.5.x
 """
 import datetime 
 import sys
@@ -49,6 +51,7 @@ class ics:
     debug_mode = 0
     debug_level = 0
     LogFilePath = "./log.txt"
+    version = "0.5.1a"
     def inf(self):
         info = "Follows:\n"
         info += "http://www.kanzaki.com/docs/ical/vevent.html \n"
@@ -138,6 +141,10 @@ class ics:
             self.validate()
     def validate(self):
         """ @TODO: add here a ical parser checking for critical compliance"""
+        
+        #check uid uniques in calendar file
+        #check when dtsart and dtend set that dtend>dtsart
+        #check all text fields are valid (escaped characters
         return 1
     def _mklist(self,start,end,step_size=1):
         #TODO:historical function created before knowing the range function, to be removed
@@ -198,6 +205,7 @@ class ics:
         dtend = ""
         uid = ""
         rdates = []
+        exdates = []
         for line in self.event:
             if line.find("DTSTART")>=0:
                 dtstart = self._iCalDateTimeToDateTime(line)
@@ -207,7 +215,12 @@ class ics:
                 rdatelist=line.split(":")[1].split(",")
                 for value in rdatelist:
                     rdates.append(self._iCalDateTimeToDateTime(value))
-                self._log("150 rdates are:", [rdates], 0)
+                self._log("214 rdates are:", [rdates], 0)
+            if line.find("EXDATE")>=0:
+                exdatelist=line.split(":")[1].split(",")
+                for value in exdatelist:
+                    exdates.append(self._iCalDateTimeToDateTime(value))
+                self._log("220 exdates are:", [exdates], 0)
             if line.find("UID")>=0:
                 uid = line.split(":")[1]
             if line.find("RRULE")>=0:
@@ -309,7 +322,7 @@ class ics:
                             rules[param] = value
                         else:
                             rules[param] = value
-        self.events.append([dtstart,dtend,rules,self.summary,uid,rdates])
+        self.events.append([dtstart,dtend,rules,self.summary,uid,rdates,exdates])
         self.event = []
     def _icalindex_to_pythonindex(self,indexes):
         ret_val = []
@@ -346,7 +359,7 @@ class ics:
         #TODO: add handling of exrule - move exrule out of flatten so flatten becomes rrule only
         #TODO: add handling of exrule:rrule;altrule:altrule is same as rrule and exrule but freq must be the same and when rrule and exrule are equal then 
         #date becomes the instance of altrule. assume 1 for 1 replacement
-        [dtstart,dtend,rules, summary,uid,rdates] = event
+        [dtstart,dtend,rules, summary,uid,rdates,exdates] = event
         increment = "NONE"
         check_dow = False
         check_week = False
@@ -659,6 +672,10 @@ class ics:
                     #if we are not counting the number of reccurencies then just keep it
                     tmp_dates.append(t_date)
         list_dates = tmp_dates
+        
+        if len(exdates)>0:
+            #remove from lisst_dates any date in exdates
+            list_dates = [val for val in list_dates if val not in exdates]
         return list_dates
     def _last_dom(self,year,month):
         day = datetime.datetime(year,month,1)
