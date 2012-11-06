@@ -16,8 +16,9 @@ setup(
     license = "LICENSE.txt",
     keywords = "ICS parser",
     url = "http://ical2list.appspot.com",
-    packages=['src'],
-    scripts=['bin/ical_test.py','bin/test_vect.py','test/u_dateutil_rrul.py'],
+    packages=['pyICSParser'],
+    package_dir={'pyICSParser': 'src'},
+    scripts=['bin/ical_test.py','bin/test_vect.py','bin/utest/u_dateutil_rrul.py'],
     long_description=open('docs/README.txt','rt').read(),
     classifiers=[
         "Development Status :: 3 - Alpha",
