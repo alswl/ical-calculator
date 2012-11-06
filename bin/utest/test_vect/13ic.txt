@@ -1,2 +1,0 @@
-{datetime-start: 20110404, summary: IC13 Yearly first Mon of April, uid: ACA27A63-F85A-475B-B289-900739A38EC8}
-{datetime-start: 20120402, summary: IC13 Yearly first Mon of April, uid: ACA27A63-F85A-475B-B289-900739A38EC8}
