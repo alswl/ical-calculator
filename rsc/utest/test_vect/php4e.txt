@@ -1,0 +1,10 @@
+{datetime-start: 19970610, summary: Yearly in June and July for 10 occurrences, uid: php4e-test}
+{datetime-start: 19970710, summary: Yearly in June and July for 10 occurrences, uid: php4e-test}
+{datetime-start: 19980610, summary: Yearly in June and July for 10 occurrences, uid: php4e-test}
+{datetime-start: 19980710, summary: Yearly in June and July for 10 occurrences, uid: php4e-test}
+{datetime-start: 19990610, summary: Yearly in June and July for 10 occurrences, uid: php4e-test}
+{datetime-start: 19990710, summary: Yearly in June and July for 10 occurrences, uid: php4e-test}
+{datetime-start: 20000610, summary: Yearly in June and July for 10 occurrences, uid: php4e-test}
+{datetime-start: 20000710, summary: Yearly in June and July for 10 occurrences, uid: php4e-test}
+{datetime-start: 20010610, summary: Yearly in June and July for 10 occurrences, uid: php4e-test}
+{datetime-start: 20010710, summary: Yearly in June and July for 10 occurrences, uid: php4e-test}

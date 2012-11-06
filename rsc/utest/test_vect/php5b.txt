@@ -1,0 +1,16 @@
+{datetime-start: 19970519, summary: Every 20th Monday of the year, forever, uid: php5b-test}
+{datetime-start: 19980518, summary: Every 20th Monday of the year, forever, uid: php5b-test}
+{datetime-start: 19990517, summary: Every 20th Monday of the year, forever, uid: php5b-test}
+{datetime-start: 20000515, summary: Every 20th Monday of the year, forever, uid: php5b-test}
+{datetime-start: 20010514, summary: Every 20th Monday of the year, forever, uid: php5b-test}
+{datetime-start: 20020520, summary: Every 20th Monday of the year, forever, uid: php5b-test}
+{datetime-start: 20030519, summary: Every 20th Monday of the year, forever, uid: php5b-test}
+{datetime-start: 20040517, summary: Every 20th Monday of the year, forever, uid: php5b-test}
+{datetime-start: 20050516, summary: Every 20th Monday of the year, forever, uid: php5b-test}
+{datetime-start: 20060515, summary: Every 20th Monday of the year, forever, uid: php5b-test}
+{datetime-start: 20070514, summary: Every 20th Monday of the year, forever, uid: php5b-test}
+{datetime-start: 20080519, summary: Every 20th Monday of the year, forever, uid: php5b-test}
+{datetime-start: 20090518, summary: Every 20th Monday of the year, forever, uid: php5b-test}
+{datetime-start: 20100517, summary: Every 20th Monday of the year, forever, uid: php5b-test}
+{datetime-start: 20110516, summary: Every 20th Monday of the year, forever, uid: php5b-test}
+{datetime-start: 20120514, summary: Every 20th Monday of the year, forever, uid: php5b-test}

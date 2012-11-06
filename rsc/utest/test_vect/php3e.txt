@@ -1,0 +1,10 @@
+{datetime-start: 19970907, summary: Every other month on the 1st and last Sunday of the month for 10 occurrences, uid: php3e_utest}
+{datetime-start: 19970928, summary: Every other month on the 1st and last Sunday of the month for 10 occurrences, uid: php3e_utest}
+{datetime-start: 19971102, summary: Every other month on the 1st and last Sunday of the month for 10 occurrences, uid: php3e_utest}
+{datetime-start: 19971130, summary: Every other month on the 1st and last Sunday of the month for 10 occurrences, uid: php3e_utest}
+{datetime-start: 19980104, summary: Every other month on the 1st and last Sunday of the month for 10 occurrences, uid: php3e_utest}
+{datetime-start: 19980125, summary: Every other month on the 1st and last Sunday of the month for 10 occurrences, uid: php3e_utest}
+{datetime-start: 19980301, summary: Every other month on the 1st and last Sunday of the month for 10 occurrences, uid: php3e_utest}
+{datetime-start: 19980329, summary: Every other month on the 1st and last Sunday of the month for 10 occurrences, uid: php3e_utest}
+{datetime-start: 19980503, summary: Every other month on the 1st and last Sunday of the month for 10 occurrences, uid: php3e_utest}
+{datetime-start: 19980531, summary: Every other month on the 1st and last Sunday of the month for 10 occurrences, uid: php3e_utest}

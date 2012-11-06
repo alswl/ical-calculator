@@ -1,0 +1,4 @@
+{datetime-start: 19970905, summary: Monthly on the 1st Friday until December 24, 1997, uid: php3d_utest}
+{datetime-start: 19971003, summary: Monthly on the 1st Friday until December 24, 1997, uid: php3d_utest}
+{datetime-start: 19971107, summary: Monthly on the 1st Friday until December 24, 1997, uid: php3d_utest}
+{datetime-start: 19971205, summary: Monthly on the 1st Friday until December 24, 1997, uid: php3d_utest}

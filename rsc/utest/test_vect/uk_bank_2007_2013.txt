@@ -1,0 +1,17 @@
+{datetime-start: 20120102, summary:  bank, uid: annum_NewYearDay}
+{datetime-start: 20120406, summary:  bank, uid: contact@1-annum.com20080321 bank - Good Friday}
+{datetime-start: 20120409, summary:  bank, uid: contact@1-annum.com20080324 bank - Easter Monday }
+{datetime-start: 20120507, summary: bank, uid: contact@1-annum.com20080505 bank - May Day}
+{datetime-start: 20120604, summary: bank, uid: contact@1-annum.com20080505 bank - May Day }
+{datetime-start: 20120605, summary: bank - Jubilee, uid: contact@1-annum.com20120605 bank - queenjubilee}
+{datetime-start: 20120827, summary: bank, uid: contact@1-annum.com20080825 bank - Summer Day }
+{datetime-start: 20121225, summary:  bank, uid: contact@1-annum.com20071225 bank - Christmas }
+{datetime-start: 20121226, summary:  bank, uid: contact@1-annum.com20071226 bank - Boxing Day}
+{datetime-start: 20130101, summary:  bank, uid: annum_NewYearDay}
+{datetime-start: 20130329, summary:  bank, uid: contact@1-annum.com20080321 bank - Good Friday}
+{datetime-start: 20130401, summary:  bank, uid: contact@1-annum.com20080324 bank - Easter Monday }
+{datetime-start: 20130506, summary: bank, uid: contact@1-annum.com20080505 bank - May Day}
+{datetime-start: 20130527, summary: bank, uid: contact@1-annum.com20080505 bank - May Day }
+{datetime-start: 20130826, summary: bank, uid: contact@1-annum.com20080825 bank - Summer Day }
+{datetime-start: 20131225, summary:  bank, uid: contact@1-annum.com20071225 bank - Christmas }
+{datetime-start: 20131226, summary:  bank, uid: contact@1-annum.com20071226 bank - Boxing Day}
