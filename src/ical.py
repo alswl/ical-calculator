@@ -51,7 +51,8 @@ class ics:
     debug_mode = 0
     debug_level = 0
     LogFilePath = "./log.txt"
-    version = "0.5.1a"
+    LogData = ""
+    version = "0.5.1b"
     def inf(self):
         info = "Follows:\n"
         info += "http://www.kanzaki.com/docs/ical/vevent.html \n"
@@ -64,25 +65,33 @@ class ics:
     def __del__(self):
         self.ical_datelist = []
         self.flat_events = []
-    def debug(self,TrueFalse,LogPath="./log.txt",debug_level=0):
+    def debug(self,TrueFalse,LogPath="",debug_level=0):
         self.debug_mode = TrueFalse
         self._log("self debug is now",[TrueFalse])
         self.debug_level = debug_level
-        self.LogFilePath = LogPath
-        log = open(self.LogFilePath,'w')
-        log.close()
+        if len(LogPath)>0:
+            try:
+                log = open(self.LogFilePath,'w')
+                log.close()
+                self.LogFilePath = LogPath
+            except:
+                pass
     def _log(self,title,list,level=0):
         if self.debug_mode == True:
             if level >= self.debug_level:
-                log=open(self.LogFilePath,'a')
                 line = "**"+title+"\n"
                 for el in list:
                     if len(str(el))<1000:
                         line = line + "\t"+str(el)
                     else:
                         line = line + "\t"+str(el)[0:1000]
-                log.write(line+"\n")
-                log.close()
+                line +="\n"
+                if len(self.LogFilePath)>0:
+                    log=open(self.LogFilePath,'a')
+                    log.write(line)
+                    log.close()
+                else:
+                    self.LogData += line
     def _iCalDateTimeToDateTime(self,icalDT):
         #DTSTART, DTEND, DTSTAMP, UNTIL,
         self._log("\t\t ical datetime to python datetime",[icalDT])
