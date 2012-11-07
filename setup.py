@@ -8,7 +8,7 @@ from setuptools import setup
 
 setup(
     name = "pyICSParser",
-    version = "0.5.1",
+    version = "0.5.2b",
     author = "Oberron",
     author_email = "one.annum@gmail.com",
     description = ("Parses ics files and converts into python array of dates "
