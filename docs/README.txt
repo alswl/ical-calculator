@@ -20,10 +20,6 @@ Typical usage often looks like this::
 	dates = sorted(mycal.flat_events)
 	#dates will contain the array with all explicit events spec'ed by the ics
 
-Paragraphs are separated by blank lines. *Italics*, **bold**,
-and ``monospace`` look like this.
-
-
 Versions
 =========
 
@@ -35,6 +31,7 @@ Versions
 * alpha
 	-0.4.x: first fully tested handling days - remains to be done is handling of
 	time of events
+	
 	-0.5.x: added support for EXDATE
 	
 Future developments
