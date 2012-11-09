@@ -75,4 +75,6 @@ testvectors = [
                ["wkst0.ics","19960101","20011231","wkst0.txt"],
                ["wkst1.ics","19960101","20011231","wkst1.txt"],
                ["uk_bank_2007_2013.ics","20120101","20131231","uk_bank_2007_2013.txt"],
+               ["soldes_FR.ics","20100101","20141231","soldes_FR.txt"],
+               ["france_doi_2007.ics","20100101","20141231","france_doi_2007.txt"],
                ["29fev.ics","20080101","20121231","29fev.txt"]]
