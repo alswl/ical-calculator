@@ -12,7 +12,8 @@ Created on Aug 4, 2011
 @author: oberron
 @change: to 0.4 - passes all unit test in ical_test v0.1
 @change: 0.4 to 0.5 adds EXDATE support
-@version: 0.5.x
+@change: 0.5 to 0.6 adds support for no DTEND and DTEND computation from DURATION or DTSTART
+@version: 0.6.x
 """
 import datetime 
 import sys
@@ -30,6 +31,7 @@ class ics:
     dates = sorted(mycal.flat_events) \n
     print "dates are",dates
     """
+    version = "0.6.1f"
     MaxInteger = 2147483647
     _weekday_map = {"MO":0,"TU":1,"WE":2,"TH":3,"FR":4,"SA":5,"SU":6}
     sDate = ""
@@ -52,7 +54,6 @@ class ics:
     debug_level = 0
     LogFilePath = "./log.txt"
     LogData = ""
-    version = "0.5.1b"
     def inf(self):
         info = "Follows:\n"
         info += "http://www.kanzaki.com/docs/ical/vevent.html \n"
@@ -92,6 +93,45 @@ class ics:
                     log.close()
                 else:
                     self.LogData += line
+    def ParseDuration(self,duration):
+        tdelta = datetime.timedelta()
+        sign =1
+        if duration[0:1]=="-":
+            duration = duration[1:]
+            sign = -1
+#            print "sign",sign
+        if duration.find("T")>0:
+            [date,time]=duration.split("T")
+            date = date[1:]
+        else:
+            [date , time] = [duration,""]
+        pos = date.find("W")
+        if pos>0:
+            tdelta += datetime.timedelta(weeks= sign*int(date[1:pos]))
+        pos = date.find("Y")
+        if (pos)>0:
+            tdelta += datetime.timedelta(years = sign*int(date[:pos]))
+            date = date[pos+1:]
+        pos = date.find("M")
+        if pos>0:
+            tdelta += datetime.timedelta(years = sign*int(date[:pos]))
+            date = date[pos+1:]
+        pos = date.find("D")
+        if (pos)>0:
+            tdelta += datetime.timedelta(days = sign*int(date[:pos]))
+        pos = time.find("H")
+        if (pos)>0:
+            tdelta += datetime.timedelta(hours = sign*int(time[:pos]))
+            time = time[pos+1:]
+        pos = time.find("M")
+        if (pos)>0:
+            tdelta += datetime.timedelta(minutes = sign*int(time[:pos]))
+#            print "line 129 tdelta minute",tdelta
+            time = time[pos+1:]
+        pos = time.find("S")
+        if (pos)>0:
+             tdelta += datetime.timedelta(seconds = sign*int(time[:pos]))
+        return tdelta
     def _iCalDateTimeToDateTime(self,icalDT):
         #DTSTART, DTEND, DTSTAMP, UNTIL,
         self._log("\t\t ical datetime to python datetime",[icalDT])
@@ -155,6 +195,15 @@ class ics:
         #check when dtsart and dtend set that dtend>dtsart
         #check all text fields are valid (escaped characters
         return 1
+    def validate_event(self,event):
+        [dtstart,dtend,duration,rules,summary,uid,rdates,exdates] = event
+        self._log("193 validate_event", event, 0)
+        if len(str(dtend))>0:
+            if len(str(duration))>0:
+                raise Exception("VEVENT VALIDATOR","DTEND and DURATION set")
+            if dtstart>dtend:
+                raise Exception("VEVENT VALIDATOR","DTSTART > DTEND")
+        return 1
     def _mklist(self,start,end,step_size=1):
         #TODO:historical function created before knowing the range function, to be removed
         list = []
@@ -195,7 +244,8 @@ class ics:
                         sys.exit()
                 pos = line.find("SUMMARY:")
                 if (pos>=0):
-                    self.summary = line.replace("\n","").split(":")[1]
+                    #FIXME: if semicolumn in the line, only get the values before the semi-column
+                    self.summary = "".join(line.replace("\n","").split(":")[1:])
                 if (self.invevent ==1):
                     if line[0]==" ":
                         self.event = self.event[:-1]+[self.event[-1]+line[1:].replace("\n","")]
@@ -212,6 +262,8 @@ class ics:
         rules = {}
         dtstart = ""
         dtend = ""
+        sDuration = ""
+        duration = ""
         uid = ""
         rdates = []
         exdates = []
@@ -232,7 +284,11 @@ class ics:
                 self._log("220 exdates are:", [exdates], 0)
             if line.find("UID")>=0:
                 uid = line.split(":")[1]
+            if line.find("DURATION")>=0:
+                sDuration = line.split(":")[1]
+                duration = self.ParseDuration(sDuration)
             if line.find("RRULE")>=0:
+                #FIXME: need to support multiple RRULE lines
                 self._log("rrule is:",[line])
                 rrule = line.split(":")[1].split(";")
                 for rule in rrule:
@@ -331,6 +387,25 @@ class ics:
                             rules[param] = value
                         else:
                             rules[param] = value
+        self.validate_event([dtstart,dtend,duration,rules,self.summary,uid,rdates,exdates])
+        
+        #if no dtend then dtend=dtstart
+        #RFC5545 §3.6.1
+        """
+        For cases where a "VEVENT" calendar component
+        specifies a "DTSTART" property with a DATE value type but no
+        "DTEND" nor "DURATION" property, the event's duration is taken to
+        be one day.  For cases where a "VEVENT" calendar component
+        specifies a "DTSTART" property with a DATE-TIME value type but no
+        "DTEND" property, the event ends on the same calendar date and
+        time of day specified by the "DTSTART" property.
+        """
+        if dtend=="" :
+            if str(duration) =="":
+                dtend = dtstart
+            else:
+                dtend = dtstart+duration
+        
         self.events.append([dtstart,dtend,rules,self.summary,uid,rdates,exdates])
         self.event = []
     def _icalindex_to_pythonindex(self,indexes):
@@ -407,8 +482,6 @@ class ics:
         month_end = 12
 
         if len(rdates)>0:
-            #code to be added
-            #FIXME: check combination between RDATE and FREQ
             list_dates=rdates
             self._log("319 days rdate", [list_dates])
         if len(rules)<=0:
@@ -418,7 +491,7 @@ class ics:
             t_date = dtstart
             delta = datetime.timedelta(days = 1)
             t_date +=delta
-            
+                        
             while t_date <= dtend:
                 list_dates.append(t_date)
                 t_date +=delta
