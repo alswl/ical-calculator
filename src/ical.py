@@ -1,7 +1,8 @@
 # -*- coding:utf-8 -*-
 """
-This module will generate a table of all dates a specific ics file
-implies through its different rules schemes
+This module will parse icalendar file (ical or ics) defined by rfc5545 (obsoleted rfc2445)
+into a typed structure and provide means to compute the dates inferred by the rrule, rdate
+exrule and exdates. The computed dates are available as a json structure
 
 first: load
 then: parse
@@ -31,7 +32,7 @@ class ics:
     dates = sorted(mycal.flat_events) \n
     print "dates are",dates
     """
-    version = "0.6.1f"
+    version = "0.6.1h"
     MaxInteger = 2147483647
     _weekday_map = {"MO":0,"TU":1,"WE":2,"TH":3,"FR":4,"SA":5,"SU":6}
     sDate = ""
