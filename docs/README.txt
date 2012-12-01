@@ -1,9 +1,9 @@
 =============
-pyICALParser
+pyICSParser
 =============
 
-pyICALParser parses ics (RFC5545 aka ical) files and converts into python array 
-[[dates, description, uid]]
+pyICSParser parses icalendar files (.ics or ical files) as defined by RFC5545 (previously RFC2445)
+and returns json structure with explicit dates [[dates, description, uid]]
 
 Typical usage often looks like this::
 
@@ -14,11 +14,11 @@ Typical usage often looks like this::
 	mycal = ical.ics(start,end)
 	#start and end are string objects of yyyymmdd type
 	mycal.local_load(file)
-	#file being string representation of file location
+	#file being a string which value is the local path to the icalendar file
 	mycal.parse_loaded()
 	mycal.flatten()
 	dates = sorted(mycal.flat_events)
-	#dates will contain the array with all explicit events spec'ed by the ics
+	#dates will contain the json with all explicit dates of the events spec'ed by the icalendar file
 
 Versions
 =========
@@ -33,6 +33,8 @@ Versions
 	time of events
 	
 	-0.5.x: added support for EXDATE
+	
+	-0.6.x: added support for DURATION and when DTEND no present
 	
 Future developments
 --------------------
