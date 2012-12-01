@@ -8,17 +8,18 @@ from setuptools import setup
 
 setup(
     name = "pyICSParser",
-    version = "0.5.2b",
+    version = "0.6.1h",
     author = "Oberron",
     author_email = "one.annum@gmail.com",
-    description = ("Parses ics files and converts into python array of dates "
-                                   "description and uid."),
+    description = ("pyICSParser parses icalendar files (.ics or ical files)"
+                   " as defined by RFC5545 (previously RFC2445)"
+                   "and returns json structure with explicit dates "),
     license = "LICENSE.txt",
-    keywords = "ICS parser",
+    keywords = "ICAL parser, ICALENDAR parser, RFC2445 parser, RFC5545 parser)",
     url = "http://ical2list.appspot.com",
     packages=['pyICSParser'],
     package_dir={'pyICSParser': 'src'},
-    scripts=['bin/ical_test.py','bin/test_vect.py','bin/utest/u_dateutil_rrul.py'],
+    scripts=['rsc/utest/u_ical.py','rsc/utest/test_vect.py','rsc/utest/u_dateutil_rrul.py'],
     long_description=open('docs/README.txt','rt').read(),
     classifiers=[
         "Development Status :: 3 - Alpha",
