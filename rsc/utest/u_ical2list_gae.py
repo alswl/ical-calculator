@@ -29,7 +29,7 @@ def gae_ical2list():
         f = urllib.urlopen("http://ical2list.appspot.com/load", params)
         res=f.read()
 #        print res
-        jres = json.loads(res)
+        jres = json.loads(res,"utf-8")
         tmpf = open(tmp,'w')
         line =""
         for reso in jres:
