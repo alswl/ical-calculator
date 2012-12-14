@@ -1,2 +1,0 @@
-{datetime-start: 20110404, summary: LN13 Yearly first Mon of April, uid: 5c2d95bf-306c-4843-9225-1e15e07fcc26}
-{datetime-start: 20120402, summary: LN13 Yearly first Mon of April, uid: 5c2d95bf-306c-4843-9225-1e15e07fcc26}

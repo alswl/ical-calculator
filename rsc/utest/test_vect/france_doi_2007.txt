@@ -1,0 +1,87 @@
+{datetime-start: 20100106, summary: Début des soldes d'hiver, uid: annum_FR_soldes_hiver}
+{datetime-start: 20100106, summary: Épiphanie, uid: annum_france_epiphanie}
+{datetime-start: 20100202, summary:  Chandeleur , uid: contact@1-annum.com20070202 Chandeleur }
+{datetime-start: 20100215, summary:  1er tiers IR , uid: contact@1-annum.com20070215 1er tiers IR }
+{datetime-start: 20100314, summary:  Élections régionales , uid: annum_france_élections régionales }
+{datetime-start: 20100321, summary:  Élections régionales , uid: annum_france_élections régionales }
+{datetime-start: 20100328, summary:  heure été , uid: contact@1-annum.com20070325 heure été }
+{datetime-start: 20100517, summary:  2eme tiers IR, uid: annum 2eme tiers IR}
+{datetime-start: 20100530, summary:  fête des mères , uid: annum_fête des mères }
+{datetime-start: 20100531, summary:  declaration IR , uid: contact@1-annum.com20070531 declaration IR }
+{datetime-start: 20100620, summary:  Fête des pères , uid: annum_Fêtepères }
+{datetime-start: 20100621, summary:  Fête de la musique, uid: contact@1-annum.com20070621 Fête de la musique}
+{datetime-start: 20100623, summary:  Début des soldes d'été, uid: annum_FR_soldes_ete}
+{datetime-start: 20100915, summary:  3eme tiers IR , uid: contact@1-annum.com20070915 3eme tiers IR }
+{datetime-start: 20100918, summary: Journées européennes du patrimoine, uid: annum_journee patrimoine}
+{datetime-start: 20101015, summary:  Taxe Fonciere , uid: contact@1-annum.com20071015 Taxe Fonciere }
+{datetime-start: 20101031, summary:  heure hiver , uid: contact@1-annum.com20071028 heure hiver }
+{datetime-start: 20101115, summary:  Taxe Habitation , uid: contact@1-annum.com20071115 Taxe Habitation }
+{datetime-start: 20110106, summary: Épiphanie, uid: annum_france_epiphanie}
+{datetime-start: 20110112, summary: Début des soldes d'hiver, uid: annum_FR_soldes_hiver}
+{datetime-start: 20110202, summary:  Chandeleur , uid: contact@1-annum.com20070202 Chandeleur }
+{datetime-start: 20110215, summary:  1er tiers IR , uid: contact@1-annum.com20070215 1er tiers IR }
+{datetime-start: 20110327, summary:  heure été , uid: contact@1-annum.com20070325 heure été }
+{datetime-start: 20110516, summary:  2eme tiers IR, uid: annum 2eme tiers IR}
+{datetime-start: 20110529, summary:  fête des mères , uid: annum_fête des mères }
+{datetime-start: 20110531, summary:  declaration IR , uid: contact@1-annum.com20070531 declaration IR }
+{datetime-start: 20110619, summary:  Fête des pères , uid: annum_Fêtepères }
+{datetime-start: 20110621, summary:  Fête de la musique, uid: contact@1-annum.com20070621 Fête de la musique}
+{datetime-start: 20110622, summary:  Début des soldes d'été, uid: annum_FR_soldes_ete}
+{datetime-start: 20110915, summary:  3eme tiers IR , uid: contact@1-annum.com20070915 3eme tiers IR }
+{datetime-start: 20110917, summary: Journées européennes du patrimoine, uid: annum_journee patrimoine}
+{datetime-start: 20111017, summary:  Taxe Fonciere , uid: contact@1-annum.com20071015 Taxe Fonciere }
+{datetime-start: 20111030, summary:  heure hiver , uid: contact@1-annum.com20071028 heure hiver }
+{datetime-start: 20111115, summary:  Taxe Habitation , uid: contact@1-annum.com20071115 Taxe Habitation }
+{datetime-start: 20120106, summary: Épiphanie, uid: annum_france_epiphanie}
+{datetime-start: 20120111, summary: Début des soldes d'hiver, uid: annum_FR_soldes_hiver}
+{datetime-start: 20120202, summary:  Chandeleur , uid: contact@1-annum.com20070202 Chandeleur }
+{datetime-start: 20120215, summary:  1er tiers IR , uid: contact@1-annum.com20070215 1er tiers IR }
+{datetime-start: 20120325, summary:  heure été , uid: contact@1-annum.com20070325 heure été }
+{datetime-start: 20120422, summary:  Élection présidentielle, uid: annum_france_élections présidentielle }
+{datetime-start: 20120506, summary:  Élection présidentielle, uid: annum_france_élections présidentielle }
+{datetime-start: 20120515, summary:  2eme tiers IR, uid: annum 2eme tiers IR}
+{datetime-start: 20120531, summary:  declaration IR , uid: contact@1-annum.com20070531 declaration IR }
+{datetime-start: 20120603, summary:  fête des mères , uid: annum_fête des mères }
+{datetime-start: 20120610, summary:  Élections législatives , uid: annum_france_élections européennes }
+{datetime-start: 20120617, summary:  Fête des pères , uid: annum_Fêtepères }
+{datetime-start: 20120617, summary:  Élections législatives , uid: annum_france_élections européennes }
+{datetime-start: 20120621, summary:  Fête de la musique, uid: contact@1-annum.com20070621 Fête de la musique}
+{datetime-start: 20120627, summary:  Début des soldes d'été, uid: annum_FR_soldes_ete}
+{datetime-start: 20120915, summary: Journées européennes du patrimoine, uid: annum_journee patrimoine}
+{datetime-start: 20120917, summary:  3eme tiers IR , uid: contact@1-annum.com20070915 3eme tiers IR }
+{datetime-start: 20121015, summary:  Taxe Fonciere , uid: contact@1-annum.com20071015 Taxe Fonciere }
+{datetime-start: 20121028, summary:  heure hiver , uid: contact@1-annum.com20071028 heure hiver }
+{datetime-start: 20121115, summary:  Taxe Habitation , uid: contact@1-annum.com20071115 Taxe Habitation }
+{datetime-start: 20130106, summary: Épiphanie, uid: annum_france_epiphanie}
+{datetime-start: 20130109, summary: Début des soldes d'hiver, uid: annum_FR_soldes_hiver}
+{datetime-start: 20130202, summary:  Chandeleur , uid: contact@1-annum.com20070202 Chandeleur }
+{datetime-start: 20130215, summary:  1er tiers IR , uid: contact@1-annum.com20070215 1er tiers IR }
+{datetime-start: 20130331, summary:  heure été , uid: contact@1-annum.com20070325 heure été }
+{datetime-start: 20130515, summary:  2eme tiers IR, uid: annum 2eme tiers IR}
+{datetime-start: 20130526, summary:  fête des mères , uid: annum_fête des mères }
+{datetime-start: 20130531, summary:  declaration IR , uid: contact@1-annum.com20070531 declaration IR }
+{datetime-start: 20130616, summary:  Fête des pères , uid: annum_Fêtepères }
+{datetime-start: 20130621, summary:  Fête de la musique, uid: contact@1-annum.com20070621 Fête de la musique}
+{datetime-start: 20130626, summary:  Début des soldes d'été, uid: annum_FR_soldes_ete}
+{datetime-start: 20130916, summary:  3eme tiers IR , uid: contact@1-annum.com20070915 3eme tiers IR }
+{datetime-start: 20130921, summary: Journées européennes du patrimoine, uid: annum_journee patrimoine}
+{datetime-start: 20131015, summary:  Taxe Fonciere , uid: contact@1-annum.com20071015 Taxe Fonciere }
+{datetime-start: 20131027, summary:  heure hiver , uid: contact@1-annum.com20071028 heure hiver }
+{datetime-start: 20131115, summary:  Taxe Habitation , uid: contact@1-annum.com20071115 Taxe Habitation }
+{datetime-start: 20140106, summary: Épiphanie, uid: annum_france_epiphanie}
+{datetime-start: 20140108, summary: Début des soldes d'hiver, uid: annum_FR_soldes_hiver}
+{datetime-start: 20140202, summary:  Chandeleur , uid: contact@1-annum.com20070202 Chandeleur }
+{datetime-start: 20140217, summary:  1er tiers IR , uid: contact@1-annum.com20070215 1er tiers IR }
+{datetime-start: 20140330, summary:  heure été , uid: contact@1-annum.com20070325 heure été }
+{datetime-start: 20140515, summary:  2eme tiers IR, uid: annum 2eme tiers IR}
+{datetime-start: 20140525, summary:  fête des mères , uid: annum_fête des mères }
+{datetime-start: 20140530, summary:  declaration IR , uid: contact@1-annum.com20070531 declaration IR }
+{datetime-start: 20140608, summary:  Élections européennes , uid: annum_france_élections européennes }
+{datetime-start: 20140615, summary:  Fête des pères , uid: annum_Fêtepères }
+{datetime-start: 20140621, summary:  Fête de la musique, uid: contact@1-annum.com20070621 Fête de la musique}
+{datetime-start: 20140625, summary:  Début des soldes d'été, uid: annum_FR_soldes_ete}
+{datetime-start: 20140915, summary:  3eme tiers IR , uid: contact@1-annum.com20070915 3eme tiers IR }
+{datetime-start: 20140920, summary: Journées européennes du patrimoine, uid: annum_journee patrimoine}
+{datetime-start: 20141015, summary:  Taxe Fonciere , uid: contact@1-annum.com20071015 Taxe Fonciere }
+{datetime-start: 20141026, summary:  heure hiver , uid: contact@1-annum.com20071028 heure hiver }
+{datetime-start: 20141117, summary:  Taxe Habitation , uid: contact@1-annum.com20071115 Taxe Habitation }
