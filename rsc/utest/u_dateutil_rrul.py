@@ -5,6 +5,7 @@ Created on Apr 10, 2012
 @version: 0.2: all tests passed
 old: 0.1 up to 150l.ics - ok
 
+@todo: need to fix the soldes_FR item, the rest works (in test_vect.version == "0.2"
 @author: Oberron
 """
 import datetime
@@ -13,6 +14,8 @@ from dateutil.rrule import *
 from dateutil.parser import *
 from test_vect import testvectors,testvector_path #@UnresolvedImport
 import ical #@UnresolvedImport
+
+version = "0.2"
 
 _freq_map = {"YEARLY": YEARLY,
              "MONTHLY": MONTHLY,
@@ -54,7 +57,7 @@ def test_rrule_import():
     for date in dates:
         print "list of dates",date
 
-def test2():
+def unit_test_rrule():
     for cal in testvectors[5:]:
         [file,start,end,reference] = cal
         wFreq = True
@@ -172,5 +175,5 @@ def see():
 
 #test_weekday()
 #see()
-test2()
+unit_test_rrule()
 #test_rrule_import()
