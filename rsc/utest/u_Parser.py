@@ -7,20 +7,35 @@ import unittest
 import sys,datetime
 sys.path.append("../../src/") #to overide previous installs
 import ical #@UnresolvedImport
+from test_vect import testvectors, testvector_path #@UnresolvedImport
 
 
 class Test(unittest.TestCase):
 
 
     def setUp(self):
+        self.testDuration()
+        self.testRRULEgen()
         pass
 
 
     def tearDown(self):
         pass
 
+    def testRRULEgen(self):
+        print "testing RRULE gen"
+        mycal = ical.ics()
+        mycal.debug(True,LogPath="../../out/log.txt",debug_level=0)
+        cal = testvectors[10]
+        [locfile,start,end,reference] = ["12OL.ics","20110101","20121231","12OL.txt"]
 
+        mycal.local_load(testvector_path + locfile)
+        mycal.parse_loaded()
+        RRULE = mycal.GenRRULEstr(mycal.events[0][2])
+        assert RRULE == "RRULE:FREQ=YEARLY;INTERVAL=1;BYMONTH=4;BYMONTHDAY=1;WKST=SU"
+        
     def testDuration(self):
+        print "testing Duration parsing"
         mycal = ical.ics("20120101","20120101")
         """RFC2445 p37
         Example: A duration of 15 days, 5 hours and 20 seconds would be:
@@ -86,8 +101,28 @@ class Test(unittest.TestCase):
         res = mycal.ParseDuration("PT5M")
         assert res == datetime.timedelta(minutes = 5) 
         
-        pass
+        print "end test on duration parsing"
+#        pass
 
 if __name__ == "__main__":
     #import sys;sys.argv = ['', 'Test.testName']
-    unittest.main()
+#    tt = Test()
+#    tt.testDuration()
+#    tt.testRRULEgen()
+    [locfile,start,end,reference] = ["12OL.ics","20110101","20121231","12OL.txt"]
+    locfile = "./test_vect/" +locfile
+    mycal = ical.ics(start,end)
+    mycal.debug(True,LogPath="../../out/log.txt",debug_level=0)
+    mycal.local_load(locfile)
+    mycal.parse_loaded()
+    RRULE = mycal.GenRRULEstr(mycal.events[0][2])
+    assert RRULE == "RRULE:FREQ=YEARLY;INTERVAL=1;BYMONTH=4;BYMONTHDAY=1;WKST=SU"
+    [locfile,start,end,reference] = ["15OL.ics","20110101","20121231","12OL.txt"]
+    locfile = "./test_vect/" +locfile
+    mycal = ical.ics(start,end)
+    mycal.debug(True,LogPath="../../out/log.txt",debug_level=0)
+    mycal.local_load(locfile)
+    mycal.parse_loaded()
+    RRULE = mycal.GenRRULEstr(mycal.events[0][2])
+    print RRULE
+    assert RRULE == "RRULE:FREQ=YEARLY;INTERVAL=1;BYMONTH=4;BYDAY=SA,SU;BYSETPOS=1;WKST=SU"
