@@ -10,10 +10,11 @@ Created on Jul 28, 2011
 """
 testvector_path = "./test_vect/"
 
-
+version = "0.2"
 
 
 testvectors = [
+               ["icalvalid.wikidot/sc_calendar_3325.ics","20090101","20091231","icalvalid.wikidot/sc_calendar_3325.txt"], #source:http://icalvalid.wikidot.com/wild-examples
                ["by_ferie.ics","20110101","20121231","by_ferie_res.txt"],
                ["rdate.ics","20110101","20121231","rdate.txt"],
                ["Ferien_Bayern_2012.ics","20110101","20121231","Ferien_Bayern_2012.txt"],
@@ -27,22 +28,49 @@ testvectors = [
                ["anmar7.ics","20050101","20051231","anmar7.txt"],
                ["anmar8.ics","20050101","20051231","anmar8.txt"],
                ["anmar9.ics","20050101","20051231","anmar9.txt"],
+               
                ["calconnect/ical/01.ics","20110101","20121231","calconnect/ical/01.txt"],
+               ["calconnect/mo/01.ics","20110101","20121231","calconnect/mo/01MO.txt"],
+               ["calconnect/ol/01.ics","20110101","20121231","calconnect/ol/01OL.txt"],
+               
                ["calconnect/ical/02.ics","20110101","20121231","calconnect/ical/02.txt"],
+               ["calconnect/mo/02.ics","20110101","20121231","calconnect/mo/02MO.txt"],
+               ["calconnect/ol/02.ics","20110101","20121231","calconnect/ol/02OL.txt"],
+               
                ["calconnect/ical/03.ics","20110101","20121231","calconnect/ical/03.txt"],
-               ["16ZB.ics","20110101","20121231","16ZB.txt"],
-               ["15OL.ics","20110101","20121231","15OL.txt"],
-               ["14OL.ics","20110101","20121231","14OL.txt"],
-               ["13ZB.ics","20110101","20121231","13ZB.txt"],
-               ["13OL.ics","20110101","20121231","13OL.txt"],
-               ["13IC.ics","20110101","20121231","13IC.txt"],
-               ["13MO.ics","20110101","20121231","13MO.txt"],
-               ["12ZB.ics","20110101","20121231","12ZB.txt"],
-               ["12OL.ics","20110101","20121231","12OL.txt"],
-               ["12IC.ics","20110101","20121231","12IC.txt"],
-               ["12MO.ics","20110101","20121231","12MO.txt"],
-               ["10MO.ics","20110101","20121231","10MO.txt"],
-               ["10OL.ics","20110101","20121231","10OL.txt"],
+               ["calconnect/mo/03.ics","20110101","20121231","calconnect/mo/03MO.txt"],
+               ["calconnect/ol/03.ics","20110101","20121231","calconnect/ol/03OL.txt"],
+
+               ["calconnect/ical/04.ics","20110101","20121231","calconnect/ical/04IC.txt"],
+               ["calconnect/mo/04.ics","20110101","20121231","calconnect/mo/04MO.txt"],
+               ["calconnect/ol/04.ics","20110101","20121231","calconnect/ol/04OL.txt"],
+
+               ["calconnect/ical/05.ics","20110101","20121231","calconnect/ical/05IC.txt"],
+               ["calconnect/mo/05.ics","20110101","20121231","calconnect/mo/05MO.txt"],
+               ["calconnect/ol/05.ics","20110101","20121231","calconnect/ol/05OL.txt"],
+               
+               ["calconnect/ical/06.ics","20110101","20121231","calconnect/ical/06IC.txt"],
+               ["calconnect/mo/06.ics","20110101","20121231","calconnect/mo/06MO.txt"],
+               
+               ["calconnect/ical/07.ics","20110101","20121231","calconnect/ical/07IC.txt"],
+               ["calconnect/mo/07.ics","20110101","20121231","calconnect/mo/07MO.txt"],
+               ["calconnect/ol/07.ics","20110101","20121231","calconnect/ol/07OL.txt"],
+               
+               ["calconnect/ical/12.ics","20110101","20121231","calconnect/ical/12IC.txt"],
+               ["calconnect/mo/12.ics","20110101","20121231","calconnect/mo/12MO.txt"],
+               ["calconnect/ol/12.ics","20110101","20121231","calconnect/ol/12OL.txt"],
+               
+               ["calconnect/ical/13.ics","20110101","20121231","calconnect/ical/13IC.txt"],
+               ["calconnect/mo/13.ics","20110101","20121231","calconnect/mo/13MO.txt"],
+               ["calconnect/ol/13.ics","20110101","20121231","calconnect/ol/13OL.txt"],
+
+               ["calconnect/ol/14.ics","20110101","20121231","calconnect/ol/14OL.txt"],
+               ["calconnect/ol/15.ics","20110101","20121231","calconnect/ol/15OL.txt"],
+
+               ["calconnect/ical/16.ics","20110101","20121231","calconnect/ical/16IC.txt"],
+               ["calconnect/mo/16.ics","20110101","20121231","calconnect/mo/16MO.txt"],
+               ["calconnect/ol/16.ics","20110101","20121231","calconnect/ol/16OL.txt"],
+               
                ["php0a.ics","19960101","20001231","php0a.txt"],
                ["php0b.ics","19960101","20001231","php0b.txt"],
                ["php0c.ics","19960101","20001231","php0c.txt"],
