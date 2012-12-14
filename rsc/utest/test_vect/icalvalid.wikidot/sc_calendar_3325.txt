@@ -1,0 +1,41 @@
+{datetime-start: 20091201, summary: Marching Band Banquet, uid: 3325.83305@westborough.ma.schoolwebpages.com}
+{datetime-start: 20091202, summary: Auditions once on this Island, uid: 3325.89839@westborough.ma.schoolwebpages.com}
+{datetime-start: 20091202, summary: Grades Close for Grades 1-6, uid: 3325.83969@westborough.ma.schoolwebpages.com}
+{datetime-start: 20091202, summary: Tri-M Chapter 3311 Recital, uid: 3325.90370@westborough.ma.schoolwebpages.com}
+{datetime-start: 20091203, summary: Auditions once on this Island, uid: 3325.89839@westborough.ma.schoolwebpages.com}
+{datetime-start: 20091203, summary: Call Backs Once on this Island, uid: 3325.89840@westborough.ma.schoolwebpages.com}
+{datetime-start: 20091203, summary: School Committee Meeting, uid: 3325.83240@westborough.ma.schoolwebpages.com}
+{datetime-start: 20091203, summary: WMPA Meeting, uid: 3325.83368@westborough.ma.schoolwebpages.com}
+{datetime-start: 20091204, summary: Armstrong Parent Group Meeting, uid: 3325.84896@westborough.ma.schoolwebpages.com}
+{datetime-start: 20091204, summary: Call Backs Once on this Island, uid: 3325.89840@westborough.ma.schoolwebpages.com}
+{datetime-start: 20091207, summary: Afternoon Professional Development AND After-School Curriculum Day for Faculty & Staff, uid: 3325.83949@westborough.ma.schoolwebpages.com}
+{datetime-start: 20091207, summary: Early Release for Students, uid: 3325.83903@westborough.ma.schoolwebpages.com}
+{datetime-start: 20091207, summary: Mill Pond Parent Group Meeting, uid: 3325.84862@westborough.ma.schoolwebpages.com}
+{datetime-start: 20091208, summary: Mill Pond Parent Group Meeting, uid: 3325.84862@westborough.ma.schoolwebpages.com}
+{datetime-start: 20091208, summary: Mill Pond grade 4 choral rehearsal, uid: 3325.89386@westborough.ma.schoolwebpages.com}
+{datetime-start: 20091209, summary: Mill Pond choral concert (daytime event), uid: 3325.89387@westborough.ma.schoolwebpages.com}
+{datetime-start: 20091209, summary: Superintendent!~~!s Advisory Council Meeting, uid: 3325.85015@westborough.ma.schoolwebpages.com}
+{datetime-start: 20091210, summary: SEPAC Coffee at the Home of Pam Sager, uid: 3325.84833@westborough.ma.schoolwebpages.com}
+{datetime-start: 20091210, summary: Superintendent!~~!s Advisory Council Meeting, uid: 3325.85015@westborough.ma.schoolwebpages.com}
+{datetime-start: 20091211, summary: Gibbons Concert #2, uid: 3325.83386@westborough.ma.schoolwebpages.com}
+{datetime-start: 20091211, summary: Report Cards issued for Grades 1-6, uid: 3325.83970@westborough.ma.schoolwebpages.com}
+{datetime-start: 20091215, summary: HS Concert, uid: 3325.83306@westborough.ma.schoolwebpages.com}
+{datetime-start: 20091217, summary: HS Concert, uid: 3325.83307@westborough.ma.schoolwebpages.com}
+{datetime-start: 20091217, summary: School Committee Meeting, uid: 3325.83241@westborough.ma.schoolwebpages.com}
+{datetime-start: 20091218, summary: 6th grade band and orchestra concert at Mill Pond, uid: 3325.90263@westborough.ma.schoolwebpages.com}
+{datetime-start: 20091219, summary: 6th grade band and orchestra concert at Mill Pond, uid: 3325.90263@westborough.ma.schoolwebpages.com}
+{datetime-start: 20091222, summary: Gibbons Concert #1 snow date, uid: 3325.83385@westborough.ma.schoolwebpages.com}
+{datetime-start: 20091222, summary: HS Orchestra and Choral Concert, uid: 3325.83308@westborough.ma.schoolwebpages.com}
+{datetime-start: 20091222, summary: Winter concerts 1+2 snow date, uid: 3325.89844@westborough.ma.schoolwebpages.com}
+{datetime-start: 20091223, summary: Gibbons Daytime assembley concert, uid: 3325.83387@westborough.ma.schoolwebpages.com}
+{datetime-start: 20091223, summary: HS daytime assembly period 3, uid: 3325.83309@westborough.ma.schoolwebpages.com}
+{datetime-start: 20091224, summary: Offices Closed, uid: 3325.83922@westborough.ma.schoolwebpages.com}
+{datetime-start: 20091224, summary: Winter Break - Schools Closed, uid: 3325.83910@westborough.ma.schoolwebpages.com}
+{datetime-start: 20091225, summary: Winter Break - Schools Closed, uid: 3325.83911@westborough.ma.schoolwebpages.com}
+{datetime-start: 20091226, summary: Winter Break - Schools Closed, uid: 3325.83912@westborough.ma.schoolwebpages.com}
+{datetime-start: 20091227, summary: Winter Break - Schools Closed, uid: 3325.83913@westborough.ma.schoolwebpages.com}
+{datetime-start: 20091228, summary: Winter Break - Schools Closed, uid: 3325.83914@westborough.ma.schoolwebpages.com}
+{datetime-start: 20091229, summary: Winter Break - Schools Closed, uid: 3325.83915@westborough.ma.schoolwebpages.com}
+{datetime-start: 20091230, summary: Winter Break - Schools Closed, uid: 3325.83916@westborough.ma.schoolwebpages.com}
+{datetime-start: 20091231, summary: Half Day for Offices, uid: 3325.83923@westborough.ma.schoolwebpages.com}
+{datetime-start: 20091231, summary: Winter Break - Schools Closed, uid: 3325.83917@westborough.ma.schoolwebpages.com}
