@@ -67,6 +67,7 @@ class CalendarExample:
 #        recurrence_data = ('DTSTART;VALUE=DATE:20081201\r\n'
 #        + 'RRULE:FREQ=WEEKLY;BYDAY=Tu;UNTIL=20121231\r\n')
     
+#        dtstart="20110101"
         recurrence_data = "DTSTART;VALUE=DATE:"+dtstart+"\r\n"+recurrence_data
 #        recurrence_data = "DTSTART;VALUE=DATE:20081229\r\nRRULE:FREQ=WEEKLY;INTERVAL=1"
         print "recurence rule:",recurrence_data
@@ -90,21 +91,47 @@ class CalendarExample:
 #        print 'Date range query for events on Primary Calendar: %s to %s' % (start_date, end_date,)
 #        print "date window:",start_date,end_date
         query = gdata.calendar.client.CalendarEventQuery()
-        query.start_min = '2011-01-01'
-        query.start_max = '2013-01-01'
+        query.start_min = '2011-01-01' #start_date # '2011-01-01'
+        query.start_max = '2012-01-01' #'2013-01-01'
+        query.max_results = 3000
+#        print end_date
+#        print query
         feed = calendar_client.GetCalendarEventFeed(q=query)
 #        print "feed",feed
         res = open(tmp,'w')
         for i, an_event in enumerate(feed.entry):
-#            print "line 99",an_event.title.text
+            print "line 99",an_event.title.text
             if an_event.title.text == title:
-#                print '\t%s. %s' % (i, an_event.title.text,)
+                print '\t%s. %s' % (i, an_event.title.text,)
                 line = ""
                 for a_when in an_event.when:
                     dtstart = datetime.datetime.strptime(a_when.start,"%Y-%m-%d").strftime("%Y%m%d")
                     line = '{datetime-start: %s, summary: %s, uid: %s}\n' % (dtstart,an_event.title.text,uid)
 #                    print line
-#                    print 'Event %s,\t\tStart time: %s,\t\tEndtime: %s' % (an_event.title.text,a_when.start,a_when.end,)
+                    print 'Event %s,\t\tStart time: %s,\t\tEndtime: %s' % (an_event.title.text,a_when.start,a_when.end,)
+#                    print '\t\tEnd time:   %s' % ()
+                    res.write(line)
+                    line = ""
+        res.close()
+        query2 = gdata.calendar.client.CalendarEventQuery()
+        query2.start_min = "2012-01-01" # '2011-01-01'
+        query2.start_max = "2013-01-02" #'2013-01-01'
+        query2.max_results = 3000
+#        print end_date
+#        print query
+        feed = calendar_client.GetCalendarEventFeed(q=query2)
+
+        res = open(tmp,'a')
+        for i, an_event in enumerate(feed.entry):
+            print "line 99",an_event.title.text
+            if an_event.title.text == title:
+                print '\t%s. %s' % (i, an_event.title.text,)
+                line = ""
+                for a_when in an_event.when:
+                    dtstart = datetime.datetime.strptime(a_when.start,"%Y-%m-%d").strftime("%Y%m%d")
+                    line = '{datetime-start: %s, summary: %s, uid: %s}\n' % (dtstart,an_event.title.text,uid)
+#                    print line
+                    print 'Event %s,\t\tStart time: %s,\t\tEndtime: %s' % (an_event.title.text,a_when.start,a_when.end,)
 #                    print '\t\tEnd time:   %s' % ()
                     res.write(line)
                     line = ""
@@ -118,7 +145,7 @@ def Run_Test_Vectors():
     EventDescription = "utest gcal"
 
     print "entering test vectors"
-    for vect in testvectors[15:20]:
+    for vect in testvectors[15:16]:
         [locfile,start,end,reference] = vect
         mycal = ical.ics(start,end)
         mycal.debug(False,"../../out/log.txt")
@@ -130,28 +157,22 @@ def Run_Test_Vectors():
         
 #        print rules
 
-        rrule = "RRULE:"
-        for prop in rules:
-#            print prop, rules[prop]
-            rrule+=prop+"="+str(rules[prop])+";"
-
-        rrule = rrule[:-1]
-#        print rrule
+        rrule = mycal.GenRRULEstr(mycal.events[0][2])
                 
         ree = sample.InsertRecurringEvent(sample.cal_client,title=summary,recurrence_data=rrule,dtstart=ddtstart)
         startdate=datetime.datetime.strptime(start,"%Y%m%d").strftime("%Y-%m-%d")
-        enddate=datetime.datetime.strptime(end,"%Y%m%d").strftime("%Y-%m-%d")
+        enddate=(datetime.datetime.strptime(end,"%Y%m%d")+datetime.timedelta(days=3)).strftime("%Y-%m-%d")
         sample.DateRangeQuery(sample.cal_client,title=summary,uid=suid,start_date=startdate, end_date=enddate)
 
         if filecmp.cmp(tmp,testvector_path+reference,shallow = False):
             print vect,"\t - OK"
         else:
             print vect,"\t - NOK"
-            sys.exit()
+#            sys.exit()
 
-        sample.cal_client.Delete(ree)
+#        sample.cal_client.Delete(ree)
 
-tmp = "c:/sw/ical2pdf/out/tmp.txt"
+tmp = "c:/sw/icalculator/out/tmp.txt"
 Run_Test_Vectors()
 
 #sample.Run(delete)
