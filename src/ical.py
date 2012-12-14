@@ -32,7 +32,7 @@ class ics:
     dates = sorted(mycal.flat_events) \n
     print "dates are",dates
     """
-    version = "0.6.1i"
+    version = "0.6.1j"
     MaxInteger = 2147483647
     _weekday_map = {"MO":0,"TU":1,"WE":2,"TH":3,"FR":4,"SA":5,"SU":6}
     sDate = ""
@@ -78,11 +78,11 @@ class ics:
                 self.LogFilePath = LogPath
             except:
                 pass
-    def _log(self,title,list,level=0):
+    def _log(self,title,listtodisplay,level=0):
         if self.debug_mode == True:
             if level >= self.debug_level:
                 line = "**"+title+"\n"
-                for el in list:
+                for el in listtodisplay:
                     if len(str(el))<1000:
                         line = line + "\t"+str(el)
                     else:
@@ -131,8 +131,29 @@ class ics:
             time = time[pos+1:]
         pos = time.find("S")
         if (pos)>0:
-             tdelta += datetime.timedelta(seconds = sign*int(time[:pos]))
+            tdelta += datetime.timedelta(seconds = sign*int(time[:pos]))
         return tdelta
+    def GenRRULEstr(self,rules):
+        RRULE="RRULE:"
+        if "FREQ" in rules:
+            RRULE+="FREQ="+rules["FREQ"]+";"
+            if "INTERVAL" in rules:
+                RRULE += "INTERVAL="+str(rules["INTERVAL"])+";"
+            if "COUNT" in rules:
+                RRULE += "INTERVAL="+str(rules["COUNT"])+";"
+            bylist = ["BYWEEKNO","BYMONTH","BYMONTHDAY","BYDAY","BYYEARDAY","BYSETPOS"]
+            for bys in bylist:
+                if bys in rules:
+                    numlist = rules[bys]
+                    icallist = self.pythonindex_to_icalindex(numlist)
+                    RRULE+=bys+"="+icallist+";"
+        if "WKST" in rules:
+            RRULE+="WKST="+rules["WKST"]+";"
+        if "UNTIL" in rules:
+            RRULE+= "UNTIL"+rules["UNTIL"]+";"
+        if RRULE[-1]==";":
+            RRULE = RRULE[:-1]
+        return RRULE
     def _iCalDateTimeToDateTime(self,icalDT):
         #DTSTART, DTEND, DTSTAMP, UNTIL,
         self._log("\t\t ical datetime to python datetime",[icalDT])
@@ -148,22 +169,23 @@ class ics:
     def _setInterval (self,start,end):
         self.sDate = datetime.datetime.strptime(start,"%Y%m%d")
         self.eDate = datetime.datetime.strptime(end,"%Y%m%d")
-        self.flat_events = []
-    """
-    function:: local_load (self,path,conformance=False)
-    path will contain local path for ics file
-    conformance will force / or not checking ics file for conformance (not supported)
-    @param conformance: optional parameter when True the ical checker will be run before loading the ic
-    """
-    def local_load(self,path,conformance=False):
+#        self.flat_events = []
+    def local_load(self,path,conformance=False,append=False):
+        """
+        function:: local_load (self,path,conformance=False)
+        path will contain local path for ics file
+        conformance will force / or not checking ics file for conformance (not supported)
+        @param conformance: optional parameter when True the ical checker will be run before loading the ic
+        """
+        
         """@param conformance: optional parameter when True the ical checker 
         will be run before loading the ics"""
         self._log("\t\t entering local load:",[path])
         self.local_path = path
         #here check local path
         string = open(self.local_path,'r').readlines()
-        self.strings_load(string,conformance)
-    def strings_load(self,strings,conformance=False):
+        self.strings_load(string,conformance,append)
+    def strings_load(self,strings,conformance=False,append = False):
         """@param conformance: optional parameter when True the ical checker 
             will be run before loading the ics
         @param strings: array of strings each item being a line from the ical 
@@ -171,8 +193,9 @@ class ics:
         """
         self.ical_data = strings
         self.ical_loaded = 1
-        self.events = []
-        self.flat_events = []
+        if not append:
+            self.events = []
+            self.flat_events = []
         if conformance:
             self.validate()
     def string_load(self,string,conformance=False):
@@ -193,42 +216,53 @@ class ics:
         """ @TODO: add here a ical parser checking for critical compliance"""
         
         #check uid uniques in calendar file
-        #check when dtsart and dtend set that dtend>dtsart
-        #check all text fields are valid (escaped characters
         return 1
     def validate_event(self,event):
         [dtstart,dtend,duration,rules,summary,uid,rdates,exdates] = event
-        self._log("193 validate_event", event, 0)
+        self._log("193 validate_event", [dtstart,dtend,duration,rules,summary,uid,rdates,exdates], 0)
+        addsummary = ""
+        adduid = ""
+        if len(summary)>0:
+            addsummary = " event summary:"+summary
+        if len(uid)<=0:
+            raise Exception("VEVENT VALIDATOR","mandatory property UID not set"+addsummary)
+        else:
+            adduid = " event UID:"+uid
+        if len(str(dtstart))<=0:
+            raise Exception("VEVENT VALIDATOR","mandatory property DTSTART not set"+adduid+addsummary)            
         if len(str(dtend))>0:
             if len(str(duration))>0:
-                raise Exception("VEVENT VALIDATOR","DTEND and DURATION set")
+                raise Exception("VEVENT VALIDATOR","DTEND and DURATION set"+adduid+addsummary)
             if dtstart>dtend:
-                raise Exception("VEVENT VALIDATOR","DTSTART > DTEND")
+                raise Exception("VEVENT VALIDATOR","DTSTART > DTEND"+adduid+addsummary)
         return 1
     def _mklist(self,start,end,step_size=1):
         #TODO:historical function created before knowing the range function, to be removed
-        list = []
+#        result_list = []
 #        while start <= end:
 #            list.append(start)
 #            start +=step_size
-        list = range(start,end+1,step_size)
-        return list
+        result_list = range(start,end+1,step_size)
+        return result_list
 
     def parse_loaded(self):
         self._log("\t\tentering loader",[])
         if self.ical_loaded == 0:
+            raise Exception("VCALENDAR VALIDATOR","no vCALENDAR loaded")
             self.ical_error = 1
-            return 0
+#            return 0
         elif self.ical_loaded == 1:
             #TODO: add here increments over the calendars
+            line_count = 0
             for line in self.ical_data:
+                line_count +=1
                 #first load the given event
                 pos = line.find("BEGIN:VEVENT")
                 if (pos>=0):
                     if (self.invevent == 0):
                         self.invevent = 1
                     else:
-                        #TODO: raise ICAL_ERROR('begin:vevent w/o end:vevent')
+                        raise Exception("VCALENDAR VALIDATOR","encountered BEGIN:VEVENT before END:VEVENT @line"+str(line_count))
                         self.ical_error = 1
                 pos = line.find("END:VEVENT")
                 if (pos>=0):
@@ -241,8 +275,7 @@ class ics:
                         self._event_load()
                     else:
                         self.ical_error = 1
-                        print >> sys.stderr, "error line 108"
-                        sys.exit()
+                        raise Exception("VCALENDAR VALIDATOR","encountered END:VEVENT before BEGIN:VEVENT @line"+str(line_count))
                 pos = line.find("SUMMARY:")
                 if (pos>=0):
                     #FIXME: if semicolumn in the line, only get the values before the semi-column
@@ -409,6 +442,13 @@ class ics:
         
         self.events.append([dtstart,dtend,rules,self.summary,uid,rdates,exdates])
         self.event = []
+    def pythonindex_to_icalindex(self,indexes,isDOW=False):
+        ret_val = ""
+        for index in indexes:
+            ret_val += str(index)+","
+        if ret_val[-1]==",":
+            ret_val=ret_val[:-1]
+        return ret_val
     def _icalindex_to_pythonindex(self,indexes):
         ret_val = []
         for index in indexes:
