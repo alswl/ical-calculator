@@ -14,7 +14,10 @@ import ical #@UnresolvedImport
 
 def Run_Test_Vectors():
     print "entering test vectors"
+    vect_index = 0
     for vect in testvectors[0:]:
+        vect_index +=1
+#        print vect
         [locfile,start,end,reference] = vect
         #print "file is:\t",file
         mycal = ical.ics(start,end)
@@ -32,9 +35,9 @@ def Run_Test_Vectors():
             #print line
         res.close()
         if filecmp.cmp(tmp,testvector_path+reference,shallow = False):
-            print vect,"\t - OK"
+            print vect_index,":",vect,"\t - OK"
         else:
-            print vect,"\t - NOK"
+            print vect_index,":",vect,"\t - NOK"
             sys.exit()
         del mycal
     mycal = ical.ics("20120101","20121231")
@@ -44,17 +47,20 @@ def Run_Test_Vectors():
 
 def see():
     print "Entering see"
-    useTestVect = False
+    useTestVect = True
     if useTestVect:
-        [locfile,start,end,reference] = testvectors[-1] #@UnusedVariable
+        [locfile,start,end,reference] = testvectors[17] #@UnusedVariable
+        locfile=testvector_path+locfile
     else:
-        [locfile,start,end,reference] = ["uk_bank_2007_2013.ics","20120101","20131231","calconnect/ical/02.txt"] #@UnusedVariable
+        [locfile,start,end,reference] = ["C:/perso/Dropbox/entolusis/1-annum/www/ics/Calendrier_Scolaire_Zones_A_B_C_2008_2013.ics","20100101","20141231","france_doi_2007.txt"] #@UnusedVariable
+#        locfile=testvector_path+locfile
+#        [locfile,start,end,reference] = ["soldes_FR.ics","20100101","20141231","soldes_FR.txt"] #@UnusedVariable
     mycal = ical.ics(start,end)
     mycal.debug(True,LogPath="../../out/log.txt",debug_level=0)
     #mycal.local_load(testvector_path+file)
 #    string = open(testvector_path+file,'r').readlines()
 
-    mycal.local_load(testvector_path+locfile)
+    mycal.local_load(locfile)
 
     mycal.parse_loaded()
     mycal.flatten()
