@@ -32,7 +32,7 @@ class ics:
     dates = sorted(mycal.flat_events) \n
     print "dates are",dates
     """
-    version = "0.6.1j"
+    version = "0.6.1h"
     MaxInteger = 2147483647
     _weekday_map = {"MO":0,"TU":1,"WE":2,"TH":3,"FR":4,"SA":5,"SU":6}
     sDate = ""
@@ -140,7 +140,7 @@ class ics:
             if "INTERVAL" in rules:
                 RRULE += "INTERVAL="+str(rules["INTERVAL"])+";"
             if "COUNT" in rules:
-                RRULE += "INTERVAL="+str(rules["COUNT"])+";"
+                RRULE += "COUNT="+str(rules["COUNT"])+";"
             bylist = ["BYWEEKNO","BYMONTH","BYMONTHDAY","BYDAY","BYYEARDAY","BYSETPOS"]
             for bys in bylist:
                 if bys in rules:
