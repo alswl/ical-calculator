@@ -125,6 +125,6 @@ cal_i18n = {
 }
 
 def test():
-	print cal_i18n["ch"]["months"]["names"][11]
+	print cal_i18n["hi"]["months"]["names"][11]
 
 test()
