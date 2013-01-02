@@ -1,13 +1,41 @@
 # -*- coding:utf-8 -*-
-"""
-This module is an icalendar parser for icalendar file (ical or ics) defined by rfc5545 (obsoleted rfc2445)
-into a typed structure and provide means to compute the dates inferred by the rrule, rdate
-exrule and exdates. The computed dates are available as a json structure
+"""Parses an icalendar (ical / .ics defined by RFC5545/RFC2445) and returns typed object including events instances
 
-first: load
-then: parse
-then: flatten
+About
+-----
 
+This module is an icalendar parser for icalendar file (ical or ics) defined by rfc5545 
+(http://tools.ietf.org/html/rfc5545), which obsoleted rfc2445 
+(http://www.ietf.org/rfc/rfc2445.txt), which had previously replaced vcal 1.0
+(http://www.imc.org/pdi/vcal-10.txt).
+
+The icalendar file, once parsed, will be available as a typed structure. 
+Events dates can be computed (including rrule, rdate exrule and exdates). 
+
+The computed dates are available as a json structure.
+
+Usage
+-----
+* Parse icalendar file, then get events dates
+
+To come
+-------
+* 0.6.1z: add unittest support
+* 0.6.2a: add code for event_instances (including support for overlapping), event.instances.isbounded, event.instances.walk,
+    add code for multiple rrule, exrule, 
+* 0.6.2b: add code for property parameters, property values, delimiters (linear, wlsp), ENCODING, character sets, language, binary values,
+    XAPIA’s CSA RRULE,
+x-components and x-properties parsing + for x-properties adding the type of data
+* 0.6.2c: add code for x-components and x-properties generation
+* 0.6.2d: add loader and generator for todo, alarm
+* 0.7.x: add datetime and tzinfo 
+* 0.8.x: add support for non-standard compliance
+    : no tzoneinfo
+    : escaped characters, ...
+* Extend support to new x-properties for icalendar like events related to religious dates or celestial events
+
+History
+-------
 Created on Aug 4, 2011
 
 @author: oberron
@@ -16,12 +44,16 @@ Created on Aug 4, 2011
 @change: 0.5 to 0.6 adds support for no DTEND and DTEND computation from DURATION or DTSTART
 @version: 0.6.x
 """
+
 import datetime 
 import sys
 
 
 class ics:
-    """#ics class usage \n
+    
+    """ Parses an icalendar (ical / .ics defined by RFC5545/RFC2445) and returns typed object including events instances
+    
+    #ics class usage \n
     mycal = icalParser.ical.ics(start="20120101", end="20121231") \n
     #above change your start and end strings to match the range of dates \n
     #where you want to look for events in our icals (ics) file
@@ -276,15 +308,15 @@ class ics:
                     else:
                         self.ical_error = 1
                         raise Exception("VCALENDAR VALIDATOR","encountered END:VEVENT before BEGIN:VEVENT @line"+str(line_count))
-                pos = line.find("SUMMARY:")
-                if (pos>=0):
-                    #FIXME: if semicolumn in the line, only get the values before the semi-column
-                    self.summary = "".join(line.replace("\n","").split(":")[1:])
-                if (self.invevent ==1):
-                    if line[0]==" ":
-                        self.event = self.event[:-1]+[self.event[-1]+line[1:].replace("\n","")]
-                    else:
-                        self.event = self.event+ [line.replace("\n","")]
+#                pos = line.find("SUMMARY:")
+#                if (pos>=0):
+#                    #FIXME: if semicolumn in the line, only get the values before the semi-column
+#                    self.summary = "".join(line.replace("\n","").split(":")[1:])
+#                if (self.invevent ==1):
+#                    if line[0]==" ":
+#                        self.event = self.event[:-1]+[self.event[-1]+line[1:].replace("\n","")]
+#                    else:
+#                        self.event = self.event+ [line.replace("\n","")]
             return 1
     def _event_load(self):
         """
@@ -882,3 +914,11 @@ class ics:
                 list_dates.append(date)
         self._log("413: list_dates at end of sublist",[list_dates])
         return list_dates
+    def event_instances(self,start,end,count=-1):
+        """Returns an array of events with dates, uid, and summary
+        
+        The function returns the array of events within a given date window (defined by start and end),
+        should only a certain number of events be needed either from a start date or to an end date the
+        missing date should be set to Null
+        """
+        #TODO: add code here
