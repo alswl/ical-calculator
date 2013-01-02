@@ -12,9 +12,11 @@ testvector_path = "./test_vect/"
 
 version = "0.2"
 
+parser = [
+                ["icalvalid.wikidot/sc_calendar_3325.ics","20090101","20091231","icalvalid.wikidot/sc_calendar_3325.txt"] #source:http://icalvalid.wikidot.com/wild-examples
+          ]
 
-testvectors = [
-               ["icalvalid.wikidot/sc_calendar_3325.ics","20090101","20091231","icalvalid.wikidot/sc_calendar_3325.txt"], #source:http://icalvalid.wikidot.com/wild-examples
+rrule_vects = [
                ["by_ferie.ics","20110101","20121231","by_ferie_res.txt"],
                ["rdate.ics","20110101","20121231","rdate.txt"],
                ["Ferien_Bayern_2012.ics","20110101","20121231","Ferien_Bayern_2012.txt"],
