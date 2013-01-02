@@ -5,7 +5,7 @@ Created on Jul 13, 2012
 @author: Oberron
 """
 
-from test_vect import testvectors, testvector_path #@UnresolvedImport
+from test_vect import rrule_vects, testvector_path #@UnresolvedImport
 import filecmp
 import sys
 sys.path.append("../../src/") #to overide previous installs
@@ -15,9 +15,9 @@ import ical #@UnresolvedImport
 def Run_Test_Vectors():
     print "entering test vectors"
     vect_index = 0
-    for vect in testvectors[0:]:
+    for vect in rrule_vects[0:]:
         vect_index +=1
-#        print vect
+        print vect
         [locfile,start,end,reference] = vect
         #print "file is:\t",file
         mycal = ical.ics(start,end)
@@ -49,7 +49,7 @@ def see():
     print "Entering see"
     useTestVect = True
     if useTestVect:
-        [locfile,start,end,reference] = testvectors[17] #@UnusedVariable
+        [locfile,start,end,reference] = rrule_vects[17] #@UnusedVariable
         locfile=testvector_path+locfile
     else:
         [locfile,start,end,reference] = ["C:/perso/Dropbox/entolusis/1-annum/www/ics/Calendrier_Scolaire_Zones_A_B_C_2008_2013.ics","20100101","20141231","france_doi_2007.txt"] #@UnusedVariable
