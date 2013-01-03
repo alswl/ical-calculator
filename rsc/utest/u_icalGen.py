@@ -28,7 +28,8 @@ class TestIcalGen(unittest.TestCase):
         
         self.mycal.local_load(testvector_path + locfile)
         self.mycal.parse_loaded()
-        sRRULE = self.mycal.GenRRULEstr(self.mycal.events[0][2])
+#        print self.mycal.events
+        sRRULE = self.mycal.GenRRULEstr(self.mycal.events[0]["RRULE"])
         assert sRRULE == "RRULE:FREQ=DAILY;INTERVAL=1"
 #        print "\t \t end test on RRULEgen"
 
