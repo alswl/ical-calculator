@@ -15,6 +15,8 @@ class TestIcalParser(unittest.TestCase):
 
     def setUp(self):
         self.mycal = ical.ics()
+        self.vevent = ical.vevent()
+
         pass
 
     def tearDown(self):
@@ -22,19 +24,20 @@ class TestIcalParser(unittest.TestCase):
         
     def test_Duration(self):
 #        print "testing Duration parsing"
-        mycal = ical.ics("20120101","20120101")
+        mycal = ical.ics()
         """RFC2445 p37
         Example: A duration of 15 days, 5 hours and 20 seconds would be:
         P15DT5H0M20S
         """
-        res = mycal.ParseDuration("P15DT5H0M20S")
+        res = self.vevent.duration_load("P15DT5H0M20S")
+#        print "line 33",res, "---",datetime.timedelta(days = 15, hours = 5, seconds = 20)
         assert res == datetime.timedelta(days = 15, hours = 5, seconds = 20)
         
         """
         A duration of 7 weeks would be:
         P7W
         """
-        res = mycal.ParseDuration("P7W")
+        res = self.vevent.duration_load("P7W")
         assert res == datetime.timedelta(weeks = 7) 
         
         """
@@ -42,7 +45,7 @@ class TestIcalParser(unittest.TestCase):
         and 30 minutes would be:        
         19970101T180000Z/PT5H30M
         """
-        res = mycal.ParseDuration("PT5H30M")
+        res = self.vevent.duration_load("PT5H30M")
         assert res == datetime.timedelta(hours = 5, minutes=30) 
         
         """
@@ -50,7 +53,7 @@ class TestIcalParser(unittest.TestCase):
         15 minute 
         PT15M
         """
-        res = mycal.ParseDuration("PT15M")
+        res = self.vevent.duration_load("PT15M")
         assert res == datetime.timedelta(minutes=15) 
         
         """
@@ -58,7 +61,7 @@ class TestIcalParser(unittest.TestCase):
         30 minutes before the scheduled start of the event
         -PT30M
         """
-        res = mycal.ParseDuration("-PT30M")
+        res = self.vevent.duration_load("-PT30M")
 #        print "res 61:",res
 #        print datetime.timedelta(minutes = -30)
         assert res == datetime.timedelta(minutes=-30) 
@@ -68,7 +71,7 @@ class TestIcalParser(unittest.TestCase):
         one hour intervals
         PT1H
         """
-        res = mycal.ParseDuration("PT1H")
+        res = self.vevent.duration_load("PT1H")
         assert res == datetime.timedelta(hours = 1) 
         
         """
@@ -76,7 +79,7 @@ class TestIcalParser(unittest.TestCase):
         interval of time of 1 hour and zero minutes and zero seconds
         PT1H0M0S
         """
-        res = mycal.ParseDuration("PT1H0M0S")
+        res = self.vevent.duration_load("PT1H0M0S")
         assert res == datetime.timedelta(hours = 1,minutes = 0, seconds =0) 
         
         """
@@ -84,7 +87,7 @@ class TestIcalParser(unittest.TestCase):
         with a 5 minute delay
         PT5M
         """
-        res = mycal.ParseDuration("PT5M")
+        res = self.vevent.duration_load("PT5M")
         assert res == datetime.timedelta(minutes = 5) 
         
 #        print "\t \t end test on duration parsing"
