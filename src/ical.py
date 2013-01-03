@@ -1,5 +1,5 @@
 # -*- coding:utf-8 -*-
-"""Parses an icalendar (ical / .ics defined by RFC5545/RFC2445) and returns typed object including events instances
+"""Icalendar (RFC5545, RFC2445) support:  Parse, Generate and enumerate events (support of RRULE, EXRULE, RDATE, EXDATE)
 
 About
 -----
@@ -12,7 +12,8 @@ This module is an icalendar parser for icalendar file (ical or ics) defined by r
 The icalendar file, once parsed, will be available as a typed structure. 
 Events dates can be computed (including rrule, rdate exrule and exdates). 
 
-The computed dates are available as a json structure.
+icalendar module and dateutils both provide some of the functionalities of this module but
+do not provide it in an integrated way.
 
 Usage
 -----
@@ -48,99 +49,51 @@ Created on Aug 4, 2011
 import datetime 
 import sys
 
-
-class ics:
+class vevent:
     
-    """ Parses an icalendar (ical / .ics defined by RFC5545/RFC2445) and returns typed object including events instances
-    
-    #ics class usage \n
-    mycal = icalParser.ical.ics(start="20120101", end="20121231") \n
-    #above change your start and end strings to match the range of dates \n
-    #where you want to look for events in our icals (ics) file
-    file = "./test.ics" # here change to your file path \n
-    mycal.local_load(file) \n
-    mycal.parse_loaded() \n
-    mycal.flatten() \n
-    dates = sorted(mycal.flat_events) \n
-    print "dates are",dates
+    """ Parses a vevent (object from vcalendar as defined by the icalendar standard (RFC5545)
     """
-    version = "0.6.1h"
-    MaxInteger = 2147483647
-    _weekday_map = {"MO":0,"TU":1,"WE":2,"TH":3,"FR":4,"SA":5,"SU":6}
-    sDate = ""
-    """ string giving in yyyymmdd the start date to look for events in the ical"""
-    eDate = ""
-    """ string giving in yyyymmdd the end date to look for events in the ical"""
-    path = ""
-    """ path where the file is located """
-    ical_data = ""
-    ical_flat = []
-    ical_loaded = 0
-    ical_error =0
-    event = []
-    invevent = 0
-    event_rules = {}
-    summary=""
-    events = []
-    flat_events = []
-    debug_mode = 0
-    debug_level = 0
-    LogFilePath = "./log.txt"
-    LogData = ""
-    def inf(self):
-        info = "Follows:\n"
-        info += "http://www.kanzaki.com/docs/ical/vevent.html \n"
-        info += "http://www.kanzaki.com/docs/ical/rrule.html \n"
-        info += "http://www.kanzaki.com/docs/ical/recur.html \n"
-    def __init__(self,start=datetime.datetime.today().strftime("%Y%m%d"),end=datetime.datetime.today().strftime("%Y%m%d")):
-        self.ical_loaded = 0
-        self.debug_mode= 0
-        self._setInterval (start, end)
-    def __del__(self):
-        self.ical_datelist = []
-        self.flat_events = []
-    def debug(self,TrueFalse,LogPath="",debug_level=0):
-        self.debug_mode = TrueFalse
-        self._log("self debug is now",[TrueFalse])
-        self.debug_level = debug_level
-        if len(LogPath)>0:
-            try:
-                log = open(self.LogFilePath,'w')
-                log.close()
-                self.LogFilePath = LogPath
-            except:
-                pass
-    def _log(self,title,listtodisplay,level=0):
-        if self.debug_mode == True:
-            if level >= self.debug_level:
-                line = "**"+title+"\n"
-                for el in listtodisplay:
-                    if len(str(el))<1000:
-                        line = line + "\t"+str(el)
-                    else:
-                        line = line + "\t"+str(el)[0:1000]
-                line +="\n"
-                if len(self.LogFilePath)>0:
-                    log=open(self.LogFilePath,'a')
-                    log.write(line)
-                    log.close()
-                else:
-                    self.LogData += line
-    def ParseDuration(self,duration):
+#    vevent_load = { "uid": self.string_load}
+    def _icalindex_to_pythonindex(self,indexes):
+        ret_val = []
+        for index in indexes:
+            index = int(index)
+            if index > 0:
+                #ical sees the first as a 1 whereas python sees the 0 as the first index for positives
+                index = index -0
+            ret_val.append(index)
+        return ret_val
+    def string_load(self,propval):
+        #TODO add here escaped characters
+        return propval
+    def date_load(self,propval):
+        #DTSTART, DTEND, DTSTAMP, UNTIL,
+#        self._log("\t\t ical datetime to python datetime",[icalDT])
+#        [param,value] = line.split(":")
+        #TODO: handle params properly http://www.kanzaki.com/docs/ical/dtstart.html
+        if len(propval)>8:
+            return datetime.datetime.strptime(propval[:8],"%Y%m%d")
+        else:
+            return datetime.datetime.strptime(propval,"%Y%m%d")
+    def duration_load(self,duration):
+#        print "line 79",duration
+        if duration[0]=="P":
+            duration = duration[1:]
         tdelta = datetime.timedelta()
         sign =1
         if duration[0:1]=="-":
             duration = duration[1:]
             sign = -1
 #            print "sign",sign
-        if duration.find("T")>0:
+        if duration.find("T")>=0:
             [date,time]=duration.split("T")
-            date = date[1:]
+#            print "line 89, date time", date,time
+#            date = date[1:]
         else:
             [date , time] = [duration,""]
         pos = date.find("W")
         if pos>0:
-            tdelta += datetime.timedelta(weeks= sign*int(date[1:pos]))
+            tdelta += datetime.timedelta(weeks= sign*int(date[:pos]))
         pos = date.find("Y")
         if (pos)>0:
             tdelta += datetime.timedelta(years = sign*int(date[:pos]))
@@ -165,6 +118,225 @@ class ics:
         if (pos)>0:
             tdelta += datetime.timedelta(seconds = sign*int(time[:pos]))
         return tdelta
+        
+    def datelist_load(self,sDatelist):
+        sDatelist=sDatelist.split(",")
+        lDatelist = []
+        for value in sDatelist:
+            lDatelist.append(self.date_load(value))
+#        self._log("214 rdates are:", [rdates], 0)
+#            if line.find("EXDATE")>=0:
+#                exdatelist=line.split(":")[1].split(",")
+#                for value in exdatelist:
+#                    exdates.append(self._iCalDateTimeToDateTime(value))
+#                self._log("220 exdates are:", [exdates], 0)
+        return lDatelist
+        
+    def rrule_load(self,sRrule):
+        #FIXME: add logs
+        rules = {}
+#        self._log("rrule is:",[line])
+        rrule = sRrule.split(";")
+        for rule in rrule:
+#            self._log("120 rule out rules is:",[rule])
+            if len(rule)>0:
+                #FIXME: this is to cater for line ending with ; which is probably not valid
+                [param, value] = rule.split("=")
+                if (param == "FREQ"):
+                    rules[param] = value
+                elif (param == "UNTIL"):
+                    rules[param] = self.date_load(value)
+                    #TODO: check if that no "COUNT" is defined
+                elif (param == "COUNT"):
+                    rules[param] = int(value)
+                    #TODO: check if that no "UNTIL" is defined
+                elif (param == "INTERVAL"):
+                    #( ";" "INTERVAL" "=" 1*DIGIT )          /
+                    rules[param] = int(value)
+                elif (param == "BYSECOND"):
+                    #( ";" "BYSECOND" "=" byseclist )        /
+                    #byseclist  = seconds / ( seconds *("," seconds) )
+                    #seconds    = 1DIGIT / 2DIGIT       ;0 to 59
+                    byseclist = value.split(",")
+                    rules[param]=[]
+                    for seconds in byseclist:
+                        rules[param].append(int(seconds))
+                elif (param == "BYMINUTE"):
+                    rules[param] = value
+                elif (param == "BYHOUR"):
+                    rules[param] = value
+                elif (param == "BYDAY"):
+                    #( ";" "BYDAY" "=" bywdaylist )          /
+                    #bywdaylist = weekdaynum / ( weekdaynum *("," weekdaynum) )
+                    #weekdaynum = [([plus] ordwk / minus ordwk)] weekday
+                    #plus       = "+"
+                    #  minus      = "-"
+                    #  ordwk      = 1DIGIT / 2DIGIT       ;1 to 53
+                    #  weekday    = "SU" / "MO" / "TU" / "WE" / "TH" / "FR" / "SA"
+                    #;Corresponding to SUNDAY, MONDAY, TUESDAY, WEDNESDAY, THURSDAY,
+                    #;FRIDAY, SATURDAY and SUNDAY days of the week.
+                    #bywdaylist = split(value,",")
+                    #for weekdaynum in bywdaylist:
+                    rules[param] = {}
+                    ldow = {}   #dictionnary with dow and list of index
+                    #{'MO': [0], 'TU': [1], 'WE': [-1]} means every monday, first tuesday
+                    # last wednesday, .. 
+                    bywdaylist = value.split(",")
+                    dow = ["MO","TU","WE","TH","FR","SA","SU"]
+                    for weekdaynum in bywdaylist:
+                        #get the position of the DOW
+                        #weekdaynum of type: MO , 1MO, 2TU or -2WE
+                        for d in dow:
+                            if weekdaynum.find(d) >=0:
+                                pos_dow = weekdaynum.find(d)
+                        #extract position of dow to split its index from it.
+                        if pos_dow == 0:
+                            index = 0
+                        else:
+                            index = int(weekdaynum[0:pos_dow])
+                        ddow = weekdaynum[pos_dow:]
+                        if ddow in ldow:
+                            ldow[ddow].append(index)
+#                                    print "238"
+                        else:
+#                                    print "240", ldow, ddow, index
+                            ldow[ddow] = [index]
+#                                print "ldow is now:",ldow
+                    rules[param] = ldow
+#                    self._log("175",[rules[param],param])
+                elif (param == "BYMONTHDAY"):
+                    # ( ";" "BYMONTHDAY" "=" bymodaylist )    /
+                    # bymodaylist = monthdaynum / ( monthdaynum *("," monthdaynum) )
+                    # monthdaynum = ([plus] ordmoday) / (minus ordmoday)
+                    # ordmoday   = 1DIGIT / 2DIGIT       ;1 to 31
+                    bymodaylist = value.split(",")
+                    rules[param] = self._icalindex_to_pythonindex(bymodaylist)
+                elif (param == "BYYEARDAY"):
+                    byyeardaylist = value.split(",")
+                    rules[param] = self._icalindex_to_pythonindex(byyeardaylist)
+                elif (param == "BYWEEKNO"):
+                    bywklist = value.split(",")
+                    rules[param] = self._icalindex_to_pythonindex(bywklist)
+                elif (param == "BYMONTH"):
+                    #";" "BYMONTH" "=" bymolist )
+                    #bymolist   = monthnum / ( monthnum *("," monthnum) )
+                    #monthnum   = 1DIGIT / 2DIGIT       ;1 to 12
+                    bymolist = value.split(",")
+                    rules[param] = self._icalindex_to_pythonindex(bymolist)
+                elif (param == "BYSETPOS"):
+                    #( ";" "BYSETPOS" "=" bysplist )         /
+                    # bysplist   = setposday / ( setposday *("," setposday) )
+                    # setposday  = yeardaynum
+                    bysplist = value.split(",")
+                    rules[param] = self._icalindex_to_pythonindex(bysplist)
+                elif (param == "WKST"):
+                    rules[param] = value
+                else:
+                    rules[param] = value
+        return rules
+        
+        
+    def validate_event(self,event):
+#        self._log("193 validate_event", event, 0)
+#        print "line 71",event
+        addsummary = ""
+        adduid = ""
+        if "SUMMARY" in event:
+            addsummary = " event summary:"+event["SUMMARY"]
+        if "UID" not in event:
+            print event["UID"]
+            raise Exception("VEVENT VALIDATOR","mandatory property UID not set"+addsummary)
+        else:
+            adduid = " event UID:"+event["UID"]
+        if "DTSTART" not in event:
+            #FIXME no DTSTART is valid, but should raise a warning
+            raise Exception("VEVENT VALIDATOR","mandatory property DTSTART not set"+adduid+addsummary)            
+        if "DTEND" in event:
+            if "DURATION" in event:
+                raise Exception("VEVENT VALIDATOR","DTEND and DURATION set"+adduid+addsummary)
+            if event["DTSTART"] > event["DTEND"]:
+                raise Exception("VEVENT VALIDATOR","DTSTART > DTEND"+adduid+addsummary)
+
+class ics:
+    
+    """ Parses an icalendar (ical / .ics defined by RFC5545/RFC2445) and returns typed object including events instances
+    
+    #ics class usage \n
+    mycal = icalParser.ical.ics(start="20120101", end="20121231") \n
+    #above change your start and end strings to match the range of dates \n
+    #where you want to look for events in our icals (ics) file
+    file = "./test.ics" # here change to your file path \n
+    mycal.local_load(file) \n
+    mycal.parse_loaded() \n
+    mycal.flatten() \n
+    dates = sorted(mycal.flat_events) \n
+    print "dates are",dates
+    """
+    version = "0.6.1v"
+    MaxInteger = 2147483647
+    _weekday_map = {"MO":0,"TU":1,"WE":2,"TH":3,"FR":4,"SA":5,"SU":6}
+    sDate = ""
+    """ string giving in yyyymmdd the start date to look for events in the ical"""
+    eDate = ""
+    """ string giving in yyyymmdd the end date to look for events in the ical"""
+    path = ""
+    """ path where the file is located """
+    sVCALENDAR = "" #the VCALENDAR as a string
+    lVEVENT = [] #the current VEVENT being loaded from icalendar file, array of strings each string is an unfolded
+    #line
+    ical_flat = []
+    ical_loaded = 0
+    ical_error =0
+    event = []
+    invevent = 0
+    event_rules = {}
+    summary=""
+    events = []
+    flat_events = []
+    debug_mode = 0
+    debug_level = 0
+    LogFilePath = "./log.txt"
+    LogData = ""
+    def inf(self):
+        info = "Follows:\n"
+        info += "http://www.kanzaki.com/docs/ical/vevent.html \n"
+        info += "http://www.kanzaki.com/docs/ical/rrule.html \n"
+        info += "http://www.kanzaki.com/docs/ical/recur.html \n"
+    def __init__(self):
+        self.ical_loaded = 0
+        self.debug_mode= 0
+    def __del__(self):
+        self.ical_datelist = []
+        self.flat_events = []
+    def debug(self,TrueFalse,LogPath="",debug_level=0):
+        self.debug_mode = TrueFalse
+        self._log("self debug is now",[TrueFalse])
+        self.debug_level = debug_level
+        if len(LogPath)>0:
+            try:
+                log = open(self.LogFilePath,'w')
+                log.close()
+                self.LogFilePath = LogPath
+            except:
+                pass
+    def _log(self,title,listtodisplay,level=0):
+#        print "___log",title,"\t list is:", listtodisplay
+        if self.debug_mode == True:
+            if level >= self.debug_level:
+                line = "**"+title+"\n"
+                for el in listtodisplay:
+                    if len(str(el))<1000:
+                        line = line + "\t"+str(el)
+                    else:
+                        line = line + "\t"+str(el)[0:1000]
+                line +="\n"
+#                print "\t\t ____log",line.replace("\n",""),"***********************"
+                if len(self.LogFilePath)>0:
+                    log=open(self.LogFilePath,'a')
+                    log.write(line)
+                    log.close()
+                else:
+                    self.LogData += line
     def GenRRULEstr(self,rules):
         RRULE="RRULE:"
         if "FREQ" in rules:
@@ -186,22 +358,6 @@ class ics:
         if RRULE[-1]==";":
             RRULE = RRULE[:-1]
         return RRULE
-    def _iCalDateTimeToDateTime(self,icalDT):
-        #DTSTART, DTEND, DTSTAMP, UNTIL,
-        self._log("\t\t ical datetime to python datetime",[icalDT])
-        if icalDT.find(":")>0:
-            [param,value] = icalDT.split(":")
-        else:
-            value = icalDT
-        #TODO: handle params properly http://www.kanzaki.com/docs/ical/dtstart.html
-        if len(value)>8:
-            return datetime.datetime.strptime(value[:8],"%Y%m%d")
-        else:
-            return datetime.datetime.strptime(value,"%Y%m%d")
-    def _setInterval (self,start,end):
-        self.sDate = datetime.datetime.strptime(start,"%Y%m%d")
-        self.eDate = datetime.datetime.strptime(end,"%Y%m%d")
-#        self.flat_events = []
     def local_load(self,path,conformance=False,append=False):
         """
         function:: local_load (self,path,conformance=False)
@@ -223,7 +379,7 @@ class ics:
         @param strings: array of strings each item being a line from the ical 
             file
         """
-        self.ical_data = strings
+        self.sVCALENDAR = strings
         self.ical_loaded = 1
         if not append:
             self.events = []
@@ -235,7 +391,7 @@ class ics:
         for char in string:
             if char == "\n":
                 line+=char
-                self.ical_data.append(line)
+                self.sVCALENDAR.append(line)
                 line =""
             else:
                 line += char
@@ -248,25 +404,6 @@ class ics:
         """ @TODO: add here a ical parser checking for critical compliance"""
         
         #check uid uniques in calendar file
-        return 1
-    def validate_event(self,event):
-        [dtstart,dtend,duration,rules,summary,uid,rdates,exdates] = event
-        self._log("193 validate_event", [dtstart,dtend,duration,rules,summary,uid,rdates,exdates], 0)
-        addsummary = ""
-        adduid = ""
-        if len(summary)>0:
-            addsummary = " event summary:"+summary
-        if len(uid)<=0:
-            raise Exception("VEVENT VALIDATOR","mandatory property UID not set"+addsummary)
-        else:
-            adduid = " event UID:"+uid
-        if len(str(dtstart))<=0:
-            raise Exception("VEVENT VALIDATOR","mandatory property DTSTART not set"+adduid+addsummary)            
-        if len(str(dtend))>0:
-            if len(str(duration))>0:
-                raise Exception("VEVENT VALIDATOR","DTEND and DURATION set"+adduid+addsummary)
-            if dtstart>dtend:
-                raise Exception("VEVENT VALIDATOR","DTSTART > DTEND"+adduid+addsummary)
         return 1
     def _mklist(self,start,end,step_size=1):
         #TODO:historical function created before knowing the range function, to be removed
@@ -286,13 +423,14 @@ class ics:
         elif self.ical_loaded == 1:
             #TODO: add here increments over the calendars
             line_count = 0
-            for line in self.ical_data:
+            for line in self.sVCALENDAR:
                 line_count +=1
                 #first load the given event
                 pos = line.find("BEGIN:VEVENT")
                 if (pos>=0):
                     if (self.invevent == 0):
                         self.invevent = 1
+                        self.lVEVENT =[]
                     else:
                         raise Exception("VCALENDAR VALIDATOR","encountered BEGIN:VEVENT before END:VEVENT @line"+str(line_count))
                         self.ical_error = 1
@@ -302,9 +440,10 @@ class ics:
                     if (self.invevent ==1):
                         #if we were already adding an event - stop adding
                         self.invevent = 0
-                        #flatten the event
-                        self._log("event is", [ self.event ], 0)
-                        self._event_load()
+                        self.lVEVENT = self.lVEVENT+ [line.replace("\n","")]
+                        self._log("event is", self.lVEVENT,2)
+#                        print "l439",self.lVEVENT
+                        self._addEvent(self.lVEVENT)
                     else:
                         self.ical_error = 1
                         raise Exception("VCALENDAR VALIDATOR","encountered END:VEVENT before BEGIN:VEVENT @line"+str(line_count))
@@ -312,149 +451,89 @@ class ics:
 #                if (pos>=0):
 #                    #FIXME: if semicolumn in the line, only get the values before the semi-column
 #                    self.summary = "".join(line.replace("\n","").split(":")[1:])
-#                if (self.invevent ==1):
-#                    if line[0]==" ":
-#                        self.event = self.event[:-1]+[self.event[-1]+line[1:].replace("\n","")]
-#                    else:
-#                        self.event = self.event+ [line.replace("\n","")]
+                if (self.invevent ==1):
+                    if line[0]==" ":
+                        #line unfolding
+                        self.lVEVENT = self.lVEVENT[:-1]+[self.lVEVENT[-1]+line[1:].replace("\n","")]
+                    else:
+                        self.lVEVENT = self.lVEVENT + [line.replace("\n","")]
             return 1
-    def _event_load(self):
+    def _addEvent(self,lVEVENT):
         """
         loads self.event which is a string into 
         self.events which is an array of python types
         """
         #TODO: add a byeaster
         self._log("\t\tentering event_load",[])
-        rules = {}
-        dtstart = ""
-        dtend = ""
-        sDuration = ""
-        duration = ""
-        uid = ""
-        rdates = []
-        exdates = []
-        for line in self.event:
-            if line.find("DTSTART")>=0:
-                dtstart = self._iCalDateTimeToDateTime(line)
-            if line.find("DTEND")>=0:
-                dtend = self._iCalDateTimeToDateTime(line)
-            if line.find("RDATE")>=0:
-                rdatelist=line.split(":")[1].split(",")
-                for value in rdatelist:
-                    rdates.append(self._iCalDateTimeToDateTime(value))
-                self._log("214 rdates are:", [rdates], 0)
-            if line.find("EXDATE")>=0:
-                exdatelist=line.split(":")[1].split(",")
-                for value in exdatelist:
-                    exdates.append(self._iCalDateTimeToDateTime(value))
-                self._log("220 exdates are:", [exdates], 0)
-            if line.find("UID")>=0:
-                uid = line.split(":")[1]
-            if line.find("DURATION")>=0:
-                sDuration = line.split(":")[1]
-                duration = self.ParseDuration(sDuration)
-            if line.find("RRULE")>=0:
+#        dtstart = ""
+#        dtend = ""
+#        sDuration = ""
+#        duration = ""
+#        uid = ""
+#        rdates = []
+#        exdates = []
+        dVevent = {}
+        self.vevent = vevent()
+        vevent_load = { "UID": self.vevent.string_load,
+                   "DTSTAMP": self.vevent.date_load,
+                   "SUMMARY":self.vevent.string_load,
+                   "DTEND":self.vevent.date_load,
+                   "DURATION":self.vevent.duration_load,
+                   "RDATE":self.vevent.datelist_load,
+                   "EXDATE":self.vevent.datelist_load,
+                   "RRULE":self.vevent.rrule_load,
+                   "DTSTART":self.vevent.date_load}
+#        print "l479",lVEVENT
+        for line in lVEVENT:
+#            print "line 480",line
+            if line.find(":")>0:
+                [prop,values]=[line.split(":")[0],"".join(line.split(":")[1:])]
+                #FIXME: need to address properties parameters
+                prop = prop.split(";")[0].upper()
+                try:
+                    res = vevent_load[prop](values)
+                except KeyError:
+                    res = values
+            else:
+                raise Exception("VEVENT VALIDATOR","mandatory property not set on line"+line)
+#            print dVevent, prop, res
+            if prop in dVevent:
                 #FIXME: need to support multiple RRULE lines
-                self._log("rrule is:",[line])
-                rrule = line.split(":")[1].split(";")
-                for rule in rrule:
-                    self._log("120 rule out rules is:",[rule])
-                    if len(rule)>0:
-                        #FIXME: this is to cater for line ending with ; which is probably not valid
-                        [param, value] = rule.split("=")
-                        if (param == "FREQ"):
-                            rules[param] = value
-                        elif (param == "UNTIL"):
-                            rules[param] = self._iCalDateTimeToDateTime(value)
-                            #TODO: check if that no "COUNT" is defined
-                        elif (param == "COUNT"):
-                            rules[param] = int(value)
-                            #TODO: check if that no "UNTIL" is defined
-                        elif (param == "INTERVAL"):
-                            #( ";" "INTERVAL" "=" 1*DIGIT )          /
-                            rules[param] = int(value)
-                        elif (param == "BYSECOND"):
-                            #( ";" "BYSECOND" "=" byseclist )        /
-                            #byseclist  = seconds / ( seconds *("," seconds) )
-                            #seconds    = 1DIGIT / 2DIGIT       ;0 to 59
-                            byseclist = value.split(",")
-                            rules[param]=[]
-                            for seconds in byseclist:
-                                rules[param].append(int(seconds))
-                        elif (param == "BYMINUTE"):
-                            rules[param] = value
-                        elif (param == "BYHOUR"):
-                            rules[param] = value
-                        elif (param == "BYDAY"):
-                            #( ";" "BYDAY" "=" bywdaylist )          /
-                            #bywdaylist = weekdaynum / ( weekdaynum *("," weekdaynum) )
-                            #weekdaynum = [([plus] ordwk / minus ordwk)] weekday
-                            #plus       = "+"
-                            #  minus      = "-"
-                            #  ordwk      = 1DIGIT / 2DIGIT       ;1 to 53
-                            #  weekday    = "SU" / "MO" / "TU" / "WE" / "TH" / "FR" / "SA"
-                            #;Corresponding to SUNDAY, MONDAY, TUESDAY, WEDNESDAY, THURSDAY,
-                            #;FRIDAY, SATURDAY and SUNDAY days of the week.
-                            #bywdaylist = split(value,",")
-                            #for weekdaynum in bywdaylist:
-                            rules[param] = {}
-                            ldow = {}   #dictionnary with dow and list of index
-                            #{'MO': [0], 'TU': [1], 'WE': [-1]} means every monday, first tuesday
-                            # last wednesday, .. 
-                            bywdaylist = value.split(",")
-                            dow = ["MO","TU","WE","TH","FR","SA","SU"]
-                            for weekdaynum in bywdaylist:
-                                #get the position of the DOW
-                                #weekdaynum of type: MO , 1MO, 2TU or -2WE
-                                for d in dow:
-                                    if weekdaynum.find(d) >=0:
-                                        pos_dow = weekdaynum.find(d)
-                                #extract position of dow to split its index from it.
-                                if pos_dow == 0:
-                                    index = 0
-                                else:
-                                    index = int(weekdaynum[0:pos_dow])
-                                ddow = weekdaynum[pos_dow:]
-                                if ddow in ldow:
-                                    ldow[ddow].append(index)
-#                                    print "238"
-                                else:
-#                                    print "240", ldow, ddow, index
-                                    ldow[ddow] = [index]
-#                                print "ldow is now:",ldow
-                            rules[param] = ldow
-                            self._log("175",[rules[param],param])
-                        elif (param == "BYMONTHDAY"):
-                            # ( ";" "BYMONTHDAY" "=" bymodaylist )    /
-                            # bymodaylist = monthdaynum / ( monthdaynum *("," monthdaynum) )
-                            # monthdaynum = ([plus] ordmoday) / (minus ordmoday)
-                            # ordmoday   = 1DIGIT / 2DIGIT       ;1 to 31
-                            bymodaylist = value.split(",")
-                            rules[param] = self._icalindex_to_pythonindex(bymodaylist)
-                        elif (param == "BYYEARDAY"):
-                            byyeardaylist = value.split(",")
-                            rules[param] = self._icalindex_to_pythonindex(byyeardaylist)
-                        elif (param == "BYWEEKNO"):
-                            bywklist = value.split(",")
-                            rules[param] = self._icalindex_to_pythonindex(bywklist)
-                        elif (param == "BYMONTH"):
-                            #";" "BYMONTH" "=" bymolist )
-                            #bymolist   = monthnum / ( monthnum *("," monthnum) )
-                            #monthnum   = 1DIGIT / 2DIGIT       ;1 to 12
-                            bymolist = value.split(",")
-                            rules[param] = self._icalindex_to_pythonindex(bymolist)
-                        elif (param == "BYSETPOS"):
-                            #( ";" "BYSETPOS" "=" bysplist )         /
-                            # bysplist   = setposday / ( setposday *("," setposday) )
-                            # setposday  = yeardaynum
-                            bysplist = value.split(",")
-                            rules[param] = self._icalindex_to_pythonindex(bysplist)
-                        elif (param == "WKST"):
-                            rules[param] = value
-                        else:
-                            rules[param] = value
-        self.validate_event([dtstart,dtend,duration,rules,self.summary,uid,rdates,exdates])
-        
+#                print lVEVENT
+                if prop in ["dtstamp" , "uid ", "dtstart ","class","created"," description ", "geo","last-mod","location","organizer","priority","seq","status","summary","transp","url","recurid","dtend","duration"]:
+                    raise Exception("VEVENT VALIDATOR", "property duplicated: "+prop)
+                else:
+                    #FIXME: need to add code for handling when multiple RRULE are available
+                    dVevent[prop]= [dVevent[prop],res]
+            else:
+                dVevent[prop] = res
+#            print dVevent, prop, res
+
+#            if line.find("SUMMARY")>=0:
+#                sSummary = line.split(":")[1]
+#                self.summary = sSummary 
+#            if line.find("DTSTART")>=0:
+#                dtstart = self._iCalDateTimeToDateTime(line)
+#            if line.find("DTEND")>=0:
+#                dtend = self._iCalDateTimeToDateTime(line)
+#            if line.find("RDATE")>=0:
+#                rdatelist=line.split(":")[1].split(",")
+#                for value in rdatelist:
+#                    rdates.append(self._iCalDateTimeToDateTime(value))
+#                self._log("214 rdates are:", [rdates], 0)
+#            if line.find("EXDATE")>=0:
+#                exdatelist=line.split(":")[1].split(",")
+#                for value in exdatelist:
+#                    exdates.append(self._iCalDateTimeToDateTime(value))
+#                self._log("220 exdates are:", [exdates], 0)
+#            if line.find("UID")>=0:
+#                uid = line.split(":")[1]
+#            if line.find("DURATION")>=0:
+#                sDuration = line.split(":")[1]
+#                duration = self.ParseDuration(sDuration)
+
+        self.vevent.validate_event(dVevent)
+    
         #if no dtend then dtend=dtstart
         #RFC5545 §3.6.1
         """
@@ -466,14 +545,16 @@ class ics:
         "DTEND" property, the event ends on the same calendar date and
         time of day specified by the "DTSTART" property.
         """
-        if dtend=="" :
-            if str(duration) =="":
-                dtend = dtstart
+        if "DTEND" not in dVevent :
+            if "DURATION" not in dVevent:
+                #FIXME: DTSTART not mandatory, need to handle when not there
+                dVevent["DTEND"] = dVevent["DTSTART"]
             else:
-                dtend = dtstart+duration
+                dVevent["DTEND"] = dVevent["DTSTART"]+dVevent["DURATION"]
         
-        self.events.append([dtstart,dtend,rules,self.summary,uid,rdates,exdates])
-        self.event = []
+        self.events.append(dVevent)
+#        self.event = []
+        return dVevent
     def pythonindex_to_icalindex(self,indexes,isDOW=False):
         ret_val = ""
         for index in indexes:
@@ -481,29 +562,21 @@ class ics:
         if ret_val[-1]==",":
             ret_val=ret_val[:-1]
         return ret_val
-    def _icalindex_to_pythonindex(self,indexes):
-        ret_val = []
-        for index in indexes:
-            index = int(index)
-            if index > 0:
-                #ical sees the first as a 1 whereas python sees the 0 as the first index for positives
-                index = index -0
-            ret_val.append(index)
-        return ret_val
     def flatten(self):
         """ generates the table of all dates for which an event will happen
         on a day by day manner"""
         self._log("******************\t\t\t entering flatten",[])
         self.flat_events = []
         for event in self.events:
-            self._log("event being flatten is:",[event])
+            self._log("event being flatten is:",event)
             t_res = self._flatten_event(event)
             self._log("*****************dates returned from flatten",[t_res])
             for t_date in t_res:
                 if len(self.flat_events)==0:
-                    self.flat_events=[[t_date,event[3],event[4]]]
+                    self.flat_events=[[t_date,event["SUMMARY"],event["UID"]]]
                 else:
-                    self.flat_events.append([t_date,event[3],event[4]])
+#                    print "l572",t_date,event["UID"]'
+                    self.flat_events.append([t_date,event["SUMMARY"],event["UID"]])
     def _flatten_event(self,event):
         """ where the actual algorithm for unrolling the rrule lies  """
         #@param event:the event with python data type to be processed
@@ -516,7 +589,24 @@ class ics:
         #TODO: add handling of exrule - move exrule out of flatten so flatten becomes rrule only
         #TODO: add handling of exrule:rrule;altrule:altrule is same as rrule and exrule but freq must be the same and when rrule and exrule are equal then 
         #date becomes the instance of altrule. assume 1 for 1 replacement
-        [dtstart,dtend,rules, summary,uid,rdates,exdates] = event
+#        [dtstart,dtend,rules, summary,uid,rdates,exdates] = event
+        dtstart = event["DTSTART"]
+        dtend = event["DTEND"]
+        if "RRULE" in event:
+            rules = event["RRULE"]
+        else:
+            rules = []
+        summary = event["SUMMARY"]
+        uid = event ["UID"]
+        if "RDATE" in event:
+            rdates = event ["RDATE"]
+        else:
+            rdates = []
+        if "EXDATE" in event:
+            exdates = event ["EXDATE"]
+        else:
+            exdates = []
+            
         increment = "NONE"
         check_dow = False
         check_week = False
@@ -914,7 +1004,7 @@ class ics:
                 list_dates.append(date)
         self._log("413: list_dates at end of sublist",[list_dates])
         return list_dates
-    def event_instances(self,start,end,count=-1):
+    def get_event_instances(self,start=datetime.datetime.today().strftime("%Y%m%d"),end=datetime.datetime.today().strftime("%Y%m%d"),count=-1):
         """Returns an array of events with dates, uid, and summary
         
         The function returns the array of events within a given date window (defined by start and end),
@@ -922,3 +1012,8 @@ class ics:
         missing date should be set to Null
         """
         #TODO: add code here
+        self.sDate = datetime.datetime.strptime(start,"%Y%m%d")
+        self.eDate = datetime.datetime.strptime(end,"%Y%m%d")
+        self.flatten()
+        self.flat_events = sorted(self.flat_events)
+        return self.flat_events
