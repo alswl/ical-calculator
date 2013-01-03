@@ -15,17 +15,22 @@ import ical #@UnresolvedImport
 def Run_Test_Vectors():
     print "entering test vectors"
     vect_index = 0
-    for vect in rrule_vects[0:]:
+    for vect in rrule_vects[44:]:
         vect_index +=1
         print vect
         [locfile,start,end,reference] = vect
         #print "file is:\t",file
-        mycal = ical.ics(start,end)
-        mycal.debug(False,"../../out/log.txt")
+        mycal = ical.ics()
+        mycal.debug(False,"../../out/log.txt",-2)
         mycal.local_load(testvector_path+locfile)
         mycal.parse_loaded()
-        mycal.flatten()
-        dates = sorted(mycal.flat_events)
+        dates = mycal.get_event_instances(start,end)
+#        mycal = ical.ics(start,end)
+#        mycal.debug(False,"../../out/log.txt")
+#        mycal.local_load(testvector_path+locfile)
+#        mycal.parse_loaded()
+#        mycal.flatten()
+#        dates = sorted(mycal.flat_events)
         tmp = "../../out/tmp.txt"
         res = open(tmp,'w')
         for event in  dates:
@@ -40,7 +45,7 @@ def Run_Test_Vectors():
             print vect_index,":",vect,"\t - NOK"
             sys.exit()
         del mycal
-    mycal = ical.ics("20120101","20121231")
+    mycal = ical.ics()
     print "ical module: ",mycal.version
     del mycal
 
@@ -75,5 +80,38 @@ def see():
     del mycal
 
 
+def t2():
+    log = open("c:/sw/icalculator/out/log.txt",'w')
+    log.write(" ")
+    log.close()
+    vect_index = 0
+    for vect in rrule_vects[0:]:
+        vect_index +=1
+#            print vect
+        [locfile,start,end,reference] = vect
+        print "file is:\t",locfile,reference
+        mycal = ical.ics()
+        mycal.debug(False,"../../out/log.txt",-2)
+        mycal.local_load(testvector_path+locfile)
+        mycal.parse_loaded()
+        dates = mycal.get_event_instances(start,end)
+#        print dates
+        tmp = "../../out/tmp.txt"
+        res = open(tmp,'w')
+        for event in  dates:
+            [date, info,uid] =event
+            line = "{datetime-start: "+date.strftime("%Y%m%d")+", summary: "+info+", uid: "+uid+"}\n"
+            res.write(line)
+            #print line
+        res.close()
+        if filecmp.cmp(tmp,testvector_path+reference,shallow = False):
+            print vect_index,":",vect,"\t - OK"
+        else:
+            print vect_index,":",vect,"\t - NOK"
+#            sys.exit()
+        del mycal
+
+
+#t2()
 #see()
 Run_Test_Vectors()
