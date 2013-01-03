@@ -1,3 +1,11 @@
+'''
+Created on Jan 2, 2013
+
+@author: Oberron
+v0.1: first version working with the ical version = "0.6.1v"
+'''
+
+
 import unittest
 
 import u_icalParser
