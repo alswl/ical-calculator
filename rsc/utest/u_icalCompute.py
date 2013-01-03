@@ -27,13 +27,11 @@ class TestIcalCompute(unittest.TestCase):
             vect_index +=1
 #            print vect
             [locfile,start,end,reference] = vect
-            #print "file is:\t",file
-            mycal = ical.ics(start,end)
-            mycal.debug(False,"../../out/log.txt")
+            mycal = ical.ics()
+            mycal.debug(False,"../../out/log.txt",-2)
             mycal.local_load(testvector_path+locfile)
             mycal.parse_loaded()
-            mycal.flatten()
-            dates = sorted(mycal.flat_events)
+            dates = mycal.get_event_instances(start,end)
             tmp = "../../out/tmp.txt"
             res = open(tmp,'w')
             for event in  dates:
