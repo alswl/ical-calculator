@@ -21,6 +21,7 @@ Usage
 
 To come
 -------
+* 0.6.1y: add support for no dtstart and/or not dtend + add support for RDATE after UNTIL
 * 0.6.1z: add unittest support
 * 0.6.2a: add code for event_instances (including support for overlapping), event.instances.isbounded, event.instances.walk,
     add code for multiple rrule, exrule, 
@@ -272,7 +273,7 @@ class ics:
     dates = sorted(mycal.flat_events) \n
     print "dates are",dates
     """
-    version = "0.6.1v"
+    version = "0.6.1w"
     MaxInteger = 2147483647
     _weekday_map = {"MO":0,"TU":1,"WE":2,"TH":3,"FR":4,"SA":5,"SU":6}
     sDate = ""
@@ -307,7 +308,7 @@ class ics:
         self.debug_mode= 0
     def __del__(self):
         self.ical_datelist = []
-        self.flat_events = []
+        self.events_instances = []
     def debug(self,TrueFalse,LogPath="",debug_level=0):
         self.debug_mode = TrueFalse
         self._log("self debug is now",[TrueFalse])
@@ -383,7 +384,7 @@ class ics:
         self.ical_loaded = 1
         if not append:
             self.events = []
-            self.flat_events = []
+            self.events_instances = []
         if conformance:
             self.validate()
     def string_load(self,string,conformance=False):
@@ -397,7 +398,7 @@ class ics:
                 line += char
         self.ical_loaded = 1
         self.events = []
-        self.flat_events = []
+        self.events_instances = []
         if conformance:
             self.validate()
     def validate(self):
@@ -566,18 +567,35 @@ class ics:
         """ generates the table of all dates for which an event will happen
         on a day by day manner"""
         self._log("******************\t\t\t entering flatten",[])
-        self.flat_events = []
+        self.events_instances = []
         for event in self.events:
             self._log("event being flatten is:",event)
-            t_res = self._flatten_event(event)
+            t_res = self._flatten_rrule(event)
+            if "RDATE" in event:
+                rdates = event ["RDATE"]
+            else:
+                rdates = []
+            if "EXDATE" in event:
+                exdates = event ["EXDATE"]
+            else:
+                exdates = []
+            if len(rdates)>0:
+                t_res = t_res + [val for val in rdates if val not in t_res and val>=event["DTSTART"] and  val>=self.sDate and val<=self.eDate]
+                self._log("319 days rdate", [rdates])
+            if len(exdates)>0:
+                #remove from lisst_dates any date in exdates
+                t_res = [val for val in t_res if val not in exdates]
+
+
             self._log("*****************dates returned from flatten",[t_res])
             for t_date in t_res:
-                if len(self.flat_events)==0:
-                    self.flat_events=[[t_date,event["SUMMARY"],event["UID"]]]
+                if len(self.events_instances)==0:
+                    #if events_instances is empty
+                    self.events_instances=[[t_date,event["SUMMARY"],event["UID"]]]
                 else:
-#                    print "l572",t_date,event["UID"]'
-                    self.flat_events.append([t_date,event["SUMMARY"],event["UID"]])
-    def _flatten_event(self,event):
+                    #if already instances in the list
+                    self.events_instances.append([t_date,event["SUMMARY"],event["UID"]])
+    def _flatten_rrule(self,event):
         """ where the actual algorithm for unrolling the rrule lies  """
         #@param event:the event with python data type to be processed
         #@param start:the first date from which this event should be displayed (note the greater of calendar start and event start will be used
@@ -598,14 +616,6 @@ class ics:
             rules = []
         summary = event["SUMMARY"]
         uid = event ["UID"]
-        if "RDATE" in event:
-            rdates = event ["RDATE"]
-        else:
-            rdates = []
-        if "EXDATE" in event:
-            exdates = event ["EXDATE"]
-        else:
-            exdates = []
             
         increment = "NONE"
         check_dow = False
@@ -644,9 +654,6 @@ class ics:
         month_start = 1
         month_end = 12
 
-        if len(rdates)>0:
-            list_dates=rdates
-            self._log("319 days rdate", [list_dates])
         if len(rules)<=0:
             #FIXME: add dtend
             if dtstart not in list_dates:
@@ -918,9 +925,6 @@ class ics:
                     tmp_dates.append(t_date)
         list_dates = tmp_dates
         
-        if len(exdates)>0:
-            #remove from lisst_dates any date in exdates
-            list_dates = [val for val in list_dates if val not in exdates]
         return list_dates
     def _last_dom(self,year,month):
         day = datetime.datetime(year,month,1)
@@ -1015,5 +1019,5 @@ class ics:
         self.sDate = datetime.datetime.strptime(start,"%Y%m%d")
         self.eDate = datetime.datetime.strptime(end,"%Y%m%d")
         self.flatten()
-        self.flat_events = sorted(self.flat_events)
-        return self.flat_events
+        self.events_instances = sorted(self.events_instances)
+        return self.events_instances
