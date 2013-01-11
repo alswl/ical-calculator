@@ -2,20 +2,22 @@
 pyICSParser - ICALENDAR Parser/Validator/Generator/Enumerator
 =============================================================
 
-pyICSParser is an icalendar parser/validator/generator/enumerator (.ics or ical files) as defined 
-by RFC5545 (previously RFC2445). Parser returns typed structure and Enumerator returns 
-structure with explicit dates for each instance of event as defined by RRULE, EXRULE, EXDATE, RDATE
+pyICSParser is an icalendar parser/validator/generator/enumerator (for .ics or ical files) as defined 
+by RFC5545 (previously RFC2445). 
 
-Typical usage for explicit date calculation:
+* Parser returns typed structure
+* Validator returns compliance report
+* Generator takes typed structures and returns valid icalendar file
+* Enumerator returns structure with explicit dates for each instance of event as defined by RRULE, EXRULE, EXDATE, RDATE
+
+Typical usage for Enumerator::
 
 	#!/usr/bin/env python
-	
 	from pyICSParser import ical
-	
 	mycal = ical.ics()
 	mycal.local_load(icsfile)
-    mycal.parse_loaded()
-    dates = mycal.get_event_instances(start,end)
+	mycal.parse_loaded()
+	dates = mycal.get_event_instances(start,end)
 	#dates will contain the json with all explicit dates of the events spec'ed by the icalendar file
 
 Versions
