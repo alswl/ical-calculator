@@ -1,10 +1,10 @@
-==============================
-pyICSParser - ICALENDAR Parser
-==============================
+=============================================================
+pyICSParser - ICALENDAR Parser/Validator/Generator/Enumerator
+=============================================================
 
-pyICSParser is an icalendar parser (parser for .ics or ical parser files) as defined 
-by RFC5545 (previously RFC2445) into typed structure and returns 
-json structure with explicit dates [[dates, description, uid]] for each instance
+pyICSParser is an icalendar parser/validator/generator/enumerator (.ics or ical files) as defined 
+by RFC5545 (previously RFC2445). Parser returns typed structure and Enumerator returns 
+structure with explicit dates for each instance of event as defined by RRULE, EXRULE, EXDATE, RDATE
 
 Typical usage for explicit date calculation:
 
@@ -12,13 +12,10 @@ Typical usage for explicit date calculation:
 	
 	from pyICSParser import ical
 	
-	mycal = ical.ics(start,end)
-	#start and end are string objects of yyyymmdd type
-	mycal.local_load(file)
-	#file being a string for the local path to the icalendar file
-	mycal.parse_loaded()
-	mycal.flatten()
-	dates = sorted(mycal.flat_events)
+	mycal = ical.ics()
+	mycal.local_load(icsfile)
+    mycal.parse_loaded()
+    dates = mycal.get_event_instances(start,end)
 	#dates will contain the json with all explicit dates of the events spec'ed by the icalendar file
 
 Versions
@@ -35,15 +32,16 @@ Versions
 	
 	-0.5.x: added support for EXDATE
 	
-	-0.6.x: added support for DURATION and when DTEND no present
+	-0.6.x: added support for DURATION and when DTEND no present, adding support unittest
 	
 Future developments
 --------------------
-1. handle of datetime (currently only handles date)
+1. handle of datetime (currently only handles dates)
 2. handle of multiple EXRULE,  RRULE as per icalendar spec
 
 Thanks
 -------
+* http://pydev.org/updates
 * http://www.tele3.cz/jbar/rest/rest.html: reST to HTML & reST validator
 * http://guide.python-distribute.org/contributing.html: registering a package on pypi and password information
 * http://guide.python-distribute.org/creation.html: uploading a package to pypi
