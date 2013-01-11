@@ -1,5 +1,5 @@
 # -*- coding:utf-8 -*-
-"""Icalendar (RFC5545, RFC2445) support:  Parse, Generate and enumerate events (support of RRULE, EXRULE, RDATE, EXDATE)
+"""Icalendar (RFC5545, RFC2445) parser/validator/generator/events enumerator :  Parse, Generate and enumerate events (support of RRULE, EXRULE, RDATE, EXDATE)
 
 About
 -----
@@ -19,12 +19,18 @@ Usage
 -----
 * Parse icalendar file, then get events dates
 
+    mycal = ical.ics()
+    mycal.local_load(icsfile)
+    mycal.parse_loaded()
+    dates = mycal.get_event_instances(start,end)
+    #dates will contain the json with all explicit dates of the events spec'ed by the icalendar file
+
 To come
 -------
 * 0.6.1y: add support for no dtstart and/or not dtend + add support for RDATE after UNTIL
 * 0.6.1z: add unittest support
 * 0.6.2a: add code for event_instances (including support for overlapping), event.instances.isbounded, event.instances.walk,
-    add code for multiple rrule, exrule, 
+    add code for multiple rrule, exrule, add code for event_instances['day']
 * 0.6.2b: add code for property parameters, property values, delimiters (linear, wlsp), ENCODING, character sets, language, binary values,
     XAPIA’s CSA RRULE,
 x-components and x-properties parsing + for x-properties adding the type of data
@@ -263,14 +269,11 @@ class ics:
     """ Parses an icalendar (ical / .ics defined by RFC5545/RFC2445) and returns typed object including events instances
     
     #ics class usage \n
-    mycal = icalParser.ical.ics(start="20120101", end="20121231") \n
-    #above change your start and end strings to match the range of dates \n
-    #where you want to look for events in our icals (ics) file
-    file = "./test.ics" # here change to your file path \n
-    mycal.local_load(file) \n
-    mycal.parse_loaded() \n
-    mycal.flatten() \n
-    dates = sorted(mycal.flat_events) \n
+    mycal = ical.ics()
+    mycal.local_load(icsfile)
+    mycal.parse_loaded()
+    dates = mycal.get_event_instances(start,end)
+    #dates will contain the json with all explicit dates of the events spec'ed by the icalendar file
     print "dates are",dates
     """
     version = "0.6.1w"
