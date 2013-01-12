@@ -4,21 +4,21 @@ Created on Jan 6, 2012
 
 @author: Oberron
 """
-from setuptools import setup
+from distutils.core import setup
 
 setup(
-    name = "pyICSParser",
-    version = "0.6.1w13",
-    author = "Oberron",
-    author_email = "one.annum@gmail.com",
-    description = ("iCalendar parser validator generator enumerator "),
-    license = "LICENSE.txt",
-    keywords = "ICALENDAR ICAL parser validator calendar calendaring event todo journal recurring RFC2445 RFC5545",
-    url = "http://ical2list.appspot.com",
+    name = 'pyICSParser',
+    version = '0.6.1x6',
+    author = 'Oberron',
+    author_email = 'one.annum@gmail.com',
     packages=['pyICSParser'],
-    package_dir={'pyICSParser': 'src'},
-    scripts=['rsc/utest/u_ical.py','rsc/utest/test_vect.py','rsc/utest/u_dateutil_rrul.py'],
+    scripts=['bin/ical_test.py','bin/test_vect.py','bin/utest/u_dateutil_rrul.py'],
+    url = 'http://ical2list.appspot.com',
+    license = 'LICENSE.txt',
+    keywords = 'iCalendar ical ics parser validator generator events enumerator rfc5545 rfc2445 vcal',
+    description='iCalendar parser, validator, generator, events enumerator',
     long_description=open('docs/README.txt','rt').read(),
+    package_dir={'pyICSParser': 'src'},
     classifiers=[
         "Development Status :: 3 - Alpha",
         "Topic :: Utilities",
