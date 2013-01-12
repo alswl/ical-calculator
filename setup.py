@@ -8,14 +8,12 @@ from setuptools import setup
 
 setup(
     name = "pyICSParser",
-    version = "0.6.1w",
+    version = "0.6.1w13",
     author = "Oberron",
     author_email = "one.annum@gmail.com",
-    description = ("pyICSParser parses/validates/generates/computes events for icalendar files (.ics or ical files)"
-                   " as defined by RFC5545 (previously RFC2445)"
-                   "computes means gives explicit dates given RRULE, EXRULE, RDATE, EXDATE"),
+    description = ("iCalendar parser validator generator enumerator "),
     license = "LICENSE.txt",
-    keywords = "ICALENDAR ICAL calendar calendaring event todo journal recurring RFC2445 RFC5545",
+    keywords = "ICALENDAR ICAL parser validator calendar calendaring event todo journal recurring RFC2445 RFC5545",
     url = "http://ical2list.appspot.com",
     packages=['pyICSParser'],
     package_dir={'pyICSParser': 'src'},
