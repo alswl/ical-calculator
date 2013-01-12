@@ -8,11 +8,11 @@ from distutils.core import setup
 
 setup(
     name = 'pyICSParser',
-    version = '0.6.1x6',
+    version = '0.6.1x7',
     author = 'Oberron',
     author_email = 'one.annum@gmail.com',
     packages=['pyICSParser'],
-    scripts=['bin/ical_test.py','bin/test_vect.py','bin/utest/u_dateutil_rrul.py'],
+    scripts=['rsc/utest/u_icalendar.py','rsc/utest/test_vect.py','rsc/utest/u_dateutil_rrul.py'],
     url = 'http://ical2list.appspot.com',
     license = 'LICENSE.txt',
     keywords = 'iCalendar ical ics parser validator generator events enumerator rfc5545 rfc2445 vcal',
