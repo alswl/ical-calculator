@@ -1,29 +1,29 @@
 # -*- coding:utf-8 -*-
-"""Icalendar (RFC5545, RFC2445) parser/validator/generator/events enumerator :  Parse, Generate and enumerate events (support of RRULE, EXRULE, RDATE, EXDATE)
+"""iCalendar (RFC5545, RFC2445) parser/validator/generator/events enumerator :  Parse, Generate and enumerate events (support of RRULE, EXRULE, RDATE, EXDATE)
 
 About
 -----
 
-This module is an icalendar parser for icalendar file (ical or ics) defined by rfc5545 
+This module is an iCalendar parser for iCalendar file (ical or ics) defined by rfc5545 
 (http://tools.ietf.org/html/rfc5545), which obsoleted rfc2445 
 (http://www.ietf.org/rfc/rfc2445.txt), which had previously replaced vcal 1.0
 (http://www.imc.org/pdi/vcal-10.txt).
 
-The icalendar file, once parsed, will be available as a typed structure. 
+The iCalendar file, once parsed, will be available as a typed structure. 
 Events dates can be computed (including rrule, rdate exrule and exdates). 
 
-icalendar module and dateutils both provide some of the functionalities of this module but
+iCalendar module and dateutils both provide some of the functionalities of this module but
 do not provide it in an integrated way.
 
 Usage
 -----
-* Parse icalendar file, then get events dates
+* Enumerator of iCalendar file:
 
     mycal = ical.ics()
     mycal.local_load(icsfile)
     mycal.parse_loaded()
     dates = mycal.get_event_instances(start,end)
-    #dates will contain the json with all explicit dates of the events spec'ed by the icalendar file
+    #dates will contain the json with all explicit dates of the events spec'ed by the iCalendar file
 
 To come
 -------
@@ -31,16 +31,13 @@ To come
 * 0.6.1z: add unittest support
 * 0.6.2a: add code for event_instances (including support for overlapping), event.instances.isbounded, event.instances.walk,
     add code for multiple rrule, exrule, add code for event_instances['day']
-* 0.6.2b: add code for property parameters, property values, delimiters (linear, wlsp), ENCODING, character sets, language, binary values,
-    XAPIA’s CSA RRULE,
-x-components and x-properties parsing + for x-properties adding the type of data
+* 0.6.2b: add code for property parameters, property values, delimiters (linear, wlsp), ENCODING, character sets, language, binary values,XAPIA’s CSA RRULE,
+    x-components and x-properties parsing + for x-properties adding the type of data
 * 0.6.2c: add code for x-components and x-properties generation
 * 0.6.2d: add loader and generator for todo, alarm
 * 0.7.x: add datetime and tzinfo 
-* 0.8.x: add support for non-standard compliance
-    : no tzoneinfo
-    : escaped characters, ...
-* Extend support to new x-properties for icalendar like events related to religious dates or celestial events
+* 0.8.x: add support for non-standard compliance: no tzoneinfo, escaped characters, ...
+* Extend support to new x-properties for iCalendar like events related to religious dates or celestial events
 
 History
 -------
@@ -54,11 +51,11 @@ Created on Aug 4, 2011
 """
 
 import datetime 
-import sys
+
 
 class vevent:
     
-    """ Parses a vevent (object from vcalendar as defined by the icalendar standard (RFC5545)
+    """ Parses a vevent (object from vcalendar as defined by the iCalendar standard (RFC5545)
     """
 #    vevent_load = { "uid": self.string_load}
     def _icalindex_to_pythonindex(self,indexes):
@@ -266,46 +263,48 @@ class vevent:
 
 class ics:
     
-    """ Parses an icalendar (ical / .ics defined by RFC5545/RFC2445) and returns typed object including events instances
+    """ iCalendar (RFC5545, RFC2445) parser/validator/generator/events enumerator 
     
-    #ics class usage \n
-    mycal = ical.ics()
-    mycal.local_load(icsfile)
-    mycal.parse_loaded()
-    dates = mycal.get_event_instances(start,end)
-    #dates will contain the json with all explicit dates of the events spec'ed by the icalendar file
-    print "dates are",dates
+    Parse, Generate and enumerate events (support of RRULE, EXRULE, RDATE, EXDATE) usage:
+
+    Enumerator:
+        mycal = ical.ics()\n
+        mycal.local_load(icsfile)\n
+        mycal.parse_loaded()\n
+        dates = mycal.get_event_instances(sDate,eDate)\n
+        #start end end are strings in yyyymmdd format\n
+        #dates will contain the json with all explicit dates of the events spec'ed by the iCalendar file\n
     """
-    version = "0.6.1w"
+    version = "0.6.1x6"
     MaxInteger = 2147483647
     _weekday_map = {"MO":0,"TU":1,"WE":2,"TH":3,"FR":4,"SA":5,"SU":6}
-    sDate = ""
-    """ string giving in yyyymmdd the start date to look for events in the ical"""
-    eDate = ""
-    """ string giving in yyyymmdd the end date to look for events in the ical"""
-    path = ""
-    """ path where the file is located """
+    OccurencesWindowStartDate = ""
+    """ Date from which occurences of iCalendar events should be returned by the enumerator"""
+    OccurencesWindowEndDate = ""
+    """ Date until which occurences of iCalendar events should be returned by the enumerator"""
+#    path = ""
+#    """ path where the file is located """
     sVCALENDAR = "" #the VCALENDAR as a string
-    lVEVENT = [] #the current VEVENT being loaded from icalendar file, array of strings each string is an unfolded
+    lVEVENT = [] #the current VEVENT being loaded from iCalendar file, array of strings each string is an unfolded
     #line
-    ical_flat = []
+#    ical_flat = []
     ical_loaded = 0
     ical_error =0
-    event = []
     invevent = 0
-    event_rules = {}
-    summary=""
     events = []
-    flat_events = []
+    """ object holding all the vevent objects (with typed data) from the parsed iCalendar """
+#    flat_events = []
     debug_mode = 0
     debug_level = 0
     LogFilePath = "./log.txt"
     LogData = ""
     def inf(self):
+        """ Returns generic info """
         info = "Follows:\n"
         info += "http://www.kanzaki.com/docs/ical/vevent.html \n"
         info += "http://www.kanzaki.com/docs/ical/rrule.html \n"
         info += "http://www.kanzaki.com/docs/ical/recur.html \n"
+        info += "version: %s \n"%(self.version)
     def __init__(self):
         self.ical_loaded = 0
         self.debug_mode= 0
@@ -313,6 +312,7 @@ class ics:
         self.ical_datelist = []
         self.events_instances = []
     def debug(self,TrueFalse,LogPath="",debug_level=0):
+        """ enables logging when executing (warning severe slow down)"""
         self.debug_mode = TrueFalse
         self._log("self debug is now",[TrueFalse])
         self.debug_level = debug_level
@@ -342,6 +342,11 @@ class ics:
                 else:
                     self.LogData += line
     def GenRRULEstr(self,rules):
+        """ Generates RRULE string from rules dictionary
+        
+        Used by generator. 
+        """
+        
         RRULE="RRULE:"
         if "FREQ" in rules:
             RRULE+="FREQ="+rules["FREQ"]+";"
@@ -353,7 +358,7 @@ class ics:
             for bys in bylist:
                 if bys in rules:
                     numlist = rules[bys]
-                    icallist = self.pythonindex_to_icalindex(numlist)
+                    icallist = self._pythonindex_to_icalindex(numlist)
                     RRULE+=bys+"="+icallist+";"
         if "WKST" in rules:
             RRULE+="WKST="+rules["WKST"]+";"
@@ -362,26 +367,21 @@ class ics:
         if RRULE[-1]==";":
             RRULE = RRULE[:-1]
         return RRULE
-    def local_load(self,path,conformance=False,append=False):
-        """
-        function:: local_load (self,path,conformance=False)
-        path will contain local path for ics file
-        conformance will force / or not checking ics file for conformance (not supported)
-        @param conformance: optional parameter when True the ical checker will be run before loading the ic
+    def local_load(self,sLocalFilePath,conformance=False,append=False):
+        """loads iCalendar file from local path
+        
+        conformance will force / or not checking ics file for conformance (not supported yet)
         """
         
-        """@param conformance: optional parameter when True the ical checker 
-        will be run before loading the ics"""
-        self._log("\t\t entering local load:",[path])
-        self.local_path = path
+        self._log("\t\t entering local load:",[sLocalFilePath])
+#        self.local_path = path
         #here check local path
-        string = open(self.local_path,'r').readlines()
+        string = open(sLocalFilePath,'r').readlines()
         self.strings_load(string,conformance,append)
     def strings_load(self,strings,conformance=False,append = False):
-        """@param conformance: optional parameter when True the ical checker 
-            will be run before loading the ics
-        @param strings: array of strings each item being a line from the ical 
-            file
+        """Loads iCalendar from array of strings
+        
+        conformance will force / or not checking ics file for conformance (not supported yet)
         """
         self.sVCALENDAR = strings
         self.ical_loaded = 1
@@ -390,22 +390,8 @@ class ics:
             self.events_instances = []
         if conformance:
             self.validate()
-    def string_load(self,string,conformance=False):
-        line = ""
-        for char in string:
-            if char == "\n":
-                line+=char
-                self.sVCALENDAR.append(line)
-                line =""
-            else:
-                line += char
-        self.ical_loaded = 1
-        self.events = []
-        self.events_instances = []
-        if conformance:
-            self.validate()
     def validate(self):
-        """ @TODO: add here a ical parser checking for critical compliance"""
+        """ @TODO: add here code to consolidate existing parser warnings"""
         
         #check uid uniques in calendar file
         return 1
@@ -419,6 +405,7 @@ class ics:
         return result_list
 
     def parse_loaded(self):
+        """ parse loaded ical from file to array of typed data: self.events"""
         self._log("\t\tentering loader",[])
         if self.ical_loaded == 0:
             raise Exception("VCALENDAR VALIDATOR","no vCALENDAR loaded")
@@ -559,20 +546,20 @@ class ics:
         self.events.append(dVevent)
 #        self.event = []
         return dVevent
-    def pythonindex_to_icalindex(self,indexes,isDOW=False):
+    def _pythonindex_to_icalindex(self,indexes,isDOW=False):
+        """ used by generator to make iCalendar lists """
         ret_val = ""
         for index in indexes:
             ret_val += str(index)+","
         if ret_val[-1]==",":
             ret_val=ret_val[:-1]
         return ret_val
-    def flatten(self):
-        """ generates the table of all dates for which an event will happen
-        on a day by day manner"""
-        self._log("******************\t\t\t entering flatten",[])
+    def _flatten(self):
+        """ goes over self.events and compute list of their instances"""
+        self._log("******************\t\t\t entering _flatten",[])
         self.events_instances = []
         for event in self.events:
-            self._log("event being flatten is:",event)
+            self._log("event being _flatten is:",event)
             t_res = self._flatten_rrule(event)
             if "RDATE" in event:
                 rdates = event ["RDATE"]
@@ -583,14 +570,14 @@ class ics:
             else:
                 exdates = []
             if len(rdates)>0:
-                t_res = t_res + [val for val in rdates if val not in t_res and val>=event["DTSTART"] and  val>=self.sDate and val<=self.eDate]
+                t_res = t_res + [val for val in rdates if val not in t_res and val>=event["DTSTART"] and  val>=self.OccurencesWindowStartDate and val<=self.OccurencesWindowEndDate]
                 self._log("319 days rdate", [rdates])
             if len(exdates)>0:
                 #remove from lisst_dates any date in exdates
                 t_res = [val for val in t_res if val not in exdates]
 
 
-            self._log("*****************dates returned from flatten",[t_res])
+            self._log("*****************dates returned from _flatten",[t_res])
             for t_date in t_res:
                 if len(self.events_instances)==0:
                     #if events_instances is empty
@@ -607,7 +594,7 @@ class ics:
         #@param list_dates: list of days i.e. [datetime, datetime, ...] of days where this event will occur
         #TODO: add handling of bycal=GREG, LUN-CHIN, ORTH
         #TODO: add handling of byeasterday = +/- integer
-        #TODO: add handling of exrule - move exrule out of flatten so flatten becomes rrule only
+        #TODO: add handling of exrule - move exrule out of _flatten so _flatten becomes rrule only
         #TODO: add handling of exrule:rrule;altrule:altrule is same as rrule and exrule but freq must be the same and when rrule and exrule are equal then 
         #date becomes the instance of altrule. assume 1 for 1 replacement
 #        [dtstart,dtend,rules, summary,uid,rdates,exdates] = event
@@ -618,7 +605,6 @@ class ics:
         else:
             rules = []
         summary = event["SUMMARY"]
-        uid = event ["UID"]
             
         increment = "NONE"
         check_dow = False
@@ -641,7 +627,7 @@ class ics:
         month_step_size = 1
         year_step_size = 1
         event_start = dtstart
-        event_end = self.eDate
+        event_end = self.OccurencesWindowEndDate
         #here we generate the list of dates for all loaded cals
         self._log("227 rules are:",[rules])
         years = [event_start.year]
@@ -819,7 +805,7 @@ class ics:
                             t_date = datetime.datetime(year,month,days0)
                             delta = datetime.timedelta(days = day-days0)
                             t_date +=delta
-                        except ValueError, e:
+                        except ValueError:
                             #this is in case days0 is not a valid date of month for the given year/month
                             dateExist = False                        
                         if (dateExist == True) and (t_date.month==month):
@@ -860,8 +846,8 @@ class ics:
                                     lday[tdate_dow] = [t_date]
                                 self._log("396 append date:",[t_date,lday])
                         if increment == "DAY":
-                            self._log("552 - about to enter sublist filtering on DAY increment: last_good_date, days_step_size",[last_good_date, days_step_size])
-                            list_dates = self.sublist(lday,dates,summary,dow,check_setpos,setposlist,list_dates)
+                            self._log("552 - about to enter _sublist filtering on DAY increment: last_good_date, days_step_size",[last_good_date, days_step_size])
+                            list_dates = self._sublist(lday,dates,summary,dow,check_setpos,setposlist,list_dates)
                             dates = []
                             lday = {}
                             t_date = last_good_date +datetime.timedelta(days = days_step_size)
@@ -876,15 +862,14 @@ class ics:
                         first_dom = 1
                     if increment == "MONTH":
                         #enter here to empty the lday list and fill the list_dates
-                        self._log("about to enter sublist filtering on MONT increment:\t lday,dates,dow,check_setpos_setposlit,list_dates\n",[lday,dates,summary,dow,check_setpos,setposlist,list_dates])
-                        list_dates = self.sublist(lday,dates,summary,dow,check_setpos,setposlist,list_dates)
+                        self._log("about to enter _sublist filtering on MONT increment:\t lday,dates,dow,check_setpos_setposlit,list_dates\n",[lday,dates,summary,dow,check_setpos,setposlist,list_dates])
+                        list_dates = self._sublist(lday,dates,summary,dow,check_setpos,setposlist,list_dates)
                         month_start = (months[-1]+month_step_size) % 12
                         dates = []
                         lday = {}
-                        #FIXME: t_date = last_good_date +datetime.timedelta(months = step_size)
                 if increment == "YEAR" or increment == "WEEK":
-                    self._log("about to enter sublist filtering on YEAR increment:\t lday,dates,dow,check_setpos_setposlit,list_dates\n",[lday,dates,summary,dow,check_setpos,setposlist,list_dates])
-                    list_dates = self.sublist(lday,dates,summary,dow,check_setpos,setposlist,list_dates)
+                    self._log("about to enter _sublist filtering on YEAR increment:\t lday,dates,dow,check_setpos_setposlit,list_dates\n",[lday,dates,summary,dow,check_setpos,setposlist,list_dates])
+                    list_dates = self._sublist(lday,dates,summary,dow,check_setpos,setposlist,list_dates)
                     dates = []
                     lday = {}
                     if increment == "WEEK":
@@ -895,16 +880,16 @@ class ics:
                         #after:
                         #need to compute last day of week - first day of week days ofset
                         
-                        max = 0
-                        min = 7
+                        maxDOW = 0
+                        minDOW = 7
                         for dw in dow:
                             dwi = self._weekday_map[dw]
-                            if dwi<min:
-                                min = dwi
-                            if dwi>max:
-                                max = dwi
+                            if dwi<minDOW:
+                                minDOW = dwi
+                            if dwi>maxDOW:
+                                maxDOW = dwi
 #                            print "dw, dwi, min, max", dw, dwi, min, max
-                        daysgap = 7-(max-min)
+                        daysgap = 7-(maxDOW-minDOW)
                         t_date = last_good_date +datetime.timedelta(weeks = weeks_step_size-1)+datetime.timedelta(days = daysgap)
                         #end 0.72b->0.72c fix
                         if t_date.year>year:
@@ -913,9 +898,9 @@ class ics:
                             self._log("584: next first dom",[first_dom,month_start,t_date.year])
                 #month_start = 1
         self._log("list of dates before the validation",[list_dates])
-        self._log("interval dates",[event_start,event_end,self.sDate,self.eDate])
+        self._log("interval dates",[event_start,event_end,self.OccurencesWindowStartDate,self.OccurencesWindowEndDate])
         for t_date in list_dates:
-            if t_date>=event_start and  t_date>=self.sDate and t_date<=self.eDate and t_date<=event_end:
+            if t_date>=event_start and  t_date>=self.OccurencesWindowStartDate and t_date<=self.OccurencesWindowEndDate and t_date<=event_end:
                 self._log("Maxcount",[MaxCount, t_date])
                 if MaxCount >0:
                     #if we count the number of recurrencies then only add dates as long as below max number
@@ -941,6 +926,7 @@ class ics:
         return date.strftime("%a")[-3:-1].upper()
     def _isoCW(self,year, month,day,wkst="MO",iso=True):
         """returns the iso week number of the passed date, 0 if invalid date
+        
         CW is week number of year/month/day
         CW is set to iso week number (ISO8601
         wkst is currenlty used start of week
@@ -972,11 +958,12 @@ class ics:
             #if dow is between wkst and monday then CW-=1 else keep CW, "MO" was put end of list so if wkst = MO then no change
             if (dow.index(self._icalDOW(datetime.date(year,month,day)))-dow.index(wkst)>=0) and (dow.index(wkst)<dow.index("MO")) and (dow.index(self._icalDOW(datetime.date(year,month,day))) < dow.index("MO")):
                     CW -= 1
-        except ValueError, e:
+        except ValueError:
             #this is in case days0 is not a valid date of month for the given year/month
             CW = 0
         return CW
-    def sublist(self,lday,dates,summary,dow,check_setpos,setposlist,list_dates):
+    def _sublist(self,lday,dates,summary,dow,check_setpos,setposlist,list_dates):
+        """ used in flatten rrule to accelerate by only looking at some dates within a list"""
         self._log("347 list_Dates",[list_dates])
         self._log("348 lday",[lday])
         self._log("349 setposlist",[setposlist])
@@ -1009,7 +996,7 @@ class ics:
         else:
             for date in dates:
                 list_dates.append(date)
-        self._log("413: list_dates at end of sublist",[list_dates])
+        self._log("413: list_dates at end of _sublist",[list_dates])
         return list_dates
     def get_event_instances(self,start=datetime.datetime.today().strftime("%Y%m%d"),end=datetime.datetime.today().strftime("%Y%m%d"),count=-1):
         """Returns an array of events with dates, uid, and summary
@@ -1018,9 +1005,8 @@ class ics:
         should only a certain number of events be needed either from a start date or to an end date the
         missing date should be set to Null
         """
-        #TODO: add code here
-        self.sDate = datetime.datetime.strptime(start,"%Y%m%d")
-        self.eDate = datetime.datetime.strptime(end,"%Y%m%d")
-        self.flatten()
+        self.OccurencesWindowStartDate = datetime.datetime.strptime(start,"%Y%m%d")
+        self.OccurencesWindowEndDate = datetime.datetime.strptime(end,"%Y%m%d")
+        self._flatten()
         self.events_instances = sorted(self.events_instances)
         return self.events_instances
