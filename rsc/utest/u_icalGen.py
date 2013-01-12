@@ -7,13 +7,13 @@ import unittest
 import filecmp
 import sys,datetime
 sys.path.append("../../src/") #to overide previous installs
-import ical #@UnresolvedImport
+import icalendar #@UnresolvedImport
 from test_vect import rrule_vects, testvector_path #@UnresolvedImport
 
 
 class TestIcalGen(unittest.TestCase):
     def setUp(self):
-        self.mycal = ical.ics()
+        self.mycal = icalendar.ics()
         pass
 
     def tearDown(self):
