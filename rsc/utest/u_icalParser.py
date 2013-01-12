@@ -7,15 +7,15 @@ import unittest
 import filecmp
 import sys,datetime
 sys.path.append("../../src/") #to overide previous installs
-import ical #@UnresolvedImport
+import icalendar #@UnresolvedImport
 from test_vect import rrule_vects, testvector_path #@UnresolvedImport
 
 
 class TestIcalParser(unittest.TestCase):
 
     def setUp(self):
-        self.mycal = ical.ics()
-        self.vevent = ical.vevent()
+        self.mycal = icalendar.ics()
+        self.vevent = icalendar.vevent()
 
         pass
 
@@ -24,7 +24,7 @@ class TestIcalParser(unittest.TestCase):
         
     def test_Duration(self):
 #        print "testing Duration parsing"
-        mycal = ical.ics()
+        mycal = icalendar.ics()
         """RFC2445 p37
         Example: A duration of 15 days, 5 hours and 20 seconds would be:
         P15DT5H0M20S
