@@ -3,6 +3,7 @@
 Created on Jul 28, 2011
 
 @author: Oberron
+@attention: icalendar list of test vectors 
 @attention: http://www.calconnect.org/tests/iCalendar-RRULE-Interop/iCalendar-RRULE-Interop-Matrix.html
 @attention:http://www.calconnect.org/tests/recurr_ical_streams.doc
 @attention:http://icalevents.com/2555-paydays-last-working-days-and-why-bysetpos-is-useful/
