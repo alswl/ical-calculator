@@ -275,7 +275,7 @@ class ics:
         #start end end are strings in yyyymmdd format\n
         #dates will contain the json with all explicit dates of the events spec'ed by the iCalendar file\n
     """
-    version = "0.6.1x6"
+    version = "0.6.1x7"
     MaxInteger = 2147483647
     _weekday_map = {"MO":0,"TU":1,"WE":2,"TH":3,"FR":4,"SA":5,"SU":6}
     OccurencesWindowStartDate = ""
