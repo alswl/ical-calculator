@@ -13,7 +13,7 @@ import filecmp, sys
 from dateutil.rrule import *
 from dateutil.parser import *
 from test_vect import testvectors,testvector_path #@UnresolvedImport
-import ical #@UnresolvedImport
+import icalendar #@UnresolvedImport
 
 version = "0.2"
 
@@ -58,10 +58,11 @@ def test_rrule_import():
         print "list of dates",date
 
 def unit_test_rrule():
+    """ testing the matching between dateutils icalendar rrule enumerator and own one """
     for cal in testvectors[5:]:
         [file,start,end,reference] = cal
         wFreq = True
-        mycal = ical.ics(start,end)
+        mycal = icalendar.ics(start,end)
 #        print "file is:\t",file,"start is:",datetime.datetime.strftime(datetime.datetime.strptime(start,"%Y%m%d"),"%Y%m%d-%a"),"end is:",end
         ref = open(testvector_path+reference,'r').readlines()
         mycal.debug(False,"C:/sw/ical2xcal/out/log.txt")
@@ -156,7 +157,7 @@ def see():
     print "Entering see"
 #    useTestVect = False
     [file,start,end,reference] = testvectors[4]
-    mycal = ical.ics(start,end)
+    mycal = icalendar.ics(start,end)
     ref = open(testvector_path+reference,'r').readlines()
 
     mycal.debug(False,"C:/sw/ical2xcal/out/log.txt")
