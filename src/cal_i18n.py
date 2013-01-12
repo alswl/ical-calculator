@@ -4,6 +4,7 @@ Created on Dec 18, 2012
 
 @author: Oberron
 @version: 0.1
+@see: iCalendar spec RFC5545
 @change: 0.1- creation for first 10 economic powers
 """
 #top 10 economic powers
