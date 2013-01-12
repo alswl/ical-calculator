@@ -18,7 +18,7 @@ import filecmp
 import sys
 import filecmp
 sys.path.append("../../src/") #to overide previous installs
-import ical #@UnresolvedImport
+import icalendar #@UnresolvedImport
 
 
 
@@ -141,13 +141,14 @@ user = 'test.ical2list@gmail.com'
 pw = 'xLRqvP3anTKW6jE8rW7X'
 
 def Run_Test_Vectors():
+    """ testing the google calendar icalendar rrule enumerator and own one"""
     sample = CalendarExample(user, pw)
     EventDescription = "utest gcal"
 
     print "entering test vectors"
     for vect in testvectors[15:16]:
         [locfile,start,end,reference] = vect
-        mycal = ical.ics(start,end)
+        mycal = icalendar.ics(start,end)
         mycal.debug(False,"../../out/log.txt")
         mycal.local_load(testvector_path+locfile)
         mycal.parse_loaded()
