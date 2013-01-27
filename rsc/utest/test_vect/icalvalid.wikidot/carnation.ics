@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+METHOD:PUBLISH
+PRODID:e-vanced event management system
+X-WR-CALNAME;VALUE=TEXT:Upcoming library events at Carnation Library
+X-WR-CALDESC;VALUE=TEXT:Upcoming library events at Carnation Library
+VERSION:2.0
+BEGIN:VEVENT
+UID:http://eventinfo.kcls.org/evanced/lib/eventsignup.asp?ID=71954
+DTSTAMP:20090404T171308Z
+DTSTART:20090421T223000Z
+DTEND:20090422T003000Z
+TITLE;ENCODING=QUOTED-PRINTABLE:Study Zone
+SUMMARY;ENCODING=QUOTED-PRINTABLE:Study Zone
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Drop-in during scheduled Study Zone hours for free homework help from volunteer tutors. Monday 5:30-7:30pm\nTuesday 3:30-5:30pm\nWednesday, 3:30-5:30pm
+LOCATION:Carnation Library at Meeting Room
+URL:http://eventinfo.kcls.org/evanced/lib/eventsignup.asp?ID=71954
+CATEGORIES:Study Zone (K-12)
+END:VEVENT
+BEGIN:VEVENT
+
