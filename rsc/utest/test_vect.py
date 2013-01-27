@@ -17,7 +17,10 @@ parser = [
                 ["icalvalid.wikidot/sc_calendar_3325.ics","20090101","20091231","icalvalid.wikidot/sc_calendar_3325.txt"] #source:http://icalvalid.wikidot.com/wild-examples
           ]
 
+rdate_vects = ["RFC5545_3.8.5.2._4.ics","19910101","19981231","RFC5545_3.8.5.2._4.txt"]
+
 rrule_vects = [
+               ["RFC5545/RFC5545_3.6.ics","20080101","20081231","RFC5545/RFC5545_3.6.txt"],
                ["by_ferie.ics","20110101","20121231","by_ferie_res.txt"],
                ["rdate.ics","20110101","20121231","rdate.txt"],
                ["Ferien_Bayern_2012.ics","20110101","20121231","Ferien_Bayern_2012.txt"],
@@ -109,3 +112,7 @@ rrule_vects = [
                ["soldes_FR.ics","20100101","20141231","soldes_FR.txt"],
                ["france_doi_2007.ics","20100101","20141231","france_doi_2007.txt"],
                ["29fev.ics","20080101","20121231","29fev.txt"]]
+
+RFC5545_ical = [["RFC5545/RFC5545_3.8.5.3_1.ics","20070101","20070530","RFC5545/RFC5545_3.8.5.3_1.txt"],
+                ["RFC5545/RFC5545_3.8.5.3_40a.ics","20070101","20070530","RFC5545/RFC5545_3.8.5.3_40a.txt"]
+                ]
