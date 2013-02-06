@@ -1,3 +1,4 @@
+# -*- coding:utf-8 -*-
 '''
 Created on Nov 27, 2012
 
@@ -8,92 +9,273 @@ import filecmp
 import sys,datetime
 sys.path.append("../../src/") #to overide previous installs
 import icalendar #@UnresolvedImport
-from test_vect import rrule_vects, testvector_path #@UnresolvedImport
+from test_vect import rrule_vects, testvector_path,SCM_withWildICS #@UnresolvedImport
+from icalendar_SCM import RFC5545_SCM #@UnresolvedImport
 
+overall_conformance = False
 
 class TestIcalParser(unittest.TestCase):
 
     def setUp(self):
         self.mycal = icalendar.ics()
         self.vevent = icalendar.vevent()
+        self.TZ = icalendar.newTZinfo()
 
         pass
 
     def tearDown(self):
         pass
         
-    def test_Duration(self):
+    def test_3_8_4_7_1_UID(self):
+#        print "test "+ "3.8.4.7_1"
+        self.mycal.lSCM = []
+        self.mycal.local_load("C:/sw/icalculator/rsc/utest/test_vect/RFC5545/SCM5545_3.8.4.7_1.ics")
+#        self.mycal.conformance = True
+        self.mycal.parse_loaded()
+#        print "line 34:",self.mycal.lSCM
+        assert "3.8.4.7_1" in self.mycal.lSCM
+        
+    def test_Duration_fromRFC2445(self):
 #        print "testing Duration parsing"
-        mycal = icalendar.ics()
+#        mycal = icalendar.ics()
         """RFC2445 p37
         Example: A duration of 15 days, 5 hours and 20 seconds would be:
         P15DT5H0M20S
         """
-        res = self.vevent.duration_load("P15DT5H0M20S")
+        [years,months,tdelta] = self.vevent.duration_load("P15DT5H0M20S")
 #        print "line 33",res, "---",datetime.timedelta(days = 15, hours = 5, seconds = 20)
-        assert res == datetime.timedelta(days = 15, hours = 5, seconds = 20)
-        
+        assert tdelta == datetime.timedelta(days = 15, hours = 5, seconds = 20)
+        assert [years, months] == [0,0]
         """
         A duration of 7 weeks would be:
         P7W
         """
-        res = self.vevent.duration_load("P7W")
-        assert res == datetime.timedelta(weeks = 7) 
+        [years,months,tdelta] = self.vevent.duration_load("P7W")
+        assert tdelta == datetime.timedelta(weeks = 7) 
+        assert [years, months] == [0,0]
         
         """
         The period start at 18:00:00 on January 1, 1997 and lasting 5 hours
         and 30 minutes would be:        
         19970101T180000Z/PT5H30M
         """
-        res = self.vevent.duration_load("PT5H30M")
-        assert res == datetime.timedelta(hours = 5, minutes=30) 
+        [years,months,tdelta] = self.vevent.duration_load("PT5H30M")
+        assert tdelta == datetime.timedelta(hours = 5, minutes=30) 
+        assert [years, months] == [0,0]
         
         """
         rfc2445 p71
         15 minute 
         PT15M
         """
-        res = self.vevent.duration_load("PT15M")
-        assert res == datetime.timedelta(minutes=15) 
+        [years,months,tdelta] = self.vevent.duration_load("PT15M")
+        assert tdelta == datetime.timedelta(minutes=15) 
+        assert [years, months] == [0,0]
         
         """
         rfc2445 p71
         30 minutes before the scheduled start of the event
         -PT30M
         """
-        res = self.vevent.duration_load("-PT30M")
+        [years,months,tdelta] = self.vevent.duration_load("-PT30M")
 #        print "res 61:",res
 #        print datetime.timedelta(minutes = -30)
-        assert res == datetime.timedelta(minutes=-30) 
+        assert tdelta == datetime.timedelta(minutes=-30) 
+        assert [years, months] == [0,0]
         
         """
         rfc2445 p72
         one hour intervals
         PT1H
         """
-        res = self.vevent.duration_load("PT1H")
-        assert res == datetime.timedelta(hours = 1) 
+        [years,months,tdelta] = self.vevent.duration_load("PT1H")
+        assert tdelta == datetime.timedelta(hours = 1) 
+        assert [years, months] == [0,0]
         
         """
         RFC2445 p94
         interval of time of 1 hour and zero minutes and zero seconds
         PT1H0M0S
         """
-        res = self.vevent.duration_load("PT1H0M0S")
-        assert res == datetime.timedelta(hours = 1,minutes = 0, seconds =0) 
+        [years,months,tdelta] = self.vevent.duration_load("PT1H0M0S")
+        assert tdelta == datetime.timedelta(hours = 1,minutes = 0, seconds =0) 
+        assert [years, months] == [0,0]
         
         """
         rfc2445 p126
         with a 5 minute delay
         PT5M
         """
-        res = self.vevent.duration_load("PT5M")
-        assert res == datetime.timedelta(minutes = 5) 
+        [years,months,tdelta] = self.vevent.duration_load("PT5M")
+        assert tdelta == datetime.timedelta(minutes = 5) 
+        assert [years, months] == [0,0]
         
 #        print "\t \t end test on duration parsing"
 #        pass
 
+    def test_Duration_fromRFC5545(self):
+        
+        """
+        p74:
+        DURATION:PT15M
+        15-minute
+        """
+        [years,months,tdelta] = self.vevent.duration_load("PT15M")
+        assert tdelta == datetime.timedelta(minutes = 15)
+        assert [years, months] == [0,0]
+        
+        """
+        p98:
+        DURATION:PT1H0M0S
+        one hour and zero minutes and zero seconds:
+        """ 
+        [years,months,tdelta] = self.vevent.duration_load("PT1H0M0S")
+        assert tdelta == datetime.timedelta(hours = 1, minutes =0, seconds = 0)
+        assert [years, months] == [0,0]
+        
+        """
+        p145
+        DURATION:PT1H
+        one hour
+        """
+        [years,months,tdelta] = self.vevent.duration_load("PT1H")
+        assert tdelta == datetime.timedelta(hours = 1)
+        assert [years, months] == [0,0]
+        
+        """
+        p34
+        Note that unlike [ISO.8601.2004], this value type doesn't support the "Y" and "M"
+        designators to specify durations in terms of years and months.
+        """
+        [years,months,tdelta] = self.vevent.duration_load("P1Y")
+#        print self.mycal.lSCM, self.mycal.vevent.lSCM
+        assert "3.3.6_1" in self.vevent.lSCM
+        assert tdelta == datetime.timedelta (days = 0)
+        assert [years, months] == [1,0]
+        
+        [years,months,tdelta] = self.vevent.duration_load("P1M")
+        assert "3.3.6_1" in self.vevent.lSCM
+        assert tdelta == datetime.timedelta (days = 0)
+        assert [years, months] == [0,1]
 
+
+    def test_RFC5545_3_8_2_4(self):
+        self.mycal.local_load("C:/sw/icalculator/rsc/utest/test_vect/RFC5545/RFC5545_3.8.2.4_1.ics")
+        self.mycal.conformance = overall_conformance
+        self.mycal.parse_loaded()
+#        print "line 183:",self.mycal.lSCM
+        assert "3.8.2.4_1" in self.mycal.lSCM
+        
+        self.mycal.local_load("C:/sw/icalculator/rsc/utest/test_vect/RFC5545/RFC5545_3.8.2.4_2.ics")
+        self.mycal.conformance = overall_conformance
+        self.mycal.parse_loaded()
+#        print "line 189",self.mycal.lSCM,self.mycal.dVCALENDAR
+#        print "line 190",self.mycal.lSCM
+        assert '3.8.2.4_2' in self.mycal.lSCM
+
+        self.mycal.local_load("C:/sw/icalculator/rsc/utest/test_vect/RFC5545/RFC5545_3.6.1_0.ics")
+        self.mycal.conformance = overall_conformance        
+        self.mycal.parse_loaded()
+#        print "line 195",self.mycal.lSCM
+        assert '3.6.1_0' in self.mycal.lSCM
+
+        self.mycal.local_load("C:/sw/icalculator/rsc/utest/test_vect/RFC5545/RFC5545_3.6.1_0a.ics")
+        self.mycal.conformance = overall_conformance        
+        self.mycal.parse_loaded()
+#        print "line 202",self.mycal.lSCM,self.mycal.events
+        assert '3.6.1_0' in self.mycal.lSCM
+
+    def test_METHOD_presence(self):
+        self.mycal.local_load("C:/sw/icalculator/rsc/utest/test_vect/anmar1.ics")
+        self.mycal.parse_loaded()
+        assert "METHOD" in self.mycal.dVCALENDAR
+        assert self.mycal.dVCALENDAR["METHOD"]["val"] == "REQUEST"
+    
+    def otest_withWildICS(self):
+        SCMvects = SCM_withWildICS
+        for SCMvect in SCMvects:
+            self.mycal.lSCM = []
+            [icsfile,scm_errors]=SCMvect
+            print icsfile
+            self.mycal.local_load(icsfile)
+            self.mycal.conformance = True
+            self.mycal.vevent.conformance = True
+            self.mycal.parse_loaded()
+#            print self.mycal.lSCM
+            for scm_code in scm_errors:
+                assert scm_code in self.mycal.lSCM
+            for scm_code in self.mycal.lSCM:
+                print scm_code
+                assert scm_code in scm_errors
+
+    def test_DATETIME_load(self):
+        folder = "C:/sw/icalculator/rsc/utest/test_vect/RFC5545/"
+        ics = ["RFC5545_3.1_3.ics", "RFC5545_3.8.5.3_11.ics"]
+        fileics = ics[0]
+        self.mycal.local_load(folder+fileics)
+        self.mycal.conformance = overall_conformance
+        self.mycal.parse_loaded()
+#        print "line 228",self.mycal.events[0]["DTSTAMP"]["val"].tzinfo.getID() == "UTC"
+        assert self.mycal.events[0]["DTSTAMP"]["val"].tzinfo.getID() == "UTC"
+        fileics = ics[1]
+        self.mycal.local_load(folder+fileics)
+        self.mycal.conformance = overall_conformance
+        self.mycal.parse_loaded()
+#        print "line 234",self.mycal.events[0]["DTSTART"]["val"].tzinfo.getID() == "America/New_York"
+        assert self.mycal.events[0]["DTSTART"]["val"].tzinfo.getID() == "America/New_York"
+
+    def test_Period_load(self):
+        perval = "19970101T180000Z/19970102T070000Z"
+        self.TZ.setID("UTC")
+        perthres = [datetime.datetime(1997,1,1,18,0,0,tzinfo=self.TZ),datetime.datetime(year=1997,month=1,day=2,hour=7,tzinfo=self.TZ)]
+        per_res = self.vevent.period_load(perval)
+        self.assertEqual( perthres , per_res)
+
+        perval = "19970101T180000Z/PT5H30M"
+        per_res = self.vevent.period_load(perval)
+        perthres = [datetime.datetime(1997,1,1,18,0,0,tzinfo=self.TZ),[0,0,datetime.timedelta(hours=5,minutes=30)]]
+        self.assertEqual( perthres , per_res)
+                
+        perval = "19970308T160000Z/PT8H30M"
+        per_res = self.vevent.period_load(perval)
+        perthres = [datetime.datetime(1997,3,8,16,0,0,tzinfo=self.TZ),[0,0,datetime.timedelta(hours=8,minutes=30)]]
+        self.assertEqual( perthres , per_res)
+        
+        perval = "19970308T160000Z/PT3H,19970308T200000Z/PT1H"
+        per_res = self.vevent.period_load(perval)
+        perthres = [[datetime.datetime(1997,3,8,16,0,0,tzinfo=self.TZ),[0,0,datetime.timedelta(hours=3,minutes=0)]],
+                    [datetime.datetime(1997,3,8,20,0,0,tzinfo=self.TZ),[0,0,datetime.timedelta(hours=1,minutes=0)]]]
+        self.assertEqual( perthres , per_res)
+        
+        perval = "19970308T160000Z/PT3H,19970308T200000Z/PT1H,19970308T230000Z/19970309T000000Z"
+        per_res = self.vevent.period_load(perval)
+        perthres = [[datetime.datetime(1997,3,8,16,0,0,tzinfo=self.TZ),[0,0,datetime.timedelta(hours=3,minutes=0)]],
+                    [datetime.datetime(1997,3,8,20,0,0,tzinfo=self.TZ),[0,0,datetime.timedelta(hours=1,minutes=0)]],
+                    [datetime.datetime(1997,3,8,23,0,0,tzinfo=self.TZ),datetime.datetime(1997,3,9,0,0,0,tzinfo=self.TZ)]
+                    ]
+        self.assertEqual( perthres , per_res)
+        
+    def test_slot_duration(self):
+        slot_dur = self.mycal._get_number_slots(datetime.datetime(2013,2,5),datetime.datetime(2013,2,6),datetime.timedelta(days=1))
+        assert slot_dur == 1
+
+        slot_dur = self.mycal._get_number_slots(datetime.datetime(2013,2,5),datetime.datetime(2013,2,7),datetime.timedelta(days=1))
+        assert slot_dur == 2
+
+    def test_dtType(self):
+        dttype = self.mycal._type_date(datetime.datetime(2013,2,6).date())
+        assert dttype == "DATE"
+        dttype = self.mycal._type_date(datetime.datetime(2000,1,1).date())
+        assert dttype == "DATE"
+        dttype = self.mycal._type_date(datetime.datetime(2013,2,6))
+        assert dttype == "DATETIME-FLOAT"
+        dttype = self.mycal._type_date(datetime.datetime(2000,1,1))
+        assert dttype == "DATETIME-FLOAT"
+        dttype = self.mycal._type_date(datetime.datetime(2013,2,6,tzinfo=self.TZ))
+        assert dttype == "DATETIME-TZ"
+        dttype = self.mycal._type_date(datetime.datetime(2000,1,1,tzinfo=self.TZ))
+        assert dttype == "DATETIME-TZ"
+        
         
 def suite():
     suite = unittest.TestSuite()
