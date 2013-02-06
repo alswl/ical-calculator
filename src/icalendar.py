@@ -1,5 +1,5 @@
 # -*- coding:utf-8 -*-
-"""iCalendar (RFC5545, RFC2445) parser/validator/generator/events enumerator :  Parse, Generate and enumerate events (support of RRULE, EXRULE, RDATE, EXDATE)
+"""iCalendar (RFC5545, RFC2445) parser/ validator/ generator/ events enumerator :  Parse, Generate and enumerate events (support of RRULE, EXRULE, RDATE, EXDATE)
 
 About
 -----
@@ -21,7 +21,6 @@ Usage
 
     mycal = icalendar.ics()
     mycal.local_load(icsfile)
-    mycal.parse_loaded()
     dates = mycal.get_event_instances(start,end)
     #dates will contain the json with all explicit dates of the events spec'ed by the iCalendar file
 
@@ -34,17 +33,23 @@ Usage
 
 To come
 -------
-* 0.6.1y: add support for no dtstart and/or not dtend + add support for RDATE after UNTIL
-* 0.6.1z: add unittest support
-* 0.6.2a: add code for event_instances (including support for overlapping), event.instances.isbounded, event.instances.walk,
+* 0.6.1z: add load DATE and DATE-TIME + add unittest support for parser, validator (RFC5545_xxx: those from RFC5545, SCM5545_xxx = additional test vectors)
+    + add validator for generator + add call for validator from vevent 
+    + make calls to validator less intrusive 
+    + add checks on DATE-TIME from the timewindow vs event values
+    + make flatten_rrule only take rrule and dtstart
+    + make code for days lasting longer than 1 day
+    + add code for get_instances or get_slots
+    + add code for instances to have date-time if ics is in datetime
+* 0.6.2a: add code for event_instances (including support for overlapping), get_instances(perday,permonth,peryear) event.instances.isbounded, event.instances.walk,
     add code for multiple rrule, exrule, add code for event_instances['day']
 * 0.6.2b: add code for property parameters, property values, delimiters (linear, wlsp), ENCODING, character sets, language, binary values,XAPIA’s CSA RRULE,
     x-components and x-properties parsing + for x-properties adding the type of data
 * 0.6.2c: add code for x-components and x-properties generation
-* 0.6.2d: add loader and generator for todo, alarm
-* 0.7.x: add datetime and tzinfo 
+* 0.6.2d: add loader and generator for vtimezone,todo, alarm
+* 0.7.x: add datetime and tzinfo + add email parser / generator capability (read MIME from email, send invite to GCal, Outlook, IPhone, BB)
 * 0.8.x: add support for non-standard compliance: no tzoneinfo, escaped characters, ...
-* Extend support to new x-properties for iCalendar like events related to religious dates or celestial events
+* 0.9.x: Extend support to new x-properties for iCalendar like events related to religious dates or celestial events
 
 Next:
 -----
@@ -52,32 +57,78 @@ Next:
 
 History
 -------
+* 0.6.1y - Jan 2013: added support for no dtstart and/or not dtend (compute one from another and raise exception if neither present) + add support for RDATE after UNTIL (and RDATE before DTSTART (to be ignored)
 Created on Aug 4, 2011
+* 0.6.1y1 - Feb 2013: added support for date-time, date-time-floating, date-time-TZID (though instances still only reports date) and no VTIMEZONE handling
 
 @author: oberron
 @change: to 0.4 - passes all unit test in ical_test v0.1
 @change: 0.4 to 0.5 adds EXDATE support
 @change: 0.5 to 0.6 adds support for no DTEND and DTEND computation from DURATION or DTSTART
-@version: 0.6.x
+@version: 0.6.1y
 """
 
-import datetime 
-from icalendar_SCM import RFC5545_SCM, ESCAPEDCHAR,RFC5545_Properties
+from datetime import tzinfo, timedelta, datetime, date
 
-CRLF= "\r\n"
+from icalendar_SCM import RFC5545_SCM, ESCAPEDCHAR,RFC5545_Properties,RFC5545_FREQ,weekday_map,MaxInteger, CRLF
+
+
+class newTZinfo(tzinfo):
+    
+    """ Overrides abstract class tzinfo from datetime to provide mean for TZID support from ical
+    """
+    name = ""
+    def setID(self,ID):
+        self.name = ID
+    def getID(self):
+        return self.name
+
+    def utcoffset(self, dt):
+        return timedelta(hours=0) + self.dst(dt)
+    def dst(self, dt):
+        return timedelta(hours=0)
 
 class vevent:
     
     """ Parses a vevent (object from vcalendar as defined by the iCalendar standard (RFC5545)
     """
+    lSCM = []
+    dSCM = {}
+    
+    conformance = False
 #    vevent_load = { "uid": self.string_load}
+    def Validator(self,RFC_SCM,line_count=0,line="",level=0, alttxt = "", show = False):
+        #FIXME: need to have one Validator for both event and calendar
+
+        self.lSCM.append(RFC_SCM)
+        if line_count in self.dSCM:
+            self.dSCM[line_count].append(RFC_SCM)
+        else:
+#            print line_count
+            self.dSCM[line_count]=[RFC_SCM]
+
+
+        if show or self.conformance:
+            if level ==0:
+                if line_count==0 and line =="" and alttxt != "":
+                    print "Warning: RFC5545 specifies \'%s\', %s"%(RFC5545_SCM[RFC_SCM],alttxt)
+                else:
+                    print "Warning: RFC5545 specifies \'%s\', following line is not compliant \n line: %s - %s"%(RFC5545_SCM[RFC_SCM],str(line_count),line)
+            if level ==1:
+                raise Exception("RFC5545 non compliance","RFC5545 specifies: \'%s\', following line is not compliant \n line: %s - %s"%(RFC5545_SCM[RFC_SCM],str(line_count),line))
+            elif level ==-1:
+                print alttxt
+                
     def _icalindex_to_pythonindex(self,indexes):
+        #FIXME: change this to load_integerlist and add check that we have "," as list separator (and no other values)
         ret_val = []
         for index in indexes:
             index = int(index)
-            if index > 0:
-                #ical sees the first as a 1 whereas python sees the 0 as the first index for positives
-                index = index -0
+#            if index > 0:
+#                #ical sees the first as a 1 whereas python sees the 0 as the first index for positives
+#                index = index -0
+            if index>MaxInteger or index<-MaxInteger:
+                self.Validator("3.3.8_1","Found: %i",index)
             ret_val.append(index)
         return ret_val
     def line_wrap(self,newline):
@@ -89,10 +140,8 @@ class vevent:
             ret_val = newline[0:74]+CRLF
             for i in range(1,NnewLine):
                 ret_val+=" "+newline[i*73+1:(i+1)*73+1]+CRLF
-            ret_val+=" "+newline[(NnewLine)*73+1:]
-            
+            ret_val+=" "+newline[(NnewLine)*73+1:]      
         return ret_val
-
     def string_write(self,string):
         for esc in ESCAPEDCHAR:
             string = string.replace(ESCAPEDCHAR[esc],esc)
@@ -106,36 +155,96 @@ class vevent:
         return ret_val
     def date_write(self,date2w,param=""):
         """ takes date or datetime and returns icalendar date or datetime"""
-        dt = datetime.datetime(year=2013,month=1,day=26)
+        dt = datetime(year=2013,month=1,day=26)
         
         if type(dt)==type(date2w):
             datestring = self.string_write(date2w.strftime("%Y%m%dT%H%M%S").upper())
         else :
             datestring = self.string_write(date2w.strftime("%Y%m%d").upper())
         return datestring
-    def date_load(self,propval,param="",LineNumber = 0):
-        """ loads the date-time or date value + optional TZID into UTC date-time or date"""
+    def date_load(self,propval,params=[],LineNumber = 0):
+        """ loads the date-time or date value + optional TZID into UTC date-time or date
         
-        #DTSTART, DTEND, DTSTAMP, UNTIL,
-        self.mycal4log = ics()
-        #TODO: handle params properly http://www.kanzaki.com/docs/ical/dtstart.html
+        DTSTART, DTEND, DTSTAMP, UNTIL,..."""
+        TZID="TZID not set - floatting"
+        newdate = None
+        for param in params:
+            if param.find("TZID=")==0:
+                TZID=param.split("=")[1]
 
-        retdate=datetime.datetime(1970,1,1) #FIXME: this is temporary 
+        nTZinfo = newTZinfo()
+
+#        retdate=datetime(1970,1,1) 
         yeardate = int(propval[0:4])
         
-        if yeardate<1970:
-            self.mycal4log.Validator("3.3.5_1", line_count = LineNumber,line = propval,alttxt="1970 however is often a computer epoch limit prior validation should be undertaken before keeping such a past date", show = True)
-        elif yeardate<1875:
-            self.mycal4log.Validator("3.3.5_1", line_count = LineNumber,line = propval,show= True)
-        elif yeardate<1582: #retdate<datetime.datetime(year=1582,month=10,day=15):
-            self.mycal4log.Validator("3.3.5_1", line_count = LineNumber,line = propval,alttext = "dates prior to 1582/oct/15 might be in julian calendar, prior validation should be undertaken", show = True,prio=1)
-        else:
-            if len(propval)>8:
-                retdate = datetime.datetime.strptime(propval[:8],"%Y%m%d")
-            else:
-                retdate = datetime.datetime.strptime(propval,"%Y%m%d")
+        if propval.find("-")>=0:
+            self.Validator("3.3.12_1",line_count = LineNumber,line = propval)
         
-        return retdate
+        if yeardate<1970:
+            self.Validator("3.3.5_1", line_count = LineNumber,line = propval,alttxt="1970 however is often a computer epoch limit prior validation should be undertaken before keeping such a past date", show = True)
+        elif yeardate<1875:
+            self.Validator("3.3.5_1", line_count = LineNumber,line = propval,show= True)
+        elif yeardate<1582: #retdate<datetime(year=1582,month=10,day=15):
+            self.Validator("3.3.5_1", line_count = LineNumber,line = propval,alttext = "dates prior to 1582/oct/15 might be in julian calendar, prior validation should be undertaken", show = True,prio=1)
+        else:
+            #BEFORE 0.6.1z
+#            if len(propval)>8:
+#                retdate = datetime.`(propval[:8],"%Y%m%d")
+#            else:
+#                retdate = datetime.strptime(propval,"%Y%m%d")
+            #AFTER 0.6.1.z (included):
+            if 'VALUE=DATE' in params:
+                if len(propval)>8:
+                    self.Validator("3.3.4_1","expected date, found: %s"%(propval))
+                else:
+                    newdate = datetime.strptime(propval,"%Y%m%d").date()
+            else:
+#                print "propval: %s \n %i \n %s"%(propval,len(propval),propval[len(propval)-1])
+                if propval[len(propval)-1]=="Z":
+#                    print "TZID"=="UTC"
+                    TZID = "UTC"
+                    propval = propval[:-1]
+                    
+                if len(propval)==15:
+                    retdate = datetime.strptime(propval[0:15],"%Y%m%dT%H%M%S")
+                    newdate = datetime(retdate.year,retdate.month,retdate.day,retdate.hour,retdate.minute,retdate.second,tzinfo=nTZinfo)
+                    newdate.tzinfo.setID(TZID)
+                elif len(propval)==8:
+                    #here is the case where we load UNTIL and it is a 'DATE' but we cannot check yet against the DTSTART value type
+                    newdate = datetime.strptime(propval[0:8],"%Y%m%d").date()
+                else:
+                    self.Validator("3.3.5_2", LineNumber, line = propval)
+                
+        return newdate
+    
+    def period_load(self,propval,params=[],LineNumber=0):
+        """ Loads period or list of period (via recursion)"""
+        ret_per = None
+        if propval.find(",")>0:
+            #here we call recursively period_load 
+            periods = propval.split(",")
+            for period in periods:
+                res = self.period_load(period,params,LineNumber)
+                if not res == None:
+                    #res == None if the propval was not valid (most likely will raise an error or warning
+                    if ret_per == None:
+                        ret_per = [res]
+                    else:
+                        ret_per.append(res)
+        else:
+            #here we get a simple period
+            if len(propval.split("/"))>2 or len(propval.split("/"))<1 :
+                self.Validator("3.3.9_1", LineNumber, propval)
+            else:
+                [start_datetime,end_datetime_or_positive_duration]=propval.split("/")
+                start_datetime = self.date_load(start_datetime, params, LineNumber)
+                if end_datetime_or_positive_duration[0]=="P":
+                    end_datetime_or_positive_duration = self.duration_load(end_datetime_or_positive_duration, params, LineNumber=LineNumber)
+                else:
+                    end_datetime_or_positive_duration = self.date_load(end_datetime_or_positive_duration, params, LineNumber)
+            ret_per = [start_datetime,end_datetime_or_positive_duration]
+                    
+        return ret_per
     def duration_write(self,duration):
         return duration
     def duration_load(self,duration,param="",conformance=False,LineNumber = 0):
@@ -154,91 +263,108 @@ class vevent:
       be added first, followed by the number of hours, number of
       minutes, and number of seconds.
         """
-#        print "line 79",duration
+        duration_received = duration
         if duration[0]=="P":
             duration = duration[1:]
-        tdelta = datetime.timedelta()
+        tdelta = timedelta()
         years =0
         months =0
         sign =1
         if duration[0:1]=="-":
             duration = duration[1:]
             sign = -1
-#            print "sign",sign
         if duration.find("T")>=0:
             [date,time]=duration.split("T")
-#            print "line 89, date time", date,time
 #            date = date[1:]
         else:
             [date , time] = [duration,""]
         pos = date.find("W")
         if pos>0:
-            tdelta += datetime.timedelta(weeks= sign*int(date[:pos]))
+            tdelta += timedelta(weeks= sign*int(date[:pos]))
         pos = date.find("Y")
         if (pos)>0:
             years = sign*int(date[:pos])
             date = date[pos+1:]
             if conformance: 
-                self.mycal4log.Validator("3.3.6_1",level=1) #raise Exception("VEVENT VALIDATOR","encountered a Y parameter in a DURATION field which is prohibited by RFC5545")
+                self.Validator("3.3.6_1",level=1,line_count = LineNumber,line = duration_received) #raise Exception("VEVENT VALIDATOR","encountered a Y parameter in a DURATION field which is prohibited by RFC5545")
             else:
-                self.mycal4log.Validator("3.3.6_1",level=0)
+                self.Validator("3.3.6_1",level=0,line_count = LineNumber,line = duration_received)
         pos = date.find("M")
         if pos>0:
             months = sign*int(date[:pos])
             date = date[pos+1:]
 #            if conformance: raise Exception("VEVENT VALIDATOR","encountered a M parameter in a DURATION field which is prohibited by RFC5545")
             if conformance: 
-                self.mycal4log.Validator("3.3.6_1",level=1)
+                self.Validator("3.3.6_1",level=1,line_count = LineNumber,line = duration_received)
             else:
-                self.mycal4log.Validator("3.3.6_1",level=0)
+                self.Validator("3.3.6_1",level=0,line_count = LineNumber,line = duration_received)
 
         pos = date.find("D")
         if (pos)>0:
-            tdelta += datetime.timedelta(days = sign*int(date[:pos]))
+            tdelta += timedelta(days = sign*int(date[:pos]))
         pos = time.find("H")
         if (pos)>0:
-            tdelta += datetime.timedelta(hours = sign*int(time[:pos]))
+            tdelta += timedelta(hours = sign*int(time[:pos]))
             time = time[pos+1:]
         pos = time.find("M")
         if (pos)>0:
-            tdelta += datetime.timedelta(minutes = sign*int(time[:pos]))
-#            print "line 129 tdelta minute",tdelta
+            tdelta += timedelta(minutes = sign*int(time[:pos]))
             time = time[pos+1:]
         pos = time.find("S")
         if (pos)>0:
-            tdelta += datetime.timedelta(seconds = sign*int(time[:pos]))
-        return [years,months,tdelta]
-    
+            tdelta += timedelta(seconds = sign*int(time[:pos]))
+        return [years,months,tdelta]  
     def datelist_write(self,dtlist):
         return  dtlist
-    def datelist_load(self,sDatelist,param="",LineNumber = 0):
+    def datelist_load(self,sDatelist,passedparam="",LineNumber = 0):
 #        if sDatelist.find(",")>=0:
         sDatelist=sDatelist.split(",")
         lDatelist = []
-        for value in sDatelist:
-            lDatelist.append(self.date_load(value,LineNumber = LineNumber))
+        #FIXME: make below more robust to tackle all uses case for RDATE,EXDATE, ...
+        if "VALUE=PERIOD" in passedparam:
+            for value in sDatelist:
+                lDatelist.append(self.period_load(value, params=passedparam, LineNumber=LineNumber))
+        else:            
+            for value in sDatelist:
+                lDatelist.append(self.date_load(value,LineNumber = LineNumber, params=passedparam))
 #        else:
 #            raise Exception("ICALENDAR WARNING", RFC5545_SCM["3.1.1_1"] + "\nline information: %s - %s"%("NA",sDatelist))
-        return lDatelist
-        
+        return lDatelist       
     def rrule_load(self,sRrule,param="",LineNumber = 0):
-        #FIXME: add logs
+        """ load a string into a rrule object"""
+        
         rules = {}
 #        self._log("rrule is:",[line])
         rrule = sRrule.split(";")
+        rule_count = 0
         for rule in rrule:
+            rule_count +=1
 #            self._log("120 rule out rules is:",[rule])
             if len(rule)>0:
                 #FIXME: this is to cater for line ending with ; which is probably not valid
                 [param, value] = rule.split("=")
+                if param in rules:
+                    self.Validator("3.3.10_1","%s rule part is defined twice in RRULE (Line: %i)"%(param,LineNumber))
                 if (param == "FREQ"):
                     rules[param] = value
+                    if rule_count >1:
+                        #FREQ should be first rule part
+                        self.Validator("3.3.10_2","see RRULE (Line: %i)"%(LineNumber))
+                    if not value in RFC5545_FREQ :
+                        self.Validator("3.3.10_5","see RRULE (Line: %i)"%(LineNumber))
+                        
                 elif (param == "UNTIL"):
+                    #FIXME: see "3.3.10_6b"
                     rules[param] = self.date_load(value)
-                    #TODO: check if that no "COUNT" is defined
                 elif (param == "COUNT"):
-                    rules[param] = int(value)
-                    #TODO: check if that no "UNTIL" is defined
+                    try:
+                        count_instances = int(value)
+                    except:
+                        self.Validator("3.3.10_6","see RRULE (Line: %i)"%(LineNumber))
+                    if count_instances <0:
+                        self.Validator("3.3.10_6","see RRULE (Line: %i)"%(LineNumber))
+                    else:
+                        rules[param] = count_instances
                 elif (param == "INTERVAL"):
                     #( ";" "INTERVAL" "=" 1*DIGIT )          /
                     rules[param] = int(value)
@@ -249,8 +375,12 @@ class vevent:
                     byseclist = value.split(",")
                     rules[param]=[]
                     for seconds in byseclist:
+                        if seconds>60:
+                            self.Validator("3.3.10_7")
                         rules[param].append(int(seconds))
                 elif (param == "BYMINUTE"):
+                    if seconds>59:
+                        self.Validator("3.3.10_8")
                     rules[param] = value
                 elif (param == "BYHOUR"):
                     rules[param] = value
@@ -286,11 +416,8 @@ class vevent:
                         ddow = weekdaynum[pos_dow:]
                         if ddow in ldow:
                             ldow[ddow].append(index)
-#                                    print "238"
                         else:
-#                                    print "240", ldow, ddow, index
                             ldow[ddow] = [index]
-#                                print "ldow is now:",ldow
                     rules[param] = ldow
 #                    self._log("175",[rules[param],param])
                 elif (param == "BYMONTHDAY"):
@@ -322,30 +449,96 @@ class vevent:
                     rules[param] = value
                 else:
                     rules[param] = value
+                    
+        if not "FREQ" in rules:
+            self.Validator("3.3.10_3",LineNumber)
+        if "UNTIL" in rules and "COUNT" in rules:
+            self.Validator("3.3.10_4",LineNumber)
+            
         return rules
     def rrule_write(self,sRRULE):
         return sRRULE
-    def validate_event(self,event):
-#        self._log("193 validate_event", event, 0)
-#        print "line 71",event
-        self.mycal4log = ics()
+    def validate_event(self,event2validate):
+        """ validates the event against RFC5545 rules"""
         addsummary = ""
         adduid = ""
+        event = {}
+        
+        
+        for prop in event2validate:
+            if "val" in event2validate[prop]:
+                event[prop]=event2validate[prop]["val"]
+            else:
+                event[prop]=event2validate[prop]
+
         if "SUMMARY" in event:
-            addsummary = " event summary:"+event["SUMMARY"]["val"]
+            addsummary = " event summary:"+event["SUMMARY"]
         if "UID" not in event:
-            print event["UID"]
-            self.mycal4log.Validator("3.6.1_3",alttxt = addsummary) #raise Exception("VEVENT VALIDATOR","mandatory property UID not set"+addsummary)
+            self.Validator("3.6.1_3",alttxt = addsummary) #raise Exception("VEVENT VALIDATOR","mandatory property UID not set"+addsummary)
         else:
-            adduid = " event UID:"+event["UID"]["val"]
+            adduid = " event UID:"+event["UID"]
 #        if "DTSTART" not in event:
 #            #FIXME no DTSTART is valid, but should raise a warning
 #            raise Exception("VEVENT VALIDATOR","mandatory property DTSTART not set"+adduid+addsummary)            
         if "DTEND" in event:
             if "DURATION" in event:
-                self.mycal4log.Validator("3.6.1_4",alttxt = adduid+addsummary)
-            if event["DTSTART"] > event["DTEND"]:
-                self.mycal4log.Validator("3.8.2.2_1",level=1,alttxt=adduid+addsummary)#raise Exception("VEVENT VALIDATOR","DTSTART > DTEND"+adduid+addsummary)
+                self.Validator("3.6.1_4",alttxt = adduid+addsummary)
+            if "DTSTART" in event:
+                if event["DTSTART"] > event["DTEND"]:
+                    self.Validator("3.8.2.2_1",level=1,alttxt=adduid+addsummary)#raise Exception("VEVENT VALIDATOR","DTSTART > DTEND"+adduid+addsummary)
+        
+        #check that all events have the same value type for all date/date-time
+        if ("DTSTART" in event) and ("DTEND" in event):
+            if not ( type(event["DTSTART"]) == type(event["DTEND"]) ): 
+                self.Validator("3.6.1_5")
+        if "RRULE" in event:
+            if "UNTIL" in event["RRULE"] and "DTSTART" in event:
+                if not ( type(event["DTSTART"]) == type(event["RRULE"]["UNTIL"]) ): 
+                    self.Validator("3.3.10_6b")
+        if "RDATE" in event and "DTSTART" in event:
+            for rdate in event["RDATE"]:
+                if not type(rdate) == type (event["DTSTART"]):
+                    self.Validator("3.8.5.2_0", alttxt = "rdate value %s does not match DTSTART: %s"%(str(rdate),str(event["DTSTART"])))
+
+        if "EXDATE" in event and "DTSTART" in event:
+            for exdate in event["EXDATE"]:
+                if not type(exdate) == type (event["DTSTART"]):
+                    self.Validator("3.8.5.1_0", alttxt = "rdate value %s does not match DTSTART: %s"%(str(rdate),str(event["DTSTART"])))
+
+        if "RRULE" in event and ("DTSTART" in event):
+            if type(event["DTSTART"]) == type(date(2003,3,5)):
+                if ("BYSECOND" in event["RRULE"]["FREQ"]) or ("BYMINUTE" in event["RRULE"]["FREQ"]) or ("BYHOUR" in event["RRULE"]["FREQ"]):
+                    self.Validator("3.3.10_10")
+        if "RRULE" in event:
+            if "BYYEARDAY" in event["RRULE"]:
+                if "YEARLY" in event["RRULE"]["FREQ"]:
+                    for daypos in event["RRULE"]["BYYEARDAY"]:
+                        if daypos>366 or daypos<-366:
+                            print "\t\t line 462 DAYPOS:",daypos
+                            self.Validator("3.3.10_11", "found BYYEARDAY value : %i while RRULE,FREQ=%s for EVENT with UID:%s"%(daypos,event["RRULE"]["FREQ"],adduid))
+                if "MONTHLY" in event["RRULE"]["FREQ"]:
+                    for daypos in event["RRULE"]["BYDAY"]:
+                        if daypos>31 or daypos<-31:
+                            self.Validator("3.3.10_11", "found BYDAY value : %i while RRULE,FREQ=%s for EVENT with UID:%s"%(daypos,event["RRULE"]["FREQ"],adduid))
+            if "BYWEEKNO" in event["RRULE"]:
+                for weekpos in event["RRULE"]["BYWEEKNO"]:
+                    if weekpos>53 or weekpos<-53:
+                        self.Validator("3.3.10_14", "found BYWEEKNO value : %i for EVENT with UID:%s"%(weekpos,adduid))
+                if not "YEARLY" in event["RRULE"]["FREQ"]:
+                    self.Validator("3.3.10_15", "found BYWEEKNO value for EVENT with FREQ: % and whose UID:%s"%(event["RRULE"]["FREQ"],adduid))
+            if "BYMONTH" in event["RRULE"]:
+                for monthpos in event["RRULE"]["BYMONTH"]:
+                    if monthpos<0 and monthpos>12:
+                        self.Validator("3.3.10_16", "found BYMONTH value: %i  for EVENT whose UID:%s"%(monthpos,adduid))
+            if "WKST" in event["RRULE"]:
+                if not event["RRULE"]["WKST"] in weekday_map :
+                    self.Validator("3.3.10_17","found WKST = %s for EVENT whose UID:%s"%(event["RRULE"]["WKST"],adduid) )
+                        
+            if "BYMONTHDAY" in event["RRULE"] and "WEEKLY" in event["RRULE"]["FREQ"]:
+                self.Validator("3.3.10_12", "both set for EVENT with UID:%s"%(adduid))
+            if "BYYEARDAY" in event["RRULE"] and (("DAILY" in event["RRULE"]["FREQ"]) or ("WEEKLY" in event["RRULE"]["FREQ"]) or ("MONTHLY" in event["RRULE"]["FREQ"])):
+                self.Validator("3.3.10_13", "both set for EVENT with UID:%s"%(adduid))
+                    
 
 class ics:
     
@@ -370,9 +563,7 @@ class ics:
 
 
     """
-    version = "0.6.1x9"
-    MaxInteger = 2147483647
-    _weekday_map = {"MO":0,"TU":1,"WE":2,"TH":3,"FR":4,"SA":5,"SU":6}
+    version = "0.6.1y1"
     OccurencesWindowStartDate = ""
     """ Date from which occurences of iCalendar events should be returned by the enumerator"""
     OccurencesWindowEndDate = ""
@@ -389,11 +580,14 @@ class ics:
     ical_error =0
     invevent = 0
     events = []
+    vevent = vevent()
     """ object holding all the vevent objects (with typed data) from the parsed iCalendar """
 #    flat_events = []
     debug_mode = 0
     debug_level = 0
     LogFilePath = "./log.txt"
+    lSCM=[]
+    dSCM={}
     LogData = ""
     def inf(self):
         """ Returns generic info """
@@ -419,10 +613,9 @@ class ics:
                 log = open(self.LogFilePath,'w')
             except:
                 raise Exception("File IO error","Could not open with write rights on log file:"+LogPath)
-            log.write("Icalendar module version: %s, date/time running: %s"%(str(self.version),str(datetime.datetime.now())))
+            log.write("Icalendar module version: %s, date/time running: %s"%(str(self.version),str(datetime.now())))
             log.close()
     def _log(self,title,listtodisplay,level=0):
-#        print "___log",title,"\t list is:", listtodisplay
         if self.debug_mode == True:
             if level >= self.debug_level:
                 line = "**"+title+"\n"
@@ -466,6 +659,15 @@ class ics:
             RRULE = RRULE[:-1]
         return RRULE
     def Validator(self,RFC_SCM,line_count=0,line="",level=0, alttxt = "", show = False):
+        """ when set for conformance logging (self.conformance == True) will display and log non-conformance """
+        
+        self.lSCM.append(RFC_SCM)
+        if line_count in self.dSCM:
+            self.dSCM[line_count].append(RFC_SCM)
+        else:
+#            print line_count
+            self.dSCM[line_count]=[RFC_SCM]
+
         if show or self.conformance:
             if level ==0:
                 if line_count==0 and line =="" and alttxt != "":
@@ -473,30 +675,43 @@ class ics:
                 else:
                     print "Warning: RFC5545 specifies \'%s\', following line is not compliant \n line: %s - %s"%(RFC5545_SCM[RFC_SCM],str(line_count),line)
             if level ==1:
-                raise Exception("RFC5545 non compliance","RFC5545 specifies: \'%s\', following line is not compliant \n line: %s - %s"%(RFC5545_SCM[RFC_SCM],str(line_count),line))        
-    def local_load(self,sLocalFilePath,conformance=False,append=False):
+                raise Exception("RFC5545 non compliance","RFC5545 specifies: \'%s\', following line is not compliant \n line: %s - %s"%(RFC5545_SCM[RFC_SCM],str(line_count),line))
+            elif level ==-1:
+                print alttxt
+    def local_load(self,sLocalFilePath,conformance=False):
         """loads iCalendar file from local path
         
         conformance will force / or not checking ics file for conformance (not supported yet)
         """
-        if not append:
-            self.sVCALENDAR = []
-            self.events = []
-            self.events_instances = []
+        self.sVCALENDAR = []
+        self.dVCALENDAR = {}
+        self.events = []
+        self.events_instances = []
+        self.lSCM = []
             
         self.conformance = conformance
+        self.vevent.conformance = conformance
         self._log("\t\t entering local load:",[sLocalFilePath])
+        self.Validator("3_0", alttxt="***********************************************************************************************\n*** \t\t Validating file: %s\t\t ***\n***\t\t with module version %s \t\t\t\t\t****\n***********************************************************************************************"%(sLocalFilePath,self.version),level = -1)
+
 #        self.local_path = path
         #here check local path
         string = open(sLocalFilePath,'r').readlines()
         #FIXME: add here the CRLF check and remove the \n from strings_load
         #RFC5545_SCM["3.1_1"]
-        self.strings_load(string,conformance,append)
-    def strings_load(self,strings,conformance=False,append = False):
+        self.strings_load(string,conformance)
+    def strings_load(self,strings,conformance=False):
         """Loads iCalendar from array of strings
 
         conformance will force / or not checking ics file for conformance (not supported yet)
         """
+        self.sVCALENDAR = []
+        self.dVCALENDAR = {}
+        self.events = []
+        self.events_instances = []
+        self.lSCM = []
+        
+        
         line_count = 0
         if not (strings[0].replace("\n","").replace("\r","") == "BEGIN:VCALENDAR"):
             self.Validator("3.4_1", line_count =0, line = strings[0])
@@ -535,17 +750,15 @@ class ics:
                 self.Validator('3.1_2',line = line,line_count = line_count,level =0)
 
         self.ical_loaded = 1
-        if not append:
-            self.events = []
-            self.events_instances = []
     def _validate(self):
         """ Will secure UID only present once at least in the file"""
-        uidlist = {}
+        uidlist = []
         for event in self.events:
-            if event["UID"]["val"] not in uidlist:
-                uidlist[event["UID"]["val"]]=""
+            if event["UID"] not in uidlist:
+                uidlist.append(event["UID"])
             else:
-                self.Validator("3.8.4.7_1", alttxt = "this UID was found more than once in current file:"+event["UID"])
+                self.Validator("3.8.4.7_1", alttxt = "this UID was found more than once in current file:"+event["UID"]["val"])
+
     def _mklist(self,start,end,step_size=1):
         #TODO:historical function created before knowing the range function, to be removed
 #        result_list = []
@@ -561,8 +774,8 @@ class ics:
         Component_Name = ""
         self._log("\t\tentering loader",[])
         if self.ical_loaded == 0:
-            self._log("error ",[RFC5545_SCM["3"]])
-            self.Validator("3", level=1) #("VCALENDAR VALIDATOR","no vCALENDAR loaded")
+            self._log("error ",[RFC5545_SCM["3_1"]])
+            self.Validator("3_1", level=1) #("VCALENDAR VALIDATOR","no vCALENDAR loaded")
             self.ical_error = 1
 #            return 0
         elif self.ical_loaded == 1:
@@ -574,7 +787,7 @@ class ics:
                 line_count +=1
                 #first load the given event
 #                pos = line.find("BEGIN:")
-                if (line.find("BEGIN:")>=0):
+                if (line.find("BEGIN:")==0):
                     self._log("new component?: LN / line / name",[line_count,line])
                     new_Component_Name= self._propval_line_split(line.replace("\n",""),line_count)[2] # ":".join(line.split(":")[1:]).replace("\n","")
                     if new_Component_Name in VCALENDAR_Components:
@@ -591,7 +804,7 @@ class ics:
                         #FIXME: if we have a IANA or X-COMP
                         pass
 #                pos = line.find("END:")
-                elif (line.find("END:")>=0):
+                elif (line.find("END:")==0):
                     self._log("new end?: LN / line ",[line_count,line])
                     #if we have a event closing tag
                     closing_Component = self._propval_line_split(line.replace("\n",""),line_count)[2]#":".join(line.split(":")[1:]).replace("\n","") 
@@ -602,7 +815,6 @@ class ics:
                             self.invevent = 0
 #                            self.lVEVENT = self.lVEVENT+ [line.replace("\n","")]
                             self._log("event is", self.lVEVENT,2)
-#                            print "l439",self.lVEVENT
                             if Component_Name == "VEVENT":
                                 self._addEvent(self.lVEVENT,LineCountBE)
                             elif Component_Name == "VTIMEZONE":
@@ -632,7 +844,6 @@ class ics:
                         #here adding the calendar  properties
                         [prop,param, val] = self._propval_line_split(line,line_count)
                         self.dVCALENDAR[prop]={"param":param,"val":val}
-#            print self.dVCALENDAR
             
             if Component_Name == "":
                 self.Validator("3.6_3", 1, show=True)
@@ -642,8 +853,9 @@ class ics:
                 self.Validator("3.6_2", 1, show=True)
             self._log("END Loader",[],0)
             
-        if self.conformance:
-            self._validate()
+#        if self.conformance:
+        self._validate()
+        self.lSCM= self.lSCM + self.vevent.lSCM
 #        return 1
     def _addEvent(self,lVEVENT,EventFirstLine = 0):
         """
@@ -659,7 +871,6 @@ class ics:
 #        rdates = []
 #        exdates = []
         dVevent = {}
-        self.vevent = vevent()
         vevent_load = { "TEXT": self.vevent.string_load,
                    "DATE-TIME-LIST": self.vevent.datelist_load,
                    "DATE-TIME": self.vevent.date_load,
@@ -669,7 +880,6 @@ class ics:
         line_count = EventFirstLine
         for line in lVEVENT:
             line_count +=1
-#            print "line 480",line
             if line.find(":")>0:
                 [prop,param,values]=self._propval_line_split(line,line_count)    #[line.split(":")[0],":".join(line.split(":")[1:])]
                 try:
@@ -686,30 +896,31 @@ class ics:
                 if prop in ["dtstamp" , "uid ", "dtstart ","class","created"," description ", "geo","last-mod","location","organizer","priority","seq","status","summary","transp","url","recurid","dtend","duration"]:
                     self.Validator("3.6.1_2", line_count = line_count, line = line, level = 0)#raise Exception("VEVENT VALIDATOR", "property duplicated: "+prop)
                 else:
-                    #FIXME: need to add code for handling when multiple RRULE are available
-                    dVevent[prop]= [dVevent[prop],{"param":param,"val":res}]
-                    print "line 684",dVevent[prop]
+                    #FIXME: need to add code for handling when properties set multiple times
+                    if not res == None:
+                        dVevent[prop]= [dVevent[prop],{"param":param,"val":res}]
             else:
-                dVevent[prop] = {"param":param,"val":res}
+                if not res == None:
+                    dVevent[prop] = {"param":param,"val":res}
 #                dVevent[prop] = res
 
         self.vevent.validate_event(dVevent)
 
         if "DTSTART" not in dVevent:
-            if "RRULE" in dVevent: 
-                self.Validator('3.8.2.4_1', line_count = line_count, line = line, level = 0) #raise Exception("VEVENT VALIDATOR", RFC5545_SCM['3.8.2.4_1'])
-            elif "METHOD" not in self.dVCALENDAR:
-                self.Validator('3.8.2.4_2', line_count = line_count, line = line, level = 0)#raise Exception("VEVENT VALIDATOR", RFC5545_SCM['3.8.2.4_2'])
-            elif 'DTEND' in dVevent and 'DURATION' in dVevent:
-                #FIXME : add code here
-                pass
+            if "UID" in dVevent:
+                uid = dVevent["UID"]["val"]
             else:
-                if "UID" in dVevent:
-                    uid = dVevent["UID"]
-                else:
-                    uid = "not available"
-                self.Validator("3.6.1_0", "event UID is:"+uid,level=1)
-                pass
+                uid = "not available"
+
+            if "RRULE" in dVevent: 
+                self.Validator('3.8.2.4_1', alttxt="DTSTART missing for event with UID:"+uid, level = 0) #raise Exception("VEVENT VALIDATOR", RFC5545_SCM['3.8.2.4_1'])
+            elif "METHOD" not in self.dVCALENDAR:
+                self.Validator('3.8.2.4_2', alttxt="DTSTART missing for event with UID:"+uid)#raise Exception("VEVENT VALIDATOR", RFC5545_SCM['3.8.2.4_2'])
+            elif 'DTEND' in dVevent:
+                self.Validator("3.6.1_0", alttxt = "DTSTART will be computed from DTEND and DURATION from event with UID: "+uid,level=0)
+            else:
+                self.Validator("3.6.1_0", alttxt="not enough information for event with UID :"+uid)
+
             
         self.events.append(dVevent)
 #        self.event = []
@@ -722,22 +933,37 @@ class ics:
         if ret_val[-1]==",":
             ret_val=ret_val[:-1]
         return ret_val
-    def _flatten(self):
+    def _flatten(self,slot_dur=timedelta(days=1)):
         """ goes over self.events and compute list of their instances"""
         self._log("******************\t\t\t entering _flatten",[])
         self.events_instances = []
+        
+        UTC = newTZinfo()
+        
         for event in self.events:
             tmp_event = event
-            tmp_event["DTSTART"]=tmp_event["DTSTART"]["val"]
-            self._log("event being _flatten is:",tmp_event)
-            
-            if "SUMMARY" in tmp_event:
-                tmp_event["SUMMARY"]=tmp_event["SUMMARY"]["val"]
+            if not "DTSTART" in tmp_event:
+                if not "DTEND" in tmp_event:
+                    #we should never be here as this was checked at loading
+                    raise Exception("VEVENT ERROR","Missing both DTSTART and DTEND, correct per RFC5545 but not enumerable")
+                elif not "DURATION" in tmp_event:
+                    tmp_event["DTSTART"]=tmp_event["DTEND"]["val"]
+                else:
+                    tmp_event["DTSTART"] = tmp_event["DTEND"]["val"]+tmp_event["DURATION"]["val"][2]
             else:
-                tmp_event["SUMMARY"] = ""
-            
-            summary = tmp_event["SUMMARY"]
-            
+                tmp_event["DTSTART"]=tmp_event["DTSTART"]["val"]
+                
+            #convert DTSTART time to a floatting
+            if type(tmp_event["DTSTART"]) == type(datetime(year = 2003, month=3,day =5, tzinfo=UTC)):
+                utcoffset = tmp_event["DTSTART"].utcoffset()
+                tmp_event["DTSTART"]=datetime(year= tmp_event["DTSTART"].year,
+                                              month = tmp_event["DTSTART"].month,
+                                              day = tmp_event["DTSTART"].day,
+                                              hour = tmp_event["DTSTART"].hour,
+                                              minute = tmp_event["DTSTART"].minute,
+                                              second = tmp_event["DTSTART"].second)
+                tmp_event["DTSTART"] = tmp_event["DTSTART"] +utcoffset
+
             """
             For cases where a "VEVENT" calendar component
             specifies a "DTSTART" property with a DATE value type but no
@@ -757,34 +983,154 @@ class ics:
                     #call: event["DTEND"] = add_year_months(event["DTEND"], event["DURATION"][1], event["DURATION"][0])
             else:
                 tmp_event["DTEND"] = tmp_event["DTEND"]["val"]
+
+
+            #convert DTEND time to a floatting
+            if type(tmp_event["DTEND"]) == type(datetime(year = 2003, month=3,day =5, tzinfo=UTC)):
+                utcoffset = tmp_event["DTEND"].utcoffset()
+                tmp_event["DTEND"]=datetime(year= tmp_event["DTEND"].year,
+                                              month = tmp_event["DTEND"].month,
+                                              day = tmp_event["DTEND"].day,
+                                              hour = tmp_event["DTEND"].hour,
+                                              minute = tmp_event["DTEND"].minute,
+                                              second = tmp_event["DTEND"].second)
+                if not type(utcoffset)== type(None):
+                    tmp_event["DTEND"] = tmp_event["DTEND"] +utcoffset
+                    
+            #convert UNTIL time to floatting
+            if "RRULE" in tmp_event:
+                if "UNTIL" in tmp_event["RRULE"]["val"]:
+                    if type(tmp_event["RRULE"]["val"]["UNTIL"]) == type(datetime(year = 2003, month=3,day =5, tzinfo=UTC)):
+                        utcoffset = tmp_event["RRULE"]["val"]["UNTIL"].utcoffset()
+                        tmp_event["RRULE"]["val"]["UNTIL"]=datetime(year= tmp_event["RRULE"]["val"]["UNTIL"].year,
+                                                      month = tmp_event["RRULE"]["val"]["UNTIL"].month,
+                                                      day = tmp_event["RRULE"]["val"]["UNTIL"].day,
+                                                      hour = tmp_event["RRULE"]["val"]["UNTIL"].hour,
+                                                      minute = tmp_event["RRULE"]["val"]["UNTIL"].minute,
+                                                      second = tmp_event["RRULE"]["val"]["UNTIL"].second)
+                        if not type(utcoffset)== type(None):
+                            tmp_event["RRULE"]["val"]["UNTIL"] = tmp_event["RRULE"]["val"]["UNTIL"] +utcoffset
             
+            if "SUMMARY" in tmp_event:
+                tmp_event["SUMMARY"]=tmp_event["SUMMARY"]["val"]
+            else:
+                tmp_event["SUMMARY"] = ""
+            
+            summary = tmp_event["SUMMARY"]
+            
+            self._log("event being _flatten is:",tmp_event)
+
             #FIXME: add here the multiple RRULE / EXRULE unfolding
             #event = #        [dtstart,dtend,rules, summary,uid,rdates,exdates] = event
 
-#            t_res = self._flatten_rrule(event)
             if "RRULE" in tmp_event:
                 tmp_event["RRULE"]=tmp_event["RRULE"]["val"]
             else:
                 tmp_event["RRULE"]=[]
-            t_res = self._flatten_rrule(tmp_event)
+
+            if type(tmp_event["DTSTART"])==type(date(2003,5,3)):
+                WindowStart =self.OccurencesWindowStartDate.date()
+                WindowEnd = self.OccurencesWindowEndDate.date()
+            else:
+                WindowStart =self.OccurencesWindowStartDate
+                WindowEnd = self.OccurencesWindowEndDate
                 
+            """ **********************************************************
+                THIS IS WHERE WE MAKE THE CALL TO ENUMERATE ALL INSTANCES
+                **********************************************************
+            """
+            t_res = self._flatten_rrule(tmp_event,WindowStart,WindowEnd)
+
+            self._log("*****************dates returned from _flatten",[t_res])
+                
+            """
+                ***********************************************************
+            """
+
             if "RDATE" in tmp_event:
                 rdates = tmp_event ["RDATE"]["val"]
             else:
                 rdates = []
+
             if "EXDATE" in tmp_event:
                 exdates = tmp_event["EXDATE"]["val"]
+                #convert EXDATES time to floatting
+                if type(exdates[0])==type(datetime(2013,2,6,10,28,0,tzinfo=UTC)):
+                    pass
+                if len(rdates)>0:
+                    rdates = [val for val in rdates if val not in exdates]
+                    t_res = [val for val in t_res if val not in exdates]
             else:
                 exdates = []
+            
+            """ FIXME:
+            If the duration of the recurring component is specified with the
+            "DTEND" or "DUE" property, then the same exact duration will apply
+            to all the members of the generated recurrence set.  Else, if the
+            duration of the recurring component is specified with the
+            "DURATION" property, then the same nominal duration will apply to
+            all the members of the generated recurrence set and the exact
+            duration of each recurrence instance will depend on its specific
+            start time.  For example, recurrence instances of a nominal
+            duration of one day will have an exact duration of more or less
+            than 24 hours on a day where a time zone shift occurs.  The
+            duration of a specific recurrence may be modified in an exception
+            component or simply by using an "RDATE" property of PERIOD value
+            type.
+            """
+            """
+            delta = timedelta(days = 1)
+            t_date +=delta
+                    
+            while t_date < dtend:
+                list_dates.append(t_date)
+                t_date +=delta
+                self._log("from dtstart to dtend",[dtstart,dtend,t_date,list_dates],0)
+
+            """                
+            res_slots_rdate = []
             if len(rdates)>0:
                 #here make sure that duplication of rrule and rdate do not result in 2 instances !
-                t_res = t_res + [val for val in rdates if val not in t_res and val>=tmp_event["DTSTART"] and  val>=self.OccurencesWindowStartDate and val<=self.OccurencesWindowEndDate]
+                #also apply RFC5545 §5.2 recommendation: when occurence in rrule and rdate, the length/duration is
+                #taken from rdate if rdate specifies a duration
+                if type(rdates[0])==type([]):
+                    start_rdates = [start for [start,end] in rdates ]
+                    t_res = [start for start in t_res if start.replace(tzinfo=UTC) not in start_rdates]
+                    for occur in rdates:
+                        [start,end] =occur
+                        nslot = self._get_number_slots(start,end,slot_dur)
+                        for slotincrement in range(1,nslot):
+#                    print "occurence start, slot_dur, slot increment:",occurence_start,slot_dur,slotincrement
+                            res_slots_rdate.append(start+slot_dur*slotincrement)
+                    res_slots_rdate+=start_rdates
+                    res_slots_rdate = sorted(res_slots_rdate)
+
+                else:
+                    t_res = t_res + [val for val in rdates if val not in t_res and val>=tmp_event["DTSTART"] and  val>=WindowStart and val<WindowEnd]
                 self._log("319 days rdate", [rdates])
             if len(exdates)>0:
                 #remove from lisst_dates any date in exdates
-                t_res = [val for val in t_res if val not in exdates]
+                #
+                #FIXME: below needs to be made robust on combination of date / date-time naive / date-time aware on both t_res and exdates
+                if not self._type_date(exdates[0])==self._type_date(t_res[0]):
+                    t_res = [self._from_FloatingTime2TZ(val, UTC) for val in t_res if self._from_FloatingTime2TZ(val, UTC) not in exdates]
+                else:
+                    t_res = [val for val in t_res if val not in exdates]
 
-            self._log("*****************dates returned from _flatten",[t_res])
+            
+            res_slots = []
+            dtstart = tmp_event["DTSTART"]
+            dtend = tmp_event["DTEND"]
+            nslot = self._get_number_slots(dtstart,dtend,slot_dur)
+            for occurence_start in t_res:
+                for slotincrement in range(1,nslot):
+#                    print "occurence start, slot_dur, slot increment:",occurence_start,slot_dur,slotincrement
+                    res_slots.append(occurence_start+slot_dur*slotincrement)
+            #FIXME: here add code for get_instances or get_slots
+            t_res += res_slots
+            t_res += res_slots_rdate
+            t_res = sorted(t_res)
+
             
             for t_date in t_res:
                 if len(self.events_instances)==0:
@@ -793,7 +1139,7 @@ class ics:
                 else:
                     #if already instances in the list
                     self.events_instances.append([t_date,summary,tmp_event["UID"]["val"]])
-    def _flatten_rrule(self,event):
+    def _flatten_rrule(self,event,WindowStart,WindowEnd):
         """ where the actual algorithm for unrolling the rrule lies  
         
         also compute day instances when dtend>dtstart"""
@@ -839,7 +1185,7 @@ class ics:
         month_step_size = 1
         year_step_size = 1
         event_start = dtstart
-        event_end = self.OccurencesWindowEndDate
+        event_end = WindowEnd #FIXME: check why not DTEND?!?!? also do we need to keep test at the end ?!?!? line 1283
         #here we generate the list of dates for all loaded cals
         self._log("227 rules are:",[rules])
         
@@ -856,17 +1202,11 @@ class ics:
         month_start = 1
         month_end = 12
 
+        t_date = dtstart
+
         if len(rules)<=0:
-            if dtstart not in list_dates:
-                list_dates.append(dtstart)
-            t_date = dtstart
-            delta = datetime.timedelta(days = 1)
-            t_date +=delta
-                        
-            while t_date <= dtend:
-                list_dates.append(t_date)
-                t_date +=delta
-                self._log("from dtstart to dtend",[dtstart,dtend,t_date,list_dates],0)
+            #FIXME: need to change this if / else and remove it
+            pass
         else:
             #switch between absolute computing and relative computing
             #if absolute: generate list
@@ -986,7 +1326,7 @@ class ics:
                     if not ("BYDAY" in rules):
                         #if BYDAY not specified add the DOW from DTSTART
                         dow = {}
-                        t_dow = self._icalDOW(datetime.date(year, month_start, first_dom))
+                        t_dow = self._icalDOW(date(year, month_start, first_dom))
                         dow[t_dow] = [0]
                         self._log("379 make week list:\tyear,month_start,first_dom,wkst,weeks\n",[year,month_start,first_dom,wkst,weeks,dow],1)
                 for month in months:
@@ -1017,12 +1357,17 @@ class ics:
                         dateExist = True
                         good_date = True
                         try:
-                            t_date = datetime.datetime(year,month,days0)
-                            delta = datetime.timedelta(days = day-days0)
+                            if type(datetime(year,month,days0))==type(dtstart):
+                                t_date = datetime(year,month,days0,dtstart.hour,dtstart.minute,dtstart.second)
+                            else:
+                                t_date = date(year,month,days0)
+                            delta = timedelta(days = day-days0)
                             t_date +=delta
                         except ValueError:
                             #this is in case days0 is not a valid date of month for the given year/month
-                            dateExist = False                        
+                            dateExist = False 
+                            #FIXME: check if could be better placed
+                            self.Validator("3.3.10_18")                       
                         if (dateExist == True) and (t_date.month==month):
                             if check_week == True:
                                 cw = self._isoCW(year,month,day,wkst)
@@ -1065,7 +1410,7 @@ class ics:
                             list_dates = self._sublist(lday,dates,summary,dow,check_setpos,setposlist,list_dates)
                             dates = []
                             lday = {}
-                            t_date = last_good_date +datetime.timedelta(days = days_step_size)
+                            t_date = last_good_date +timedelta(days = days_step_size)
                             if t_date.month>month:
                                 first_dom = t_date.day
                                 self._log("380 - next first dom",[first_dom,month,year])
@@ -1091,21 +1436,21 @@ class ics:
                         self._log("584: next first dom last_good_date, weeks_step_size",[last_good_date ,weeks_step_size])
                         #0.72b fixed
                         #before:
-                        t_date = last_good_date +datetime.timedelta(weeks = weeks_step_size)
+                        t_date = last_good_date +timedelta(weeks = weeks_step_size)
                         #after:
                         #need to compute last day of week - first day of week days ofset
                         
                         maxDOW = 0
                         minDOW = 7
                         for dw in dow:
-                            dwi = self._weekday_map[dw]
+                            dwi = weekday_map[dw]
                             if dwi<minDOW:
                                 minDOW = dwi
                             if dwi>maxDOW:
                                 maxDOW = dwi
 #                            print "dw, dwi, min, max", dw, dwi, min, max
                         daysgap = 7-(maxDOW-minDOW)
-                        t_date = last_good_date +datetime.timedelta(weeks = weeks_step_size-1)+datetime.timedelta(days = daysgap)
+                        t_date = last_good_date +timedelta(weeks = weeks_step_size-1)+timedelta(days = daysgap)
                         #end 0.72b->0.72c fix
                         if t_date.year>year:
                             first_dom = t_date.day
@@ -1114,8 +1459,17 @@ class ics:
                 #month_start = 1
         self._log("list of dates before the validation: list_dates and tmp_dates \n",[list_dates,tmp_dates])
         self._log("interval dates: event_start,event_end,self.OccurencesWindowStartDate,self.OccurencesWindowEndDate \n",[event_start,event_end,self.OccurencesWindowStartDate,self.OccurencesWindowEndDate])
+        
+        if dtstart not in list_dates:
+            list_dates.append(dtstart)
+            self._log("DTSTART added to list", [dtstart,list_dates])
+
+        list_dates = sorted(list_dates)
+
         for t_date in list_dates:
-            if t_date>=event_start and  t_date>=self.OccurencesWindowStartDate and t_date<=self.OccurencesWindowEndDate and t_date<=event_end:
+            #FIXME: need to account here for event with start<WindowStart but start+duration>WindowStart
+            #FIXME: need to account also for dual case with WindowEnd
+            if t_date>=event_start and  t_date>=WindowStart and t_date<WindowEnd and t_date<=event_end:
                 self._log("Maxcount",[MaxCount, t_date])
                 if MaxCount >0:
                     #if we count the number of recurrencies then only add dates as long as below max number
@@ -1128,6 +1482,7 @@ class ics:
                     tmp_dates.append(t_date)
         list_dates = tmp_dates
         
+#        print "returning:",list_dates
         return list_dates
     def add_year_months(self,date,years,months,InstanceAccurate = True):
         """"will add nMonths to the date, if not 100% accurate it will either compromise the date (like 31 jan +1 mo = 28 fev InstanceAccurate
@@ -1169,9 +1524,9 @@ class ics:
                 self.Validator("8.3.2_1", line_count = LineNumber, line = LineContent, level = 0)
         return [prop,param,value]
     def _last_dom(self,year,month):
-        day = datetime.datetime(year,month,1)
+        day = datetime(year,month,1)
         for i in range(1,32):
-            delta = datetime.timedelta(days = i)
+            delta = timedelta(days = i)
             new = day + delta
             if new.month != day.month:
                 return i
@@ -1208,14 +1563,73 @@ class ics:
         CW = 0
         dow = ["TU","WE","TH","FR","SA","SU","MO"]
         try:
-            CW= datetime.datetime(year,month,day).isocalendar()[1]
+            CW= datetime(year,month,day).isocalendar()[1]
             #if dow is between wkst and monday then CW-=1 else keep CW, "MO" was put end of list so if wkst = MO then no change
-            if (dow.index(self._icalDOW(datetime.date(year,month,day)))-dow.index(wkst)>=0) and (dow.index(wkst)<dow.index("MO")) and (dow.index(self._icalDOW(datetime.date(year,month,day))) < dow.index("MO")):
+            if (dow.index(self._icalDOW(date(year,month,day)))-dow.index(wkst)>=0) and (dow.index(wkst)<dow.index("MO")) and (dow.index(self._icalDOW(date(year,month,day))) < dow.index("MO")):
                     CW -= 1
         except ValueError:
             #this is in case days0 is not a valid date of month for the given year/month
             CW = 0
         return CW
+    def _get_number_slots(self,dtstart,dtend,slot_duration):
+        """ will return the number of slots (defined by slot duration) between dtstart (inclusive) and dtend (not inclusive)
+        
+        handles timezones and leap seconds
+        """
+        delta = dtend-dtstart
+        delta_days = delta.days
+        #FIXME: here converts number of days in seconds
+        delta_seconds = delta_days *86400
+        delta_seconds = delta_seconds+delta.seconds
+        slot_dur_seconds = slot_duration.days*86400 + slot_duration.seconds
+        nb_slots = delta_seconds/slot_dur_seconds
+        return nb_slots
+    def _to_FloatingTime(self,dt):
+        """ takes a datetime object with tzinfo and returns a naive datetime with time converted to UTC """
+        
+        #FIXME: need to uncomment below
+#        timedelta = dt.tzinfo.DST()
+        
+        dtFloat = datetime(year = dt.year, 
+                        month = dt.month,
+                        day = dt.day,
+                        hour = dt.hour,
+                        minute = dt.minute,
+                        second = dt.second
+                        )
+        
+        return dtFloat
+    def _from_FloatingTime2TZ(self,dt,TZ):
+        """ takes a TZ naive-datetime (floating) and converts to TZ-aware datetime """
+        #FIXME: need to uncomment below
+#        timedelta = dt.tzinfo.DST()
+
+        
+        dtTZ = datetime(year = dt.year, 
+                        month = dt.month,
+                        day = dt.day,
+                        hour = dt.hour,
+                        minute = dt.minute,
+                        second = dt.second,
+                        tzinfo = TZ)
+        
+        return dtTZ
+       
+    def _type_date(self,dt):
+        typeDT = "DATETIME-TZ"
+        if type(dt)==type(datetime(2013,2,6).date()):
+            typeDT= "DATE"
+        if type(dt) == type(datetime(2013,2,6)):
+            try:
+                if dt>datetime(2013,2,6):
+                    typeDT= "DATETIME-FLOAT"
+                elif dt<=datetime(2013,2,6):
+                    typeDT= "DATETIME-FLOAT"
+                else:
+                    pass                    
+            except:
+                typeDT = "DATETIME-TZ"
+        return typeDT
     def _sublist(self,lday,dates,summary,dow,check_setpos,setposlist,list_dates):
         """ used in flatten rrule to accelerate by only looking at some dates within a list"""
         self._log("347 list_Dates",[list_dates])
@@ -1252,15 +1666,15 @@ class ics:
                 list_dates.append(date)
         self._log("413: list_dates at end of _sublist",[list_dates])
         return list_dates
-    def get_event_instances(self,start=datetime.datetime.today().strftime("%Y%m%d"),end=datetime.datetime.today().strftime("%Y%m%d"),count=-1):
+    def get_event_instances(self,start=datetime.today().strftime("%Y%m%d"),end=datetime.today().strftime("%Y%m%d"),count=-1):
         """Returns an array of events with dates, uid, and summary
         
         The function returns the array of events within a given date window (defined by start and end),
         should only a certain number of events be needed either from a start date or to an end date the
         missing date should be set to Null
         """
-        self.OccurencesWindowStartDate = datetime.datetime.strptime(start,"%Y%m%d")
-        self.OccurencesWindowEndDate = datetime.datetime.strptime(end,"%Y%m%d")
+        self.OccurencesWindowStartDate = datetime.strptime(start,"%Y%m%d")
+        self.OccurencesWindowEndDate = datetime.strptime(end,"%Y%m%d")+timedelta(days =1)
         self.parse_loaded()
         self._flatten()
         self.events_instances = sorted(self.events_instances)
@@ -1268,7 +1682,7 @@ class ics:
     def Gen_iCalendar(self):
         """ takes the self.dVCALENDAR and generates an icalendar string """
         
-        self.vevent = vevent()
+#        self.vevent = vevent()
         vevent_write = {
                         "TEXT": self.vevent.string_write,
                         "DATE-TIME": self.vevent.date_write,
@@ -1283,9 +1697,7 @@ class ics:
             self.dVCALENDAR["PRODID"]="1-annum.com_sponsors_pyICSParser"
         for Prop in self.dVCALENDAR:
             #here add calendar properties
-#            print "1235: prop, dVCALENDAR",Prop,self.dVCALENDAR[Prop]
             param = ""
-            print self.dVCALENDAR[Prop]
             if "param" in self.dVCALENDAR[Prop]:
                 for p in self.dVCALENDAR[Prop]["param"]:
                     param +=p+";"
@@ -1300,15 +1712,13 @@ class ics:
             if "UID" not in event:
                 event["UID"]="FIXMEUID"
             if "DTSTAMP" not in event:
-                event["DTSTAMP"]={"param":"","val":datetime.datetime.now()}
+                event["DTSTAMP"]={"param":"","val":datetime.now()}
             sCalendar += "BEGIN:VEVENT"+CRLF
             for Prop in event:
-                print Prop
                 if not "val" in event[Prop]:
                     propvalue = event[Prop]
                 else:   
                     propvalue = event[Prop]["val"]
-                print Prop,propvalue
 #                newline = Prop+":"+vevent_write[Prop](propvalue)+CRLF
                 #RFC5545_Properties[Prop] will give the relevant type
                 #vevent_write["TEXT"] will call self.vevent.string_write(_
