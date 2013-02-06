@@ -11,7 +11,7 @@ Created on Jul 28, 2011
 """
 testvector_path = "./test_vect/"
 
-version = "0.2"
+version = "0.3"
 
 parser = [
                 ["icalvalid.wikidot/sc_calendar_3325.ics","20090101","20091231","icalvalid.wikidot/sc_calendar_3325.txt"] #source:http://icalvalid.wikidot.com/wild-examples
@@ -34,34 +34,26 @@ rrule_vects = [
                ["anmar7.ics","20050101","20051231","anmar7.txt"],
                ["anmar8.ics","20050101","20051231","anmar8.txt"],
                ["anmar9.ics","20050101","20051231","anmar9.txt"],
-               
                ["calconnect/ical/01.ics","20110101","20121231","calconnect/ical/01.txt"],
                ["calconnect/mo/01.ics","20110101","20121231","calconnect/mo/01MO.txt"],
                ["calconnect/ol/01.ics","20110101","20121231","calconnect/ol/01OL.txt"],
-               
                ["calconnect/ical/02.ics","20110101","20121231","calconnect/ical/02.txt"],
                ["calconnect/mo/02.ics","20110101","20121231","calconnect/mo/02MO.txt"],
                ["calconnect/ol/02.ics","20110101","20121231","calconnect/ol/02OL.txt"],
-               
                ["calconnect/ical/03.ics","20110101","20121231","calconnect/ical/03.txt"],
                ["calconnect/mo/03.ics","20110101","20121231","calconnect/mo/03MO.txt"],
                ["calconnect/ol/03.ics","20110101","20121231","calconnect/ol/03OL.txt"],
-
                ["calconnect/ical/04.ics","20110101","20121231","calconnect/ical/04IC.txt"],
                ["calconnect/mo/04.ics","20110101","20121231","calconnect/mo/04MO.txt"],
                ["calconnect/ol/04.ics","20110101","20121231","calconnect/ol/04OL.txt"],
-
                ["calconnect/ical/05.ics","20110101","20121231","calconnect/ical/05IC.txt"],
                ["calconnect/mo/05.ics","20110101","20121231","calconnect/mo/05MO.txt"],
                ["calconnect/ol/05.ics","20110101","20121231","calconnect/ol/05OL.txt"],
-               
                ["calconnect/ical/06.ics","20110101","20121231","calconnect/ical/06IC.txt"],
                ["calconnect/mo/06.ics","20110101","20121231","calconnect/mo/06MO.txt"],
-               
                ["calconnect/ical/07.ics","20110101","20121231","calconnect/ical/07IC.txt"],
                ["calconnect/mo/07.ics","20110101","20121231","calconnect/mo/07MO.txt"],
                ["calconnect/ol/07.ics","20110101","20121231","calconnect/ol/07OL.txt"],
-               
                ["calconnect/ical/12.ics","20110101","20121231","calconnect/ical/12IC.txt"],
                ["calconnect/mo/12.ics","20110101","20121231","calconnect/mo/12MO.txt"],
                ["calconnect/ol/12.ics","20110101","20121231","calconnect/ol/12OL.txt"],
@@ -111,8 +103,29 @@ rrule_vects = [
                ["uk_bank_2007_2013.ics","20120101","20131231","uk_bank_2007_2013.txt"],
                ["soldes_FR.ics","20100101","20141231","soldes_FR.txt"],
                ["france_doi_2007.ics","20100101","20141231","france_doi_2007.txt"],
-               ["29fev.ics","20080101","20121231","29fev.txt"]]
+               ["29fev.ics","20080101","20121231","29fev.txt"],
+               ["RFC5545_3.8.5.3_2_RDATE.ics","19970101","19981231","RFC5545_3.8.5.3_2_RDATE.txt"],
+               ["SO_14702482_1.ics","20120101","20301231","SO_14702482_1.txt"],
+               ["SO_14702482_2.ics","20120101","20301231","SO_14702482_2.txt"],
+               ["SCM5545_3.6.1_1.ics","20120101","20301231","SCM5545_3.6.1_1.txt"],
+               ["SCM5545_5.2_1.ics","20050101","20061231","SCM5545_5.2_1.txt"]]
 
 RFC5545_ical = [["RFC5545/RFC5545_3.8.5.3_1.ics","20070101","20070530","RFC5545/RFC5545_3.8.5.3_1.txt"],
                 ["RFC5545/RFC5545_3.8.5.3_40a.ics","20070101","20070530","RFC5545/RFC5545_3.8.5.3_40a.txt"]
                 ]
+
+#SCM test vect templates:
+#list of test vectors + for each test vector the list of all exceptions
+
+SCM_withWildICS = [
+            ["C:/sw/icalculator/rsc/utest/test_vect/icalvalid.wikidot/sc_calendar_3325.ics",['3.1_3', '3.1_2', '3.1_2', '8.3.2_1', '8.3.2_1', '3.3.6_1', '3.3.6_1', '3.8.2.2_1', '3.8.2.2_1', '3.8.2.2_1', '3.8.2.2_1']],
+            ["C:/sw/icalculator/rsc/utest/test_vect/icalvalid.wikidot/artdoll.ics",['3.1_3', '3.1_2', '8.3.2_1', '3.6_2', '3.3.6_1', '3.3.6_1']],
+            ["C:/sw/icalculator/rsc/utest/test_vect/icalvalid.wikidot/GilsumNH.ics",['3.4_1', '3.4_1', '3.1_2', '3.6_1', '3.6_2', '3.3.6_1', '3.3.6_1', '3.3.5_1']],
+            ["C:/sw/icalculator/rsc/utest/test_vect/icalvalid.wikidot/projo.ics", ['3.4_1', '3.1_3', '3.1_2', '3.1_3', '3.1_2', '3.1_2', '3.3.6_1', '3.3.6_1']],
+            ["C:/sw/icalculator/rsc/utest/test_vect/icalvalid.wikidot/carnation.ics",['3.4_1', '3.1_3', '3.1_2', '8.3.2_1', '3.3.6_1', '3.3.6_1']]
+            ]
+
+SCM_5545 = [["RFC5545/RFC5545_3.8.4.7_1.ics",["3.8.4.7_1"]]
+            ]
+
+                    
