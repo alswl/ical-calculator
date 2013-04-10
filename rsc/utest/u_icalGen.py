@@ -21,6 +21,26 @@ class TestIcalGen(unittest.TestCase):
     def tearDown(self):
         pass
 
+    def test_3_1(self):
+        "line folding support"
+        pass
+
+    def test_3_1_1(self):
+        "test the list separators"
+        pass
+
+    def test_3_1_2(self):
+        "test the ability to get all values for properties with multiple values"
+        pass
+
+    def test_3_1_3(self):
+        "binary value"
+        pass
+
+    def test_3_1_4(self):
+        "character set - need to come-up with relevant test + appropriate method"
+        pass
+    
     def test_RRULEgen(self):
         self.mycal.debug(True,LogPath="../../out/log.txt",debug_level=0)
         cal = rrule_vects[34]
@@ -56,7 +76,7 @@ class TestIcalGen(unittest.TestCase):
     def test_icalGenFromCode(self):
         dtstart = datetime.datetime(year=2012,month=1,day=26,hour=8,minute=12,second=10)
         dtstamp = datetime.datetime.now().strftime("%Y%m%dT%H%M%S")
-        rescal = "BEGIN:VCALENDAR"+CRLF+"VERSION:2.0"+CRLF+"PRODID:1-annum.com_sponsors_pyICSParser"+CRLF+"BEGIN:VEVENT"+CRLF+"DTSTAMP:"+dtstamp+CRLF+"DTSTART:20120126T081210"+CRLF+"UID:FIXMEUID"+CRLF+"SUMMARY:test"+CRLF+"END:VEVENT"+CRLF+"END:VCALENDAR"+CRLF
+        rescal = "BEGIN:VCALENDAR"+CRLF+"VERSION:2.0"+CRLF+"PRODID:pyICSParser@1-annum.com"+CRLF+"BEGIN:VEVENT"+CRLF+"DTSTAMP:"+dtstamp+CRLF+"DTSTART:20120126T081210"+CRLF+"UID:FIXMEUID"+CRLF+"SUMMARY:test"+CRLF+"END:VEVENT"+CRLF+"END:VCALENDAR"+CRLF
         
         summary = "test"
         self.mycal.dVCALENDAR={}
@@ -71,5 +91,11 @@ def suite():
     return suite
 
 if __name__ == "__main__":
-    unittest.main()
+    RunAll = True
+    if RunAll :
+        unittest.main()
+    else:
+        uniquetest = unittest.TestSuite()
+        uniquetest.addTest(TestIcalGen('test_icalGenFromCode'))
+        unittest.TextTestRunner(verbosity=2).run(uniquetest)
     

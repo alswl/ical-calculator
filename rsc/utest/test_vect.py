@@ -118,12 +118,15 @@ RFC5545_ical = [["RFC5545/RFC5545_3.8.5.3_1.ics","20070101","20070530","RFC5545/
 #list of test vectors + for each test vector the list of all exceptions
 
 SCM_withWildICS = [
-            ["C:/sw/icalculator/rsc/utest/test_vect/icalvalid.wikidot/sc_calendar_3325.ics",['3.1_3', '3.1_2', '3.1_2', '8.3.2_1', '8.3.2_1', '3.3.6_1', '3.3.6_1', '3.8.2.2_1', '3.8.2.2_1', '3.8.2.2_1', '3.8.2.2_1']],
-            ["C:/sw/icalculator/rsc/utest/test_vect/icalvalid.wikidot/artdoll.ics",['3.1_3', '3.1_2', '8.3.2_1', '3.6_2', '3.3.6_1', '3.3.6_1']],
-            ["C:/sw/icalculator/rsc/utest/test_vect/icalvalid.wikidot/GilsumNH.ics",['3.4_1', '3.4_1', '3.1_2', '3.6_1', '3.6_2', '3.3.6_1', '3.3.6_1', '3.3.5_1']],
-            ["C:/sw/icalculator/rsc/utest/test_vect/icalvalid.wikidot/projo.ics", ['3.4_1', '3.1_3', '3.1_2', '3.1_3', '3.1_2', '3.1_2', '3.3.6_1', '3.3.6_1']],
-            ["C:/sw/icalculator/rsc/utest/test_vect/icalvalid.wikidot/carnation.ics",['3.4_1', '3.1_3', '3.1_2', '8.3.2_1', '3.3.6_1', '3.3.6_1']]
+            ["C:/sw/icalculator/rsc/utest/test_vect/wild/sc_calendar_3325.ics",['3.4_2','3.1_3', '3.1_2', '3.1_2', '8.3.2_1', '8.3.2_1', '3.8.2.2_1', '3.8.2.2_1', '3.8.2.2_1', '3.8.2.2_1']],
+            ["C:/sw/icalculator/rsc/utest/test_vect/wild/artdoll.ics",['3.4_2','3.1_3', '3.1_2', '8.3.2_1', '3.6_2']],
+            ["C:/sw/icalculator/rsc/utest/test_vect/wild/GilsumNH.ics",['3.4_1', '3.4_2', '3.1_2', '3.6_1', '3.6_2', '3.3.5_1','3.3.5_2']],
+            ["C:/sw/icalculator/rsc/utest/test_vect/wild/projo.ics", ['3.4_2', '3.1_3', '3.1_2', '3.1_3', '3.1_2', '3.1_2']],
+            ["C:/sw/icalculator/rsc/utest/test_vect/wild/carnation.ics",['3.4_2', '3.1_3', '3.1_2', '8.3.2_1']],
+            ["C:/sw/icalculator/rsc/utest/test_vect/wild/SO_15002203.ics",[]],
+            ["C:/sw/icalculator/rsc/utest/test_vect/wild/SO_15047977.ics",['3.4_2', '3.8.4.7_1', '3.8.4.7_1', '3.8.4.7_1', '3.8.4.7_1', '3.8.4.7_1', '3.8.4.7_1', '3.8.4.7_1', '3.8.4.7_1', '3.8.4.7_1', '3.3.5_3', '3.3.5_3', '3.3.5_3', '3.3.5_3', '3.3.5_3', '3.3.5_3', '3.3.5_3', '3.3.5_3', '3.3.5_3', '3.3.5_3', '3.3.5_3', '3.3.5_3', '3.3.5_3', '3.3.5_3', '3.3.5_3', '3.3.5_3', '3.3.5_3', '3.3.5_3', '3.3.5_3', '3.3.5_3']]
             ]
+            
 
 SCM_5545 = [["RFC5545/RFC5545_3.8.4.7_1.ics",["3.8.4.7_1"]]
             ]

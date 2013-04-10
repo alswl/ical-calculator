@@ -1,0 +1,1131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0103)http://blog.jonudell.net/2009/01/02/feed-validation-revisited-the-parallel-universe-of-icalendar-feeds/ -->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head profile="http://gmpg.org/xfn/11"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Feed validation revisited: The parallel universe of iCalendar feeds | Jon Udell</title>
+
+	<style type="text/css" media="screen">
+		@import url( http://s2.wp.com/wp-content/themes/pub/connections/style.css?m=1355519460g );
+	</style>
+	<link rel="pingback" href="http://blog.jonudell.net/xmlrpc.php">
+
+<!--[if IE 7]>
+<style type="text/css">
+	#topnav li {
+		display: inline;
+	}
+</style>
+<![endif]-->
+
+			<script src="./Feed validation revisited  The parallel universe of iCalendar feeds   Jon Udell_files/quant.js" async="" type="text/javascript"></script><script src="./Feed validation revisited  The parallel universe of iCalendar feeds   Jon Udell_files/remote-login.php" type="text/javascript"></script>
+		<script type="text/javascript">
+		/* <![CDATA[ */
+			if ( 'function' === typeof WPRemoteLogin ) {
+				document.cookie = "wordpress_test_cookie=test; path=/";
+				if ( document.cookie.match( /(;|^)\s*wordpress_test_cookie\=/ ) ) {
+					WPRemoteLogin();
+				}
+			}
+		/* ]]> */
+		</script>
+		<link rel="alternate" type="application/rss+xml" title="Jon Udell » Feed" href="http://blog.jonudell.net/feed/">
+<link rel="alternate" type="application/rss+xml" title="Jon Udell » Comments Feed" href="http://blog.jonudell.net/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="Jon Udell » Feed validation revisited: The parallel universe of iCalendar feeds Comments Feed" href="http://blog.jonudell.net/2009/01/02/feed-validation-revisited-the-parallel-universe-of-icalendar-feeds/feed/">
+<script type="text/javascript">
+/* <![CDATA[ */
+function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!='function'){window.onload=func;}else{window.onload=function(){oldonload();func();}}}
+/* ]]> */
+</script>
+<link rel="stylesheet" id="all-css-0" href="./Feed validation revisited  The parallel universe of iCalendar feeds   Jon Udell_files/saved_resource" type="text/css" media="all">
+<link rel="stylesheet" id="demosites-open-sans-css" href="./Feed validation revisited  The parallel universe of iCalendar feeds   Jon Udell_files/css" type="text/css" media="all">
+<link rel="stylesheet" id="all-css-2" href="./Feed validation revisited  The parallel universe of iCalendar feeds   Jon Udell_files/saved_resource(1)" type="text/css" media="all">
+<link rel="stylesheet" id="print-css-2" href="./Feed validation revisited  The parallel universe of iCalendar feeds   Jon Udell_files/global-print.css" type="text/css" media="print">
+<script type="text/javascript">
+/* <![CDATA[ */
+var LoggedOutFollow = {"invalid_email":"Your subscription did not succeed, please try again with a valid email address."};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Feed validation revisited  The parallel universe of iCalendar feeds   Jon Udell_files/saved_resource(2)"></script>
+<link rel="stylesheet" id="all-css-0" href="./Feed validation revisited  The parallel universe of iCalendar feeds   Jon Udell_files/style.css" type="text/css" media="all">
+<!--[if lt IE 8]>
+<link rel='stylesheet' id='highlander-comments-ie7-css'  href='http://s2.wp.com/wp-content/mu-plugins/highlander-comments/style-ie7.css?m=1351637563g&#038;ver=20110606' type='text/css' media='all' />
+<![endif]-->
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://jonudell.wordpress.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://jonudell.wordpress.com/wp-includes/wlwmanifest.xml"> 
+<link rel="prev" title="Visible Workings (redux)" href="http://blog.jonudell.net/2008/12/30/visible-workings-redux/">
+<link rel="next" title="A conversation with Jeff Jonas about connecting dots" href="http://blog.jonudell.net/2009/01/05/a-conversation-with-jeff-jonas-about-connecting-dots/">
+<meta name="generator" content="WordPress.com">
+<link rel="canonical" href="./Feed validation revisited  The parallel universe of iCalendar feeds   Jon Udell_files/Feed validation revisited  The parallel universe of iCalendar feeds   Jon Udell.htm">
+<link rel="shortlink" href="http://wp.me/psr3-eu">
+<link rel="alternate" type="application/json+oembed" href="http://public-api.wordpress.com/oembed/1.0/?format=json&url=http%3A%2F%2Fblog.jonudell.net%2F2009%2F01%2F02%2Ffeed-validation-revisited-the-parallel-universe-of-icalendar-feeds%2F&for=wpcom-auto-discovery"><link rel="alternate" type="application/xml+oembed" href="http://public-api.wordpress.com/oembed/1.0/?format=xml&url=http%3A%2F%2Fblog.jonudell.net%2F2009%2F01%2F02%2Ffeed-validation-revisited-the-parallel-universe-of-icalendar-feeds%2F&for=wpcom-auto-discovery">
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="Feed validation revisited: The parallel universe of iCalendar feeds">
+<meta property="og:url" content="http://blog.jonudell.net/2009/01/02/feed-validation-revisited-the-parallel-universe-of-icalendar-feeds/">
+<meta property="og:description" content="If you were tuned into the blogosphere back in 2001, you&#39;ll recall lots of chatter about RSS feed validation. RSS came in multiple flavors. Anyone could whip up a feed purporting to be in one or an...">
+<meta property="og:site_name" content="Jon Udell">
+<meta name="twitter:site" content="@wordpressdotcom">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:creator" content="@judell">
+<link rel="shortcut icon" type="image/x-icon" href="http://s2.wp.com/i/favicon.ico?m=1311975824g" sizes="16x16 24x24 32x32 48x48">
+<link rel="icon" type="image/x-icon" href="http://s2.wp.com/i/favicon.ico?m=1311975824g" sizes="16x16 24x24 32x32 48x48">
+<link rel="apple-touch-icon-precomposed" href="http://s0.wp.com/i/webclip.png?m=1355642671g">
+<link rel="openid.server" href="http://jonudell.wordpress.com/?openidserver=1">
+<link rel="openid.delegate" href="http://jonudell.wordpress.com/">
+<link rel="search" type="application/opensearchdescription+xml" href="http://blog.jonudell.net/osd.xml" title="Jon Udell">
+<link rel="search" type="application/opensearchdescription+xml" href="http://wordpress.com/opensearch.xml" title="WordPress.com">
+		<style>
+		/* <![CDATA[ */
+		/* Block: reblog */
+		
+		.reblog-from img                   { margin: 0 10px 0 0; vertical-align: middle; padding: 0; border: 0; }
+		.reblogger-note img.avatar         { float: left; padding: 0; border: 0; }
+		.reblogger-note-content            { margin: 0 0 20px; }
+		.reblog-post .wpcom-enhanced-excerpt-content { border-left: 3px solid #eee; padding-left: 15px; }
+		.reblog-post ul.thumb-list         { display: block; list-style: none; margin: 2px 0; padding: 0; clear: both; }
+		.reblog-post ul.thumb-list li      { display: inline; margin: 0; padding: 0 1px; border: 0; }
+		.reblog-post ul.thumb-list li a    { margin: 0; padding: 0; border: 0; }
+		.reblog-post ul.thumb-list li img  { margin: 0; padding: 0; border: 0; }
+		
+		.reblog-post .wpcom-enhanced-excerpt { clear: both; }
+		
+		.reblog-post .wpcom-enhanced-excerpt address,
+		.reblog-post .wpcom-enhanced-excerpt li,
+		.reblog-post .wpcom-enhanced-excerpt h1,
+		.reblog-post .wpcom-enhanced-excerpt h2,
+		.reblog-post .wpcom-enhanced-excerpt h3,
+		.reblog-post .wpcom-enhanced-excerpt h4,
+		.reblog-post .wpcom-enhanced-excerpt h5,
+		.reblog-post .wpcom-enhanced-excerpt h6,
+		.reblog-post .wpcom-enhanced-excerpt p { font-size: 100% !important; }
+		
+		.reblog-post .wpcom-enhanced-excerpt blockquote,
+		.reblog-post .wpcom-enhanced-excerpt pre,
+		.reblog-post .wpcom-enhanced-excerpt code,
+		.reblog-post .wpcom-enhanced-excerpt q { font-size: 98% !important; }
+		
+
+		/* ]]> */
+		</style>
+		<style type="text/css">
+.widget_twitter li {
+	word-wrap: break-word;
+}
+</style>
+<meta name="application-name" content="Jon Udell"><meta name="msapplication-window" content="width=device-width;height=device-height"><meta name="msapplication-tooltip" content="Strategies for Internet citizens"><meta name="msapplication-task" content="name=Subscribe;action-uri=http://blog.jonudell.net/feed/;icon-uri=http://s2.wp.com/i/favicon.ico"><meta name="msapplication-task" content="name=Sign up for a free blog;action-uri=http://wordpress.com/signup/;icon-uri=http://s2.wp.com/i/favicon.ico"><meta name="msapplication-task" content="name=WordPress.com Support;action-uri=http://support.wordpress.com/;icon-uri=http://s2.wp.com/i/favicon.ico"><meta name="msapplication-task" content="name=WordPress.com Forums;action-uri=http://forums.wordpress.com/;icon-uri=http://s2.wp.com/i/favicon.ico"><meta name="title" content="Feed validation revisited: The parallel universe of iCalendar feeds | Jon Udell on WordPress.com">
+<meta name="description" content="Strategies for Internet citizens (by Jon Udell)">
+<style type="text/css">
+#headimg {
+	background:#7d8b5a url(http://jonudell.files.wordpress.com/2008/04/cropped-keene-night-360.jpg) center repeat-y;
+}
+#headimg h1 a, #headimg h1 a:hover, #headimg #desc {
+	color: #B5C09D;
+}
+</style>
+<link rel="stylesheet" type="text/css" id="gravatar-card-css" href="./Feed validation revisited  The parallel universe of iCalendar feeds   Jon Udell_files/hovercard.css"><link rel="stylesheet" type="text/css" id="gravatar-card-services-css" href="./Feed validation revisited  The parallel universe of iCalendar feeds   Jon Udell_files/services.css"></head>
+
+<body class="single single-post postid-898 single-format-standard highlander-enabled highlander-light">
+<div id="rap">
+
+<div id="header">
+		<ul id="topnav">
+		<li><a href="http://blog.jonudell.net/" id="navHome" title="Posted Recently" accesskey="h">Home</a></li>
+		<li class="page_item page-item-2"><a href="http://blog.jonudell.net/about/">about</a></li>
+<li class="page_item page-item-1371"><a href="http://blog.jonudell.net/elmcity-project-faq/">elmcity project&nbsp;faq</a></li>
+<li class="page_item page-item-1252"><a href="http://blog.jonudell.net/elmcityazure-project-status/">elmcity project&nbsp;status</a></li>
+<li class="page_item page-item-2526"><a href="http://blog.jonudell.net/index/">index</a></li>
+<li class="page_item page-item-2641"><a href="http://blog.jonudell.net/why-and-how/">why and&nbsp;how</a></li>
+	</ul>
+
+	<div id="headimg">
+	<h1><a href="http://blog.jonudell.net/" title="Jon Udell">Jon Udell</a></h1>
+	<div id="desc">Strategies for Internet citizens</div>
+	</div>
+</div>
+	<div id="main">
+	<div id="content">
+						<div class="post-898 post type-post status-publish format-standard hentry category-uncategorized">
+				<p class="post-date">January 2, 2009</p>
+<div class="post-info">
+	<h2 class="post-title">
+			Feed validation revisited: The parallel universe of iCalendar&nbsp;feeds		</h2>
+Posted by Jon Udell under <a href="http://blog.jonudell.net/category/uncategorized/" title="View all posts in Uncategorized" rel="category tag">Uncategorized</a> <br><a href="http://blog.jonudell.net/2009/01/02/feed-validation-revisited-the-parallel-universe-of-icalendar-feeds/#comments" title="Comment on Feed validation revisited: The parallel universe of iCalendar feeds">[11] Comments</a>&nbsp;</div>
+<div class="post-content">
+	<p>
+If you were tuned into the blogosphere back in 2001, you’ll recall lots of chatter about RSS feed validation. RSS came in multiple flavors. Anyone could whip up a feed purporting to be in one or another of those formats, and many of us did. There were all kinds of questions about how and why feeds did or didn’t conform to the various specifications.
+</p>
+<p>
+Nowadays we have even more flavors. There’s RSS 2.0. And there’s Atom, which isn’t a member of the RSS family at all, it’s a different species of feed format. And yet you rarely hear about problems with feeds that can’t be read and processed by feedreaders.
+</p>
+<p>
+I think there are two reasons why RSS/Atom-style feeds work pretty well nowdays. First, there’s the <a href="http://feedvalidator.org/">Feed Validator</a>. Mark Pilgrim and Sam Ruby put a huge amount of effort into this excellent tool. Why? Here is their explanation:
+</p>
+<blockquote><p>
+Despite its relatively simple nature, RSS is poorly implemented by many tools. This validator is an attempt to codify the specification (literally, to translate it into code) to make it easier to know when you’re producing RSS correctly, and to help you fix it when you’re not.
+</p></blockquote>
+<p>
+The second reason is that RSS/Atom-style syndication has been happening in a lot of places for a long time now. A lot of people have used, and helped to refine, the tools and techniques.
+</p>
+<p>
+Now I’m exploring the parallel world of calendar syndication, using ICS feeds instead of RSS/Atom feeds. And it feels like 2001 all over again. There are ICS feeds out there, but nowhere near as many as RSS/Atom feeds. And my hunch is that even when ICS feeds are published, they’re often unused, so there isn’t enough feedback to flush out problems. Finally, the ICS equivalent of the RSS/Atom Feed Validator — a service called <a href="http://severinghaus.org/projects/icv/">iCalendar Validator</a>, based on a Java library called <a href="http://sourceforge.net/projects/ical4j/">iCal4j</a> — isn’t anywhere near as comprehensive and informative as the RSS/Atom Validator.
+</p>
+<p>
+Here’s a chart that lists the iCalendar feeds currently being collected by the <a href="http://elmcity.info/events">elmcity.info calendar aggregator</a>.
+</p>
+<table border="0" cellspacing="8">
+<tbody>
+<tr>
+<td align="center"><strong>feed</strong></td>
+<td align="center"><strong>producer</strong></td>
+<td><strong>valid in <a href="http://severinghaus.org/projects/icv/">iCal4J</a></strong></td>
+<td><strong>loads with <a href="http://www.ddaysoftware.com/Pages/Projects/DDay.iCal/">DDay.iCal</a></strong></td>
+<td><strong>loads with <a href="http://codespeak.net/icalendar/">iCalendar.py</a></strong></td>
+<td><strong>loads with <a href="http://vobject.skyhouseconsulting.com/">vObject</a></strong></td>
+</tr>
+<tr>
+<td align="center"><a href="http://www.google.com/calendar/ical/thom@armadillosburritos.com/public/basic.ics">armadillos</a></td>
+<td align="center">google</td>
+<td align="center"><span style="color:green;"><strong>yes</strong></span></td>
+<td align="center"><span style="color:green;"><strong>yes</strong></span></td>
+<td align="center"><span style="color:green;"><strong>yes</strong></span></td>
+<td align="center"><span style="color:green;"><strong>yes</strong></span></td>
+</tr>
+<tr>
+<td align="center"><a href="http://www.google.com/calendar/ical/moon@aveo.org/public/basic.ics">aveo</a></td>
+<td align="center">google</td>
+<td align="center"><span style="color:green;"><strong>yes</strong></span></td>
+<td align="center"><span style="color:green;"><strong>yes</strong></span></td>
+<td align="center"><span style="color:green;"><strong>yes</strong></span></td>
+<td align="center"><span style="color:green;"><strong>yes</strong></span></td>
+</tr>
+<tr>
+<td align="center"><a href="http://www.keenechamber.com/gkcc_ics.php">chamber of commerce</a></td>
+<td align="center">homegrown</td>
+<td align="center"><span style="color:green;"><strong>yes</strong></span></td>
+<td align="center"><span style="color:red;"><strong>no</strong></span></td>
+<td align="center"><span style="color:green;"><strong>yes</strong></span></td>
+<td align="center"><span style="color:green;"><strong>yes</strong></span></td>
+</tr>
+<tr>
+<td align="center"><a href="http://www.google.com/calendar/ical/cheshiredems@gmail.com/public/basic.ics">cheshire democrats</a></td>
+<td align="center">google</td>
+<td align="center"><span style="color:green;"><strong>yes</strong></span></td>
+<td align="center"><span style="color:green;"><strong>yes</strong></span></td>
+<td align="center"><span style="color:green;"><strong>yes</strong></span></td>
+<td align="center"><span style="color:green;"><strong>yes</strong></span></td>
+</tr>
+<tr>
+<td align="center"><a href="http://www.frostfree.org/event/ical/all/all">frost free library</a></td>
+<td align="center">drupal</td>
+<td align="center"><span style="color:red;"><strong>no</strong></span></td>
+<td align="center"><span style="color:red;"><strong>no</strong></span></td>
+<td align="center"><span style="color:green;"><strong>yes</strong></span></td>
+<td align="center"><span style="color:red;"><strong>no</strong></span></td>
+</tr>
+<tr>
+<td align="center"><a href="http://www.google.com/calendar/ical/ed1simu3nnn78fabr6q4071a4k@group.calendar.google.com/public/basic.ics">fuzzy logic</a></td>
+<td align="center">google</td>
+<td align="center"><span style="color:green;"><strong>yes</strong></span></td>
+<td align="center"><span style="color:green;"><strong>yes</strong></span></td>
+<td align="center"><span style="color:green;"><strong>yes</strong></span></td>
+<td align="center"><span style="color:green;"><strong>yes</strong></span></td>
+</tr>
+<tr>
+<td align="center"><a href="http://www.google.com/calendar/ical/gilsumchurch@gmail.com/public/basic.ics">gilsum church</a></td>
+<td align="center">google</td>
+<td align="center"><span style="color:green;"><strong>yes</strong></span></td>
+<td align="center"><span style="color:green;"><strong>yes</strong></span></td>
+<td align="center"><span style="color:green;"><strong>yes</strong></span></td>
+<td align="center"><span style="color:green;"><strong>yes</strong></span></td>
+</tr>
+<tr>
+<td align="center"><a href="http://hannahgrimes.com/ical">hannah grimes</a></td>
+<td align="center">drupal</td>
+<td align="center"><span style="color:green;"><strong>yes</strong></span></td>
+<td align="center"><span style="color:green;"><strong>yes</strong></span></td>
+<td align="center"><span style="color:green;"><strong>yes</strong></span></td>
+<td align="center"><span style="color:red;"><strong>no</strong></span></td>
+</tr>
+<tr>
+<td align="center"><a href="http://www.google.com/calendar/ical/jmiirua8k29uqcn77vcmalq034@group.calendar.google.com/public/basic.ics">keene high soccer</a></td>
+<td align="center">google</td>
+<td align="center"><span style="color:red;"><strong>no</strong></span></td>
+<td align="center"><span style="color:green;"><strong>yes</strong></span></td>
+<td align="center"><span style="color:green;"><strong>yes</strong></span></td>
+<td align="center"><span style="color:green;"><strong>yes</strong></span></td>
+</tr>
+<tr>
+<td align="center"><a href="http://www.fusecal.com/calendar/ical/320516?h=ea236e2a-d8fb-11dd-a692-00163e284ee0">keene public library</a></td>
+<td align="center">fusecal</td>
+<td align="center"><span style="color:green;"><strong>yes</strong></span></td>
+<td align="center"><span style="color:green;"><strong>yes</strong></span></td>
+<td align="center"><span style="color:green;"><strong>yes</strong></span></td>
+<td align="center"><span style="color:green;"><strong>yes</strong></span></td>
+</tr>
+<tr>
+<td align="center"><a href="http://www.google.com/calendar/ical/cmiles@keene.edu/public/basic.ics">keene state bodyworks</a></td>
+<td align="center">google</td>
+<td align="center"><span style="color:green;"><strong>yes</strong></span></td>
+<td align="center"><span style="color:green;"><strong>yes</strong></span></td>
+<td align="center"><span style="color:green;"><strong>yes</strong></span></td>
+<td align="center"><span style="color:green;"><strong>yes</strong></span></td>
+</tr>
+<tr>
+<td align="center"><a href="http://www.google.com/calendar/ical/367m8bqo3i4077646nvi8p0r24@group.calendar.google.com/public/basic.ics">mmama cinema</a></td>
+<td align="center">google</td>
+<td align="center"><span style="color:green;"><strong>yes</strong></span></td>
+<td align="center"><span style="color:green;"><strong>yes</strong></span></td>
+<td align="center"><span style="color:green;"><strong>yes</strong></span></td>
+<td align="center"><span style="color:green;"><strong>yes</strong></span></td>
+</tr>
+<tr>
+<td align="center"><a href="http://www.google.com/calendar/ical/uscq24djdsk5todjhrgj9j33c4@group.calendar.google.com/public/basic.ics">mmama dance</a></td>
+<td align="center">google</td>
+<td align="center"><span style="color:green;"><strong>yes</strong></span></td>
+<td align="center"><span style="color:green;"><strong>yes</strong></span></td>
+<td align="center"><span style="color:red;"><strong>no</strong></span></td>
+<td align="center"><span style="color:red;"><strong>no</strong></span></td>
+</tr>
+<tr>
+<td align="center"><a href="http://www.google.com/calendar/ical/snqj0a6bgu77d3phtmsdihi928@group.calendar.google.com/public/basic.ics">mmama music</a></td>
+<td align="center">google</td>
+<td align="center"><span style="color:green;"><strong>yes</strong></span></td>
+<td align="center"><span style="color:green;"><strong>yes</strong></span></td>
+<td align="center"><span style="color:green;"><strong>yes</strong></span></td>
+<td align="center"><span style="color:green;"><strong>yes</strong></span></td>
+</tr>
+<tr>
+<td align="center"><a href="http://www.google.com/calendar/ical/vhqv602ih1dk9bqnjpqjv495j0@group.calendar.google.com/public/basic.ics">mmama visual</a></td>
+<td align="center">google</td>
+<td align="center"><span style="color:green;"><strong>yes</strong></span></td>
+<td align="center"><span style="color:green;"><strong>yes</strong></span></td>
+<td align="center"><span style="color:green;"><strong>yes</strong></span></td>
+<td align="center"><span style="color:green;"><strong>yes</strong></span></td>
+</tr>
+<tr>
+<td align="center"><a href="http://www.monadnockfolk.org/?ec3_ical">monadnock folk</a></td>
+<td align="center">wordpress ec3</td>
+<td align="center"><span style="color:green;"><strong>yes</strong></span></td>
+<td align="center"><span style="color:green;"><strong>yes</strong></span></td>
+<td align="center"><span style="color:green;"><strong>yes</strong></span></td>
+<td align="center"><span style="color:green;"><strong>yes</strong></span></td>
+</tr>
+<tr>
+<td align="center"><a href="http://mrhsnhus.intand.com/index.php?type=export&action=ical&export_type=month&calendar=ical&page=2">monadnock regional high</a></td>
+<td align="center">unknown</td>
+<td align="center"><span style="color:red;"><strong>no</strong></span></td>
+<td align="center"><span style="color:green;"><strong>yes</strong></span></td>
+<td align="center"><span style="color:green;"><strong>yes</strong></span></td>
+<td align="center"><span style="color:green;"><strong>yes</strong></span></td>
+</tr>
+<tr>
+<td align="center"><a href="http://www.google.com/calendar/ical/info@swampbats.com/public/basic.ics">swamp  bats</a></td>
+<td align="center">google</td>
+<td align="center"><span style="color:green;"><strong>yes</strong></span></td>
+<td align="center"><span style="color:green;"><strong>yes</strong></span></td>
+<td align="center"><span style="color:green;"><strong>yes</strong></span></td>
+<td align="center"><span style="color:green;"><strong>yes</strong></span></td>
+</tr>
+<tr>
+<td align="center"><a href="http://www.google.com/calendar/ical/gilsumrocks@gmail.com/public/basic.ics">town  of gilsum</a></td>
+<td align="center">google</td>
+<td align="center"><span style="color:green;"><strong>yes</strong></span></td>
+<td align="center"><span style="color:green;"><strong>yes</strong></span></td>
+<td align="center"><span style="color:green;"><strong>yes</strong></span></td>
+<td align="center"><span style="color:green;"><strong>yes</strong></span></td>
+</tr>
+<tr>
+<td align="center"><a href="http://extension.unh.edu/events/index.cfm?e=app.subscribeICS">unh  coop extension</a></td>
+<td align="center">homegrown</td>
+<td align="center"><span style="color:red;"><strong>no</strong></span></td>
+<td align="center"><span style="color:green;"><strong>yes</strong></span></td>
+<td align="center"><span style="color:green;"><strong>yes</strong></span></td>
+<td align="center"><span style="color:green;"><strong>yes</strong></span></td>
+</tr>
+<tr>
+<td align="center"><a href="http://upcoming.yahoo.com/calendar/v2/search_all/?loc=Keene%2C+New+Hampshire+03431&rt=0">upcoming</a></td>
+<td align="center">yahoo</td>
+<td align="center"><span style="color:red;"><strong>no</strong></span></td>
+<td align="center"><span style="color:green;"><strong>yes</strong></span></td>
+<td align="center"><span style="color:green;"><strong>yes</strong></span></td>
+<td align="center"><span style="color:green;"><strong>yes</strong></span></td>
+</tr>
+<tr>
+<td align="center"><a href="http://www.google.com/calendar/ical/keene.ymca@gmail.com/public/basic.ics">ymca</a></td>
+<td align="center">google</td>
+<td align="center"><span style="color:green;"><strong>yes</strong></span></td>
+<td align="center"><span style="color:green;"><strong>yes</strong></span></td>
+<td align="center"><span style="color:green;"><strong>yes</strong></span></td>
+<td align="center"><span style="color:green;"><strong>yes</strong></span></td>
+</tr>
+</tbody>
+</table>
+<p>
+As you can see, the results are all over the map. Some purportedly valid feeds won’t load using one iCalendar library, some won’t load using another. Some purportedly invalid feeds <i>do</i> load.
+</p>
+<p>
+I expect things will get worse before they get better. There are only a handful of different ICS producers represented here, but the two labeled <i>homegrown</i> were created directly or indirectly in response to my project. If we recapitulate the RSS/Atom experience with ICS, and lots more ad-hoc ICS feeds arrive on the scene, charts like this will go even redder.
+</p>
+<p>
+To make them go green, we’ll need a more robust ICS validator.</p>
+<div id="jp-post-flair" class="sharedaddy sd-like-enabled sd-sharing-enabled"><div class="sharedaddy sd-sharing-enabled"><div class="robots-nocontent sd-block sd-social sd-social-icon-text sd-sharing"><h3 class="sd-title">Share this:</h3><div class="sd-content"><ul><li class="share-email share-service-visible"><a rel="nofollow" class="share-email sd-button share-icon" href="http://blog.jonudell.net/2009/01/02/feed-validation-revisited-the-parallel-universe-of-icalendar-feeds/?share=email&nb=1" title="Click to email this to a friend"><span>Email</span></a></li><li class="share-twitter"><a rel="nofollow" class="share-twitter sd-button share-icon" href="http://blog.jonudell.net/2009/01/02/feed-validation-revisited-the-parallel-universe-of-icalendar-feeds/?share=twitter&nb=1" title="Click to share on Twitter" id="sharing-twitter-898"><span>Twitter</span></a></li><li class="share-facebook"><a rel="nofollow" class="share-facebook sd-button share-icon" href="http://blog.jonudell.net/2009/01/02/feed-validation-revisited-the-parallel-universe-of-icalendar-feeds/?share=facebook&nb=1" title="Share on Facebook" id="sharing-facebook-898"><span>Facebook</span></a></li><li class="share-stumbleupon"><a rel="nofollow" class="share-stumbleupon sd-button share-icon" href="http://blog.jonudell.net/2009/01/02/feed-validation-revisited-the-parallel-universe-of-icalendar-feeds/?share=stumbleupon&nb=1" title="Click to share on StumbleUpon"><span>StumbleUpon</span></a></li><li class="share-digg"><a rel="nofollow" class="share-digg sd-button share-icon" href="http://blog.jonudell.net/2009/01/02/feed-validation-revisited-the-parallel-universe-of-icalendar-feeds/?share=digg&nb=1" title="Click to Digg this post"><span>Digg</span></a></li><li class="share-reddit"><a rel="nofollow" class="share-reddit sd-button share-icon" href="http://blog.jonudell.net/2009/01/02/feed-validation-revisited-the-parallel-universe-of-icalendar-feeds/?share=reddit&nb=1" title="Click to share on Reddit"><span>Reddit</span></a></li><li class="share-end"></li></ul><div class="sharing-clear"></div></div></div></div><div class="sharedaddy sd-block sd-like jetpack-likes-widget-wrapper jetpack-likes-widget-loaded" id="like-post-wrapper-109309-898" data-src="http://widgets.wp.com/#blog_id=109309&amp;post_id=898&amp;origin=http://jonudell.wordpress.com" data-name="like-post-frame-109309-898"><h3 class="sd-title">Like this:</h3><div class="post-likes-widget-placeholder" style="height: 55px; display: none;"><span class="button"><span>Like</span></span> <span class="loading">Loading...</span></div><iframe class="post-likes-widget jetpack-likes-widget" name="like-post-frame-109309-898" height="55px" width="100%" frameborder="0" src="./Feed validation revisited  The parallel universe of iCalendar feeds   Jon Udell_files/saved_resource.htm" style="display: inline;"></iframe><span class="sd-text-color"></span><a class="sd-link-color"></a></div></div>	<div class="post-info">
+			</div>
+	<div class="post-footer">&nbsp;</div>
+</div>
+					<h3 id="comments">11 Responses to “Feed validation revisited: The parallel universe of iCalendar&nbsp;feeds”</h3>
+
+	<ol class="commentlist">
+	<li class="comment even thread-even depth-1 highlander-comment" id="comment-126290">
+	<div id="div-comment-126290">
+	<div class="comment-author vcard">
+		<img alt="" src="./Feed validation revisited  The parallel universe of iCalendar feeds   Jon Udell_files/a1efe62d36d57cd24c2426f875c9b406" class="avatar avatar-48 grav-hashed grav-hijack" height="48" width="48" id="grav-a1efe62d36d57cd24c2426f875c9b406-0">		<cite class="fn"><a href="http://vobject.skyhouseconsulting.com/" rel="external nofollow" class="url">Jeffrey Harris</a></cite> <span class="says">Says:</span>	</div>
+		<br>
+
+	<small class="comment-meta commentmetadata"><a href="http://blog.jonudell.net/2009/01/02/feed-validation-revisited-the-parallel-universe-of-icalendar-feeds/#comment-126290" title="">
+	January 2, 2009 at 9:36 pm</a> </small>
+
+	<p>I originally intended vobject to provide validation in addition to parsing of icalendar data, but I ended up focusing more on being liberal in what I accepted and working around bugs in major clients.</p>
+<p>(as an aside, I’d be fascinated to see which of your feeds vobject fails to parse).</p>
+<p>The validation scaffolding is still in there, though, and it wouldn’t be particularly hard to improve.</p>
+<p>It’d be great to collect a snapshot of failing icalendar files and catalog them just so implementers in all languages could see which ones they fail on, how!  I think the folks at CalConnect came up with test files like this at some point, but I don’t think they were made public.</p>
+<p>I keep meaning to make a GAE icalendar validator using vobject, maybe one of these weekends.</p>
+<p>P.S. If you aren’t already planning on it, you might try to attend the CalConnect at Microsoft’s Redmond campus, <a href="http://www.calconnect.org/calconnect14.shtml" rel="nofollow">http://www.calconnect.org/calconnect14.shtml</a></p>
+
+	<div class="reply">
+		<a class="comment-reply-link" href="http://blog.jonudell.net/2009/01/02/feed-validation-revisited-the-parallel-universe-of-icalendar-feeds/?replytocom=126290#respond" onclick="return addComment.moveForm(&quot;div-comment-126290&quot;, &quot;126290&quot;, &quot;respond&quot;, &quot;898&quot;)">Reply</a>	</div>
+	</div>
+</li>
+<li class="comment odd alt thread-odd thread-alt depth-1 highlander-comment" id="comment-126296">
+	<div id="div-comment-126296">
+	<div class="comment-author vcard">
+		<img alt="" src="./Feed validation revisited  The parallel universe of iCalendar feeds   Jon Udell_files/1f74f2f3a76f819d9daf6f16c473a68a" class="avatar avatar-48 grav-hashed grav-hijack" height="48" width="48" id="grav-1f74f2f3a76f819d9daf6f16c473a68a-0">		<cite class="fn">Stephen Judd</cite> <span class="says">Says:</span>	</div>
+		<br>
+
+	<small class="comment-meta commentmetadata"><a href="http://blog.jonudell.net/2009/01/02/feed-validation-revisited-the-parallel-universe-of-icalendar-feeds/#comment-126296" title="">
+	January 3, 2009 at 9:15 am</a> </small>
+
+	<p>I created the UNH Cooperative Extension application, and didn’t know about the validator.  I fixed the feeds so they validate.  The problem was not adding ;VALUE=DATE to all day events where I set the DTSTART and DTEND to date values.</p>
+<p>I’m using iCalendar.py on my GAE project (www.mashical.com) and have felt the pain of ics formats.  For example, Yahoo sports calendars use TZID in the DTSTART and DTEND, which iCalendar.py doesn’t handle natively.  I had to use a regular expression and pytz to take the timezone information and transform the start and end times.</p>
+<p>Also, when looking around my community (New Boston, NH) to see if I could create an aggregated calendar, like elmcity.info, I found nary an iCalendar enabled calendar!</p>
+
+	<div class="reply">
+		<a class="comment-reply-link" href="http://blog.jonudell.net/2009/01/02/feed-validation-revisited-the-parallel-universe-of-icalendar-feeds/?replytocom=126296#respond" onclick="return addComment.moveForm(&quot;div-comment-126296&quot;, &quot;126296&quot;, &quot;respond&quot;, &quot;898&quot;)">Reply</a>	</div>
+	</div>
+</li>
+<li class="comment byuser comment-author-jonudell bypostauthor even thread-even depth-1 highlander-comment" id="comment-126297">
+	<div id="div-comment-126297">
+	<div class="comment-author vcard">
+		<img alt="" src="./Feed validation revisited  The parallel universe of iCalendar feeds   Jon Udell_files/0d7c7e171fc0ad3dacc9b1ed203e3e50" class="avatar avatar-48 grav-hashed grav-hijack" height="48" width="48" id="grav-0d7c7e171fc0ad3dacc9b1ed203e3e50-0">		<cite class="fn"><a href="http://jonudell.wordpress.com/" rel="external nofollow" class="url">Jon Udell</a></cite> <span class="says">Says:</span>	</div>
+		<br>
+
+	<small class="comment-meta commentmetadata"><a href="http://blog.jonudell.net/2009/01/02/feed-validation-revisited-the-parallel-universe-of-icalendar-feeds/#comment-126297" title="">
+	January 3, 2009 at 10:41 am</a> </small>
+
+	<p>“I’d be fascinated to see which of your feeds vobject fails to parse”</p>
+<p>I updated the chart above to include vObject. As you can see, it seems to like everything except the two Drupal-produced feeds.</p>
+<p>“It’d be great to collect a snapshot of failing icalendar files and catalog them just so implementers in all languages could see which ones they fail on, how!”</p>
+<p>Absolutely. That’s another benefit of maintaining the feed registry in an open, queryable location:</p>
+<p><a href="http://del.icio.us/elmcity/trusted+ics+feed" rel="nofollow">http://del.icio.us/elmcity/trusted+ics+feed</a></p>
+<p>“I think the folks at CalConnect came up with test files like this at some point, but I don’t think they were made public.”</p>
+<p>In any case, the stuff that comes up in the wild is what’s most interesting to me. </p>
+<p>“If you aren’t already planning on it, you might try to attend the CalConnect at Microsoft’s Redmond campus, <a href="http://www.calconnect.org/calconnect14.shtml" rel="nofollow">http://www.calconnect.org/calconnect14.shtml</a>”</p>
+<p>Hmm. Perhaps. Although I don’t think that the use case I’m pursuing here is of much interest to that community.</p>
+
+	<div class="reply">
+		<a class="comment-reply-link" href="http://blog.jonudell.net/2009/01/02/feed-validation-revisited-the-parallel-universe-of-icalendar-feeds/?replytocom=126297#respond" onclick="return addComment.moveForm(&quot;div-comment-126297&quot;, &quot;126297&quot;, &quot;respond&quot;, &quot;898&quot;)">Reply</a>	</div>
+	</div>
+</li>
+<li class="comment byuser comment-author-jonudell bypostauthor odd alt thread-odd thread-alt depth-1 highlander-comment" id="comment-126298">
+	<div id="div-comment-126298">
+	<div class="comment-author vcard">
+		<img alt="" src="./Feed validation revisited  The parallel universe of iCalendar feeds   Jon Udell_files/0d7c7e171fc0ad3dacc9b1ed203e3e50" class="avatar avatar-48 grav-hashed grav-hijack" height="48" width="48" id="grav-0d7c7e171fc0ad3dacc9b1ed203e3e50-1">		<cite class="fn"><a href="http://jonudell.wordpress.com/" rel="external nofollow" class="url">Jon Udell</a></cite> <span class="says">Says:</span>	</div>
+		<br>
+
+	<small class="comment-meta commentmetadata"><a href="http://blog.jonudell.net/2009/01/02/feed-validation-revisited-the-parallel-universe-of-icalendar-feeds/#comment-126298" title="">
+	January 3, 2009 at 10:49 am</a> </small>
+
+	<p>“I fixed the feeds so they validate.”</p>
+<p>Although, as we see above, their former non-validity didn’t prevent three iCalendar libraries from parsing the feeds.</p>
+<p>“I had to use a regular expression and pytz to take the timezone information and transform the start and end times.”</p>
+<p>And therein lies the dilemma. If those changes are required, a robust validator should prescribe them.</p>
+<p>“Also, when looking around my community (New Boston, NH) to see if I could create an aggregated calendar, like elmcity.info, I found nary an iCalendar enabled calendar!”</p>
+<p>This, of course, is the ultimate purpose of my project. ICS feeds want to be as superabundant as RSS feeds. They aren’t, and for no better reason than that it just doesn’t occur to people to publish them.</p>
+<p>Changing that is an exercise in politics more than in software development. Jim Groom’s going to try to make Fredericksburg VA a sister city to Keene w/respect to this idea:</p>
+<p><a href="http://bavatuesdays.com/a-calendar-year/" rel="nofollow">http://bavatuesdays.com/a-calendar-year/</a></p>
+<p>Maybe you can do the same for your region of NH?</p>
+
+	<div class="reply">
+		<a class="comment-reply-link" href="http://blog.jonudell.net/2009/01/02/feed-validation-revisited-the-parallel-universe-of-icalendar-feeds/?replytocom=126298#respond" onclick="return addComment.moveForm(&quot;div-comment-126298&quot;, &quot;126298&quot;, &quot;respond&quot;, &quot;898&quot;)">Reply</a>	</div>
+	</div>
+</li>
+<li class="pingback even thread-even depth-1 highlander-comment" id="comment-126306">
+	<div id="div-comment-126306">
+	<div class="comment-author vcard">
+				<cite class="fn"><a href="http://gfmorris.com/2009/01/03/links-for-2009-01-03/" rel="external nofollow" class="url">GFMorris.com » links for 2009-01-03</a></cite> <span class="says">Says:</span>	</div>
+		<br>
+
+	<small class="comment-meta commentmetadata"><a href="http://blog.jonudell.net/2009/01/02/feed-validation-revisited-the-parallel-universe-of-icalendar-feeds/#comment-126306" title="">
+	January 3, 2009 at 9:30 pm</a> </small>
+
+	<p>[...] Feed validation revisited: The parallel universe of iCalendar feeds « Jon Udell "Now I’m exploring the parallel world of calendar syndication, using ICS feeds instead of RSS/Atom feeds. And it feels like 2001 all over again. There are ICS feeds out there, but nowhere near as many as RSS/Atom feeds. And my hunch is that even when ICS feeds are published, they’re often unused, so there isn’t enough feedback to flush out problems." I have been thinking that 2009-10 is going to be the year of distributed calendar feeds [for awesome!], so … something like this is terribly needed. (tags: ical validation) [...]</p>
+
+	<div class="reply">
+		<a class="comment-reply-link" href="http://blog.jonudell.net/2009/01/02/feed-validation-revisited-the-parallel-universe-of-icalendar-feeds/?replytocom=126306#respond" onclick="return addComment.moveForm(&quot;div-comment-126306&quot;, &quot;126306&quot;, &quot;respond&quot;, &quot;898&quot;)">Reply</a>	</div>
+	</div>
+</li>
+<li class="pingback odd alt thread-odd thread-alt depth-1 highlander-comment" id="comment-126344">
+	<div id="div-comment-126344">
+	<div class="comment-author vcard">
+				<cite class="fn"><a href="http://blog.jonudell.net/2009/01/06/icalendar-validation-issue-3-quoted-printable-vs-html/" rel="external nofollow" class="url">iCalendar validation issue #3: Quoted-printable vs HTML « Jon Udell</a></cite> <span class="says">Says:</span>	</div>
+		<br>
+
+	<small class="comment-meta commentmetadata"><a href="http://blog.jonudell.net/2009/01/02/feed-validation-revisited-the-parallel-universe-of-icalendar-feeds/#comment-126344" title="">
+	January 6, 2009 at 11:49 am</a> </small>
+
+	<p>[...] validation examples: The Frost Free Library feed. It fails in three of the four parsers I tried here, and should have failed in all. It begins like [...]</p>
+
+	<div class="reply">
+		<a class="comment-reply-link" href="http://blog.jonudell.net/2009/01/02/feed-validation-revisited-the-parallel-universe-of-icalendar-feeds/?replytocom=126344#respond" onclick="return addComment.moveForm(&quot;div-comment-126344&quot;, &quot;126344&quot;, &quot;respond&quot;, &quot;898&quot;)">Reply</a>	</div>
+	</div>
+</li>
+<li class="comment even thread-even depth-1 highlander-comment" id="comment-126392">
+	<div id="div-comment-126392">
+	<div class="comment-author vcard">
+		<img alt="" src="./Feed validation revisited  The parallel universe of iCalendar feeds   Jon Udell_files/2378b474e8eadf5da80e86c2bbc75a74" class="avatar avatar-48 grav-hashed grav-hijack" height="48" width="48" id="grav-2378b474e8eadf5da80e86c2bbc75a74-0">		<cite class="fn"><a href="http://scripting.com/" rel="external nofollow" class="url">Dave Winer</a></cite> <span class="says">Says:</span>	</div>
+		<br>
+
+	<small class="comment-meta commentmetadata"><a href="http://blog.jonudell.net/2009/01/02/feed-validation-revisited-the-parallel-universe-of-icalendar-feeds/#comment-126392" title="">
+	January 8, 2009 at 6:55 pm</a> </small>
+
+	<p>I would like the feed validator to have a web service interface, so I can put a more neutral UI on it, stressing what I feel is important and de-emphasizing what I don’t feel is important.</p>
+<p>I would then be able to do more with it than I have been lately — because I can’t recommend something that makes warnings look like errors, esp when they’re so much a matter of taste and don’t reflect anything the spec says or doesn’t say. </p>
+<p>I was looking for a recent thread that mentioned the validator and this is the one I found — I thought you might agree that a web service interface for the validator makes sense.</p>
+<p>Hope all is well and that you’re having a pleasant and healthy 2009!</p>
+
+	<div class="reply">
+		<a class="comment-reply-link" href="http://blog.jonudell.net/2009/01/02/feed-validation-revisited-the-parallel-universe-of-icalendar-feeds/?replytocom=126392#respond" onclick="return addComment.moveForm(&quot;div-comment-126392&quot;, &quot;126392&quot;, &quot;respond&quot;, &quot;898&quot;)">Reply</a>	</div>
+	</div>
+</li>
+<li class="comment byuser comment-author-jonudell bypostauthor odd alt thread-odd thread-alt depth-1 highlander-comment" id="comment-126394">
+	<div id="div-comment-126394">
+	<div class="comment-author vcard">
+		<img alt="" src="./Feed validation revisited  The parallel universe of iCalendar feeds   Jon Udell_files/0d7c7e171fc0ad3dacc9b1ed203e3e50" class="avatar avatar-48 grav-hashed grav-hijack" height="48" width="48" id="grav-0d7c7e171fc0ad3dacc9b1ed203e3e50-2">		<cite class="fn"><a href="http://jonudell.wordpress.com/" rel="external nofollow" class="url">Jon Udell</a></cite> <span class="says">Says:</span>	</div>
+		<br>
+
+	<small class="comment-meta commentmetadata"><a href="http://blog.jonudell.net/2009/01/02/feed-validation-revisited-the-parallel-universe-of-icalendar-feeds/#comment-126394" title="">
+	January 8, 2009 at 8:04 pm</a> </small>
+
+	<p>&gt; I thought you might agree that a web<br>
+&gt; service interface for the validator makes<br>
+&gt; sense.</p>
+<p>I do. Of course I also think a web service interface on just about everything makes sense.</p>
+<p>I hope that if iCalendar validation advances in 2009, it’ll take that approach.</p>
+<p>I’d also love to see it follow the approach taken at feedvalidator.org w/respect to test cases. </p>
+<p><a href="http://feedvalidator.org/testcases/" rel="nofollow">http://feedvalidator.org/testcases/</a></p>
+<p>Although the validator itself is written in Python, the tests are purely declarative and completely decoupled from the implementation. A different validator could work off the same tests, and multiple validators could serve as checks on one another.</p>
+<p>What’s more, if that happened, the ensuing conversation would doubtless improve the breadth and quality of the (already excellent) test suite.</p>
+
+	<div class="reply">
+		<a class="comment-reply-link" href="http://blog.jonudell.net/2009/01/02/feed-validation-revisited-the-parallel-universe-of-icalendar-feeds/?replytocom=126394#respond" onclick="return addComment.moveForm(&quot;div-comment-126394&quot;, &quot;126394&quot;, &quot;respond&quot;, &quot;898&quot;)">Reply</a>	</div>
+	</div>
+</li>
+<li class="pingback even thread-even depth-1 highlander-comment" id="comment-126697">
+	<div id="div-comment-126697">
+	<div class="comment-author vcard">
+				<cite class="fn"><a href="http://blog.jonudell.net/2009/02/06/the-icalendar-validation-project/" rel="external nofollow" class="url">The iCalendar validation project « Jon Udell</a></cite> <span class="says">Says:</span>	</div>
+		<br>
+
+	<small class="comment-meta commentmetadata"><a href="http://blog.jonudell.net/2009/01/02/feed-validation-revisited-the-parallel-universe-of-icalendar-feeds/#comment-126697" title="">
+	February 6, 2009 at 12:20 pm</a> </small>
+
+	<p>[...] iCalendar validation&nbsp;project Posted by Jon Udell under Uncategorized &nbsp;   Last month, in a series of entries, I laid out the case for an effort — inspired by the RSS/Atom feed validator [...]</p>
+
+	<div class="reply">
+		<a class="comment-reply-link" href="http://blog.jonudell.net/2009/01/02/feed-validation-revisited-the-parallel-universe-of-icalendar-feeds/?replytocom=126697#respond" onclick="return addComment.moveForm(&quot;div-comment-126697&quot;, &quot;126697&quot;, &quot;respond&quot;, &quot;898&quot;)">Reply</a>	</div>
+	</div>
+</li>
+<li class="pingback odd alt thread-odd thread-alt depth-1 highlander-comment" id="comment-127219">
+	<div id="div-comment-127219">
+	<div class="comment-author vcard">
+				<cite class="fn"><a href="http://blog.jonudell.net/2009/04/06/icalendar-validation-status-report/" rel="external nofollow" class="url">iCalendar validation: status report « Jon Udell</a></cite> <span class="says">Says:</span>	</div>
+		<br>
+
+	<small class="comment-meta commentmetadata"><a href="http://blog.jonudell.net/2009/01/02/feed-validation-revisited-the-parallel-universe-of-icalendar-feeds/#comment-127219" title="">
+	April 6, 2009 at 9:19 am</a> </small>
+
+	<p>[...] outcomes reinforce what I saw in the table of results shown here. Parsers sometimes disagree about which feeds are valid, and why or why [...]</p>
+
+	<div class="reply">
+		<a class="comment-reply-link" href="http://blog.jonudell.net/2009/01/02/feed-validation-revisited-the-parallel-universe-of-icalendar-feeds/?replytocom=127219#respond" onclick="return addComment.moveForm(&quot;div-comment-127219&quot;, &quot;127219&quot;, &quot;respond&quot;, &quot;898&quot;)">Reply</a>	</div>
+	</div>
+</li>
+<li class="pingback even thread-even depth-1 highlander-comment" id="comment-130951">
+	<div id="div-comment-130951">
+	<div class="comment-author vcard">
+				<cite class="fn"><a href="http://blog.jonudell.net/2009/12/14/a-new-validator-for-icalendar/" rel="external nofollow" class="url">A new validator for iCalendar « Jon Udell</a></cite> <span class="says">Says:</span>	</div>
+		<br>
+
+	<small class="comment-meta commentmetadata"><a href="http://blog.jonudell.net/2009/01/02/feed-validation-revisited-the-parallel-universe-of-icalendar-feeds/#comment-130951" title="">
+	December 14, 2009 at 7:56 am</a> </small>
+
+	<p>[...] Jon Udell under Uncategorized Leave a Comment&nbsp;   In January 2009 I wrote a series of entries [1, 2, 3] documenting examples of ill-formed iCalendar files. And I argued that that we need an [...]</p>
+
+	<div class="reply">
+		<a class="comment-reply-link" href="http://blog.jonudell.net/2009/01/02/feed-validation-revisited-the-parallel-universe-of-icalendar-feeds/?replytocom=130951#respond" onclick="return addComment.moveForm(&quot;div-comment-130951&quot;, &quot;130951&quot;, &quot;respond&quot;, &quot;898&quot;)">Reply</a>	</div>
+	</div>
+</li>
+	</ol>
+
+	<div class="navigation">
+	<div class="alignleft"></div>
+	<div class="alignright"></div>
+	</div>
+
+	
+
+									<div id="respond" class="js">
+				<h3 id="reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="http://blog.jonudell.net/2009/01/02/feed-validation-revisited-the-parallel-universe-of-icalendar-feeds/#respond" style="display:none;">Cancel reply</a></small></h3>
+									<form action="http://blog.jonudell.net/wp-comments-post.php" method="post" id="commentform">
+																										
+
+
+												
+<input type="hidden" name="hc_post_as" id="hc_post_as" value="guest">
+
+<div class="comment-form-field comment-textarea">
+	
+	<div id="comment-form-comment"><textarea placeholder="Enter your comment here..." style="height: 36px; resize: none; overflow-y: hidden; position: absolute; top: 0px; left: -9999px; width: 488px; line-height: normal; text-decoration: none; letter-spacing: 0px;" tabindex="-1"></textarea><textarea id="comment" name="comment" placeholder="Enter your comment here..." style="height: 36px; resize: none; overflow-y: hidden;"></textarea></div>
+</div>
+
+<div id="comment-form-identity" style="display: none;">
+
+	<div id="comment-form-nascar">
+		<p>Fill in your details below or click an icon to log in:</p>
+		<ul>
+			<li class="selected" style="display:none;">
+				<a href="http://blog.jonudell.net/2009/01/02/feed-validation-revisited-the-parallel-universe-of-icalendar-feeds/#comment-form-guest" id="postas-guest" title="Guest">
+					<span></span>
+				</a>
+			</li>
+			<li>
+				<a href="http://blog.jonudell.net/2009/01/02/feed-validation-revisited-the-parallel-universe-of-icalendar-feeds/#comment-form-load-service:WordPress.com" id="postas-wordpress" title="WordPress.com">
+					<span></span>
+				</a>
+			</li>
+			<li>
+				<a href="http://blog.jonudell.net/2009/01/02/feed-validation-revisited-the-parallel-universe-of-icalendar-feeds/#comment-form-load-service:Twitter" id="postas-twitter" title="Twitter">
+					<span></span>
+				</a>
+			</li>
+			<li>
+				<a href="http://blog.jonudell.net/2009/01/02/feed-validation-revisited-the-parallel-universe-of-icalendar-feeds/#comment-form-load-service:Facebook" id="postas-facebook" title="Facebook">
+					<span></span>
+				</a>
+			</li>
+		</ul>
+	</div>
+
+	<div id="comment-form-guest" class="comment-form-service selected">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+<a href="https://gravatar.com/site/signup/" target="_blank">				<img src="./Feed validation revisited  The parallel universe of iCalendar feeds   Jon Udell_files/ad516503a11cd5ca435acc9bb6523536" alt="Gravatar" width="25" class="no-grav">
+</a>			</div>
+
+				<div class="comment-form-fields">
+				<div class="comment-form-field comment-form-email">
+					<label for="email">Email <span class="required">(required)</span> <span class="nopublish">(Address never made public)</span></label>
+					<div class="comment-form-input"><input id="email" name="email" type="email" value=""></div>
+				</div>
+				<div class="comment-form-field comment-form-author">
+					<label for="author">Name <span class="required">(required)</span></label>
+					<div class="comment-form-input"><input id="author" name="author" type="text" value=""></div>
+				</div>
+				<div class="comment-form-field comment-form-url">
+					<label for="url">Website</label>
+					<div class="comment-form-input"><input id="url" name="url" type="text" value=""></div>
+				</div> 
+			</div>
+	
+		</div>
+	</div>
+
+	<div id="comment-form-wordpress" class="comment-form-service">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+				<img src="./Feed validation revisited  The parallel universe of iCalendar feeds   Jon Udell_files/wplogo.png" alt="WordPress.com Logo" width="25" class="no-grav">
+			</div>
+
+				<div class="comment-form-fields">
+				<input type="hidden" name="wp_avatar" id="wordpress-avatar" class="comment-meta-wordpress" value="">
+				<input type="hidden" name="wp_user_id" id="wordpress-user_id" class="comment-meta-wordpress" value="">
+				<input type="hidden" name="wp_access_token" id="wordpress-access_token" class="comment-meta-wordpress" value="">
+				<p class="comment-form-posting-as pa-wordpress"><strong></strong> You are commenting using your WordPress.com account. <span class="comment-form-log-out">(&nbsp;<a href="javascript:HighlanderComments.doExternalLogout( 'wordpress' );">Log&nbsp;Out</a>&nbsp;/&nbsp;<a href="http://blog.jonudell.net/2009/01/02/feed-validation-revisited-the-parallel-universe-of-icalendar-feeds/#" onclick="javascript:HighlanderComments.switchAccount();return false;">Change</a>&nbsp;)</span></p>
+			</div>
+	
+		</div>
+	</div>
+
+	<div id="comment-form-twitter" class="comment-form-service">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+				<img src="./Feed validation revisited  The parallel universe of iCalendar feeds   Jon Udell_files/ad516503a11cd5ca435acc9bb6523536" alt="Twitter picture" width="25" class="no-grav">
+			</div>
+
+				<div class="comment-form-fields">
+				<input type="hidden" name="twitter_avatar" id="twitter-avatar" class="comment-meta-twitter" value="">
+				<input type="hidden" name="twitter_user_id" id="twitter-user_id" class="comment-meta-twitter" value="">
+				<input type="hidden" name="twitter_access_token" id="twitter-access_token" class="comment-meta-twitter" value="">
+				<p class="comment-form-posting-as pa-twitter"><strong></strong> You are commenting using your Twitter account. <span class="comment-form-log-out">(&nbsp;<a href="javascript:HighlanderComments.doExternalLogout( 'twitter' );">Log&nbsp;Out</a>&nbsp;/&nbsp;<a href="http://blog.jonudell.net/2009/01/02/feed-validation-revisited-the-parallel-universe-of-icalendar-feeds/#" onclick="javascript:HighlanderComments.switchAccount();return false;">Change</a>&nbsp;)</span></p>
+			</div>
+	
+		</div>
+	</div>
+
+	<div id="comment-form-facebook" class="comment-form-service">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+				<img src="./Feed validation revisited  The parallel universe of iCalendar feeds   Jon Udell_files/ad516503a11cd5ca435acc9bb6523536" alt="Facebook photo" width="25" class="no-grav">
+			</div>
+
+				<div class="comment-form-fields">
+				<input type="hidden" name="fb_avatar" id="facebook-avatar" class="comment-meta-facebook" value="">
+				<input type="hidden" name="fb_user_id" id="facebook-user_id" class="comment-meta-facebook" value="">
+				<input type="hidden" name="fb_access_token" id="facebook-access_token" class="comment-meta-facebook" value="">
+				<p class="comment-form-posting-as pa-facebook"><strong></strong> You are commenting using your Facebook account. <span class="comment-form-log-out">(&nbsp;<a href="javascript:HighlanderComments.doExternalLogout( 'facebook' );">Log&nbsp;Out</a>&nbsp;/&nbsp;<a href="http://blog.jonudell.net/2009/01/02/feed-validation-revisited-the-parallel-universe-of-icalendar-feeds/#" onclick="javascript:HighlanderComments.switchAccount();return false;">Change</a>&nbsp;)</span></p>
+			</div>
+	
+		</div>
+	</div>
+
+
+	<div id="comment-form-load-service" class="comment-form-service">
+		<div class="comment-form-posting-as-cancel"><a href="javascript:HighlanderComments.cancelExternalWindow();">Cancel</a></div>
+		<p>Connecting to %s</p>
+	</div>
+	
+	
+</div>
+
+<script type="text/javascript">
+jQuery(document).ready(function(){
+	var input = document.createElement( 'input' ),
+	    comment = jQuery( '#comment' );
+
+	if ( 'placeholder' in input ) {
+		comment.attr( 'placeholder', jQuery( '.comment-textarea label' ).remove().text() );
+	}
+
+	// Expando Mode: start small, then auto-resize on first click + text length
+	jQuery( '#comment-form-identity' ).hide();
+	jQuery( '#comment-form-subscribe' ).hide();
+	jQuery( '#commentform .form-submit' ).hide();
+
+	comment.css( { 'height':'10px' } ).one( 'focus', function() {
+		var timer = setInterval( HighlanderComments.resizeCallback, 10 )
+		jQuery( this ).animate( { 'height': HighlanderComments.initialHeight } ).delay( 100 ).queue( function(n) { clearInterval( timer ); HighlanderComments.resizeCallback(); n(); } );
+		jQuery( '#comment-form-identity' ).slideDown();
+		jQuery( '#comment-form-subscribe' ).slideDown();
+		jQuery( '#commentform .form-submit' ).slideDown();
+	});
+});
+</script>
+
+<div id="comment-form-subscribe" style="display: none;"> 
+	<p class="comment-subscription-form"><input type="checkbox" name="subscribe" id="subscribe" value="subscribe" style="width: auto;" tabindex="6"> <label class="subscribe-label" id="subscribe-label" for="subscribe" style="display: inline;">Notify me of follow-up comments via email.</label></p></div>
+
+												<p class="form-submit" style="display: none;">
+							<input name="submit" type="submit" id="comment-submit" value="Post Comment">
+							<input type="hidden" name="comment_post_ID" value="898" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+						</p>
+						
+<input type="hidden" name="genseq" value="1361694865">
+<p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="25b8428784"></p><script type="text/javascript" src="./Feed validation revisited  The parallel universe of iCalendar feeds   Jon Udell_files/form.js"></script>
+<p style="display: none;"><input type="hidden" id="ak_js" name="ak_js" value="1361695007303"></p>					</form>
+							</div><!-- #respond -->
+			<div style="clear: both"></div>			
+			</div>
+					<p align="center"></p>
+	</div>
+	<div id="sidebar">
+			<h2>Archived Entry</h2>
+	<ul>
+	<li><strong>Post Date :</strong></li>
+	<li>January 2, 2009 at 6:41 pm</li>
+		<li><strong>Category :</strong></li>
+	<li><a href="http://blog.jonudell.net/category/uncategorized/" title="View all posts in Uncategorized" rel="category tag">Uncategorized</a></li>
+			<li><strong>Do More :</strong></li>
+	<li>							You can <a href="http://blog.jonudell.net/2009/01/02/feed-validation-revisited-the-parallel-universe-of-icalendar-feeds/#respond">leave a response</a>, or <a href="http://blog.jonudell.net/2009/01/02/feed-validation-revisited-the-parallel-universe-of-icalendar-feeds/trackback/" rel="trackback">trackback</a> from your own site.
+						</li>
+	</ul>
+		</div>
+<p id="footer"><a href="http://wordpress.com/?ref=footer" rel="generator">Blog at WordPress.com</a>. — Theme: <a href="http://theme.wordpress.com/themes/connections/" title="Learn more about this theme">Connections</a> by <a href="http://www.vanillamist.com/" rel="designer">www.vanillamist.com</a>.</p>
+
+
+<script type="text/javascript">
+var _qevents = _qevents || [], wpcomQuantcastData = {"qacct":"p-18-mFEk4J448M","labels":",language.en,type.wpcom"};
+function wpcomQuantcastPixel( labels, options ) {
+	var i, defaults = wpcomQuantcastData, data = { event: 'ajax' };
+
+	labels  = labels  || '';
+	options = options || {};
+
+	if ( typeof labels != 'string' )
+		options = labels;
+
+	for ( i in defaults ) {
+		data[i] = defaults[i];
+	}
+
+	for ( i in options ) {
+		data[i] = options[i];
+	}
+
+	if ( data.labels ) {
+		data.labels += ',' + labels;
+	} else {
+		data.labels = labels;
+	}
+
+	_qevents.push( data );
+};
+(function() {var elem = document.createElement('script');elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";elem.async = true;elem.type = "text/javascript";var scpt = document.getElementsByTagName('script')[0];scpt.parentNode.insertBefore(elem, scpt);  })();
+_qevents.push( wpcomQuantcastData );
+</script>
+<noscript>&lt;div style="display: none;"&gt;&lt;img src="//pixel.quantserve.com/pixel/p-18-mFEk4J448M.gif?labels=%2Clanguage.en%2Ctype.wpcom" height="1" width="1" alt="" /&gt;&lt;/div&gt;</noscript>
+
+<script type="text/javascript" src="./Feed validation revisited  The parallel universe of iCalendar feeds   Jon Udell_files/gprofiles.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var WPGroHo = {"my_hash":""};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Feed validation revisited  The parallel universe of iCalendar feeds   Jon Udell_files/wpgroho.js"></script>
+<script>jQuery(document).ready(function($){ Gravatar.profile_cb = function( h, d ) { WPGroHo.syncProfileData( h, d );	}; Gravatar.my_hash = WPGroHo.my_hash; Gravatar.init( 'body', '#wp-admin-bar-my-account' ); });</script>	<div style="display:none">
+	<div class="grofile-hash-map-a1efe62d36d57cd24c2426f875c9b406">
+	</div>
+	<div class="grofile-hash-map-1f74f2f3a76f819d9daf6f16c473a68a">
+	</div>
+	<div class="grofile-hash-map-0d7c7e171fc0ad3dacc9b1ed203e3e50">
+	</div>
+	<div class="grofile-hash-map-2378b474e8eadf5da80e86c2bbc75a74">
+	</div>
+	</div>
+<script type="text/javascript">
+/* <![CDATA[ */
+var HighlanderComments = {"loggingInText":"Logging In\u2026","submittingText":"Posting Comment\u2026","postCommentText":"Post Comment","connectingToText":"Connecting to %s","commentingAsText":"%1$s: You are commenting using your %2$s account.","logoutText":"Log Out","loginText":"Log In","connectURL":"http:\/\/jonudell.wordpress.com\/public.api\/connect\/?action=request","logoutURL":"http:\/\/jonudell.wordpress.com\/wp-login.php?action=logout&_wpnonce=23f235ff30","homeURL":"http:\/\/blog.jonudell.net\/","postID":"898","gravDefault":"identicon","enterACommentError":"Please enter a comment","enterEmailError":"Please enter your email address here","invalidEmailError":"Invalid email address","enterAuthorError":"Please enter your name here","gravatarFromEmail":"This picture will show whenever you leave a comment. Click to customize it.","logInToExternalAccount":"Log in to use details from one of these accounts.","change":"Change","changeAccount":"Change Account","comment_registration":"","userIsLoggedIn":"","isJetpack":"0"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Feed validation revisited  The parallel universe of iCalendar feeds   Jon Udell_files/script.js"></script>
+
+	<div id="bit" class="loggedout-follow-normal" style="bottom: -240px;">
+		<a class="bsub" href="javascript:void(0)"><span id="bsub-text">Follow</span></a>
+		<div id="bitsubscribe">
+
+					<h3><label for="loggedout-follow-field">Follow “Jon Udell”</label></h3>
+
+			<form action="https://subscribe.wordpress.com/" method="post" accept-charset="utf-8" id="loggedout-follow">
+			<p>Get every new post delivered to your Inbox.</p>
+
+			<p id="loggedout-follow-error" style="display: none;"></p>
+
+						<p class="bit-follow-count">Join 5,099 other followers</p>
+			<p><input type="email" name="email" style="width: 95%; padding: 1px 2px" value="Enter your email address" onfocus="this.value=(this.value==&quot;Enter your email address&quot;) ? &quot;&quot; : this.value;" onblur="this.value=(this.value==&quot;&quot;) ? &quot;Enter email address&quot; : this.value;" id="loggedout-follow-field"></p>
+
+			<input type="hidden" name="action" value="subscribe">
+			<input type="hidden" name="blog_id" value="109309">
+			<input type="hidden" name="source" value="http://blog.jonudell.net/2009/01/02/feed-validation-revisited-the-parallel-universe-of-icalendar-feeds/">
+			<input type="hidden" name="sub-type" value="loggedout-follow">
+
+			<input type="hidden" id="_wpnonce" name="_wpnonce" value="d3d83273cf"><input type="hidden" name="_wp_http_referer" value="/2009/01/02/feed-validation-revisited-the-parallel-universe-of-icalendar-feeds/">
+			<p id="bsub-subscribe-button"><input type="submit" value="Sign me up"></p>
+			</form>
+					<div id="bsub-credit"><a href="http://wordpress.com/signup/?ref=lof">Powered by WordPress.com</a></div>
+		</div><!-- #bitsubscribe -->
+	</div><!-- #bit -->
+
+	<script type="text/javascript">
+		WPCOM_sharing_counts = {"http:\/\/blog.jonudell.net\/2009\/01\/02\/feed-validation-revisited-the-parallel-universe-of-icalendar-feeds\/":898}	</script>
+<script type="text/javascript" src="./Feed validation revisited  The parallel universe of iCalendar feeds   Jon Udell_files/sharing.js"></script>
+	<div id="sharing_email" style="display: none;">
+		<form action="./Feed validation revisited  The parallel universe of iCalendar feeds   Jon Udell_files/Feed validation revisited  The parallel universe of iCalendar feeds   Jon Udell.htm" method="post">
+			<label for="target_email">Send to Email Address</label>
+			<input type="text" name="target_email" id="target_email" value="">
+
+			
+				<label for="source_name">Your Name</label>
+				<input type="text" name="source_name" id="source_name" value="">
+
+				<label for="source_email">Your Email Address</label>
+				<input type="text" name="source_email" id="source_email" value="">
+
+			
+			<div class="recaptcha" id="sharing_recaptcha"></div><input type="hidden" name="recaptcha_public_key" id="recaptcha_public_key" value="6LcYW8MSAAAAADBAuEH9yaPcF7lWh11Iq62ZKtoo">
+			<img style="float: right; display: none" class="loading" src="./Feed validation revisited  The parallel universe of iCalendar feeds   Jon Udell_files/loading.gif" alt="loading" width="16" height="16">
+			<input type="submit" value="Send Email" class="sharing_send">
+			<a href="http://blog.jonudell.net/2009/01/02/feed-validation-revisited-the-parallel-universe-of-icalendar-feeds/#cancel" class="sharing_cancel">Cancel</a>
+
+			<div class="errors errors-1" style="display: none;">
+				Post was not sent - check your email addresses!			</div>
+
+			<div class="errors errors-2" style="display: none;">
+				Email check failed, please try again			</div>
+
+			<div class="errors errors-3" style="display: none;">
+				Sorry, your blog cannot share posts by email.			</div>
+		</form>
+	</div>
+		<script type="text/javascript">
+		jQuery(document).on( 'ready post-load', function(){
+			jQuery( 'a.share-twitter' ).on( 'click', function() {
+				window.open( jQuery(this).attr( 'href' ), 'wpcomtwitter', 'menubar=1,resizable=1,width=600,height=350' );
+				return false;
+			});
+		});
+		</script>
+				<script type="text/javascript">
+		jQuery(document).on( 'ready post-load', function(){
+			jQuery( 'a.share-facebook' ).on( 'click', function() {
+				window.open( jQuery(this).attr( 'href' ), 'wpcomfacebook', 'menubar=1,resizable=1,width=600,height=400' );
+				return false;
+			});
+		});
+		</script>
+				<iframe src="./Feed validation revisited  The parallel universe of iCalendar feeds   Jon Udell_files/master.htm" id="likes-master" name="likes-master" style="display:none;"></iframe>
+		<div id="likes-other-gravatars"><div class="likes-text"><span>%d</span> bloggers like this:</div><ul class="wpl-avatars sd-like-gravatars"></ul></div>
+		<script type="text/javascript">
+		//<![CDATA[
+			var jetpackLikesWidgetQueue = [];
+			var jetpackLikesMasterReady = false;
+
+			function JetpackLikespostMessage( message, target ) {
+				if ( "string" === typeof message ){
+					try{
+						message = JSON.parse( message );
+					}
+					catch(e) {
+						return;
+					}
+				}
+
+				pm( {
+					target: target,
+					type: 'likesMessage',
+					data: message,
+					origin: '*'					
+				} );
+			}
+
+			function JetpackLikesMessageListener( event ) {
+				if ( "undefined" == typeof event.event )
+					return;
+
+				if ( 'masterReady' == event.event ) {
+					jQuery( document ).ready( function() {
+						jetpackLikesMasterReady = true;
+
+						var stylesData = {
+								event: 'injectStyles'
+						};
+
+						if ( jQuery( 'iframe.admin-bar-likes-widget' ).length > 0 ) {
+							JetpackLikespostMessage( { event: 'adminBarEnabled' }, window.frames[ 'likes-master' ] );
+
+							stylesData.adminBarStyles = {
+								background: jQuery( '#wpadminbar .quicklinks li#wp-admin-bar-wpl-like > a' ).css( 'background' )
+							};
+						}
+
+						if ( !window.addEventListener )
+							jQuery( '#wp-admin-bar-admin-bar-likes-widget' ).hide();
+
+						stylesData.textStyles = {
+							color: jQuery( '.sd-text-color').css( 'color' ),
+							fontFamily: jQuery( '.sd-text-color' ).css( 'font-family' ),
+							fontSize: jQuery( '.sd-text-color' ).css( 'font-size' ),
+							direction: jQuery( '.sd-text-color' ).css( 'direction' ),
+							fontWeight: jQuery( '.sd-text-color' ).css( 'font-weight' ),
+							fontStyle: jQuery( '.sd-text-color' ).css( 'font-style' ),
+							textDecoration: jQuery( '.sd-text-color' ).css('text-decoration')
+						};
+
+						stylesData.linkStyles = {
+							color: jQuery( '.sd-link-color' ).css('color'),
+							fontFamily: jQuery( '.sd-link-color' ).css('font-family'),
+							fontSize: jQuery( '.sd-link-color' ).css('font-size'),
+							textDecoration: jQuery( '.sd-link-color' ).css('text-decoration'),
+							fontWeight: jQuery( '.sd-link-color' ).css( 'font-weight' ),
+							fontStyle: jQuery( '.sd-link-color' ).css( 'font-style' )
+						};
+
+						JetpackLikespostMessage( stylesData, window.frames[ 'likes-master' ] );
+
+						var requests = [];
+						jQuery( '.jetpack-likes-widget-wrapper' ).each( function( i ) {
+							var regex = /like-(post|comment)-wrapper-(\d+)-(\d+)/;
+							var match = regex.exec( this.id );
+							if ( ! match || match.length != 4 )
+								return;
+
+							var info = {
+								blog_id: match[2],
+								width:   this.width
+							};
+
+							if ( 'post' == match[1] ) {
+								info.post_id = match[3];
+							} else if ( 'comment' == match[1] ) {
+								info.comment_id = match[3];
+							}
+
+							requests.push( info );
+						});
+
+						JetpackLikespostMessage( { event: 'initialBatch', requests: requests }, window.frames['likes-master'] );
+
+						jQuery( document ).on( 'inview', 'div.jetpack-likes-widget-unloaded', function() {
+							jetpackLikesWidgetQueue.push( this.id );
+						});
+					});
+				}
+
+				if ( 'showLikeWidget' == event.event ) {
+					setTimeout( JetpackLikesWidgetQueueHandler, 10 );
+					jQuery( '#' + event.id + ' .post-likes-widget-placeholder'  ).fadeOut( 'fast', function() {
+						jQuery( '#' + event.id + ' .post-likes-widget' ).fadeIn( 'fast' );
+					});
+				}
+
+				if ( 'showOtherGravatars' == event.event ) {
+					var $container = jQuery( '#likes-other-gravatars' );
+					var $list = $container.find( 'ul' );
+
+					$container.hide();
+					$list.html( '' );
+
+					$container.find( '.likes-text span' ).text( event.total );
+
+					jQuery.each( event.likers, function( i, liker ) {
+						$list.append( '<li class="' + liker.css_class + '"><a href="' + liker.profile_URL + '" class="wpl-liker" rel="nofollow" target="_parent"><img src="' + liker.avatar_URL + '" alt="' + liker.name + '" width="30" height="30" style="padding-right: 3px;" /></a></li>');
+					} );
+
+					var offset = jQuery( "[name='" + event.parent + "']" ).offset();
+
+					$container.css( 'left', offset.left + event.position.left - 10 + 'px' );
+					$container.css( 'top', offset.top + event.position.top - 33 + 'px' );
+
+					var rowLength = Math.floor( event.width / 37 );
+					var height = ( Math.ceil( event.likers.length / rowLength ) * 37 ) + 13;
+					if ( height > 204 ) {
+						height = 204;
+					}
+
+					$container.css( 'height', height + 'px' );
+					$container.css( 'width', rowLength * 37 - 7 + 'px' );
+
+					$list.css( 'width', rowLength * 37 + 'px' );
+
+					$container.fadeIn( 'slow' );
+
+					var scrollbarWidth = $list[0].offsetWidth - $list[0].clientWidth;
+					if ( scrollbarWidth > 0 ) {
+						$container.width( $container.width() + scrollbarWidth );
+						$list.width( $list.width() + scrollbarWidth );
+					}
+				}
+			}
+
+			pm.bind( 'likesMessage', function(e) { JetpackLikesMessageListener(e); } );
+
+			jQuery( document ).click( function( e ) {
+				var $container = jQuery( '#likes-other-gravatars' );
+
+				if ( $container.has( e.target ).length === 0 ) {
+					$container.fadeOut( 'slow' );
+				}
+			});
+
+			function JetpackLikesWidgetQueueHandler() {
+				var wrapperID;
+				if ( ! jetpackLikesMasterReady ) {
+					setTimeout( JetpackLikesWidgetQueueHandler, 500 );
+					return;
+				}
+
+				if ( jetpackLikesWidgetQueue.length > 0 ) {
+					// We may have a widget that needs creating now
+					var found = false;
+					while( jetpackLikesWidgetQueue.length > 0 ) {
+						// Grab the first member of the queue that isn't already loading.
+						wrapperID = jetpackLikesWidgetQueue.splice( 0, 1 )[0];
+						if ( jQuery( '#' + wrapperID ).hasClass( 'jetpack-likes-widget-unloaded' ) ) {
+							found = true;
+							break;
+						}
+					}
+					if ( ! found ) {
+						setTimeout( JetpackLikesWidgetQueueHandler, 500 );
+						return;
+					}
+				} else if ( jQuery( 'div.jetpack-likes-widget-unloaded' ).length > 0 ) {
+					// Get the next unloaded widget
+					wrapperID = jQuery( 'div.jetpack-likes-widget-unloaded' ).first()[0].id;
+					if ( ! wrapperID ) {
+						// Everything is currently loaded
+						setTimeout( JetpackLikesWidgetQueueHandler, 500 );
+						return;
+					}
+				}
+
+				var $wrapper = jQuery( '#' + wrapperID );
+				$wrapper.find( 'iframe' ).remove();
+
+				$wrapper.find( '.post-likes-widget-placeholder' ).after( "<iframe class='post-likes-widget jetpack-likes-widget' name='" + $wrapper.data( 'name' ) + "' height='55px' width='100%' frameBorder='0' src='" + $wrapper.data( 'src' ) + "'></iframe>" );
+
+
+				$wrapper.removeClass( 'jetpack-likes-widget-unloaded' ).addClass( 'jetpack-likes-widget-loading' );
+
+				$wrapper.find( 'iframe' ).load( function( e ) {
+					var $iframe = jQuery( e.target );
+					$wrapper.removeClass( 'jetpack-likes-widget-loading' ).addClass( 'jetpack-likes-widget-loaded' );
+
+					/*try {
+						$iframe.Jetpack( 'resizeable' );
+					}
+					catch ( error ) {}*/
+					JetpackLikespostMessage( { event: 'loadLikeWidget', name: $iframe.attr( 'name' ), width: $iframe.width() }, window.frames[ 'likes-master' ] );
+				});
+			}
+			setInterval( JetpackLikesWidgetQueueHandler, 250 );
+		//]]>
+		</script>
+<script type="text/javascript" src="./Feed validation revisited  The parallel universe of iCalendar feeds   Jon Udell_files/saved_resource(3)"></script>
+<script type="text/javascript">
+// <![CDATA[
+(function() {
+try{
+  if ( window.external &&'msIsSiteMode' in window.external) {
+    if (window.external.msIsSiteMode()) {
+      var jl = document.createElement('script');
+      jl.type='text/javascript';
+      jl.async=true;
+      jl.src='/wp-content/plugins/ie-sitemode/custom-jumplist.php';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(jl, s);
+    }
+  }
+}catch(e){}
+})();
+// ]]>
+</script><script src="./Feed validation revisited  The parallel universe of iCalendar feeds   Jon Udell_files/w.js" type="text/javascript"></script>
+<script type="text/javascript">
+st_go({'blog':'109309','v':'wpcom','tz':'-5','user_id':'0','post':'898','subd':'jonudell'});
+ex_go({'crypt':'UE40eW5QN0p8M2Y/RE1oV0pFNEwueXFaVXlyMGwvVFs4ODlRZi15ODdZbV9dUVlqL1VfcEREP1s4TjU5Yn4/Uk5vakJXb2kmUEhJT3ZbS1JsXUZ+V3NGTUNpQWhaN0ktW0klVS9idXhmM21oWkk5Jkl6dVJUeDAsLXpYeHd5SVdHUFRhZlt0aHFRdllPbXxvdGsxLldjVmI4NS9CRnx4fHlXSSY/SDdXcDZXQnBnYkFBX3ZZK3U3d1RJelM2eTJzXV83dVZ1QiZ5dDQ4bURuZVVtdm8mMDlmLEFqeklpfEQua1pMLU1VflU1My1GUXAwbGhDQzVxMDViRkk/Qzclay1RNyZdNmcsSHdrRDUsMg=='});
+addLoadEvent(function(){linktracker_init('109309',898);});
+	</script><img id="wpstats" src="./Feed validation revisited  The parallel universe of iCalendar feeds   Jon Udell_files/g.gif" alt=""><img id="wpstats2" src="./Feed validation revisited  The parallel universe of iCalendar feeds   Jon Udell_files/g(1).gif" alt="" style="display:none">
+<noscript>&lt;img src="http://stats.wordpress.com/b.gif?v=noscript" style="height:0px;width:0px;overflow:hidden" alt="" /&gt;</noscript>
+</div>
+</div>
+
+
+</body></html>

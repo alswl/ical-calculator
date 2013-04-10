@@ -7,11 +7,13 @@ all ok with * icalendar "0.6.1y1" and test_vect "0.3"
 @author: Oberron
 """
 
-from test_vect import rrule_vects, testvector_path #@UnresolvedImport
+from test_vect import rrule_vects, testvector_path,RFC5545_ical #@UnresolvedImport
 import filecmp
 import sys
 sys.path.append("../../src/") #to overide previous installs
 import icalendar #@UnresolvedImport
+import datetime
+import urllib
 
 
 def Run_Test_Vectors():
@@ -88,26 +90,36 @@ def see(index=-1):
 
 
 def t2():
-    log = open("c:/sw/icalculator/out/log.txt",'w')
-    log.write(" ")
-    log.close()
+#    log = open("c:/sw/icalculator/out/log.txt",'w')
+#    log.write(" ")
+#    log.close()
     vect_index = 0
-    for vect in rrule_vects[0:]:
+    for vect in RFC5545_ical[:1]:
         vect_index +=1
 #            print vect
         [locfile,start,end,reference] = vect
-        print "file is:\t",locfile,reference
+        print "files are: \t ics:%s \t-\t reference: %s"%(locfile,reference)
         mycal = icalendar.ics()
-        mycal.debug(False,"../../out/log.txt",-2)
-        mycal.local_load(testvector_path+locfile)
-        mycal.parse_loaded()
-        dates = mycal.get_event_instances(start,end)
-#        print dates
+        mycal.debug(True,"../../out/log.txt",-2)
+#        sical = urllib.urlopen("http://ical2list.appspot.com/bastilleday.ics").read()
+#        mycal.string_load(sical)
+#        sical = open("C:/sw/icalculator/rsc/utest/test_vect/RFC5545/RFC5545_3.6.ics").read()
+        sical = open("C:/sw/icalculator/rsc/utest/test_vect/SCM5545_3.8.5.3_1.ics").read()
+
+#        mycal.local_load(testvector_path+locfile)
+        mycal.string_load(sical)
+
+#        mycal.parse_loaded()
+        dates = mycal.get_event_instances("20010101","20130101")
+        print dates
         tmp = "../../out/tmp.txt"
         res = open(tmp,'w')
         for event in  dates:
             [date, info,uid] =event
-            line = "{datetime-start: "+date.strftime("%Y%m%d")+", summary: "+info+", uid: "+uid+"}\n"
+            if type(date)==type(datetime.datetime.now()):
+                line = "{datetime-start: "+date.strftime("%Y%m%dT%H%M%SZ")+", summary: "+info+", uid: "+uid+"}\n"
+            else:
+                line = "{datetime-start: "+date.strftime("%Y%m%d")+", summary: "+info+", uid: "+uid+"}\n"
             res.write(line)
             #print line
         res.close()
@@ -118,7 +130,13 @@ def t2():
 #            sys.exit()
         del mycal
 
+def Validate():
+    mycal = icalendar.ics()
+    mycal.isCalendarFileCompliant("C:/sw/icalculator/rsc/utest/test_vect/WA_40871a.ics")
+    print mycal.lSCM
+    
 
+Validate()
 #t2()
-#see(81)
-Run_Test_Vectors()
+#see(2)
+#Run_Test_Vectors()

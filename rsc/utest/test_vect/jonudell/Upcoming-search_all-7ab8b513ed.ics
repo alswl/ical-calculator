@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+X-WR-CALNAME:Upcoming: EventsEvents found in Keene\, New Hampshire\, United States
+PRODID:-//Upcoming.org/Upcoming ICS//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+DTSTART:20130505T200000
+DURATION:PT0S
+TRANSP:TRANSPARENT
+SUMMARY:Kronos Quartet
+DESCRIPTION: [Full details at http://upcoming.yahoo.com/event/9490030/ ] 
+URL;VALUE=URI:http://upcoming.yahoo.com/event/9490030/
+UID:http://upcoming.yahoo.com/event/9490030/
+DTSTAMP:20120808T044542
+LAST-MODIFIED:20120808T044542
+CATEGORIES:
+ORGANIZER;CN=:X-ADDR:http://upcoming.yahoo.com/user/4/
+LOCATION;ALTREP="http://upcoming.yahoo.com/venue/43388/":Colonial Theater @ 95 Main St\, Keene\, New Hampshire 03431
+END:VEVENT
+END:VCALENDAR

@@ -4,20 +4,24 @@ Created on 20 Oct 2012
 @author: Oberron
 '''
 
-from test_vect import testvectors,testvector_path #@UnresolvedImport
+from test_vect import rrule_vects, testvector_path,RFC5545_ical #@UnresolvedImport
 import urllib
 from datetime import datetime
 import filecmp, sys
 import json
+ical2list_url = "http://ical2list.appspot.com"
+#ical2list_url="http://localhost:8080"
 
 def gae_ical2list():
     tmp = "../../out/tmp.txt"
-    for cal in testvectors:
-        [file,start,end,reference] = cal
+    for vect in rrule_vects:
+        [locfile,start,end,reference] = vect
         wFreq = True
-#        print "file is:\t",file,"start is:",datetime.datetime.strftime(datetime.datetime.strptime(start,"%Y%m%d"),"%Y%m%d-%a"),"end is:",end
-        ref = open(testvector_path+reference,'r').readlines()
-        src = open(testvector_path+file,'r').read()
+        print "file is:%s \t, start is:%s \t end is: %s"%(testvector_path+locfile,start,end)
+#        ref = open(testvector_path+reference,'r').readlines()
+        src = open(testvector_path+locfile,'r').read()
+#        src = open("C:/sw/icalculator/rsc/utest/test_vect/RFC5545/RFC5545_3.6.ics").read()
+
         params = {}
         params['start'] = start
         params['end'] = end
@@ -26,9 +30,10 @@ def gae_ical2list():
         params['file'] = ""        
         params = urllib.urlencode(params)
 #        f = urllib.urlopen("http://localhost:8085/load", params)
-        f = urllib.urlopen("http://ical2list.appspot.com/load", params)
+        f = urllib.urlopen(ical2list_url+"/load", params)
         res=f.read()
-#        print res
+#        print "src is:",src
+        print "res is:",res
         jres = json.loads(res,"utf-8")
         tmpf = open(tmp,'w')
         line =""
@@ -41,9 +46,9 @@ def gae_ical2list():
         tmpf.write(line)
         tmpf.close()
         if filecmp.cmp(tmp,testvector_path+reference,shallow = False):
-            print cal,"\t - OK"
+            print vect,"\t - OK"
         else:
-            print cal,"\t - NOK"
+            print vect,"\t - NOK"
             sys.exit()
 
 gae_ical2list()

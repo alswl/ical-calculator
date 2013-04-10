@@ -3,13 +3,11 @@
 {datetime-start: 20120103, summary: Weihnachtsferien Bayern, uid: Weihnachtsferien-Bayern-201201061008839421@schulferien.org}
 {datetime-start: 20120104, summary: Weihnachtsferien Bayern, uid: Weihnachtsferien-Bayern-201201061008839421@schulferien.org}
 {datetime-start: 20120105, summary: Weihnachtsferien Bayern, uid: Weihnachtsferien-Bayern-201201061008839421@schulferien.org}
-{datetime-start: 20120106, summary: Weihnachtsferien Bayern, uid: Weihnachtsferien-Bayern-201201061008839421@schulferien.org}
 {datetime-start: 20120220, summary: Winterferien Bayern, uid: Winterferien-Bayern-201202251020944752@schulferien.org}
 {datetime-start: 20120221, summary: Winterferien Bayern, uid: Winterferien-Bayern-201202251020944752@schulferien.org}
 {datetime-start: 20120222, summary: Winterferien Bayern, uid: Winterferien-Bayern-201202251020944752@schulferien.org}
 {datetime-start: 20120223, summary: Winterferien Bayern, uid: Winterferien-Bayern-201202251020944752@schulferien.org}
 {datetime-start: 20120224, summary: Winterferien Bayern, uid: Winterferien-Bayern-201202251020944752@schulferien.org}
-{datetime-start: 20120225, summary: Winterferien Bayern, uid: Winterferien-Bayern-201202251020944752@schulferien.org}
 {datetime-start: 20120402, summary: Osterferien Bayern, uid: Osterferien-Bayern-201204151110544198@schulferien.org}
 {datetime-start: 20120403, summary: Osterferien Bayern, uid: Osterferien-Bayern-201204151110544198@schulferien.org}
 {datetime-start: 20120404, summary: Osterferien Bayern, uid: Osterferien-Bayern-201204151110544198@schulferien.org}
@@ -23,7 +21,6 @@
 {datetime-start: 20120412, summary: Osterferien Bayern, uid: Osterferien-Bayern-201204151110544198@schulferien.org}
 {datetime-start: 20120413, summary: Osterferien Bayern, uid: Osterferien-Bayern-201204151110544198@schulferien.org}
 {datetime-start: 20120414, summary: Osterferien Bayern, uid: Osterferien-Bayern-201204151110544198@schulferien.org}
-{datetime-start: 20120415, summary: Osterferien Bayern, uid: Osterferien-Bayern-201204151110544198@schulferien.org}
 {datetime-start: 20120529, summary: Pfingstferien Bayern, uid: Pfingstferien-Bayern-201206101400415452@schulferien.org}
 {datetime-start: 20120530, summary: Pfingstferien Bayern, uid: Pfingstferien-Bayern-201206101400415452@schulferien.org}
 {datetime-start: 20120531, summary: Pfingstferien Bayern, uid: Pfingstferien-Bayern-201206101400415452@schulferien.org}
@@ -36,7 +33,6 @@
 {datetime-start: 20120607, summary: Pfingstferien Bayern, uid: Pfingstferien-Bayern-201206101400415452@schulferien.org}
 {datetime-start: 20120608, summary: Pfingstferien Bayern, uid: Pfingstferien-Bayern-201206101400415452@schulferien.org}
 {datetime-start: 20120609, summary: Pfingstferien Bayern, uid: Pfingstferien-Bayern-201206101400415452@schulferien.org}
-{datetime-start: 20120610, summary: Pfingstferien Bayern, uid: Pfingstferien-Bayern-201206101400415452@schulferien.org}
 {datetime-start: 20120801, summary: Sommerferien Bayern, uid: Sommerferien-Bayern-201209131242582268@schulferien.org}
 {datetime-start: 20120802, summary: Sommerferien Bayern, uid: Sommerferien-Bayern-201209131242582268@schulferien.org}
 {datetime-start: 20120803, summary: Sommerferien Bayern, uid: Sommerferien-Bayern-201209131242582268@schulferien.org}
@@ -80,14 +76,12 @@
 {datetime-start: 20120910, summary: Sommerferien Bayern, uid: Sommerferien-Bayern-201209131242582268@schulferien.org}
 {datetime-start: 20120911, summary: Sommerferien Bayern, uid: Sommerferien-Bayern-201209131242582268@schulferien.org}
 {datetime-start: 20120912, summary: Sommerferien Bayern, uid: Sommerferien-Bayern-201209131242582268@schulferien.org}
-{datetime-start: 20120913, summary: Sommerferien Bayern, uid: Sommerferien-Bayern-201209131242582268@schulferien.org}
 {datetime-start: 20121029, summary: Herbstferien Bayern, uid: Herbstferien-Bayern-201211041142681339@schulferien.org}
 {datetime-start: 20121030, summary: Herbstferien Bayern, uid: Herbstferien-Bayern-201211041142681339@schulferien.org}
 {datetime-start: 20121031, summary: Herbstferien Bayern, uid: Herbstferien-Bayern-201211041142681339@schulferien.org}
 {datetime-start: 20121101, summary: Herbstferien Bayern, uid: Herbstferien-Bayern-201211041142681339@schulferien.org}
 {datetime-start: 20121102, summary: Herbstferien Bayern, uid: Herbstferien-Bayern-201211041142681339@schulferien.org}
 {datetime-start: 20121103, summary: Herbstferien Bayern, uid: Herbstferien-Bayern-201211041142681339@schulferien.org}
-{datetime-start: 20121104, summary: Herbstferien Bayern, uid: Herbstferien-Bayern-201211041142681339@schulferien.org}
 {datetime-start: 20121224, summary: Weihnachtsferien Bayern, uid: Weihnachtsferien-Bayern-201301011001166984@schulferien.org}
 {datetime-start: 20121225, summary: Weihnachtsferien Bayern, uid: Weihnachtsferien-Bayern-201301011001166984@schulferien.org}
 {datetime-start: 20121226, summary: Weihnachtsferien Bayern, uid: Weihnachtsferien-Bayern-201301011001166984@schulferien.org}

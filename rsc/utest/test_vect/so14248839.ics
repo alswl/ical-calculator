@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Blue Mandala Retreat Site
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Deryk Wenaus Blog
+X-WR-TIMEZONE: 
+BEGIN:VEVENT
+UID:http://ayahuas.ca/program/sample-program/
+DTSTAMP:20130110T001222Z
+CONTACT:
+DESCRIPTION: a nice program. a nice program.
+DTSTART;VALUE=DATE:20130124
+DTEND;VALUE=DATE:20130127
+LOCATION:
+SUMMARY:sample program
+URL:http://ayahuas.ca/program/sample-program/
+END:VEVENT
+END:VCALENDAR

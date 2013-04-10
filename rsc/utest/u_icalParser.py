@@ -25,6 +25,52 @@ class TestIcalParser(unittest.TestCase):
 
     def tearDown(self):
         pass
+    
+    def test_3_1(self):
+        "line folding support"
+        self.mycal.local_load("C:/sw/icalculator/rsc/utest/test_vect/SCM5545_3.1_1.ics")
+        self.mycal.parse_loaded()
+#        print self.mycal.dSCM
+        assert {9: ['3.1_2']} == self.mycal.dSCM
+        assert self.mycal.events[0]["UID"]["val"] == "SCM3_1"
+        assert self.mycal.events[0]["DTSTART"]["val"] == datetime.datetime(2013,2,24,19)
+
+    def test_3_1_1(self):
+        "test the list separators"
+        pass
+
+    def test_3_1_2(self):
+        "test the ability to get all values for properties with multiple values"
+        pass
+
+    def test_3_1_3(self):
+        "binary value"
+        pass
+
+    def test_3_1_4(self):
+        "character set - need to come-up with relevant test + appropriate method"
+        pass
+
+        
+    def test_SCM5545_3_8_5_3(self):
+        self.mycal.local_load("C:/sw/icalculator/rsc/utest/test_vect/SCM5545_3.8.5.3_1.ics")
+        self.mycal.parse_loaded()
+        assert "3.8.5.3_1" in self.mycal.lSCM
+        
+    def test_SCM5545_3_6_1v2(self):
+        self.mycal.lSCM = []
+        self.mycal.local_load("C:/sw/icalculator/rsc/utest/test_vect/SCM5545_3.6.1_2.ics")
+#        self.mycal.conformance = True
+        self.mycal.parse_loaded()
+#        print "line 34:",self.mycal.lSCM
+        assert "3.6.1_2" in self.mycal.lSCM
+        self.mycal.lSCM = []
+        self.mycal.local_load("C:/sw/icalculator/rsc/utest/test_vect/SCM5545_3.6.1_2a.ics")
+#        self.mycal.conformance = True
+        self.mycal.parse_loaded()
+#        print "line 34:",self.mycal.lSCM
+        assert "3.6.1_2" in self.mycal.lSCM
+        
         
     def test_3_8_4_7_1_UID(self):
 #        print "test "+ "3.8.4.7_1"
@@ -191,22 +237,36 @@ class TestIcalParser(unittest.TestCase):
         assert "METHOD" in self.mycal.dVCALENDAR
         assert self.mycal.dVCALENDAR["METHOD"]["val"] == "REQUEST"
     
-    def otest_withWildICS(self):
+    def test_withWildICS(self):
         SCMvects = SCM_withWildICS
+        index = 0
         for SCMvect in SCMvects:
-            self.mycal.lSCM = []
             [icsfile,scm_errors]=SCMvect
-            print icsfile
-            self.mycal.local_load(icsfile)
-            self.mycal.conformance = True
-            self.mycal.vevent.conformance = True
-            self.mycal.parse_loaded()
-#            print self.mycal.lSCM
+#            print "..........\t %s"%icsfile
+            self.mycal.lSCM = {}
+            self.mycal.isCalendarFileCompliant(icsfile,_ReportNonConformance = False)
+    #            print "mycal.lSCM: %s \n recorded errors: %s"%(self.mycal.lSCM,scm_errors)
             for scm_code in scm_errors:
-                assert scm_code in self.mycal.lSCM
+    #                print scm_code
+                try:
+                    assert scm_code in self.mycal.lSCM
+                except Exception,e:
+#                    print "index is: %s, file is: %s"%(index,icsfile)
+#                    print "scm_errors: %s \n dSCM: %s"%(scm_errors,self.mycal.dSCM)
+#                    print "caught e: %s - END"%e.strerror
+#                    e.strerror = e.strerror+ "file: %s"%icsfile
+                    msg = "Error reporting matches failed for index/file\n%s: %s \n values were: \n*: %s \n*: %s "%(index,icsfile,scm_errors,self.mycal.dSCM)
+                    raise Exception(msg)
             for scm_code in self.mycal.lSCM:
-                print scm_code
-                assert scm_code in scm_errors
+    #                print scm_code
+                try:
+                    assert scm_code in self.mycal.lSCM
+                except Exception,e:
+                    print "index is: %s, file is: %s"%(index,icsfile)
+                    print "dSCM: %s \n scm_errors: %s"%(self.mycal.dSCM,scm_errors)
+                    msg = "Error reporting matches failed for index/file\n%s: %s \n values were: \n*: %s \n*: %s "%(index,icsfile,scm_errors,self.mycal.dSCM)
+                    raise Exception(msg)
+            index +=1
 
     def test_DATETIME_load(self):
         folder = "C:/sw/icalculator/rsc/utest/test_vect/RFC5545/"
@@ -278,10 +338,18 @@ class TestIcalParser(unittest.TestCase):
         
         
 def suite():
+    print "suite"
     suite = unittest.TestSuite()
     suite.addTest(unittest.makeSuite(TestIcalParser))
     return suite
 
 if __name__ == "__main__":
-    unittest.main()
-    
+#    print "main"
+#    all = True
+    RunAll = False
+    if RunAll :
+        unittest.main()
+    else:
+        uniquetest = unittest.TestSuite()
+        uniquetest.addTest(TestIcalParser('test_3_1'))
+        unittest.TextTestRunner(verbosity=2).run(uniquetest)

@@ -1,3 +1,4 @@
+{datetime-start: 19970902, summary: Every other week on Monday, Wednesday and Friday until December 24, 1997, but starting on Tuesday, September 2, 1997, uid: php3a_utest}
 {datetime-start: 19970903, summary: Every other week on Monday, Wednesday and Friday until December 24, 1997, but starting on Tuesday, September 2, 1997, uid: php3a_utest}
 {datetime-start: 19970905, summary: Every other week on Monday, Wednesday and Friday until December 24, 1997, but starting on Tuesday, September 2, 1997, uid: php3a_utest}
 {datetime-start: 19970915, summary: Every other week on Monday, Wednesday and Friday until December 24, 1997, but starting on Tuesday, September 2, 1997, uid: php3a_utest}
@@ -22,4 +23,3 @@
 {datetime-start: 19971210, summary: Every other week on Monday, Wednesday and Friday until December 24, 1997, but starting on Tuesday, September 2, 1997, uid: php3a_utest}
 {datetime-start: 19971212, summary: Every other week on Monday, Wednesday and Friday until December 24, 1997, but starting on Tuesday, September 2, 1997, uid: php3a_utest}
 {datetime-start: 19971222, summary: Every other week on Monday, Wednesday and Friday until December 24, 1997, but starting on Tuesday, September 2, 1997, uid: php3a_utest}
-{datetime-start: 19971224, summary: Every other week on Monday, Wednesday and Friday until December 24, 1997, but starting on Tuesday, September 2, 1997, uid: php3a_utest}

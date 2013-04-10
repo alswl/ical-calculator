@@ -1,0 +1,4305 @@
+BEGIN:VCALENDAR
+PRODID:-//Google Inc//Google Calendar 70.9054//EN
+VERSION:2.0
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Cheshire County Democrats
+X-WR-TIMEZONE:America/New_York
+BEGIN:VTIMEZONE
+TZID:America/New_York
+X-LIC-LOCATION:America/New_York
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0400
+TZNAME:EDT
+DTSTART:19700308T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0400
+TZOFFSETTO:-0500
+TZNAME:EST
+DTSTART:19701101T020000
+RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20121123T120000
+DTEND;TZID=America/New_York:20121123T130000
+DTSTAMP:20130224T083846Z
+UID:i3q9l3g1ttp101im5f43knjbtc@google.com
+RECURRENCE-ID;TZID=America/New_York:20121123T120000
+CREATED:20100924T124914Z
+DESCRIPTION:An information\, drop by if you can\, lunch. For more informati
+ on contact Eddie Albert  @ e_c_albert@hotmail.com
+LAST-MODIFIED:20121119T205315Z
+LOCATION:Gino's\, 815 Court Street\, Keene NH
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Democratic Lunch - cancelled
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20130108T233000Z
+DTEND:20130109T013000Z
+DTSTAMP:20130224T083846Z
+UID:kfl4qa5e3g881orebc94dfg79c@google.com
+CREATED:20121119T204722Z
+DESCRIPTION:
+LAST-MODIFIED:20121119T204911Z
+LOCATION:Unitarian Church\, Keene - downstairs (enter thru Spring St.)
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:Executive Board Meeting
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20120929T220000Z
+DTEND:20120930T010000Z
+DTSTAMP:20130224T083846Z
+UID:ssv6np6ih5l6oovjntekc9j2dg@google.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;CN=Cheshi
+ re County Democrats;X-NUM-GUESTS=0:mailto:cheshiredems@gmail.com
+CREATED:20120911T145742Z
+DESCRIPTION:Door open at 5:30\nCocktail Party at the home of Del & Nancy Bu
+ rridge\n7 Starlight Drive (directly across from the high school) beginning 
+ at 4 p.m.
+LAST-MODIFIED:20120911T151344Z
+LOCATION:Keene High School
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:Spaghetti Dinner
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20120918T103000Z
+DTEND:20120918T120000Z
+DTSTAMP:20130224T083846Z
+UID:uqrl5rgboj6gpud17jkpa8vmo4@google.com
+CREATED:20120911T150353Z
+DESCRIPTION:Undercroft room
+LAST-MODIFIED:20120911T150353Z
+LOCATION:Keene Unitarian Church at 69 Washington Street
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Open Membership Meeting
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20120531T213000Z
+DTEND:20120531T223000Z
+DTSTAMP:20130224T083846Z
+UID:purfrq1ns94dccamqcbunsoq8s@google.com
+CREATED:20120625T001455Z
+DESCRIPTION:
+LAST-MODIFIED:20120625T001455Z
+LOCATION:KEENE PUBLIC LIBRARY
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:CHESHIRE DEMS MEETING
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20100924T120000
+DTEND;TZID=America/New_York:20100924T130000
+RRULE:FREQ=WEEKLY;BYDAY=FR
+DTSTAMP:20130224T083846Z
+UID:i3q9l3g1ttp101im5f43knjbtc@google.com
+CREATED:20100924T124914Z
+DESCRIPTION:An information\, drop by if you can\, lunch. For more informati
+ on contact Eddie Albert  @ e_c_albert@hotmail.com
+LAST-MODIFIED:20110927T012940Z
+LOCATION:Gino's\, 815 Court Street\, Keene NH
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Democratic Lunch
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20111015
+DTEND;VALUE=DATE:20111016
+DTSTAMP:20130224T083846Z
+UID:f7t6o8f7hg25q42f1hgtgh91po@google.com
+CREATED:20110824T153035Z
+DESCRIPTION:
+LAST-MODIFIED:20110824T153035Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Sen. Bernie Sanders guest Speaker for Spaghetti Dinner
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20110730T230000Z
+DTEND:20110731T020000Z
+DTSTAMP:20130224T083846Z
+UID:hh7cubrc2ee1j4tep62rdb9n5k@google.com
+CREATED:20110611T140429Z
+DESCRIPTION:Save the Date – Saturday\, July 30\, 7 PM – for a Going-Away-Pa
+ rty for Greg Martin. \nThe Cheshire County Democrats invite you to join us 
+ for drinks and hors d’oeuvres at the home of Eddie Albert\, 380 Main Street
+ \, Keene. We hope that you will plan to be there as we honor Greg for his m
+ any years of outstanding service\, not only to our Democratic community\, b
+ ut also to the city of Keene and Cheshire County\, as Library Trustee and C
+ ounty Commissioner. Join us to wish him well on his marriage and move to Lo
+ well\, Massachusetts. As a gift from and to Greg\, this event will be a fun
+ draiser for the Cheshire County Democrats.
+LAST-MODIFIED:20110611T140431Z
+LOCATION:Eddie Albert's Home\, 380 Main Street Keene\, NH 03431
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Going-Away-Party for Greg Martin
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20110322T220000Z
+DTEND:20110323T003000Z
+DTSTAMP:20130224T083846Z
+UID:npq7olbfgchfolr79mi8ghamnc@google.com
+CREATED:20110320T174441Z
+DESCRIPTION:Please join Working Families Win to celebrate health care refor
+ m's first birthday!\n\nWhen:  Tuesday\, March 22nd\, 6 - 8:30pm\nWhere:  Ma
+ rgarita's Restaurant\, 77 Main Street\, Keene\n\nJoin us for food\, cake\, 
+ stories of how people are able to get the health care they need\, and a cel
+ ebration of our accomplishments!  \n\nSpecial guests:  Gail O'Brien\, first
+  person in the country to receive care through the new high-risk plan\, and
+  Richard Davis\, R.N. Ex Officio and Executive Director of Vermont Citizens
+  Campaign for Health\, who is working to make Vermont the first state in th
+ e nation with a Single Payer System.   \n \nThere is no cost to attend. Ple
+ ase email Jaime to RSVP or call 603-504-2906.\n\nSincerely\,\nJaime and Mik
+ e\nWorking Families Win NH\n \nJaime Contois\nNH State Director\nWorking Fa
+ milies Win\n15 Eagle Court\nKeene\, NH 03431\njaime@wfwin.org\ncell:  603-5
+ 04-2906\nwww.workingfamilieswin.org
+LAST-MODIFIED:20110320T174441Z
+LOCATION:Margarita's Restaurant\, 77 Main Street\, Keene\, 03431
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Please join Working Families Win to celebrate health care reform's 
+ first birthday! 
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20110307T230000Z
+DTEND:20110308T000000Z
+DTSTAMP:20130224T083846Z
+UID:7c910ubhvvkir5r2bgd4q0tre8@google.com
+CREATED:20110307T195857Z
+DESCRIPTION:
+LAST-MODIFIED:20110320T001742Z
+LOCATION:Courtyard Marriott\, Keene\, NH
+SEQUENCE:2
+STATUS:CONFIRMED
+SUMMARY:Meeting Cheshire County Democratic Committee
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20110122T140000Z
+DTEND:20110122T210000Z
+DTSTAMP:20130224T083846Z
+UID:4tl5ha74ktbsjf81oan3m20rb0@google.com
+CREATED:20110118T212507Z
+DESCRIPTION:Saturday in Keene: Defend Marriage Equality in NH\n\nCalling al
+ l Marriage Equality Partners!\n \nThe Monadnock Live Free and Equal Coaliti
+ on is co-hosting our region’s Camp Courage on Saturday\, January 22 at the 
+ Keene Public Library from 9am-2pm!  Learn talking points\, be coached on ho
+ w to tell your story\, and then actually tape your testimony between 2-4:00
+ pm\, next door at the Cheshire TV studios in Heberton Hall!  Details below.
+ \n \nGranite State Camp Courage\nA series of regional trainings hosted by G
+ ranite State Progress\, in collaboration with the Courage Campaign\n\nYou a
+ nd I know that New Hampshire is an equality state. New Hampshire passed mar
+ riage equality in 2009\, soundly defeated a repeal effort in 2010 and sent 
+ a clear message at town meeting last year that the Granite State opposes di
+ scrimination.\n \nBut anti-equality forces are at work again in our state\,
+  introducing legislation to overturn marriage equality and codify discrimin
+ ation into our state law. Immediately\, we need to help ensure equality rem
+ ains a proud Live Free or Die tradition in New Hampshire. In the long-term\
+ , we need to build more visible\, broad public support for equality by chan
+ ging the hearts and minds of those closest to us.\n \nJoin us for Camp Cour
+ age\, an intensive training on how to talk to our legislators\, friends\, f
+ amily and community members about the importance of equality through our ow
+ n stories and experiences. Based on the model developed by the Courage Camp
+ aign\, these trainings across New Hampshire will empower individuals to hav
+ e "Courageous Conversations" about their personal reasons for supporting ma
+ rriage equality. Working in local teams\, we will establish ways to strengt
+ hen equality in our community\, at the State House and one person at a time
+ .\n \nTo sign-up or help organize a Camp Courage in your area\, visit http:
+ //granitestatecampcourage.org/.\n \n \n***\nAbout Monadnock Live Free and E
+ qual Coalition\nCore organizers invited community members to attend an orga
+ nizational meeting on January 6 and were delighted when 31 people made the 
+ commitment!  Work groups were formed and initial assignments made.  The Jan
+ uary 22 training represents Phase II of the effort dedicated to ensuring th
+ at marriage equality for NH’s gay and lesbian citizens remains intact.  Tim
+ e is short\, so there can be no delay.  We need you NOW!  Join us on Facebo
+ ok at http://www.facebook.com/home.php?sk=group_131783710217502\n \nAbout G
+ ranite State Progress\nGranite State Progress is a progressive advocacy org
+ anization that addresses issues of immediate state and local concern. Grani
+ te State Progress ran the successful Challenge the Vote to Discriminate pub
+ lic education campaign during the 2010 town meeting season\, which resoundi
+ ngly rejected anti-gay attempts to discriminate against same-sex couples.\n
+  \nAbout the Courage Campaign\nThe Courage Campaign Institute is part of th
+ e Courage Campaign's online organizing network that empowers more than 700\
+ ,000 grassroots and netroots activists to push for progressive change and f
+ ull equality in California and across the country. The Courage Campaign org
+ anized the Prop 8 Trial Tracker documenting the historic court case in Cali
+ fornia and has conducted numerous Courage Camps to build “a grassroots army
+  for equality”.
+LAST-MODIFIED:20110118T212507Z
+LOCATION:Keene Public Library
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Defend Marriage Equality in NH
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20110212T230000Z
+DTEND:20110213T010000Z
+DTSTAMP:20130224T083846Z
+UID:8mt5s9tu7r9kdn8s2vi1i180a8@google.com
+CREATED:20110118T173514Z
+DESCRIPTION:The Cheshire County Democrats invite you to\nAn evening with Da
+ yton Duncan*\nSpeaking on NH Elections and Politics\n\nWhen: Saturday\, Feb
+ ruary 12th\, 2011\n6:00pm - 8:00pm \n \nWhere: Historical Society of Cheshi
+ re County\n246 Main Street\nKeene\, New Hampshire 03431\n \nHors d'oeuvres/
+ WIne/Beer\n \nTickets may be purchased online at Actblue\nhttp://www.actblu
+ e.com/page/duncanevent\nTickets $25.00\nSponsor level $45.00\nTickets also 
+ available: Eddie Albert\, 380 Main Street\, Keene\nTicket prices will incre
+ ase by $10 February 1st.\nMore information available on line at: www.cheshi
+ redemocrats.org\nContact: Daniel White vicechair@cheshiredemocrats.org or 6
+ 03-499-7438\n\n*On Saturday\, February 12th\, Dayton Duncan will be the key
+ note speaker at the Cheshire County Democratic Committee’s President’s Day 
+ Event.  He is an Emmy Award winning writer/producer and is the creative par
+ tner of Ken Burns.  Duncan\, an American historian\, will be speaking about
+  the 2010 elections in the context of New Hampshire’s rich political histor
+ y.\n\nDuncan himself has been a key figure in State and National campaigns 
+ and administrations.  He was NH Gov. Hugh Callen’s Chief of Staff\; the dep
+ uty national press secretary for Walter Mondale's presidential campaign in 
+ 1984\; and national press secretary for Michael Dukakis's 1988 presidential
+  campaign. President Clinton appointed him chair of the American Heritage R
+ ivers Advisory Committee and Secretary of Interior Bruce Babbitt appointed 
+ him as a director of the National Park Foundation.
+LAST-MODIFIED:20110118T173514Z
+LOCATION:Historical Society of Cheshire County\, 246 Main Street Keene\, Ne
+ w Hampshire 0343
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:An evening with Dayton Duncan Speaking on NH Elections and Politics
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20110120T233000Z
+DTEND:20110121T003000Z
+DTSTAMP:20130224T083846Z
+UID:sqr74hjvdpgs77qoqtmj7i26f8@google.com
+CREATED:20110110T164605Z
+DESCRIPTION:Manny Krasner has been organizing progressive groups throughout
+  the\nstate.  He will be in Keene on Jan. 20 to get our local group\norgani
+ zed.  Please join us at the Keene Public Library on Jan. 20 at\n6:30 in the
+  Trustees room.  For more info  please call Ellen Clement\nat 399-4923.
+LAST-MODIFIED:20110117T030420Z
+LOCATION:Keene Public Library\, Keene\, NH
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Progressives Meeting
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20110111
+DTEND;VALUE=DATE:20110112
+DTSTAMP:20130224T083846Z
+UID:3t1a7qhal3dbcuaue1c83iv890@google.com
+CREATED:20110103T232329Z
+DESCRIPTION:THE JAFFREY DEMOCRATIC COMMITTEE\n \nWILL MEET AT 7PM ON JANUAR
+ Y 11\, 2011\n \nAT THE JAFFREY PUBLIC LIBRARY\n\nOur guest will be Mark Fer
+ nald*.  Mark will discuss current legislative and public policy issues\, op
+ portunities and challenges.   \n \nOur agenda will also include a review an
+ d discussion of legislative proposals that have been filed for consideratio
+ n in 2011 by the New Hampshire House and Senate.\n \nI will hope to see you
+  on January 11!\n \nDick Ames\, Chair\n \n*Mark was elected to the State Se
+ nate in 1998 and 2000. He was the first Democrat to hold the District 11 se
+ at since before the Civil War. Mark was the Democratic nominee for Governor
+  in 2002.\nIn the State Senate\, Mark distinguished himself as someone will
+ ing to read every word of a proposed bill\, seeking ways to improve the leg
+ islation. He took on issues others were reluctant to touch\, coming up with
+  logical explanations and common sense solutions.  Recently\, Mark’s inform
+ ative\, carefully researched articles on health care\, access to justice\, 
+ and other important issues have been published in our regional news outlets
+ .
+LAST-MODIFIED:20110117T030420Z
+LOCATION:JAFFREY PUBLIC LIBRARY
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Jaffrey Democrat's Meeting
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20101031T184500Z
+DTEND:20101031T193000Z
+DTSTAMP:20130224T083846Z
+UID:u59875blqtkarrqhl0ppqda2o4@google.com
+CREATED:20101030T233311Z
+DESCRIPTION:
+LAST-MODIFIED:20101030T233311Z
+LOCATION:67 Emerald Street
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Paul Hodes visiting Cheshire Democrats Office
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20101026T210000Z
+DTEND:20101026T230000Z
+DTSTAMP:20130224T083846Z
+UID:pv7d17m0si1utirug986ufrmo0@google.com
+CREATED:20101025T014140Z
+DESCRIPTION:We Have our last debate of the election on Tuesday\, this is th
+ e big one---WMUR. This Tuesday Oct. 26th we need people to support Annie at
+  Saint Anslem's College in Manchester\, NH. 100 Saint Anselm's Drive\, The 
+ NH Institute of Politics. We need people there at 5:00pm.\n\nPlease come if
+  you can\, if you have never volunteered in the past\, here is your chance.
+  If you have volunteered\, we are counting on you now. This is the last deb
+ ate and our last chance to show the grassroots strength that we have built 
+ over the past year and a half.\n\nPlease let me that you you can go. Thank 
+ you so much!!\n-- \nBest Regards\nJohn Greene- Monadnock Regional Field Dir
+ ector\nWorking hard to elect Annie Kuster and the entire Democratic ticket\
+ nJgreene@nhdp.org\n(c) 603-620-0654
+LAST-MODIFIED:20101026T013331Z
+LOCATION:100 Saint Anselm's Drive\, Manchester\, NH
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Ann McLane Kuster Debate
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20101014T210000Z
+DTEND:20101014T230000Z
+DTSTAMP:20130224T083846Z
+UID:oabeukj7696rj90gjldp46gkg4@google.com
+CREATED:20101001T173919Z
+DESCRIPTION:Join our local candidates on Central Square in downtown Keene f
+ or a rally.
+LAST-MODIFIED:20101005T164522Z
+LOCATION:Central Square Keene\, NH 03431
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Party of Yes! Central Square Rally
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20100927T170000
+DTEND;TZID=America/New_York:20100927T200000
+RRULE:FREQ=WEEKLY;UNTIL=20101013T210000Z;BYDAY=MO,TU,WE,TH
+DTSTAMP:20130224T083846Z
+UID:0mboca2j3pam02oqe7o0asv7eg@google.com
+CREATED:20100924T130929Z
+DESCRIPTION:Make phone calls or canvass (door-to-door) for Paul Hodes and t
+ he rest of our Democratic Ticket. Contact Cynthia Lander at 603-717-8377 or
+  clander@nhdp.org
+LAST-MODIFIED:20100929T015953Z
+LOCATION:67 Emerald St. Keene NH 03431
+SEQUENCE:4
+STATUS:CONFIRMED
+SUMMARY:Hodes and Coordinated Campaign Phonebank
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20100926T140000
+DTEND;TZID=America/New_York:20100926T170000
+RRULE:FREQ=WEEKLY;UNTIL=20101010T180000Z;BYDAY=SU
+DTSTAMP:20130224T083846Z
+UID:0tlte4mb6ma9lf3258fidmnrmc@google.com
+CREATED:20100924T130536Z
+DESCRIPTION:Make phone calls or canvass (door-to-door) for Paul Hodes and t
+ he rest of our Democratic Ticket. Contact Cynthia Lander at 603-717-8377 or
+   clander@nhdp.org
+LAST-MODIFIED:20100929T015953Z
+LOCATION:67 Emerald St. Keene NH 03431
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Hodes and Coordinated Campaign Phonebank/Canvass
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20100926T120000
+DTEND;TZID=America/New_York:20100926T150000
+RRULE:FREQ=WEEKLY;UNTIL=20101024T160000Z;BYDAY=SU
+DTSTAMP:20130224T083846Z
+UID:gsqr4ii94sa2rrio76qb3fhp7o@google.com
+CREATED:20100924T131737Z
+DESCRIPTION:Canvass (door-to-door) for Anne Kuster. Contact John Greene for
+  more information 603-620-0654 or John@kusterforcongress.com
+LAST-MODIFIED:20100929T015953Z
+LOCATION:67 Emerald St. Keene NH 03431
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Kuster Canvass
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20100925T140000
+DTEND;TZID=America/New_York:20100925T170000
+RRULE:FREQ=WEEKLY;UNTIL=20101009T180000Z;BYDAY=SA
+DTSTAMP:20130224T083846Z
+UID:4j6ja8h76u7pd2vda6kd46u67s@google.com
+CREATED:20100924T130049Z
+DESCRIPTION:Phone bank or Canvass for Paul Hodes and the rest of our democr
+ atic ticket. Contact Cynthia Lander at 603-717-8377 orl clander@nhdp.org fo
+ r more information
+LAST-MODIFIED:20100929T015953Z
+LOCATION:67 Emerald St. Keene NH
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Hodes and Coordinated Campaign Phonebank/Canvass (Shift 2)
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20100927T173000
+DTEND;TZID=America/New_York:20100927T203000
+RRULE:FREQ=WEEKLY;UNTIL=20101029T213000Z;BYDAY=MO,TU,WE,TH,FR
+DTSTAMP:20130224T083846Z
+UID:31uv6v8m5nl18487e61na1dtjo@google.com
+CREATED:20100924T131355Z
+DESCRIPTION:
+LAST-MODIFIED:20100929T015953Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Kuster Phone Bank
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20100925T110000
+DTEND;TZID=America/New_York:20100925T140000
+RRULE:FREQ=WEEKLY;UNTIL=20101009T150000Z;BYDAY=SA
+DTSTAMP:20130224T083846Z
+UID:b07it08ual5lfsqdaio2ceelvk@google.com
+CREATED:20100924T125814Z
+DESCRIPTION:Make phone calls or canvass (door-to-door) for Paul Hodes and t
+ he rest of our Democratic Ticket. Contact Cynthia Lander at 603-717-8377 or
+   clander@nhdp.org
+LAST-MODIFIED:20100929T015953Z
+LOCATION:67 Emerald St. Keene NH 03431
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Hodes and Coordinated Campaign Phonebank/Canvass (Shift 1) 
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20101002T110000
+DTEND;TZID=America/New_York:20101002T140000
+RRULE:FREQ=WEEKLY;UNTIL=20101023T150000Z;BYDAY=SA
+DTSTAMP:20130224T083846Z
+UID:gvo0tv9aero57lu5gmqv7p6lm4@google.com
+CREATED:00001229T000000Z
+DESCRIPTION:Canvass (door-to-door) for Anne Kuster. Contact John Greene for
+  more information 603-620-0654 or John@kusterforcongress.com
+LAST-MODIFIED:20100929T015953Z
+LOCATION:67 Emerald St. Keene NH 03431 
+SEQUENCE:2
+STATUS:CONFIRMED
+SUMMARY:Kuster Canvass
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20100914
+DTEND;VALUE=DATE:20100915
+DTSTAMP:20130224T083846Z
+UID:56849c8ojf5ta40prp54c2h970@google.com
+CREATED:20100913T202535Z
+DESCRIPTION:Voter Info: http://www.cheshiredemocrats.org/2010/09/13/vote-tu
+ esday/
+LAST-MODIFIED:20100929T015953Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:VOTE
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20101102
+DTEND;VALUE=DATE:20101103
+DTSTAMP:20130224T083846Z
+UID:ao2nj1ml1soqrnpv1688hk4ljo@google.com
+CREATED:20100924T125415Z
+DESCRIPTION:
+LAST-MODIFIED:20100929T015953Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:VOTE!
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20101030
+DTEND;VALUE=DATE:20101103
+DTSTAMP:20130224T083846Z
+UID:l6mrlfi8pbvip27vctgmejpve8@google.com
+CREATED:20100924T125441Z
+DESCRIPTION:
+LAST-MODIFIED:20100929T015952Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:GOTV Activities (Details TBA)
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20100925
+DTEND;VALUE=DATE:20100926
+DTSTAMP:20130224T083846Z
+UID:d7hvigpj12gl55mstg7fe3mq2g@google.com
+CREATED:20100924T125304Z
+DESCRIPTION:For more information Contact:\n• Cynthia Lander 603-717-8377 cl
+ ander@nhdp.org\n-or-  \n• John Greene  603-620-0654 jgreene@nhdp.org 
+LAST-MODIFIED:20100929T015952Z
+LOCATION:67 Emerald St.
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Democratic Day of Action
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20100928T213000Z
+DTEND:20100928T233000Z
+DTSTAMP:20130224T083846Z
+UID:qec7do804uun12ud7kci8u1nug@google.com
+CREATED:20100926T235112Z
+DESCRIPTION:
+LAST-MODIFIED:20100929T015952Z
+LOCATION:67 Emerald Street Keene\, NH
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:OFFICE WARMING
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20060901T120000
+DTEND;TZID=America/New_York:20060901T130000
+RRULE:FREQ=WEEKLY;BYDAY=FR;WKST=SU;UNTIL=20100924T160000Z
+DTSTAMP:20130224T083846Z
+UID:tmtcv1mq5oh7iqseogqlo677q8@google.com
+CREATED:20060829T022334Z
+DESCRIPTION:More info: http://www.cheshiredemocrats.org/lunch.htm
+LAST-MODIFIED:20100924T124728Z
+LOCATION:the EF Lane
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Lunch at the EF Lane
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20100804T163000
+DTEND;TZID=America/New_York:20100804T190000
+RRULE:FREQ=MONTHLY;BYDAY=1WE;WKST=SU
+DTSTAMP:20130224T083846Z
+UID:7jakcdh5m216iur54s6i34on48@google.com
+CREATED:20100728T142955Z
+DESCRIPTION:Please Join the Cheshire Democrats the first Wednesday of each 
+ Month at the Community Kitchen in Keene.\n\nBecause of new policies that ha
+ ve been put into place by the management at the Community Kitchen\, we ask 
+ that those of you who so kindly give us your time be able to do the followi
+ ng:\n\nPlease arrive at 4:30 and be able to stay until the meal is complete
+ d\nPlease be sure and follow the dress code\; shoes\, no sleeveless shirts\
+ , and no shorts.\nIf possible\, we need to know if you will be able to join
+  us two days ahead of time because we now need to advise the staff of who w
+ ill be working.\n\nAs always\, we are committed to this important cause in 
+ our County\, and very grateful for your help.
+LAST-MODIFIED:20100808T032339Z
+LOCATION:Community Kitchen\, Mechanic Street\, Keene\, NH
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Community Kitchen volunteering
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20100730T220000Z
+DTEND:20100730T233000Z
+DTSTAMP:20130224T083846Z
+UID:0ah2elq098e2vp3r1ldd36v19g@google.com
+CREATED:20100723T235629Z
+DESCRIPTION:Please join us!\n\nMeet Congressional Candidate\nAnn McLane Kus
+ ter\n\nfor a house party at the home of\nSuzanne and Larry Butcher\n44 Felt
+  Rd\, Keene\, NH\n\nFriday\, July 30th\n6:00 p.m.\n\nPlease go here to RSVP
+ ! or email SuzanneButcherNH@yahoo.com\nhttp://www.kusterforcongress.com/cal
+ endar_details.asp?id=673\nor call 230-2415
+LAST-MODIFIED:20100808T032339Z
+LOCATION:44 Felt Rd\, Keene\, NH
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Ann McLane Kuster House Party
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20100730T223000Z
+DTEND:20100731T010000Z
+DTSTAMP:20130224T083846Z
+UID:1fuulr6iioaj0nmc9ch7mpk96o@google.com
+CREATED:20100723T235255Z
+DESCRIPTION:Jean and John Hoffman & JoAnn and Bill Fenton\n\nInvite you to 
+ a\nMid-Summer Reception\n\nfor\n\nSenator Molly Kelly\n\nWhen: Friday\, Jul
+ y 30\, 2010 6:30 – 9:00 p.m.\nWhere: Jean and John Hoffman’s\nSeward Mounta
+ in Farm 279 Bowlder Road Sullivan\, New Hampshire\n~ ~ ~\nDine on hors d’oe
+ uvres and desserts created by First Course\nListen to music and vocals by Z
+ anRicky\nVisit one of the country’s oldest\, original school houses:\nSchoo
+ l House #3 at Seward Mountain Farm\n~ ~ ~\nContribution Levels: $1\,000 ~ $
+ 500 ~ $250 ~ $100 ~ $50\nRSVP Jean Hoffman\, phone 847-9630\, e-mail jeansm
+ f@gmail.com or\nJoAnn Fenton 355-4900\, e-mail jfenton@ne.rr.com\n\nDirecti
+ ons: On Route 9 in Sullivan\, at the blinking light by\nthe Sullivan Countr
+ y Store\, turn down Centre Street\nand follow the green and white balloons.
+ \nPLEASE RSVP!!!
+LAST-MODIFIED:20100808T032338Z
+LOCATION:Seward Mountain Farm 279 Bowlder Road Sullivan\, New Hampshire
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Senator Molly Kelly Mid-Summer Reception
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20100619T200000Z
+DTEND:20100619T220000Z
+DTSTAMP:20130224T083846Z
+UID:vkcah9cq2p1a4n822l44rvfvv8@google.com
+CREATED:20100622T164642Z
+DESCRIPTION:Speaker Terie Norelli and Majority Leader Mary Jane Wallner\nIn
+ vite you to a reception to benefit the\nCommittee to Elect House Democrats\
+ n\nWith Special Guest\nGovernor Howard Dean\, MD\nMonday\, July 19th\nRed R
+ iver Theater\n11 South Main St\, Concord NH\n\n$20 advance/ $25 at the door
+  for State Representatives\n$40 advance/$50 at the door General Admission t
+ ickets\n$250 Sponsor\n$500 Host\n$1000 Partner\nhttp://www.actblue.com/enti
+ ty/fundraisers/19471\n\nPO Box 1292\nConcord\, NH 03302\n\nTo RSVP\, please
+  call Alexis Chininis at 225-6899 or by email at\nachininis@nhdp.org.\nFor 
+ more information\, contact Marcia Moody at 659-7106 or Bob\nPerry at 269-46
+ 51\n\n
+LAST-MODIFIED:20100715T062935Z
+LOCATION:Red River Theater 11 South Main St\, Concord NH
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Committee to Elect House Democrats Governor Howard Dean event
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20100712T220000Z
+DTEND:20100712T230000Z
+DTSTAMP:20130224T083846Z
+UID:01dm87r5fvhnoe6heunf0fkj4k@google.com
+CREATED:20100619T153229Z
+DESCRIPTION:
+LAST-MODIFIED:20100715T062935Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Meeting Cheshire County Democrats
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20100717T133000Z
+DTEND:20100717T170000Z
+DTSTAMP:20130224T083846Z
+UID:jqgmjq2an7f2lvqevoncij1o90@google.com
+CREATED:20100714T144017Z
+DESCRIPTION:Swanzey Old Home Day 2010\nThe festivities of Saturday\, July 1
+ 7 begin at 9:00. The first order of the day is the Old Home Day parade. Ent
+ rants muster at the intersection of Talbot Hill Road and Route 32 at 9:30\,
+  and begin the parade up Route 32 to Town Hall at 10:00.\n \nOther home-gro
+ wn events include a dedication ceremony and unveiling of Deb Crowder’s new 
+ “Welcome to Swanzey” sign\; a softball game pitting the Swanzey Police agai
+ nst the Fire Department\; a chicken barbeque and\, to complete the day\, th
+ e Saturday performance of “The Old Homestead.”\n\nhttp://www.town.swanzey.n
+ h.us/index.asp?Type=B_PR&SEC={D6B5C513-0253-4774-A486-10EA20084BAC}&DE={551
+ 26EB6-6D03-48C4-AB3B-22CC9E9EB66D}
+LAST-MODIFIED:20100715T062935Z
+LOCATION:Talbot Hill Road\, Swanzey\, NH
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Swanzey Old Home Day 2010
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20100703T173000Z
+DTEND:20100703T193000Z
+DTSTAMP:20130224T083846Z
+UID:k4329pbi6anj50mv1go7robvdc@google.com
+CREATED:20100518T190403Z
+DESCRIPTION:We will be having a get together at Lakefalls Lodge\, Stoddard 
+ on Saturday\,\nJuly 3rd at 1:30pm.  Paul Hodes\, Ann McLane Kuster and will
+  be there.\ntickets: $5\nContact: Richard Whitney 603-446-7476 studios@cres
+ centpond.com
+LAST-MODIFIED:20100715T062935Z
+LOCATION:Lakefalls Lodge\, Aten Road\, Stoddard
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Stoddard Democrats Annual Meet the Candidates Event
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20100718T173000Z
+DTEND:20100718T190000Z
+DTSTAMP:20130224T083846Z
+UID:iih2bevo1u1v9dj6skgml0nrio@google.com
+CREATED:20100626T220734Z
+DESCRIPTION:Please join Cheshire County Sheriff Candidate\n\nEli Rivera\nfo
+ r a campaign kick off\nsocial/fundraiser event at\n55 Pine Ave Keene\, NH\n
+ \nSunday\, July 18th\n1:30 - 3:00 p.m.\n\nwith Special Guest\nSenator Molly
+  Kelly\n\nSuggested contribution levels:\nSponsor $50\, Friend $25\, Suppor
+ ter $10\n\nTo RSVP\nemail Eli at vote@riveraforsheriff.org\n\nIf you have a
+ ny questions\, please contact Eli Rivera at\nvote@riveraforsheriff.org or (
+ 603) 903-2825.\nFor contributions of $25.00 or more you will receive a\nhon
+ orary Rivera for Sheriff campaign pin.\n\n﻿﻿
+LAST-MODIFIED:20100715T062935Z
+LOCATION:55 Pine Ave Keene\, NH
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Eli Rivera for Sheriff campaign kick off social/fundraiser event
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20100623T213000Z
+DTEND:20100623T233000Z
+DTSTAMP:20130224T083846Z
+UID:35st56rj82hc955415sobpknu8@google.com
+CREATED:20100622T134725Z
+DESCRIPTION:Please join Congressional Candidate\n\nAnn McLane Kuster\n\nfor
+  a fundraiser at the home of\nDiana & Charlton MacVeagh\n90 Hill Street\, M
+ arlborough\, NH\n\nWednesday\, June 23rd\n5:30 - 7:30 p.m.\n\nCo-Hosts\nAli
+ ce & Gil Fuld\, MD * Michael & Jenny Krinsky\nMaria & Kimball Temple\, MD *
+  Jeff Miller & Carol MacKinnon\n\nRSVP https://services.myngp.com/ngponline
+ services/Event.aspx?Y=FrZ0S4jyDpXM7TxapO1b46aLFijCaZTOYN9yAUWX10SPCuFiin53G
+ w==\n\nor email us at rsvp@kusterforcongress.com\nwww.KusterforCongress.com
+LAST-MODIFIED:20100715T062934Z
+LOCATION:90 Hill Street\, Marlborough\, NH
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Please join Congressional Candidate Ann McLane Kuster at the home o
+ f Diana & Charlton MacVeagh
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20100613T170000Z
+DTEND:20100613T190000Z
+DTSTAMP:20130224T083846Z
+UID:v2v1snk8n5euv8bhi3ksf06cpg@google.com
+CREATED:20100528T235316Z
+DESCRIPTION:Please join us at the Keene City Democrats Pot Luck Picnic\n\nW
+ hen: Sunday June 13 1pm\nWhere: Greg Martin’s house\,  22 Valley Street \, 
+ Keene\n\nPlease RSVP to  kodonnell@ne.rr.com letting Kathy know what you wi
+ ll bring- if you would rather\, we could use of hamburgers hot dogs\, buns\
+ , condiments\, drinks\, etc.\nAlso please be sure to bring your own plates 
+ and utensils.\n\nFeel free to forward this list to any local dems- those fr
+ om out of Keene are welcome to join us for good conversation with friends.\
+ n\nThis is a “shine only” event- if it rains we will reschedule for later i
+ n the summer.
+LAST-MODIFIED:20100628T071902Z
+LOCATION:Greg Martin’s house\,  22 Valley Street\, Keene NH
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Keene City Democrats Pot Luck Picnic
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20100607T220000Z
+DTEND:20100607T230000Z
+DTSTAMP:20130224T083846Z
+UID:bghfabsnh9f3he6glqku68ptk0@google.com
+CREATED:20100528T234137Z
+DESCRIPTION:
+LAST-MODIFIED:20100628T071902Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:CCD MEETING
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20100606T210000Z
+DTEND:20100606T220000Z
+DTSTAMP:20130224T083846Z
+UID:bmmn1ovfphe8315nfv70g86178@google.com
+CREATED:20100528T235215Z
+DESCRIPTION:Please join\n\nRussell & Linda Bastedo • Linda Cates & Tom Murr
+ ay\n\nDavid & Sara Caruso • Robert & Alfrieda Englund\n\nJohn & Jean Hoffma
+ n • Dan Kaplan & Heather Melander\nSenator Molly Kelly • Charlton MacVeagh\
+ n\nJames & Judith Putnam\n\nand\nSenator Jon Tester\nDemocratic U.S. Senato
+ r from Montana\n\nto support\n\nCongressman Paul Hodes\n\nCandidate for U.S
+ . Senate\n\nat the home of\n\nJames & Judith Putnam\n\n168 Court Street\, K
+ eene\n\nSunday\, June 6\, 2010\n\n5:00 p.m. to 6:00 p.m.\n\nSuggested Contr
+ ibution Levels\nHost – $1\,000 • Sponsor – $500 • Friend – $250\n\nSupporte
+ r – $100 • Grassroots Activist – $50\n\nContributors at the sponsor level a
+ nd above are invited to join us for a\nprivate reception at 5:30 p.m. with 
+ Congressman Hodes and Senator Tester\n\nRSVP to Josh Handelman at (603) 413
+ -5224 or jhandelman@paulhodesforsenate.com.\n\nContributions or gifts to Ho
+ des for Senate are not tax deductible.\nPaid for by Hodes for Senate
+LAST-MODIFIED:20100628T071902Z
+LOCATION:168 Court Street\, Keene
+SEQUENCE:2
+STATUS:CONFIRMED
+SUMMARY:Congressman Paul Hodes for U.S. Senate Event
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20100608T230000Z
+DTEND:20100609T000000Z
+DTSTAMP:20130224T083846Z
+UID:4gb9oolck330cvt3n6r36ldqdk@google.com
+CREATED:20100607T230251Z
+DESCRIPTION:
+LAST-MODIFIED:20100628T071901Z
+LOCATION:Jaffrey Library\, Jaffrey\, NH
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Jaffrey Democrats Monthly Meeting
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20100605T140000Z
+DTEND:20100605T160000Z
+DTSTAMP:20130224T083846Z
+UID:m7lkbkh4sgg1tnhcrsvj5p5fn4@google.com
+CREATED:20100528T235036Z
+DESCRIPTION:OFA Canvasses:\nAs grassroots\, we will be “planting” a network
+  of community leaders and members\, so please come and be part of this new 
+ movement of political community organizing\, we are needing you.\nOur next 
+ (Nationwide) community event will be a short canvass on Saturday\, June 5th
+  in the morning from 10:00 to noon.\nWe will be canvassing from three locat
+ ions:\nKeene: At the Home of Beverly Lachman\, 31 Robbins Road 352-2009\nWe
+ stmoreland: at the home of Paul Berch\, 956 River Rd. 399-4960\nWinchester:
+  At the home of Harriet and Art Charland\, 68 Kapper Drive\, 239-6521\nWe w
+ ill be talking to first time voters from the 2009 election. If you don’t li
+ ke to talk face to face\, you can help by driving someone around for two ho
+ urs. 
+LAST-MODIFIED:20100628T071901Z
+LOCATION:Cheshire County\, NH
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:OFA Canvasses
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20100517T223000Z
+DTEND:20100518T003000Z
+DTSTAMP:20130224T083846Z
+UID:3a3o31jfckb70l97o5rr5fgg60@google.com
+CREATED:20100509T202909Z
+DESCRIPTION:NEW HAMPSHIRE YOUNG DEMOCRATS TO HOST NH-02 CONGRESSIONAL CANDI
+ DATE FORUM\nThe New Hampshire Young Democrats will host a forum with all De
+ mocratic Congressional Candidates at Keene State College\nConcord\, NH – Th
+ e New Hampshire Young Democrats (NHYD) will be hosting a forum event with D
+ emocratic Congressional Candidates Ann McLane Kuster and Katrina Swett at K
+ eene State College on Monday\, May 17th.\nThe event will begin at 6:30 PM a
+ nd will be held in the Mountainview room on the campus of Keene State Colle
+ ge located at 229 Main Street\, Keene\, NH 03435.\nThe event will be social
+  and focus on the issues that concern young people.  Those in attendance wi
+ ll have the opportunity to meet the candidates and ask questions through a 
+ variety of formats.  Questions for the candidates at the forum may also be 
+ submitted through twitter using the hasgtag #NHYD02 or by going to the webs
+ ite http://www.formspring.me/NHYD.  Additional information can also be foun
+ d at the NHYD website: http://nhyoungdemocrats.org/\n–\nJohn Barriere\nDepu
+ ty Political Director\nNew Hampshire Democratic Party\n105 N. State St. Con
+ cord\, NH\n603-225-6899
+LAST-MODIFIED:20100601T074518Z
+LOCATION:Keene State College
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:NEW HAMPSHIRE YOUNG DEMOCRATS TO HOST NH-02 CONGRESSIONAL CANDIDATE
+  FORUM
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20100513
+DTEND;VALUE=DATE:20100514
+DTSTAMP:20130224T083846Z
+UID:rab00jjnm1h8jiri33fbee5hhc@google.com
+CREATED:20100503T190821Z
+DESCRIPTION:Dear Cheshire County Democrats\,\nPlease join us on Thursday\, 
+ May 13th 6:30 for a meeting to elect a new executive committee.  Registered
+  Democrats may vote.\n\nWe are\, as per By-Laws\, a month early\, but we wo
+ uld like to have the new board in place so that they may attend the upcomin
+ g NHDP Convention May 22nd. Since this will be a tough election year\, we f
+ eel strongly that we need to have all the tools and training we can in orde
+ r to be a strong organization. We have been granted permission by the NHDP 
+ to hold this election early.\n\nThis meeting will take place at the E.F. La
+ ne hotel on Main Street in Keene.\n\nWe hope that many of you will be able 
+ to attend. This will be a brief meeting\, and we will move forward\, beginn
+ ing in June\, with our regular monthly meetings.\n\nAnn Heffernon
+LAST-MODIFIED:20100601T074518Z
+LOCATION:E.F. Lane hotel\, Main Street in Keene\, NH
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Committee Election
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20100407T203000Z
+DTEND:20100407T230000Z
+DTSTAMP:20130224T083846Z
+UID:64cekivbqslkdh7gvdhul5eb2c@google.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;CN=Cheshi
+ re County Democrats;X-NUM-GUESTS=0:mailto:cheshiredems@gmail.com
+CREATED:20100406T002140Z
+DESCRIPTION:Don't forget!  It's the first Wednesday of the month\, and the 
+ Community Kitchen needs our help!\n4:30 PM until 7ish.
+LAST-MODIFIED:20100406T002153Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Community Kitchen Volunteer Night
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20100401
+DTEND;VALUE=DATE:20100402
+DTSTAMP:20130224T083846Z
+UID:uerhcnftm09u2au5jik6nmti1c@google.com
+CREATED:20100331T010932Z
+DESCRIPTION:
+LAST-MODIFIED:20100331T010932Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:CCD Meeting Postponed
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20100401T223000Z
+DTEND:20100402T000000Z
+DTSTAMP:20130224T083846Z
+UID:gpl0m0h25ea6ctkrrpsuio85no@google.com
+CREATED:20100331T010646Z
+DESCRIPTION:For Immediate Release: CONTACT: Kathleen O’Donnell\nMarch 25\, 
+ 2010 603-357-6103\n\nKeene Democrats to Caucus April 1\, 2010\nElect Delega
+ tes to State Convention\n\nKeene City Democrats will meet at 6:30pm -8 Thur
+ sday April 1\, 2010 at 103 Roxbury Street\, Suite 200C to elect town Democr
+ atic officers and delegates to the New Hampshire Democratic Party state con
+ vention.\n\nAll registered Democrats are encouraged to attend the caucus an
+ d to help set the party’s course for the fall elections.\n\nNew Hampshire D
+ emocrats and Independents are excited about working hard to elect great lea
+ ders for our state and local communities. These caucuses provide a great op
+ portunity for anyone who wants to continue being involved in the grassroots
+  politics that makes New Hampshire great.
+LAST-MODIFIED:20100331T010646Z
+LOCATION:103 Roxbury Street\, Suite 200C\, Keene\, NH
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Keene Democrats Caucus
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20100321T200000Z
+DTEND:20100321T213000Z
+DTSTAMP:20130224T083846Z
+UID:fvjtiumemm5buri1pou75thi48@google.com
+CREATED:20100312T172013Z
+DESCRIPTION:Stoddard Democrats Caucus\nStoddard Town Hall on Sunday\, the 2
+ 1st.\nFeatured speaker: Rick VanWickler\, the superintendent of the Cheshir
+ e County Jail who will talk about their new facility and he will review dis
+ cussion among the NH legislators regarding capital punishment.\nContact Dr.
+  Bob Englund at 847-9727 for more information
+LAST-MODIFIED:20100312T172224Z
+LOCATION:Stoddard Town Hall\, Stoddard\, NH
+SEQUENCE:2
+STATUS:CONFIRMED
+SUMMARY:Stoddard Democrats Caucus
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20100313T183000Z
+DTEND:20100313T220000Z
+DTSTAMP:20130224T083846Z
+UID:s61hcb9r3insidqbm43r59h9ac@google.com
+CREATED:20100203T030101Z
+DESCRIPTION:
+LAST-MODIFIED:20100203T030101Z
+LOCATION:the Keene public library 
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Cheshire County Democrats Summit\; We'll be at the Keene public lib
+ rary
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20100203T213000Z
+DTEND:20100204T001500Z
+DTSTAMP:20130224T083846Z
+UID:t7r8iebq5siq29kds8nth33pjk@google.com
+CREATED:20100203T030027Z
+DESCRIPTION:
+LAST-MODIFIED:20100203T030027Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Community Kitchen
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20100204T233000Z
+DTEND:20100205T003000Z
+DTSTAMP:20130224T083846Z
+UID:vn3iemsqoo1i8pm9eemojle3j4@google.com
+CREATED:20100203T025933Z
+DESCRIPTION:
+LAST-MODIFIED:20100203T025933Z
+LOCATION:EF Lane\, Keene\, NH
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:CCDC Monthly Meeting at EF Lane\, Keene\, NH
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20100202T190000Z
+DTEND:20100202T210000Z
+DTSTAMP:20130224T083846Z
+UID:k8ilq20umn7o4qcca43rf5simc@google.com
+CREATED:20100130T153546Z
+DESCRIPTION:President Obama will visit Nashua\, NH on Tuesday\, February 2\
+ , 2010\nDate: Tues\, February 2\, 2010\nTime: 2:00pm\nNashua High School\nF
+ ree and Open to the Public\nTickets required - go to the following website 
+ \nhttp://www.whitehouse.gov/webform/rsvp/nashua-nh-100202\n \nThis website 
+ is available until 5:00pm Saturday\, January 30
+LAST-MODIFIED:20100130T153546Z
+LOCATION:Nashua High School\, Nashua\, NH
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:President Obama will visit Nashua
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20100107T230000Z
+DTEND:20100108T000000Z
+DTSTAMP:20130224T083846Z
+UID:ut1horp5ju27ivmudoo62qikps@google.com
+CREATED:20100107T163255Z
+DESCRIPTION:
+LAST-MODIFIED:20100107T163255Z
+LOCATION:E.F. Lane Hotel
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:CCD Meeting
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20100123
+DTEND;VALUE=DATE:20100124
+DTSTAMP:20130224T083846Z
+UID:74maf4t1kp6gpm7e5i4o877opg@google.com
+CREATED:20100103T182109Z
+DESCRIPTION:Celebrate the anniversary of the historic inauguration of Presi
+ dent Barack Obama and meet Democratic Candidates of 2010 while responsibly 
+ enjoying cocktails and appetizers. Each ticket will come with one free glas
+ s of wine or bottle of beer\, each additional glass or bottle will "cost" a
+  $5.00 donation to the Cheshire County Democrats.\n\nLocation:E.F. Lane Hot
+ el\, 30 Main Street\, Keene\, NH 03431\n\nDate: Saturday\, January 23\, 7:0
+ 0PM to 9:00PM\n\nQuestions? Please email info@cheshiredemocrats.org or call
+  (603) 499-7438\n\nRSVP by ordering your tickets below. http://www.actblue.
+ com/page/ccdiac\n\nPlease help us be paperless\, don't print out your ticke
+ t. We will have your name at the door. Thank you!\nhttp://www.actblue.com/p
+ age/ccdiac\n\nActBlue provides a unique way for you to make your voice echo
+  in the corridors of power. Please support them with a 10% tip when you con
+ tribute
+LAST-MODIFIED:20100103T182109Z
+LOCATION:E.F. Lane Hotel\, 30 Main Street\, Keene\, NH 03431
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Inaugural Anniversary Celebration
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20091114
+DTEND;VALUE=DATE:20091115
+DTSTAMP:20130224T083846Z
+UID:cpp7aum5l9flt664krork8hgqs@google.com
+CREATED:20091014T200212Z
+DESCRIPTION:CANCELLED\nSAVE THE DATE SAVE THE DATE SAVE THE DATE SAVE THE D
+ ATE\nSaturday November 14th the Cheshire County Democrats will hold their C
+ ounty Summit!\nDetails and specific times to follow soon!\nWe hope you can 
+ join us for this important event-\n\nAnn Heffernon\nVice-Chair\nCheshire Co
+ unty Democrats
+LAST-MODIFIED:20091111T192857Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:CANCELLED (County Summit - Cheshire County Democrats)
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20091203T230000Z
+DTEND:20091204T000000Z
+DTSTAMP:20130224T083846Z
+UID:uaelrv9rco722jgkhbc4dvvlt4@google.com
+CREATED:20091106T010010Z
+DESCRIPTION:
+LAST-MODIFIED:20091106T010010Z
+LOCATION:E.F. Lane\, Keene\, NH
+SEQUENCE:2
+STATUS:TENTATIVE
+SUMMARY:Meeting Cheshire County Democrats
+TRANSP:OPAQUE
+CATEGORIES:http://schemas.google.com/g/2005#event
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20091105T233000Z
+DTEND:20091106T003000Z
+DTSTAMP:20130224T083846Z
+UID:plhmfh5asid9n773l67otuq5po@google.com
+CREATED:20091102T231942Z
+DESCRIPTION:Please join the Cheshire County Democrats for our monthly meeti
+ ng Thursday November 5th at 6:30 at the E.F. Lane Hotel.\n\nWe look forward
+  to seeing you!\n\nAnn Heffernon\, Vice-Chair\, Cheshire County Democrats
+LAST-MODIFIED:20091102T231942Z
+LOCATION:EF Lane Hotel Keene\, nh
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Meeting Cheshire County Dems
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20091001T210000Z
+DTEND:20091001T220000Z
+DTSTAMP:20130224T083846Z
+UID:m2pogr1enfo0adin22p1bv0mak@google.com
+CREATED:20090928T201319Z
+DESCRIPTION:Please join the Cheshire County Democrats for our monthly meeti
+ ng this Thursday\, October 1st.\n \nThe location is different--We will meet
+  at the E.F.Lane Hotel\, who has kindly offered us a room.  Also\, we will 
+ start at 6:30 P.M. in order to accommodate the Health Care vigil at the top
+  of Main Street in Keene. (This starts at 5:00 P.M. and there will be news 
+ coverage at this event\, so please come early and join us there as well)!\n
+  \nWe had a great turnout last month\, and I hope we can get more of you to
+  join us and offer your positive ideas and help us to move forward with new
+  goals and agendas.\n
+LAST-MODIFIED:20090928T201320Z
+LOCATION:Central Square\, Keene\, NH
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Health Care Vigil
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20091001T223000Z
+DTEND:20091001T233000Z
+DTSTAMP:20130224T083846Z
+UID:6nvkd3tm43776ap27c4fclbcjk@google.com
+CREATED:20090928T201232Z
+DESCRIPTION:Please join the Cheshire County Democrats for our monthly meeti
+ ng this Thursday\, October 1st.\n \nThe location is different--We will meet
+  at the E.F.Lane Hotel\, who has kindly offered us a room.  Also\, we will 
+ start at 6:30 P.M. in order to accommodate the Health Care vigil at the top
+  of Main Street in Keene. (This starts at 5:00 P.M. and there will be news 
+ coverage at this event\, so please come early and join us there as well)!\n
+  \nWe had a great turnout last month\, and I hope we can get more of you to
+  join us and offer your positive ideas and help us to move forward with new
+  goals and agendas.\n
+LAST-MODIFIED:20090928T201232Z
+LOCATION:E.F. Lane Hotel\, Keene\, NH
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Monthly Meeting
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20090923T223000Z
+DTEND:20090923T233000Z
+DTSTAMP:20130224T083846Z
+UID:birabpp756h1aaogjhpp3hggjo@google.com
+CREATED:20090819T154016Z
+DESCRIPTION:After a summer hiatus\, we are regrouping for a September meeti
+ ng.  We will be reading The Wordy Shipmates\, by Sarah Vowell.  It's an amu
+ sing look at the Puritans and how they still influence us today.  We are go
+ ing to meet on Wednesday\, September 23\, 6:30 PM at the Food Court at Colo
+ ny Mill Marketplace. \n \nI hope you are all having a good summer and I loo
+ k forward to seeing you in September.\n \nLinda Cates\n \nFrom Publishers W
+ eekly\nEssayist and public radio regular Vowell  revisits America's Puritan
+  roots in this witty exploration of the ways in which our country's present
+  predicaments are inextricably tied to its past. In a style less colloquial
+  than her previous books\, Vowell traces the 1630 journey of several key En
+ glish colonists and members of the Massachusetts Bay Colony. Foremost among
+  these men was John Winthrop\, who would become governor of Massachusetts. 
+ While the Puritans who had earlier sailed to Plymouth on the Mayflower were
+  separatists\, Winthrop's followers remained loyal to England\, spurred on 
+ by Puritan Reverend John Cotton's proclamation that they were God's chosen 
+ people. Vowell underscores that the seemingly minute differences between th
+ e Plymouth Puritans and the Massachusetts Puritans were as meaningful as th
+ e current Sunni/Shia Muslim rift. Gracefully interspersing her history less
+ on with personal anecdotes\, Vowell offers reflections that are both amusin
+ g  and tender . 
+LAST-MODIFIED:20090819T154016Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Book Club
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20090505T220000Z
+DTEND:20090505T230000Z
+DTSTAMP:20130224T083846Z
+UID:5qodm04vn319h183cqfg1rfkj8@google.com
+CREATED:20090430T145430Z
+DESCRIPTION:Please join the Cheshire County Democrats for our Bi-Monthly me
+ eting\nto be held on Tuesday May 5th at the Food Court located in the Colon
+ y\nMill Marketplace\, 222 West Street in Keene.\n\nWe look forward to seein
+ g you!\n\nAnn Heffernon\, Vice-Chair
+LAST-MODIFIED:20090430T145430Z
+LOCATION:Colony Mill Marketplace\, Keene\, NH
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:CCD Meeting
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20090302T224500Z
+DTEND:20090302T234500Z
+DTSTAMP:20130224T083846Z
+UID:g043nbcfi3smkf04focv9pb3po@google.com
+CREATED:20090302T150751Z
+DESCRIPTION:The CCD will hold it's bi-monthly open meeting on Monday March 
+ 2nd at 5:45 PM in the Food Court of the Colony Mill Marketplace.  We are gr
+ ateful to the Colony Mill for letting us use this space.\n \nPlease bring c
+ onstructive and positive ideas for fundraising and events that we can hold 
+ in the near future.\n \nMany Many thanks to those kind and generous people 
+ who helped to move our office furniture into storage on the 21st.  We are a
+ lso most appreciative of the loan (twice)! of a truck from Fairfield Motors
+  to help this feat be accomplished.  Without the truck--this would have bee
+ n a very difficult task indeed.\n \nAs always\, we look forward to seeing y
+ ou!\n \nBest\,\nAnn Heffernon\nVIce-CHair\, Cheshire County Democrats
+LAST-MODIFIED:20090302T150822Z
+LOCATION:Colony Mill Marketplace\, Keene\, NH
+SEQUENCE:2
+STATUS:CONFIRMED
+SUMMARY:MEETING Cheshire County Democrats 5:45pm
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20090111T223000Z
+DTEND:20090111T233000Z
+DTSTAMP:20130224T083846Z
+UID:01dpdse51grgc34md5apk4ajao@google.com
+CREATED:20090110T173607Z
+DESCRIPTION:
+LAST-MODIFIED:20090110T173607Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:CCD Meeting
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20090114T233000Z
+DTEND:20090115T003000Z
+DTSTAMP:20130224T083846Z
+UID:k21co99m9egvrk759dsvgnhutg@google.com
+CREATED:20081207T211730Z
+DESCRIPTION:Book Group\n\nWe had a good meeting Wednesday night\, ten peopl
+ e and an excellent discussion of Hot\, Flat and Crowded by Thomas Freidman.
+  This book should be required reading. The first half will scare you to dea
+ th\, but the second half will give you some hope\, and some ideas of what w
+ e can do to save the planet - and our economy. Phil mentioned that he found
+  online\, an 84 minute lecture by Freidman on Hot\, Flat and Crowded. So if
+  you don’t have time to read the book\, perhaps you can go online and watch
+  the lecture. During our discussion we wondered what kind of “green” steps 
+ are being taken by the State of New Hampshire. We wished that Suzanne was t
+ here to enlighten us. Kay is going to check with her and see what she can f
+ ind out to report at our next meeting.\n\nWe are not meeting in December du
+ e to everyone’s busy schedule.\n\nWe thought it would be interesting to rea
+ d one of the books that Obama is reading in preparation for the presidency.
+  So\, for January we are going to read The Defining Moment: FDR’s Hundred D
+ ays and the Triumph of Hope\, by Jonathan Alter. This is the book that Obam
+ a mentioned during his 60 Minutes interview. We will meet on Wednesday\, Ja
+ nuary 14\, 6:30 PM in the Food Court at Colony Mill Marketplace.\n\nFor Feb
+ ruary\, we will be reading American Lion: Andrew Jackson in the White House
+ \, by Jon Meacham. For March\, we are considering The Devil’s Highway: A Tr
+ ue Story\, by Luis Alberto Urrea\, about illegal immigration\, a subject we
+ ’ve been meaning to get to.
+LAST-MODIFIED:20081207T211730Z
+LOCATION:Colony Mill Marketplace\, Keene\, NH
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Book Club Meeting
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20081207
+DTEND;VALUE=DATE:20081208
+DTSTAMP:20130224T083846Z
+UID:cfblo2m82auqmin3ta3epvh2eo@google.com
+CREATED:20081207T162023Z
+DESCRIPTION:Greetings to you all!\n\nMy sincerest apologies for not having 
+ gotten this message out to you sooner.\n\nThe Cheshire County Democrats Exe
+ cutive Committee has decided to forgo a December meeting.\n\nWe wish you al
+ l a lovely holiday season\, and take this opportunity again to thank you al
+ l for your incredible efforts in the past year.  We can all be very proud o
+ f what has been accomplished.\n\nWe look forward to seeing you in a new yea
+ r of hope\, peace and continued joy-\n\nBest\,\nAnn Heffernon\nVice Chair\n
+ Cheshire County Democrats
+LAST-MODIFIED:20081207T162023Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Meeting Cancelled
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20081102T223000Z
+DTEND:20081102T233000Z
+DTSTAMP:20130224T083846Z
+UID:vrrmsnoea3ie6lvsa3kts7g7d8@google.com
+CREATED:20081101T133841Z
+DESCRIPTION:Cheshire County Democrats Monthly Meeting\nWHEN: Sunday 5:30pm\
+ nWHERE: 2 Eagle Ct.\, Keene\, NH 
+LAST-MODIFIED:20081101T133841Z
+LOCATION:2 Eagle Ct.\, Keene\, NH 
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Meeting Cheshire County Democrats 
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20081102
+DTEND;VALUE=DATE:20081103
+DTSTAMP:20130224T083846Z
+UID:i9kh009gpckl4rj716ouq4tpo0@google.com
+CREATED:20081028T005747Z
+DESCRIPTION:Chesterfield Democratic Committee\nNOV. 1ST & 2ND: Literature d
+ rop\n\nELECTION DAY : Poll watchers\, visibility\, rides to the polls\, com
+ munications\n\nFor the details:\nDuring the days of Nov. 1\, 2\, 3\, and 4\
+ , we need all the volunteers we can get\, to make telephone calls\, enter d
+ ata\, put literature on every doorstep\, make food\, house out-of-town volu
+ nteers\, poll watch\, hold signs\, etc. We are particularly interested if y
+ ou have Voting Day - November 4 - free to work all day. This meeting will b
+ e our chance to coordinate everyone in Chesterfield\, Hinsdale and Winchest
+ er.\n\nSIGNS: There are still some people who ordered OBAMA signs and I hav
+ en’t been able to deliver them. Please contact me again\, or stop by and pi
+ ck them up. Also\, we have some extras\, and if you want one in front of yo
+ ur house\, let me know.\n\nNOV. 1 & 2 LITERATURE DROP. On Saturday and Sund
+ ay\, we want to deliver a couple of pieces of paper to every doorstep in Ch
+ esterfield. I like to do this very early\, before people are up\, so I don’
+ t get stuck chatting\, but it can really go on all day. This is not a canva
+ ss - no need to talk\, just drop the information off.\nWe could really use 
+ a lot of people\, even if you only want to do your street.\n\nELECTION DAY:
+  I’ll be spending most of the day outside the polls (Chesterfield Town Hall
+ ) \, holding signs\, chatting and passing out literature to anyone who want
+ s it\, and I’d love company(It looks a lot better if there is a group.)\n\n
+ Kathy Thatcher is opening her house as the local headquarters\, and we need
+  staff and food help there. We need people to make phone calls. All these j
+ obs can be done in shifts\, so you don’t have to commit the whole day. But\
+ , if anyone thinks they have the whole day - or even half the day - to help
+ \, please get in touch with me for other activities.\n\nTHANK YOU VERY MUCH
+  FOR ALL THE SUPPORT AND GOOD WILL YOU HAVE SHOWN IN THE PAST. AS YOU KNOW\
+ , THIS IS THE FINAL MOMENT\, A HISTORIC \, TRANSFORMATIONAL\,\, DEFINING MO
+ MENT IN AMERICAN HISTORY. WORK FOR HOPE AND GOOD GOVERNMENT THESE FINAL WEE
+ KS\, AND TELL YOU GRANDCHILDREN ABOUT IT! 
+LAST-MODIFIED:20081028T005747Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Chesterfield Democratic Committee
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20081101
+DTEND;VALUE=DATE:20081102
+DTSTAMP:20130224T083846Z
+UID:viumd4779rjmt0nq19j9diib4o@google.com
+CREATED:20081028T005732Z
+DESCRIPTION:Chesterfield Democratic Committee\nNOV. 1ST & 2ND: Literature d
+ rop\n\nELECTION DAY : Poll watchers\, visibility\, rides to the polls\, com
+ munications\n\nFor the details:\nDuring the days of Nov. 1\, 2\, 3\, and 4\
+ , we need all the volunteers we can get\, to make telephone calls\, enter d
+ ata\, put literature on every doorstep\, make food\, house out-of-town volu
+ nteers\, poll watch\, hold signs\, etc. We are particularly interested if y
+ ou have Voting Day - November 4 - free to work all day. This meeting will b
+ e our chance to coordinate everyone in Chesterfield\, Hinsdale and Winchest
+ er.\n\nSIGNS: There are still some people who ordered OBAMA signs and I hav
+ en’t been able to deliver them. Please contact me again\, or stop by and pi
+ ck them up. Also\, we have some extras\, and if you want one in front of yo
+ ur house\, let me know.\n\nNOV. 1 & 2 LITERATURE DROP. On Saturday and Sund
+ ay\, we want to deliver a couple of pieces of paper to every doorstep in Ch
+ esterfield. I like to do this very early\, before people are up\, so I don’
+ t get stuck chatting\, but it can really go on all day. This is not a canva
+ ss - no need to talk\, just drop the information off.\nWe could really use 
+ a lot of people\, even if you only want to do your street.\n\nELECTION DAY:
+  I’ll be spending most of the day outside the polls (Chesterfield Town Hall
+ ) \, holding signs\, chatting and passing out literature to anyone who want
+ s it\, and I’d love company(It looks a lot better if there is a group.)\n\n
+ Kathy Thatcher is opening her house as the local headquarters\, and we need
+  staff and food help there. We need people to make phone calls. All these j
+ obs can be done in shifts\, so you don’t have to commit the whole day. But\
+ , if anyone thinks they have the whole day - or even half the day - to help
+ \, please get in touch with me for other activities.\n\nTHANK YOU VERY MUCH
+  FOR ALL THE SUPPORT AND GOOD WILL YOU HAVE SHOWN IN THE PAST. AS YOU KNOW\
+ , THIS IS THE FINAL MOMENT\, A HISTORIC \, TRANSFORMATIONAL\,\, DEFINING MO
+ MENT IN AMERICAN HISTORY. WORK FOR HOPE AND GOOD GOVERNMENT THESE FINAL WEE
+ KS\, AND TELL YOU GRANDCHILDREN ABOUT IT! 
+LAST-MODIFIED:20081028T005732Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Chesterfield Democratic Committee
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20081104
+DTEND;VALUE=DATE:20081105
+DTSTAMP:20130224T083846Z
+UID:rdsinkjaa9avp4u5ok2edavv9o@google.com
+CREATED:20081028T005700Z
+DESCRIPTION:Chesterfield Democratic Committee\nNOV. 1ST & 2ND: Literature d
+ rop\n\nELECTION DAY : Poll watchers\, visibility\, rides to the polls\, com
+ munications\n\nFor the details:\nDuring the days of Nov. 1\, 2\, 3\, and 4\
+ , we need all the volunteers we can get\, to make telephone calls\, enter d
+ ata\, put literature on every doorstep\, make food\, house out-of-town volu
+ nteers\, poll watch\, hold signs\, etc. We are particularly interested if y
+ ou have Voting Day - November 4 - free to work all day. This meeting will b
+ e our chance to coordinate everyone in Chesterfield\, Hinsdale and Winchest
+ er.\n\nSIGNS: There are still some people who ordered OBAMA signs and I hav
+ en’t been able to deliver them. Please contact me again\, or stop by and pi
+ ck them up. Also\, we have some extras\, and if you want one in front of yo
+ ur house\, let me know.\n\nNOV. 1 & 2 LITERATURE DROP. On Saturday and Sund
+ ay\, we want to deliver a couple of pieces of paper to every doorstep in Ch
+ esterfield. I like to do this very early\, before people are up\, so I don’
+ t get stuck chatting\, but it can really go on all day. This is not a canva
+ ss - no need to talk\, just drop the information off.\nWe could really use 
+ a lot of people\, even if you only want to do your street.\n\nELECTION DAY:
+  I’ll be spending most of the day outside the polls (Chesterfield Town Hall
+ ) \, holding signs\, chatting and passing out literature to anyone who want
+ s it\, and I’d love company(It looks a lot better if there is a group.)\n\n
+ Kathy Thatcher is opening her house as the local headquarters\, and we need
+  staff and food help there. We need people to make phone calls. All these j
+ obs can be done in shifts\, so you don’t have to commit the whole day. But\
+ , if anyone thinks they have the whole day - or even half the day - to help
+ \, please get in touch with me for other activities.\n\nTHANK YOU VERY MUCH
+  FOR ALL THE SUPPORT AND GOOD WILL YOU HAVE SHOWN IN THE PAST. AS YOU KNOW\
+ , THIS IS THE FINAL MOMENT\, A HISTORIC \, TRANSFORMATIONAL\,\, DEFINING MO
+ MENT IN AMERICAN HISTORY. WORK FOR HOPE AND GOOD GOVERNMENT THESE FINAL WEE
+ KS\, AND TELL YOU GRANDCHILDREN ABOUT IT! 
+LAST-MODIFIED:20081028T005700Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Chesterfield Democratic Committee
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20081103
+DTEND;VALUE=DATE:20081104
+DTSTAMP:20130224T083846Z
+UID:r3q5sr7ks1idbn0vu2oa7uhkus@google.com
+CREATED:20081028T005618Z
+DESCRIPTION:Chesterfield Democratic Committee\nNOV. 1ST & 2ND: Literature d
+ rop\n\nELECTION DAY : Poll watchers\, visibility\, rides to the polls\, com
+ munications\n\nFor the details:\nDuring the days of Nov. 1\, 2\, 3\, and 4\
+ , we need all the volunteers we can get\, to make telephone calls\, enter d
+ ata\, put literature on every doorstep\, make food\, house out-of-town volu
+ nteers\, poll watch\, hold signs\, etc. We are particularly interested if y
+ ou have Voting Day - November 4 - free to work all day. This meeting will b
+ e our chance to coordinate everyone in Chesterfield\, Hinsdale and Winchest
+ er.\n\nSIGNS: There are still some people who ordered OBAMA signs and I hav
+ en’t been able to deliver them. Please contact me again\, or stop by and pi
+ ck them up. Also\, we have some extras\, and if you want one in front of yo
+ ur house\, let me know.\n\nNOV. 1 & 2 LITERATURE DROP. On Saturday and Sund
+ ay\, we want to deliver a couple of pieces of paper to every doorstep in Ch
+ esterfield. I like to do this very early\, before people are up\, so I don’
+ t get stuck chatting\, but it can really go on all day. This is not a canva
+ ss - no need to talk\, just drop the information off.\nWe could really use 
+ a lot of people\, even if you only want to do your street.\n\nELECTION DAY:
+  I’ll be spending most of the day outside the polls (Chesterfield Town Hall
+ ) \, holding signs\, chatting and passing out literature to anyone who want
+ s it\, and I’d love company(It looks a lot better if there is a group.)\n\n
+ Kathy Thatcher is opening her house as the local headquarters\, and we need
+  staff and food help there. We need people to make phone calls. All these j
+ obs can be done in shifts\, so you don’t have to commit the whole day. But\
+ , if anyone thinks they have the whole day - or even half the day - to help
+ \, please get in touch with me for other activities.\n\nTHANK YOU VERY MUCH
+  FOR ALL THE SUPPORT AND GOOD WILL YOU HAVE SHOWN IN THE PAST. AS YOU KNOW\
+ , THIS IS THE FINAL MOMENT\, A HISTORIC \, TRANSFORMATIONAL\,\, DEFINING MO
+ MENT IN AMERICAN HISTORY. WORK FOR HOPE AND GOOD GOVERNMENT THESE FINAL WEE
+ KS\, AND TELL YOU GRANDCHILDREN ABOUT IT! 
+LAST-MODIFIED:20081028T005618Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Chesterfield Democratic Committee
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20081028T220000Z
+DTEND:20081028T233000Z
+DTSTAMP:20130224T083846Z
+UID:tj0dn1du7snt239c91ksfd6e8c@google.com
+CREATED:20081028T005505Z
+DESCRIPTION:Final GOTV training for anyone in Cheshire County today Tuesday
+  at 6pm at the warehouse at the end of Dunbar St.\n\nThanks!\n\nTim Kistner
+ \nRegional Field Director - Obama’s Campaign for Change\nCheshire\, Sulliva
+ n\, Grafton Counties\nemail: tkistner@nhforchange.com\nphone: 603-438-5771\
+ nnh.barackobama.com
+LAST-MODIFIED:20081028T005505Z
+LOCATION:Dunbar St.\, Keene\, NH
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:GOTV training
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20081019T210000Z
+DTEND:20081019T220000Z
+DTSTAMP:20130224T083846Z
+UID:ne0qbglkaictc40g0cgc7ij8hk@google.com
+CREATED:20081016T145223Z
+DESCRIPTION:Get Out The Vote Meetings!\nSunday\, October 19\, 5pm\, 2 Eagle
+  Ct\, Keene - for Keene\, Swanzey\, and northeastern Cheshire County\nMonda
+ y\, October 20\, 6pm\, 305 Park Ave\, Keene - for the Fitzwilliam\, Richmon
+ d\, Troy\, Marlborough area\nTuesday\, October 21\, 7pm\, 23 Main St\, Ashu
+ elot - for southwest Cheshire County\nWednesday\, October 22\, 6pm\, 8 Pros
+ pect Hill\, Walpole - for northwest Cheshire County\n**Note: Dublin\, Jaffr
+ ey\, and Rindge will be operating out of the Peterborough office\, located 
+ at 50 Jaffrey Rd.\nTim Kistner\nRegional Field Director - Obama’s Campaign 
+ for Change\nCheshire\, Sullivan\, Grafton Counties\nemail: tkistner@nhforch
+ ange.com\nphone: 603-438-5771\nnh.barackobama.com
+LAST-MODIFIED:20081016T151344Z
+LOCATION:2 Eagle Ct\, Keene
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Get Out The Vote Meetings!
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20081021T230000Z
+DTEND:20081022T000000Z
+DTSTAMP:20130224T083846Z
+UID:lj1gsfabqoqq7ed1jbvgejp8d8@google.com
+CREATED:20081016T145502Z
+DESCRIPTION:Get Out The Vote Meetings!\nSunday\, October 19\, 5pm\, 2 Eagle
+  Ct\, Keene - for Keene\, Swanzey\, and northeastern Cheshire County\nMonda
+ y\, October 20\, 6pm\, 305 Park Ave\, Keene - for the Fitzwilliam\, Richmon
+ d\, Troy\, Marlborough area\nTuesday\, October 21\, 7pm\, 23 Main St\, Ashu
+ elot - for southwest Cheshire County\nWednesday\, October 22\, 6pm\, 8 Pros
+ pect Hill\, Walpole - for northwest Cheshire County\n**Note: Dublin\, Jaffr
+ ey\, and Rindge will be operating out of the Peterborough office\, located 
+ at 50 Jaffrey Rd.\nTim Kistner\nRegional Field Director - Obama’s Campaign 
+ for Change\nCheshire\, Sullivan\, Grafton Counties\nemail: tkistner@nhforch
+ ange.com\nphone: 603-438-5771\nnh.barackobama.com
+LAST-MODIFIED:20081016T151336Z
+LOCATION:23 Main St\, Ashuelot\, NH
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:Get Out The Vote Meetings!
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20081022T220000Z
+DTEND:20081022T230000Z
+DTSTAMP:20130224T083846Z
+UID:11i5tcjd01e1cttk6ridc7h76s@google.com
+CREATED:20081016T145422Z
+DESCRIPTION:Get Out The Vote Meetings!\nSunday\, October 19\, 5pm\, 2 Eagle
+  Ct\, Keene - for Keene\, Swanzey\, and northeastern Cheshire County\nMonda
+ y\, October 20\, 6pm\, 305 Park Ave\, Keene - for the Fitzwilliam\, Richmon
+ d\, Troy\, Marlborough area\nWednesday\, October 22\, 6pm\, 8 Prospect Hill
+ \, Walpole - for northwest Cheshire County\nWednesday\, October 22\, 7pm\, 
+ 23 Main St\, Ashuelot - for southwest Cheshire County\n**Note: Dublin\, Jaf
+ frey\, and Rindge will be operating out of the Peterborough office\, locate
+ d at 50 Jaffrey Rd.\nTim Kistner\nRegional Field Director - Obama’s Campaig
+ n for Change\nCheshire\, Sullivan\, Grafton Counties\nemail: tkistner@nhfor
+ change.com\nphone: 603-438-5771\nnh.barackobama.com
+LAST-MODIFIED:20081016T145422Z
+LOCATION:8 Prospect Hill\, Walpole
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Get Out The Vote Meetings!
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20081020T220000Z
+DTEND:20081020T230000Z
+DTSTAMP:20130224T083846Z
+UID:i2fgmie1speh74r4077uld5kcc@google.com
+CREATED:20081016T145313Z
+DESCRIPTION:Get Out The Vote Meetings!\nSunday\, October 19\, 5pm\, 2 Eagle
+  Ct\, Keene - for Keene\, Swanzey\, and northeastern Cheshire County\nMonda
+ y\, October 20\, 6pm\, 305 Park Ave\, Keene - for the Fitzwilliam\, Richmon
+ d\, Troy\, Marlborough area\nWednesday\, October 22\, 6pm\, 8 Prospect Hill
+ \, Walpole - for northwest Cheshire County\nWednesday\, October 22\, 7pm\, 
+ 23 Main St\, Ashuelot - for southwest Cheshire County\n**Note: Dublin\, Jaf
+ frey\, and Rindge will be operating out of the Peterborough office\, locate
+ d at 50 Jaffrey Rd.\nTim Kistner\nRegional Field Director - Obama’s Campaig
+ n for Change\nCheshire\, Sullivan\, Grafton Counties\nemail: tkistner@nhfor
+ change.com\nphone: 603-438-5771\nnh.barackobama.com
+LAST-MODIFIED:20081016T145313Z
+LOCATION:305 Park Ave\, Keene
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Get Out The Vote Meetings!
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20081014T223000Z
+DTEND:20081015T000000Z
+DTSTAMP:20130224T083846Z
+UID:s8gosg7njmk3rc5iiof9mlus50@google.com
+CREATED:20081010T195320Z
+DESCRIPTION: Book group\nFor October we will be reading The Omnivore’s Dile
+ ma: A Natural History of Four Meals\, by Michael Polan. We will meet on a T
+ uesday this month\, on October 14th\, the day after Columbus Day Weekend\, 
+ at 6:30 PM\, at the Food Court in Colony Mill Marketplace.
+LAST-MODIFIED:20081010T195320Z
+LOCATION:Colony Mill Marketplace\, Keene\, NH
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Book Group meeting
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20081020T220000Z
+DTEND:20081021T010000Z
+DTSTAMP:20130224T083846Z
+UID:88tkftc39oo6afg0aa98ggumis@google.com
+CREATED:20081010T195224Z
+DESCRIPTION:Rindge   Democrats\nMark your calendars! Dublin resident and Am
+ erica’s campaign reforming grandmother\, Doris Haddock \, also known as Gra
+ nny D\, is coming to Franklin Pierce University on October 20 from 6 to 9pm
+  to share in the screening of the documentary film\, Run\, Granny\, Run. So
+ me of you may know that she has devoted the later years of her long life (s
+ he’s 98 now) to campaign reform. The film is a most\ninteresting look at th
+ e inside workings of a campaign\, as well as a riveting portrait of Granny 
+ D herself. She is a truly remarkable woman. Please plan on attending this i
+ mportant event with the Rindge Democrats. 
+LAST-MODIFIED:20081010T195224Z
+LOCATION:Franklin Pierce University
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Rindge Democrats\,  Granny D screening of Run\, Granny\, Run
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20081015T230000Z
+DTEND:20081016T003000Z
+DTSTAMP:20130224T083846Z
+UID:sctvo9qtqatgq3f65hqg83u6hc@google.com
+CREATED:20081010T195028Z
+DESCRIPTION:Pre Domestic Policy Debate Briefing\nDo you know the real story
+  behind the financial crisis? Are you\nconfused by the jargon such as CDOs\
+ , securitization\, mortgage backed\nsecurities\, naked short selling\, or c
+ redit default swaps? Do you know\nwhat is in the 700 billion-dollar bailout
+  (”rescue”) plan? Do you\nwonder how our brother and sister capitalist syst
+ ems are doing in\nother parts of the world?\n\nFor answers to these questio
+ ns and more\, please mark on your calendars\nWednesday\, October 15 at 7-8:
+ 30 p.m. in Heberton Hall\, the Keene\nPublic Library (you can get back home
+  to watch the last Presidential\ndebate). Economic professors\, Marie Dugga
+ n and John Hackett will be\non a panel with political scientist\, Jon Marte
+ ns for a timely\ndiscussion in this exciting and confusing election season.
+  Please\ncall Charles F. Weed –358-2627 for information
+LAST-MODIFIED:20081010T195028Z
+LOCATION:Keene Public Library\, Keene\, NH
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Pre Domestic Policy Debate Briefing
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20081020T230000Z
+DTEND:20081021T010000Z
+DTSTAMP:20130224T083846Z
+UID:4i25dlf4ku9kckthfrieejdfvs@google.com
+CREATED:20081010T194925Z
+DESCRIPTION:Pre-Election Teach-in/Discussions of Major Economic Issues of o
+ ur Time\nOctober 20 (Monday) 7:00 - 9:00 pm Auditorium\, Keene Public Libra
+ ry\nPre-Election Teach-in/Discussions of Major Economic Issues of our Time\
+ nThe second of several open discussions\nALL WELCOME!\nJim Tober (Professor
+  of Economics\, Marlboro College):\nTaxation\, Deficits and Consequences\nP
+ aula Duston (Professor of Economics\, U Mass (Amherst)):\nHealth: Care\, Co
+ sts and Who Pays What to Whom?\n\nSponsored by Cheshire County Democrats (E
+ conomic Forum)\n\n(N.B. These are interim titles)\nSponsored by Cheshire Co
+ unty Democrats (Economic Forum)
+LAST-MODIFIED:20081010T194925Z
+LOCATION:Keene Public Library\, Keene\, NH
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Pre-Election Teach-in/Discussions of Major Economic Issues of our T
+ ime
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20081013
+DTEND;VALUE=DATE:20081014
+DTSTAMP:20130224T083846Z
+UID:ohelnr82h2kvem9nuhh02ms13o@google.com
+CREATED:20081010T194830Z
+DESCRIPTION:DNC Chairman Howard Dean\nDNC Chairman and Former VT Gov. Howar
+ d Dean is scheduled to visit Keene State College on October 13 and will att
+ end a voter registration event at Keene State College. 
+LAST-MODIFIED:20081010T194830Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Howard Dean in Keene
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20081017T230000Z
+DTEND:20081018T000000Z
+DTSTAMP:20130224T083846Z
+UID:hpe7mioqtl4q6cva4tigsk60bc@google.com
+CREATED:20081010T194756Z
+DESCRIPTION:Executive Councilor Debora Pignatelli will be on the WKBK  radi
+ o (1290 am)  in Keene with Dan Mitchell next Thursday\, October 16 at 8:35a
+ m.\n\nOctober 17th\, at 7pm Debora will be on The No Spin Zone\, Chris Coat
+ es TV show discussing the role of the Council and why I seek another term.\
+ n
+LAST-MODIFIED:20081010T194755Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Debora Pignatelli on NO SPIN ZONE Ch 8
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20081016
+DTEND;VALUE=DATE:20081017
+DTSTAMP:20130224T083846Z
+UID:caj0317dvsb7runlde0ch3ddbc@google.com
+CREATED:20081010T194650Z
+DESCRIPTION:Executive Councilor Debora Pignatelli will be on the WKBK  radi
+ o (1290 am)  in Keene with Dan Mitchell next Thursday\, October 16 at 8:35a
+ m.\n\nOctober 17th\, at 7pm Debora will be on The No Spin Zone\, Chris Coat
+ es TV show discussing the role of the Council and why I seek another term.\
+ n\nThe numbers to call are:\nStudio Line: (603) 357-1290\nToll Free Studio 
+ Line: (866) 357-1290
+LAST-MODIFIED:20081010T194650Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Debora Pignatelli on WKBK
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20081018T100000
+DTEND;TZID=America/New_York:20081018T133000
+RRULE:FREQ=WEEKLY;WKST=SU;UNTIL=20081101T140000Z;BYDAY=SA
+DTSTAMP:20130224T083846Z
+UID:ru61gvcp2dukr7e60s5r88e0do@google.com
+CREATED:20081010T194454Z
+DESCRIPTION:  The Barack Obama campaign in Keene will be running canvasses 
+ every weekend from now until November out of the Keene office at 305 Park A
+ venue.This office is located across from Dube’s Tire on Park Ave.\n\nThere 
+ will be two canvass shifts:\nWhen: Saturdays\, at 10:00 am and another at 1
+ :30 pm\nSundays\, 12 noon.\n\nWhere to meet:\n\n305 Park Avenue\n\nWe are a
+ ttempting to identify all voters in an effort to more effectively target ou
+ r message to voters.We are also running phonebanks from the office all day\
+ , every day. Barack Obama and John McCain are currently polling at a dead h
+ eat in New Hampshire\; every personal contact with undecided voters in this
+  state is crucial to our victory.\n\nWe need as much as help as we can get!
+ \n\nPlease let me know if you are interested in volunteering! My contact in
+ formation is listed below.\n\nThanks\,\nSamantha\n\nSamantha Cotter\n305 Pa
+ rk Avenue\nKeene\, NH 03431\nscotter@nhforchange.com\n603-438-4796 
+LAST-MODIFIED:20081010T194454Z
+LOCATION:305 Park Avenue Keene\, NH 03431
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:OBAMA Canvass!
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20081012T120000
+DTEND;TZID=America/New_York:20081012T130000
+RRULE:FREQ=WEEKLY;BYDAY=SU;UNTIL=20081102T170000Z;WKST=SU
+DTSTAMP:20130224T083846Z
+UID:o2eig92v1rhm7apdep4coffs04@google.com
+CREATED:20081010T194323Z
+DESCRIPTION: The Barack Obama campaign in Keene will be running canvasses e
+ very weekend from now until November out of the Keene office at 305 Park Av
+ enue.This office is located across from Dube’s Tire on Park Ave.\n\nThere w
+ ill be two canvass shifts:\nWhen: Saturdays\, at 10:00 am and another at 1:
+ 30 pm\nSundays\, 12 noon.\n\nWhere to meet:\n\n305 Park Avenue\n\nWe are at
+ tempting to identify all voters in an effort to more effectively target our
+  message to voters.We are also running phonebanks from the office all day\,
+  every day. Barack Obama and John McCain are currently polling at a dead he
+ at in New Hampshire\; every personal contact with undecided voters in this 
+ state is crucial to our victory.\n\nWe need as much as help as we can get!\
+ n\nPlease let me know if you are interested in volunteering! My contact inf
+ ormation is listed below.\n\nThanks\,\nSamantha\n\nSamantha Cotter\n305 Par
+ k Avenue\nKeene\, NH 03431\nscotter@nhforchange.com\n603-438-4796 
+LAST-MODIFIED:20081010T194323Z
+LOCATION:305 Park Avenue Keene\, NH 03431
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:OBAMA Canvass!
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20081004T213000Z
+DTEND:20081005T010000Z
+DTSTAMP:20130224T083846Z
+UID:ijq1u9thma4sv5oo8she6aqu3s@google.com
+CREATED:20080826T140624Z
+DESCRIPTION:Former Gov. Angus King to be keynote speaker at Cheshire County
+  Democrat's annual Pasta and Politics dinner.\n\nFormer Maine Governor Angu
+ s King will be the featured speaker at Saturday's Cheshire County Democrat'
+ s Pasta and Politics Dinner and Reception. King\, an Independent\, served t
+ wo terms as Governor of Maine from 1995 to 2003. In 2000 King endorsed Geor
+ ge Bush. Two weeks ago King endorsed Sen. Barack Obama in the 2008 Presiden
+ tial election\, stating that the Illinois Democrat "...leads with hope and 
+ not through fear."\n\n<a href="http://www.cheshiredemocrats.org/" target="_
+ blank">PURCHASE YOUR TICKETS NOW</a>\n\nGov. Jeanne Shaheen and Congressman
+  Paul Hodes will also be speaking at the dinner and will be attending the r
+ eception beforehand. Many other noted local democratic candidates will be a
+ ttending the event.\n\nThe fundraising event gives the opportunity for Demo
+ crats and other like minded individuals to gather for good food and company
+  and to raise money in support of local Democratic candidates.\n\nThe progr
+ am will include presentation of the annual Russell Award to longtime Democr
+ at Robert L. Mallat.\n\nCheshire County Democrats Annual PASTA and POLITICS
+  DINNER will be held this year on Saturday\, October 4th at Keene State Col
+ lege.\n\n$25 for the dinner (6:30 - 9:00pm in The Mabel Brown Room) a table
+  seats 8\, so get your group's table early for best placement.\n$100 for th
+ e reception with Gov. King in the Mountain View Room (5:30-6:25 pm) this pr
+ ice includes dinner.\n\nTickets may be purchased from your state representa
+ tives\, Eddie Albert (352-4050)\, Terry Clark (661-8347)\, or online at www
+ .cheshiredemocrats.org\nTickets may also be purchased at the door.\n\nFor u
+ pdated information visit www.cheshiredemocrats.org
+LAST-MODIFIED:20081001T020750Z
+LOCATION:Keene State College\, Keene\, NH
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:CCD ANNUAL PASTA and POLITICS DINNER - Gov. Angus King to be keynot
+ e speaker
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20081006T230000Z
+DTEND:20081007T003000Z
+DTSTAMP:20130224T083846Z
+UID:plrq6lrut40cp8p0k91houa7m8@google.com
+CREATED:20080930T150748Z
+DESCRIPTION: Pre-Election Teach-in/Discussions of Major Economic Issues of 
+ our Time\nThe first of several open discussions\nWhen: October 6 (Monday) 7
+ :00 pm\nWhere: Auditorium\, Keene Public Library\nALL WELCOME!\nTom Duston 
+ (Professor emeritus\, KSC)\nEnergy and the Environment: Political Will or E
+ verywhere Drill?\nSponsored by Cheshire County Democrats (Economic Forum)\n
+LAST-MODIFIED:20080930T150748Z
+LOCATION:Keene Public Library
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY: Pre-Election Teach-in/Discussions of Major Economic Issues of our 
+ Time
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20081025T200000Z
+DTEND:20081025T220000Z
+DTSTAMP:20130224T083846Z
+UID:3dhl2aee603fv12ftgk3v0skn8@google.com
+CREATED:20080918T204650Z
+DESCRIPTION:The Nelson Democrats Cordially invite you to attend a Democrati
+ c Candidates Event\n\nSaturday Afternoon\, October 25th\, 4 PM\n\nNelson To
+ wn Hall\n\nGuests will include: Harold Janeway\, State Senator\, John Shea\
+ , Executive Councilor\,\nDan Eaton\, Lucy Weber and Tara Sad\, State Repres
+ entatives\,\nAnna Tilton\, Register of Probate\, and Stu West\, County Trea
+ surer.\n\nContact Linda Cates 827-3839\, lindacates@mindspring.com for furt
+ her information.
+LAST-MODIFIED:20080918T204650Z
+LOCATION:Nelson Town Hall\, Nelson\, NH
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Nelson Democrats
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20080925T223000Z
+DTEND:20080926T000000Z
+DTSTAMP:20130224T083846Z
+UID:llerp233n2pm0fka5mgo67b6a0@google.com
+CREATED:20080918T163227Z
+DESCRIPTION:The Walpole Democratic Committee is sponsoring a Democratic Mee
+ t and Greet next Thursday.  Details are as follows:\n \nMeet and talk infor
+ mally with the Democratic candidates for Executive Councillor\, State Senat
+ or and Representatives\, County Commissioner\, County Treasurer\, and Regis
+ ter of Probate.\nWhere: at the Hastings House (behind the Unitarian Church)
+  in Walpole.\nWhen:  Thursday\, September 25 at 6:30 p.m.\nHors d'oeuvres a
+ nd liquid refreshments will be provided by the esteemed catering firm of Sa
+ d\, Weber & Friends.
+LAST-MODIFIED:20080918T163227Z
+LOCATION:Hastings House (behind the Unitarian Church) in Walpole
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:The Walpole Democratic Committee is sponsoring a Democratic Meet an
+ d Greet
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20080831
+DTEND;VALUE=DATE:20080901
+DTSTAMP:20130224T083846Z
+UID:05d23r3k9gi610n4krnmatf2ug@google.com
+CREATED:20080828T173903Z
+DESCRIPTION:August 31: Phonebank Sunday 5 pm at the Keene office:\nKeene Of
+ fice: 305 Park Avenue\, Keene\, 03431
+LAST-MODIFIED:20080828T173903Z
+LOCATION:305 Park Avenue\, Keene\, 03431v
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Obama Phonebanking
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20080830
+DTEND;VALUE=DATE:20080831
+DTSTAMP:20130224T083846Z
+UID:it7l8k80q9kh4t0nov3s3br3v0@google.com
+CREATED:20080828T173700Z
+DESCRIPTION:August 30: Canvasses! Big Canvasses:\nSaturday: 10 am and anoth
+ er shift at 1:30 pm\nSunday: noon\nMeet at Keene Obama office: 305 Park Ave
+ \, Keene\, NH\, 03431\n- Knock on doors to identify supporters!! 
+LAST-MODIFIED:20080828T173700Z
+LOCATION:Keene\, NH
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Obama Canvass
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20080829T110000Z
+DTEND:20080829T130000Z
+DTSTAMP:20130224T083846Z
+UID:f2qbsrugbdh4u3uims3r6krbvk@google.com
+CREATED:20080828T173623Z
+DESCRIPTION:August 29: Morning Visibility: 7 am- 9 am\nCentral Square\, Kee
+ ne. Roundabout at the Junction of Main Street\, Court Street\, and Washingt
+ on Ave\n- Hold up signs to show our excitement about Barack and the convent
+ ion!! 
+LAST-MODIFIED:20080828T173623Z
+LOCATION:Central Square\, Keene\, NH
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Obama Visibility
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20080901T160000Z
+DTEND:20080901T200000Z
+DTSTAMP:20130224T083846Z
+UID:oj0pmrhli8qn5r6gc07ff3frhc@google.com
+CREATED:20080825T020120Z
+DESCRIPTION:KEENE CITY DEMOCRATS POTLUCK\n\nThe Keene City Democrats are ce
+ lebrating Labor Day in Cheshire County and\nwe are planning to have lots of
+  fun with fellow Democrats. Please join us!\n\nWHEN: Monday\, September 1\,
+  from 12 noon to 4 p.m.\nWHERE: Otterbrook Dam off of Route 9.\n\nSuggested
+  donation $5. (The event costs the Keene City Democrats at least\n$65 plus 
+ $1 per person so any donation is appreciated to keep our treasury\nsolvent)
+  Children are free.\n\nBring your lawn chairs and frisbees\, wiffle balls\,
+  badminton\, horseshoes\, swimsuits\,\nbocce\, whatever.\n\nPlease also bri
+ ng a potluck dish with you to share with all.\nIf your last name begins wit
+ h A-F please bring a salad\;\nif your name begins with G-O\, please bring a
+  dessert\; and\nif your name begins with P-Z\, please bring a casserole.\n\
+ nWe encourage you to bring your own plates\, eating utensils\, and napkins 
+ though we will have some back up supplies. We will supply drinks.
+LAST-MODIFIED:20080828T173521Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:KEENE CITY DEMOCRATS POTLUCK
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20080828
+DTEND;VALUE=DATE:20080829
+DTSTAMP:20130224T083846Z
+UID:n67al54iegl3bba5p9qisurml0@google.com
+CREATED:20080828T173445Z
+DESCRIPTION:FROM THE KEENE STATE COLLEGE DEMOCRATS\n\nCome see Democratic P
+ residential Nominee Barack Obama deliver his acceptance speech this Thursda
+ y.\n\nThe event starts at 9:00pm in the Night Owl Cafe. There will be free 
+ soda and popcorn!\n\nBarack is set to take the stage at 10:00pm. Don't miss
+  this opportunity to see Barack Obama deliver one of the most historic spee
+ ches of our time.\n\nInterested in volunteering or have questions about the
+  campaign? An Obama staffer will be there!\n\nAlso\, representatives from t
+ he Jeanne Shaheen for U.S. Senate campaign and Molly Kelly for NH State Sen
+ ate will be at the event.\n\nAny Questions? Please contact the KSC Democrat
+ s by e-mailing bhall2@ksc. mailcruiser.com 
+LAST-MODIFIED:20080828T173445Z
+LOCATION:Keene State College
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:KSC Dems Watch Party 9pm
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20080828T233000Z
+DTEND:20080829T023000Z
+DTSTAMP:20130224T083846Z
+UID:u3uk631badla4t4gdqdl8ggd0s@google.com
+CREATED:20080828T173334Z
+DESCRIPTION:Thursday night August 28: Convention Watch Party: 8 pm Pizza an
+ d refreshments will be served\nCCD Headquarters\, 2 Eagle Court\, behind Ba
+ gelworks on Main Street\n- Watch Barack Obama make his historic acceptance 
+ speech with other supporters!\n CCD Rented a Big Screen TV for the Event.
+LAST-MODIFIED:20080828T173334Z
+LOCATION:2 Eagle Ct.\, Keene\, NH
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Convention Watch Party at CCD
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20080825
+DTEND;VALUE=DATE:20080826
+DTSTAMP:20130224T083846Z
+UID:2qeq9m3vt7jmb3nhevvg9gqimk@google.com
+CREATED:20080825T015726Z
+DESCRIPTION:Monday\, August 25 – One Nation\n\nBarack Obama’s story is an A
+ merican story that reflects a life of struggle\, opportunity and responsibi
+ lity like those faced by Americans everyday. The opening night of the Conve
+ ntion will highlight Barack’s life story\, his commitment to change\, and t
+ he voices of Americans who are calling for a new direction for this country
+ .\n\nMonday’s headline prime-time speaker will be Michelle Obama.\n\n5:00 P
+ M - 9:00 PM EST\n\nCall to Order\nThe Honorable Howard Dean\nChair\, Democr
+ atic National Committee\nFormer Governor of Vermont\n\nInvocation\nThe Hono
+ rable Polly Baca – Greeley\, Colorado\nFormer Colorado State Senator\nPresi
+ dent & CEO Latin American Research & Service Agency\n\nPresentation of Colo
+ rs\nNavajo Code Talkers Association\nKeith Little\, Frank Willeto\, Bill To
+ ledo\, Jimmy Begay\n\nPledge of Allegiance\nAngela Morgan –Alexandria\, Vir
+ ginia\nServed 9 years in the Marines and now runs a leadership development 
+ small business\n\nNational Anthem\nColorado Children's Chorale\nGroup over 
+ 30-years old – Tad Koriath (piano)\nLocal children (7-14) performing throug
+ hout US & the world (China\, Asia\, Europe\, etc.)\n\nWelcome\nReverend Lea
+ h D. Daughtry\nConvention CEO & Chief of Staff\, Democratic National Commit
+ tee\n\nVideo - “Welcome to the West”\n\nIntroduction of and Report by the C
+ redentials Committee\nThe Honorable Howard Dean\nChair\, Democratic Nationa
+ l Committee\nEliseo Roques-Arroyo\nCo-Chair Credentials Committee\nFormer E
+ xecutive Director\, Democratic Party of Puerto Rico\nJames Roosevelt\, Jr.\
+ nCo-Chair Credentials Committee\nPres. & CEO Tuffs Health Plan (HMO) and gr
+ andson of FDR\nThe Honorable Alexis Herman\nCo Chair Credentials Committee\
+ nFormer US Secretary of Labor\n\nIntroduction of and Report by the Rules Co
+ mmittee\nThe Honorable Howard Dean\nChair\, Democratic National Committee\n
+ Sunita Leeds\nCo-Chair Rules Committee\nChair of the DNC Indo-American Lead
+ ership Council\nThe Honorable Mary Rose Oakar\nCo-Chair Rules Committee\nFo
+ rmer Member of the US Congress\, Ohio\,\nPresident of the American-Arab Ant
+ i Discrimination Committee\nThe Honorable David Walters\nCo-Chair Rules Com
+ mittee\nFormer Governor of Oklahoma\nPresident of Walters Power Internation
+ al\n\nVideo - Changing the Course of Our Nation\nFeaturing Ashley Baia -Nat
+ ive of Pennsylvania and an Obama field organizer mentioned in Obama's Phila
+ delphia speech.  Know as the "sandwich girl" who\, at age 9\, convinced her
+  mother she liked mustard & relish sandwiches to save money while her mothe
+ r was fighting cancer.  She is now twenty-three.\n\nIntroduction of Convent
+ ion Co-Chairs\nThe Honorable Howard Dean\nChair\, Democratic National Commi
+ ttee\nThe Honorable Shirley Franklin\nMayor of Atlanta\, Georgia\nThe Honor
+ able Leticia Van de Putte\nState Senator\, Texas District 26\nThe Honorable
+  Kathleen Sebelius\nGovernor of Kansas\nThe Honorable Nancy Pelosi\nSpeaker
+  of the US House of Representatives\nMember of the US House of Representati
+ ves\, California\nPermanent Chair of the 2008 Democratic National Conventio
+ n\n\nTurning Over the Gavel\nThe Honorable Howard Dean\, temporary Chair of
+  the Convention turns over the gavel to\nThe Honorable Nancy Pelosi\, Perma
+ nent Chair of the 2008 Democratic Convention.\n\nRemarks\nThe Honorable Dor
+ is Matsui\, Parliamentarian\nMember of the US House of Representatives\, Ca
+ lifornia\n\nAndrew Tobias\, Treasurer\nDemocratic Party Treasurer\n\nRemark
+ s by the Secretary and the Electronic Roll Call of Attendance\nAlice Travis
+  Germond - West Virginia\nSecretary\, Democratic Party\nMember of the Democ
+ ratic National Committee\n\nRemarks – Presentation of Platform\nThe Honorab
+ le Patricia Madrid\nCo-Chair Platform Committee\nAttorney General of New Me
+ xico\n\nJudith McHale\nCo-Chair Platform Committee\nBusiness Executive (for
+ mer President\, Discovery Communications\; Board of DigitalGlobal)\n\nRemar
+ ks\nThe Honorable John Hickenlooper\nMayor of Denver\, Colorado\n\nCongress
+ ional Hispanic Caucus\nThe Honorable Joe Baca\nMember of the US House of Re
+ presentatives\, California\n\nThe Honorable Grace Napolitano\nMember of the
+  US House of Representatives\, California\n\nThe Honorable Silvestre Reyes\
+ nMember of the US House of Representatives\, Texas\n \nRemarks\nNancy Keena
+ n\nPresident\, NARAL - Pro-Choice America\n\nThe Honorable Emil Jones\, Jr.
+ \nState Senator\, Illinois\nAmanda Kubik\nYoung Delegate – North Dakota\n\n
+ Ret. Rear Admiral John Hutson\,\nPres. Franklin Pierce Law Center in Concor
+ d – lifetime Republican\n\nReg Weaver\nPresident\, National Education Assoc
+ iation\n\nThe Honorable Manuel Diaz\nMayor of Miami\, Florida\n\nVideo - Ch
+ anging the Course of Our Nation\nFeaturing Gabrielle Grossman\nNew Hampshir
+ e Obama Supporter "U2 mamma for Obama"\n\nRemarks\nThe Honorable Lisa Madig
+ an\nAttorney General\, Illinois\n\nThe Honorable Dan Hynes\nComptroller\, I
+ llinois\n\nThe Honorable Alexi Giannoulis\nState Treasurer\, Illinois\n\nRa
+ ndi Weingarten\nAmerican Federation of Teachers\n\nThe Honorable Amy Klobuc
+ har\nUS Senator\, Minnesota\n\nMusical Performance\nJohn Legend (vocals & p
+ iano) and accompanied by:\nAgape Choir - International Spiritual Center\, C
+ ulver City\, CA\nTrans-denominational Spiritual Community founded by Dr. Mi
+ chael Bernard Beckwith\n\nVideo/Remarks\nThe Honorable Nancy Pelosi\nSpeake
+ r of the US House of Representatives\nPermanent Chair\, Democratic National
+  Convention\n\nVideo - First Time Delegates: Renewing America's Promise\n\n
+ America’s Town Hall – Economy\nModerator: Senator Sherrod Brown - Ohio\,\nP
+ anelists: Ned Helms\, Lisa Olivares\, Dr. Laura Tyson\, Jon Schnur\n\nRemar
+ ks\nMargie Perez\nNew Orleans jazz singer & song writer from Musicians Vill
+ age\n\nPresident Jimmy Carter Segment\nJimmy Carter/New Orleans Video\nAckn
+ owledgment of President Carter\n\nRemarks\nMaya Soetoro-Ng\nHalf-sister of 
+ Barack Obama\nHigh School teacher - Hawaii\n\n7:00 PM - 9:00 PM\n\nRemarks\
+ nThe Honorable Jesse Jackson\, Jr.\nMember of the US House of Representativ
+ es\, Illinois\n\nMike Fisher & Cheryl Fisher – Beech Grove\, Indiana\nMike 
+ – Amtrak tech & Cheryl – hospital tech (hosted Obama for lunch)\n\nTom Bala
+ noff\nPresident\, SEIU Local 1 (Chicago)\n\nSenator Edward M. Kennedy Tribu
+ te\nCaroline Kennedy Schlossberg\nDaughter of the late President John F. Ke
+ nnedy and Jackie Kennedy\n\nVideo - Edward M. Kennedy Video\n\nRemarks\nThe
+  Honorable Miguel Del Valle\nCity Clerk of Chicago\, Illinois\n\nCandi Schm
+ ieder\nDelegate Chair\, Iowa County Convention\n\nJerry Kellman\nHired & su
+ pervised Obama at Developing Communities Project - Chicago\, Illinois\n\nIn
+ troduction of Jim Leach by\nThe Honorable Tom Harkin\nUS Senator\, Iowa\n\n
+ The Honorable Jim Leach\nFormer Republican Member of the US House of Repres
+ entatives\, 1st District\, Iowa\n\nIntroduction of Claire McCaskill by\nAus
+ tin Esposito\nSon of Senator McCaskill\n\nThe Honorable Claire McCaskill\nU
+ S Senator\, Missouri\n\nVideo - Michelle Obama Package\n\nIntroduction to t
+ he Michelle Obama Package\nCraig Robinson\nOlder brother of Michelle Obama\
+ n\nRemarks\nMichelle Obama\nWife of Presidential Candidate Barack Obama\n\n
+ Benediction\nDon Miller -Portland\, Oregon\nBest-selling author & public sp
+ eaker focusing on Christian spirituality\n\nRecess\nThe Honorable Kathleen 
+ Sebelius\nGovernor of Kansas
+LAST-MODIFIED:20080825T144942Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Democratic Convention - One Nation
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20080827
+DTEND;VALUE=DATE:20080828
+DTSTAMP:20130224T083846Z
+UID:d7k9p16k92jm29jejd8ng7jah0@google.com
+CREATED:20080825T015934Z
+DESCRIPTION:Gov. Jeanne Shaheen will be addressing the convention (Join the
+  Shaheen campaing at the CCD headquarts there  will be refreshments 6pm)\n\
+ nWednesday\, August 27 – Securing America’s Future.\n\nBarack Obama offers 
+ a new\, tough foreign policy that is neither Republican nor Democratic\, bu
+ t is a strong\, smart American foreign policy to make our country more secu
+ re and advance our interests in the world. Wednesday night’s Convention pro
+ gram will feature the voices of Americans who share Barack’s vision of maki
+ ng America stronger and safer.\n\nThe headline prime-time speaker on Wednes
+ day will be Barack Obama’s Vice Presidential Nominee.\n\nFeatured speakers 
+ will include:\nFormer President Bill Clinton\; former Senator Tom Daschle\;
+  Governor Bill Richardson and Senators Evan Bayh\, Joe Biden\, John Kerry a
+ nd Jay Rockefeller. Senate Majority Leader Harry Reid\, Convention home sta
+ te Senator Ken Salazar\, House Majority Whip James E. Clyburn\, and Congres
+ sman Robert Wexler (D-FL) along with Chicago Mayor Richard Daley. Represent
+ ative Patrick Murphy (D-PA) and Iraq War veteran Tammy Duckworth will lead 
+ a tribute honoring those who give so much to secure our nation’s future – v
+ eterans\, active duty military and their families. 
+LAST-MODIFIED:20080825T020446Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Democratic Convention - Securing America’s Future.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20080831T200000Z
+DTEND:20080831T230000Z
+DTSTAMP:20130224T083846Z
+UID:33enmqo56na0ru4bmgp5ddpkgg@google.com
+CREATED:20080825T020243Z
+DESCRIPTION:FROM THE GILSUM DEMOCRATS:\n\nGilsum Democrats are reviving the
+ ir annual potluck bar-b-que at the home of Barbara Bryce and Tom Julius!\nJ
+ ay Phinizey and Stu West will be there\, as well as representatives from va
+ rious campaigns.\n\nWHEN: Sun. 8/31 4-7PM\nWHERE: 3 Tannery Rd. in Gilsum\,
+  across the street from RJ Sports.\n\nRSVP: 357-4521.\nThank you!\nBarbara
+LAST-MODIFIED:20080825T020243Z
+LOCATION:3 Tannery Rd. in Gilsum\, NH
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Gilsum Democrats annual potluck bar-b-que
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20080828
+DTEND;VALUE=DATE:20080829
+DTSTAMP:20130224T083846Z
+UID:924v49b842rkv7s6ac7v3h7fg0@google.com
+CREATED:20080825T020025Z
+DESCRIPTION:Thursday\, August 28 – Change You Can Believe In.\n\nOn Thursda
+ y night\, the DNCC will throw open the doors of the Convention and move to 
+ INVESCO Field at Mile High so that more Americans can be a part of the four
+ th night of the Convention as Barack Obama accepts the Democratic nominatio
+ n. Obama will communicate the urgency of the moment\, highlight the struggl
+ es Americans are facing and call on Americans to come together to change th
+ e course of our nation.\n\nColorado Governor Bill Ritter\, Jr.  will addres
+ s the Convention on Thursday night.\n\nAdditional details of the program to
+  precede Barack Obama’s acceptance speech will be announced later this week
+ .
+LAST-MODIFIED:20080825T020025Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Democratic Convention - Change You Can Believe In.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20080826
+DTEND;VALUE=DATE:20080827
+DTSTAMP:20130224T083846Z
+UID:1unafd6hrhic9rkaja3h4p07m8@google.com
+CREATED:20080825T015837Z
+DESCRIPTION:Tuesday\, August 26 – Renewing America’s Promise.\n\nMillions o
+ f Americans are struggling to get by. The failed policies of the last eight
+  years have betrayed the country’s values and left an economy out of balanc
+ e. Barack Obama believes a strong economy is unattainable with a weak middl
+ e class. Tuesday’s Convention program will feature the voices of Americans 
+ who share Barack’s concerns and strongly support his detailed economic plan
+  to grow the economy\, create jobs\, restore fairness\, and expand opportun
+ ity.\n\nSenator Hillary Clinton will be the headline prime-time speaker and
+  former Virginia Governor Mark Warner will deliver the keynote address on T
+ uesday night. Pay Equity pioneer Lilly Ledbetter will also address the Conv
+ ention on Tuesday.\n\nOther Tuesday speakers will include:\nGovernor Brian 
+ Schweitzer of Montana\; Governor Deval Patrick of Massachusetts\; Governor 
+ Kathleen Sebelius of Kansas\; Governor Janet Napolitano of Arizona\; Govern
+ or Joe Manchin of West Virginia\; Governor Jim Doyle of Wisconsin\; Governo
+ r Ed Rendell of Pennsylvania\; Governor Ted Strickland of Ohio\; Governor D
+ avid Paterson of New York\; Governor Chet Culver of Iowa\; Senator Bob Case
+ y\, Jr.\, of Pennsylvania\; Senator Patrick Leahy of Vermont\; former Secre
+ tary of Energy and Transportation Federico Peña\; House Majority Leader Ste
+ ny Hoyer\; House Democratic Caucus Chair Rahm Emanuel\; Representative Xavi
+ er Becerra (D-CA)\, Assistant to the Speaker of the House\; and Democratic 
+ Congressional Campaign Committee (DCCC) Chair Chris Van Hollen\, who will u
+ se his time to showcase his top candidates for change.\n\nRepresentatives N
+ ydia Velazquez (D-NY)\, Linda Sanchez (D-CA)\, Tammy Baldwin (D-WI)\, Elean
+ or Holmes Norton (D-DC)\, Mike Honda (D-CA)\, California Controller John Ch
+ iang\, Planned Parenthood President Cecile Richards\, Change To Win’s Anna 
+ Burger\, and AFL-CIO President John Sweeney will also speak.
+LAST-MODIFIED:20080825T015837Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Democratic Convention – Renewing America’s Promise.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20070901T160000Z
+DTEND:20070901T200000Z
+DTSTAMP:20130224T083846Z
+UID:s71f5offje8dp679nq844ta1jg@google.com
+CREATED:20080825T015520Z
+DESCRIPTION:KEENE CITY DEMOCRATS POTLUCK\nNEW\nThe Keene City Democrats are
+  celebrating Labor Day in Cheshire County and\nwe are planning to have lots
+  of fun with fellow Democrats. Please join us!\n\nWHEN: Monday\, September 
+ 1\, from 12 noon to 4 p.m.\nWHERE: Otterbrook Dam off of Route 9.\n\nSugges
+ ted donation $5. (The event costs the Keene City Democrats at least\n$65 pl
+ us $1 per person so any donation is appreciated to keep our treasury\nsolve
+ nt) Children are free.\n\nBring your lawn chairs and frisbees\, wiffle ball
+ s\, badminton\, horseshoes\, swimsuits\,\nbocce\, whatever.\n\nPlease also 
+ bring a potluck dish with you to share with all.\nIf your last name begins 
+ with A-F please bring a salad\;\nif your name begins with G-O\, please brin
+ g a dessert\; and\nif your name begins with P-Z\, please bring a casserole.
+ \n\nWe encourage you to bring your own plates\, eating utensils\, and napki
+ ns though we will have some back up supplies. We will supply drinks.
+LAST-MODIFIED:20080825T015520Z
+LOCATION:Otterbrook Dam
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:KEENE CITY DEMOCRATS POTLUCK
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20070831T200000Z
+DTEND:20070831T230000Z
+DTSTAMP:20130224T083846Z
+UID:m810hcn899cpbhrut2m2taa54o@google.com
+CREATED:20080825T015357Z
+DESCRIPTION:FROM THE GILSUM DEMOCRATS:\n\nGilsum Democrats are reviving the
+ ir annual potluck bar-b-que at the home of Barbara Bryce and Tom Julius!\nJ
+ ay Phinizey and Stu West will be there\, as well as representatives from va
+ rious campaigns.\n\nWHEN: Sun. 8/31 4-7PM\nWHERE: 3 Tannery Rd. in Gilsum\,
+  across the street from RJ Sports.\n\nRSVP: 357-4521.\nThank you!\nBarbara
+LAST-MODIFIED:20080825T015357Z
+LOCATION:3 Tannery Rd. in Gilsum\, nh
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Gilsum Democrats annual potluck bar-b-que
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20080818T210000Z
+DTEND:20080818T220000Z
+DTSTAMP:20130224T083846Z
+UID:r4t63j3m3ea80jdelgoh1adav0@google.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;CN=Cheshi
+ re County Democrats;X-NUM-GUESTS=0:mailto:cheshiredems@gmail.com
+CREATED:20080818T142640Z
+LAST-MODIFIED:20080818T142714Z
+LOCATION:McCues 5pm
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Spaghetti Dinner meeting at McCues 5pm
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20080804T220000Z
+DTEND:20080804T230000Z
+DTSTAMP:20130224T083846Z
+UID:ig0eg183lgdcu0ote066sf1mb4@google.com
+CREATED:20080804T133013Z
+DESCRIPTION:Obama's Campaign for Change Office Open House / Barack Birthday
+  Celebration\, Monday\, August 4\, 6pm. Location 305 Park Avenue\, Keene. F
+ eel free to bring food (birthday cupcakes welcome).\nTim Kistner\nRegional 
+ Field Director - Obama's Campaign for Change\nCheshire\, Sullivan\, Grafton
+  Counties\nemail: tkistner@nhforchange.com\nphone: 603-438-5771
+LAST-MODIFIED:20080804T133013Z
+LOCATION:305 Park Avenue\, Keene\, NH
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Obama's Campaign for Change Office Open House
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20080803T213000Z
+DTEND:20080803T223000Z
+DTSTAMP:20130224T083846Z
+UID:c0fndgioc2udv85vq4uaj7bg2c@google.com
+CREATED:20080729T011933Z
+DESCRIPTION:Please join The Cheshire County Democrats for our monthly meeti
+ ng on Sunday August 3rd at our headquarters located at 2 Eagle Court in dow
+ ntown Keene.
+LAST-MODIFIED:20080729T012019Z
+LOCATION:2 Eagle Court\, Keene\, NH
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Cheshire County Democrats monthly meeting
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20080730
+DTEND;VALUE=DATE:20080804
+DTSTAMP:20130224T083846Z
+UID:3efedp701vlgrav2u36uhs6ed8@google.com
+CREATED:20080724T151256Z
+DESCRIPTION:Each year the Cheshire County Democrats have a booth at the Che
+ shire County Fair.\nThe Fair runs from Wednesday the 30th of July through S
+ unday August 3rd. Assistance manning the Cheshire County Democrats booth wo
+ uld be greatly appreciated.\nPeter Hocking is good enough to open the booth
+  each morning and close the booth on Sunday. Peter usually stays until arou
+ nd mid day and breaks for lunch. The fair has lots of good treats\, but can
+  get a little pricey eating there each day. As we don't have lights we usua
+ lly close the booth around sunset\, between 7 and 8 p.m. Hopefully we will 
+ have campaign personnel for some of the time particularly on the weekend.\n
+ Any desiring to assist please let Peter know at pwhocking@aol.com
+LAST-MODIFIED:20080724T151256Z
+LOCATION:Cheshire County Fairgrounds
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Cheshire County Fair
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20080727T140000
+DTEND;TZID=America/New_York:20080727T180000
+RRULE:FREQ=WEEKLY;WKST=SU;UNTIL=20081109T190000Z;BYDAY=SU
+DTSTAMP:20130224T083846Z
+UID:16766ng8bgspopu9a56eujbv3c@google.com
+CREATED:20080723T193352Z
+DESCRIPTION:Canvass with the Shaheen Campaign\nWhen: from 10-2 or 2-6 on Sa
+ t.\, and 2-6 on Sunday\nWhere: Meet with Al Killeffer at the Cheshire Count
+ y Democratic Committee office 2 Eagle Court\, Keene behind Bagel Works\n\nC
+ ontact with any questions:\nAl Killeffer\nCheshire County Field Organizer\n
+ New Hampshire Democratic Coordinated Campaign\n2 Eagle Court\, Keene\nw 603
+ .617.2139\nc 203.247.5640\nakilleffer@nhdp.org
+LAST-MODIFIED:20080723T193352Z
+LOCATION:2 Eagle Court\, Keene
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Canvass with the Shaheen Campaign
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20080726T100000
+DTEND;TZID=America/New_York:20080726T180000
+RRULE:FREQ=WEEKLY;WKST=SU;UNTIL=20081108T150000Z;BYDAY=SA
+DTSTAMP:20130224T083846Z
+UID:jdqngv34p1jir74bi6ppdgem3k@google.com
+CREATED:20080723T193140Z
+DESCRIPTION:Canvass with the Shaheen Campaign\nWhen: from 10-2 or 2-6 on Sa
+ t.\, and 2-6 on Sunday\nWhere: Meet with Al Killeffer at the Cheshire Count
+ y Democratic Committee office 2 Eagle Court\, Keene behind Bagel Works\n\nC
+ ontact with any questions:\nAl Killeffer\nCheshire County Field Organizer\n
+ New Hampshire Democratic Coordinated Campaign\n2 Eagle Court\, Keene\nw 603
+ .617.2139\nc 203.247.5640\nakilleffer@nhdp.org
+LAST-MODIFIED:20080723T193140Z
+LOCATION:2 Eagle Court\, Keene
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Canvass with the Shaheen Campaign
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20080721T170000
+DTEND;TZID=America/New_York:20080724T190000
+RRULE:FREQ=WEEKLY;WKST=SU;UNTIL=20081110T220000Z;BYDAY=MO
+DTSTAMP:20130224T083846Z
+UID:bd7861sag9c1hhdp4dmfqvkijc@google.com
+CREATED:20080723T192800Z
+DESCRIPTION:Phonebank with the Shaheen campaign\nWhen: Monday -Thursday @ 5
+ pm\nWhere: Meet with Al Killeffer at Cheshire County Democratic Committee o
+ ffice 2 Eagle Court\, Keene behind Bagel Works\n\nContact with any question
+ s:\nAl Killeffer\nCheshire County Field Organizer\nNew Hampshire Democratic
+  Coordinated Campaign\n2 Eagle Court\, Keene\nw 603.617.2139\nc 203.247.564
+ 0\nakilleffer@nhdp.org
+LAST-MODIFIED:20080723T192844Z
+LOCATION:2 Eagle Court\, Keene
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Phonebank with the Shaheen campaign
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20080804T230000Z
+DTEND:20080805T000000Z
+DTSTAMP:20130224T083846Z
+UID:idda5hbg5q8kgg7ljfs7b36f1o@google.com
+CREATED:20080723T192508Z
+DESCRIPTION:Cheshire County Spaghetti Dinner Committee needs your input!\nM
+ onday\, August 4th\nWe will have a meeting of the Spaghetti Dinner Committe
+ e on Monday August 4th at 7:00 P.M. in order to plan our upcoming dinner. T
+ his is the most important fund raising event that the Cheshire County Democ
+ rats host each year. With this being an election year we really need your i
+ deas\, input and help to make this a memorable event. Please join us at the
+  CCD headquarters located at 2 Eagle Court in Keene.
+LAST-MODIFIED:20080723T192508Z
+LOCATION:2 Eagle Court\, Keene
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Cheshire County Spaghetti Dinner Committee needs your input!
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20080731T223000Z
+DTEND:20080801T000000Z
+DTSTAMP:20130224T083846Z
+UID:ncbd1j9hqgasq01ij3tpt0nruo@google.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;CN=Cheshi
+ re County Democrats;X-NUM-GUESTS=0:mailto:cheshiredems@gmail.com
+CREATED:20080723T192323Z
+DESCRIPTION:Meet and Greet for State Senate Candidate Jay Phinizy\nThursday
+ \, July 31st\nPlease join State Representatives Lucy Webber and Tara Sad wh
+ o will hosting a Meet and Greet for State Senate Candidate Jay Phinizy .\nW
+ ine\, cheese and refreshments will be served.\nWhen: Thursday\, July 31st a
+ t 6:30 pm.\nWhere: Walpole Town Hall\n\nAll are welcome!
+LAST-MODIFIED:20080723T192335Z
+LOCATION:Walpole Town Hall\, Walpole\, NH
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Meet and Greet for State Senate Candidate Jay Phinizy
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20080720T164500Z
+DTEND:20080720T183000Z
+DTSTAMP:20130224T083846Z
+UID:7ku9fa7r1r4sbg42be1o019dhg@google.com
+CREATED:20080719T121425Z
+DESCRIPTION:This is a family event where kids (and parents) can come and de
+ corate their bikes before riding in the parade with Sen. Molly Kelly. All o
+ ther candidates for office as well as current office holders are welcome to
+  join us at the party and in the parade!  RSVP's are appreciated.  Hope to 
+ see you there!\n\nYou're Invited to a Pre-Parade Bike Decorating Party!\n\n
+ At The Swanzey Old Home Day Parade!\n\nWhen:   Sunday\, July 20th @ 12:45pm
+ \n\nWhere:  The corner of Sawmill Drive and Talbot Hill in Swanzey\n\nLemon
+ ade and Cookies will be Served and bike decorating supplies will be provide
+ d!\n\nAfter the Party we will be Walking/Riding in the Parade with Senator 
+ Molly Kelly\n\n\nTO RSVP or for more information\,\n\nCall Jamie @ 965.2575
+  or\n\ne-mail  jjudd@nhdp.org\n
+LAST-MODIFIED:20080719T121425Z
+LOCATION:The corner of Sawmill Drive and Talbot Hill in Swanzey
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Come Walk/Ride in the Parade!
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20080712T000000Z
+DTEND:20080712T050000Z
+DTSTAMP:20130224T083846Z
+UID:gc16rgpdtjcmce8rnclcmn7vs8@google.com
+CREATED:20080711T181817Z
+DESCRIPTION:When? First Friday of each month\, 8:00 pm\nWhere? 21 Bar and G
+ rill\, 21 Roxbury St (Right off Central Square (9 o'clock on the rotary))\n
+ Hosted by Michael Caulfield\n\nhttp://livingliberally.org/drinking/about
+LAST-MODIFIED:20080711T181817Z
+LOCATION:21 Bar and Grill\, 21 Roxbury St.\, Keene\, NH
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Drinking Liberally
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20080713T213000Z
+DTEND:20080713T230000Z
+DTSTAMP:20130224T083846Z
+UID:kt9imk4vqn1g474i0d6nfv7034@google.com
+CREATED:20080703T202925Z
+DESCRIPTION:The Cheshire County Democrats will host their monthly meeting o
+ n the second Sunday of July because of the 4th of July Holiday weekend.  Pl
+ ease join us on Sunday July 13th at 5:30 P.M. at our headquarters located a
+ t 2 Eagle Court in Keene New Hampshire.\n \n \nWe look forward to seeing yo
+ u on the 13th.  Have a safe and enjoyable 4th.\n \nAnn Heffernon\nVice Chai
+ r\, Cheshire County Democrats
+LAST-MODIFIED:20080703T202925Z
+LOCATION:2 Eagle Ct.\, Keene\, NH 03431
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:CCD Monthly Meeting
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20080706
+DTEND;VALUE=DATE:20080707
+DTSTAMP:20130224T083846Z
+UID:ld384bbip3a3vi1lhk7ebfc5t8@google.com
+CREATED:20080703T202839Z
+DESCRIPTION:The Cheshire County Democrats will host their monthly meeting o
+ n the second Sunday of July because of the 4th of July Holiday weekend.  Pl
+ ease join us on Sunday July 13th at 5:30 P.M. at our headquarters located a
+ t 2 Eagle Court in Keene New Hampshire.\n \n \nWe look forward to seeing yo
+ u on the 13th.  Have a safe and enjoyable 4th.\n \nAnn Heffernon\nVice Chai
+ r\, Cheshire County Democrats
+LAST-MODIFIED:20080703T202839Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:MEETING CHANGE
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20080603
+DTEND;VALUE=DATE:20080604
+DTSTAMP:20130224T083846Z
+UID:in973hrchcdnndo4scclr6tva8@google.com
+CREATED:20080303T205824Z
+LAST-MODIFIED:20080603T140810Z
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:PRIMARY/CAUCUS: Montana\, South Dakota
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20080509T220000Z
+DTEND:20080510T000000Z
+DTSTAMP:20130224T083846Z
+UID:b2ckpvbccs2d4aef2j1fh2l31s@google.com
+CREATED:20080410T131530Z
+DESCRIPTION:AN EVENING WITH GOV. JEANNE SHAHEEN\, CANDIDATE FOR U.S. SENATE
+ \nAND CONGRESSMAN PAUL HODES \n\nSPAGHETTI DINNER\nFRIDAY MAY 9\, 2OO8\, 6P
+ M\nCash bar and hors d'oeuvres and meet the candidates\, followed by dinner
+  and speeches\nby Hodes and Shaheen\nVFW POST 5613\nRoute 202 South\nJaffre
+ y\, NH\n$15 per person\n($20 at the door)\nFor more information or to reser
+ ve a place call Bill Weibel in Jaffrey 532-4259\, Carol Bramblett in Rindge
+  899-9783\, or Jack Donnelly in Dublin 563-8338\nTickets may also be picked
+  up at Hampsey and Grenier's\, 11 North St.\, Jaffrey (532-4336)\nMake chec
+ ks out to the "Jaffrey Democrats"\nSponsored by the Dublin/Jaffrey/Rindge D
+ emocrats.\n\n
+LAST-MODIFIED:20080506T170814Z
+LOCATION:VFW POST 5613\, Route 202 South\, Jaffrey\, NH
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Jaffrey: AN EVENING WITH GOV. JEANNE SHAHEEN\, CANDIDATE FOR U.S. S
+ ENATE AND CONGRESSMAN PAUL HODES 
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20080509T180000Z
+DTEND:20080509T193000Z
+DTSTAMP:20130224T083846Z
+UID:niukf2qimbo1t8obio23to9td8@google.com
+CREATED:20080506T170720Z
+DESCRIPTION:Please join GOVERNOR JEANNE SHAHEEN’s campaign for U.S. Senate\
+ nFor A DAY OF EVENTS IN CHESHIRE COUNTY! \n\nCome out to see why Cheshire C
+ ounty can count on Jeanne Shaheen!\n\nMeet and Greet\n\nWHEN: Friday\, May 
+ 9\, 2:00 pm\n\nWHERE: The Pub Restaurant\, Keene\n\nWith questions or to RS
+ VP call Al Killeffer at 203-247-5640 or email akilleffer@nhdp.org 
+LAST-MODIFIED:20080506T170800Z
+LOCATION:The Pub Restaurant\, Keene\, NH
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Keene: Gov. Jeanne Shaheen event at The Pub
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20080504T213000Z
+DTEND:20080504T230000Z
+DTSTAMP:20130224T083846Z
+UID:163scjcl8hqja8s3iq6ea5n59k@google.com
+CREATED:20080428T190438Z
+DESCRIPTION:Please join the Cheshire County Democrats for our monthly meeti
+ ng on Sunday May 4th at our Headquarters located at 2 Eagle Court in Keene.
+   The meeting will begin promptly at 5:30.\n \nWe look forward to seeing yo
+ u-
+LAST-MODIFIED:20080428T190438Z
+LOCATION:2 Eagle Ct.\, Keene\, NH
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:MEETING: Cheshire County Democrats
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20080416
+DTEND;VALUE=DATE:20080417
+DTSTAMP:20130224T083846Z
+UID:pc205j2nnsgmp99gqcsaccchko@google.com
+CREATED:20080416T123646Z
+DESCRIPTION:Community Vision Open House\n 11:00 AM-2:00 PM (Transportation 
+ Center\, Gilbo Ave and Main St.)\n\nCommunity Vision Open House\n 5:00 PM-8
+ :30 PM (Transportation Center\, Gilbo Ave and Main St.)Community Vision 
+LAST-MODIFIED:20080416T123646Z
+LOCATION:Transportation Center\, Gilbo Ave and Main St.
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Community Vision Open House
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20080416T230000Z
+DTEND:20080417T003000Z
+DTSTAMP:20130224T083846Z
+UID:4qlcc5ams5ht6d6is1jivb78go@google.com
+CREATED:20080414T001647Z
+DESCRIPTION:The Keene Cares meeting planned for Weds April 16 has been canc
+ elled.  We heard today that the Board cannot use the surplus funds for plan
+ ning a new KMS\, and therefore there will be no public hearing on the subje
+ ct\, and so a KC meeting at this time would be unnecessary.  If there is an
+ y reason to meet on KMS in the upcoming weeks\, you will hear from me. \n\n
+ (Keene Cares will be holding a meeting on Wednesday April 16 at 7pm at the 
+ Public Library\, in the Trustees Room.  We will be discussing the Middle Sc
+ hool situation and the upcoming Board of Ed meeting related to the KMS situ
+ ation.)
+LAST-MODIFIED:20080416T123059Z
+LOCATION:Keene Public Library
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:CANCELLED-Keene Cares meeting
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20080412T000000Z
+DTEND:20080412T010000Z
+DTSTAMP:20130224T083846Z
+UID:9k9489341egnkbu73mus5psp2k@google.com
+CREATED:20080411T220442Z
+DESCRIPTION:WGBH 8:00pm\nVPTV 8:30pm\n"Millions of Americans are filing the
+ ir taxes and hoping for the best\, but are rich people actually paying a sm
+ aller percentage of their total income than the poor? This week\, NOW looks
+  at how state policies to generate revenue by raising sales taxes and lower
+ ing property taxes come at a bigger price for low-income households than fo
+ r wealthier ones."\nhttp://www.pbs.org/now/shows/415/index.html
+LAST-MODIFIED:20080411T220443Z
+LOCATION:PBS
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:NOW on PBS Taxing the Poor
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20080405T140000Z
+DTEND:20080405T180000Z
+DTSTAMP:20130224T083846Z
+UID:pdcmk2daac53p8clh4vp6m9d2c@google.com
+CREATED:20080402T225936Z
+DESCRIPTION:Please join GOVERNOR JEANNE SHAHEEN’s campaign for U.S. Senate\
+ nFor OUR FIRST STATEWIDE CANVASS!\nHit the streets to make sure Keene resid
+ ents know they can count on Jeanne Shaheen!\n\nWHEN: Saturday\, April 5 10 
+ am\n\nWHERE: Elm City Bagels\n255 West Street\n\nKeene\n  With questions or
+  to RSVP call Al Killeffer at 203-247-5640 or email akilleffer@nhdp.org\nPa
+ id for by Shaheen for Senate
+LAST-MODIFIED:20080402T225936Z
+LOCATION:Elm City Bagels\, 255 West Street\, Keene\, NH 03431
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Keene canvass for GOVERNOR JEANNE SHAHEEN
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20080406T213000Z
+DTEND:20080406T223000Z
+DTSTAMP:20130224T083846Z
+UID:dcvitp7002j15renm2t0bed3cs@google.com
+CREATED:20080402T225649Z
+DESCRIPTION:Please join the Cheshire County Democrats for our Monthly meeti
+ ng Sunday April 6th at 5:30pm.\n \nThe meeting will be held at our headquar
+ ters located at 2 Eagle Court in Keene.\n \nWe look forward to seeing you t
+ here.
+LAST-MODIFIED:20080402T225649Z
+LOCATION:2 Eagle Court\, Keene\, NH 03431
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Cheshire County Democrats Monthly meeting
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20080404T020000Z
+DTEND:20080404T030000Z
+DTSTAMP:20130224T083846Z
+UID:eln1toqljh1hdj568semuvjtpg@google.com
+CREATED:20080401T131711Z
+DESCRIPTION:American soldiers supplied with cameras record the daily grind 
+ of their perilous mission in Iraq.\nFrom NH filmmaker Deborah Scranton\nNHP
+ TV Channel 11\nEpisode: 2610  BAD VOODOO'S WAR\nLength: 56 Minutes\nProgram
+  Genre: Public Affairs\nEducational Rights for school taping: One-year righ
+ ts for teachers to tape.\nhttp://nhptv.org/schedule/summary.asp?d=3406&prog
+ Id=176684&chnl=&progTimeAir=4/3/2008%2010:00:00%20PM
+LAST-MODIFIED:20080401T131711Z
+LOCATION:NHPTV Channel 11
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:FRONTLINE on NHPTV
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20080330T230000Z
+DTEND:20080331T010000Z
+DTSTAMP:20130224T083846Z
+UID:ut9pdo549h095v41pc3qrh8k8c@google.com
+CREATED:20080328T160223Z
+DESCRIPTION:"Education Funding in New Hampshire and its effect on Keene"\n\
+ n ...will be discussed in a roundtable forum at Heberton Hall\, Winter Stre
+ et\, in Keene on Sunday \, March 30\, at 7pm.   The panel will include the 
+ complete Keene house and senate delegation:\n\nRepresentatives Charles Weed
+ \, Kris Roberts\, Tim Robertson\, Tim Dunn\, Suzanne Butcher\, Peter Espief
+ s\, Delmar Burridge\, and Senator Molly Kelly.\n\nThe public is encouraged 
+ to attend and opportunity will be allowed to submit questions to the panel 
+ relative to education funding.\n\nEveryone is welcome to the forum- no matt
+ er which town they live in or whatever their party affiliation.\n\nSponsore
+ d by the Keene City Democrats\, for further information please contact Kath
+ leen O'Donnell  357-6103 or kodonnell@ne.rr.com
+LAST-MODIFIED:20080328T160223Z
+LOCATION:Heberton Hall\, Winter Street\, Keene\, NH 03431
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Education Funding in New Hampshire and its effect on Keene (Forum)
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20080327T230000Z
+DTEND:20080328T003000Z
+DTSTAMP:20130224T083846Z
+UID:ab45654ond6l1g1nc7m0nl8bl8@google.com
+CREATED:20080320T194833Z
+DESCRIPTION:EVENT:\nKeene Democrats Elections\nDATE:\n3/20/2008\nTIME:\n7:0
+ 0pm\nDETAILS:\n\nPlease join the Keene Democrats for the annual election of
+  officers and delegates to the state convention.  All registered Democrats 
+ are welcome to run for any position.  The meeting will be held at 7:00pm at
+  the Cheshire County Democrats headquarters at 2 Eagle Ct (behind Bagel Wor
+ ks) in Keene.
+LAST-MODIFIED:20080320T194833Z
+LOCATION:2 Eagle Court\, Keene\, NH
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Keene Democrats Elections
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20080311T113000Z
+DTEND:20080311T230000Z
+DTSTAMP:20130224T083846Z
+UID:mjt6gtf3ovaoeucnl25sg3b924@google.com
+CREATED:20080304T005111Z
+DESCRIPTION:Wards 1\, 2 and 3\nKeene Recreation Center\n312 Washington Stre
+ et\n\nWards 4 and 5\nFirst Baptist Church\n105 Maple Avenue\n(next to bypas
+ s)\n\nQuestions: 357-9002\ncweeks@sau29.org\nwww.sau29.org
+LAST-MODIFIED:20080305T050740Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:VOTE ON SCHOOL BOND\, BUDGET &amp\; LABOR AGREEMENTS
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20080607
+DTEND;VALUE=DATE:20080608
+DTSTAMP:20130224T083846Z
+UID:r2i6plvirei7v5t1slq4dj38e4@google.com
+CREATED:20080303T205904Z
+LAST-MODIFIED:20080303T205925Z
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:PRIMARY/CAUCUS: Puerto Rico
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20080520
+DTEND;VALUE=DATE:20080521
+DTSTAMP:20130224T083846Z
+UID:f8gh06e2f3dttf6u25283ato5s@google.com
+CREATED:20080303T205414Z
+LAST-MODIFIED:20080303T205414Z
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:PRIMARY/CAUCUS: Kentucky\, Oregon
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20080513
+DTEND;VALUE=DATE:20080514
+DTSTAMP:20130224T083846Z
+UID:d4er8rp94532sduv6hmn0ftoso@google.com
+CREATED:20080303T205349Z
+LAST-MODIFIED:20080303T205349Z
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:PRIMARY/CAUCUS: Nebraska\, West Virginia
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20080506
+DTEND;VALUE=DATE:20080507
+DTSTAMP:20130224T083846Z
+UID:5foh2ngnao8b87okd4tdigi5v8@google.com
+CREATED:20080303T205333Z
+LAST-MODIFIED:20080303T205333Z
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:PRIMARY/CAUCUS: Indiana\, North Carolina
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20080422
+DTEND;VALUE=DATE:20080423
+DTSTAMP:20130224T083846Z
+UID:u2safiitatr22asbjle2l5c4t0@google.com
+CREATED:20080303T205250Z
+LAST-MODIFIED:20080303T205250Z
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:PRIMARY/CAUCUS: Pennsylvania
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20080311
+DTEND;VALUE=DATE:20080312
+DTSTAMP:20130224T083846Z
+UID:2jc5ldcs3evoqriqf58ronh9r8@google.com
+CREATED:20080303T195118Z
+LAST-MODIFIED:20080303T195118Z
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:PRIMARY/CAUCUS: Mississippi
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20080308
+DTEND;VALUE=DATE:20080309
+DTSTAMP:20130224T083846Z
+UID:g658r1rcmuad35j6h0ihlut3oo@google.com
+CREATED:20080303T195047Z
+LAST-MODIFIED:20080303T195047Z
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:PRIMARY/CAUCUS: Wyoming
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20080304
+DTEND;VALUE=DATE:20080305
+DTSTAMP:20130224T083846Z
+UID:634ko8ee4gua0l304539c7odao@google.com
+CREATED:20080303T195008Z
+LAST-MODIFIED:20080303T195008Z
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:PRIMARY/CAUCUS: Ohio\, Rhode Island\, Texas\, Vermont
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20080302T220000Z
+DTEND:20080303T000000Z
+DTSTAMP:20130224T083846Z
+UID:h9ujqs0t15046bhbfeq9rg5t7s@google.com
+CREATED:20080228T021808Z
+DESCRIPTION:Please join the  this coming Sunday at 5:00 (EARLIER TIME)!   W
+ e will first meet with Esther Kane Dickinson --who will be teaching us to u
+ se the voter file.  It is very important that we have as many of the Town C
+ hairs and committee members as possible attending as this is very important
+  information that we will need to use in the upcoming elections.\n \n>From 
+ 6:00 until 7:00\, we will be meeting with the New Hampshire Democrats Platf
+ orm Committee. The platform committee is trying to get as many people to co
+ me their hearings and propose ideas as possible and in order to help you pr
+ epare I have included the Platform procedures in the body of this email.\n 
+ \n2008 Platform Process\n \nThe Platform Committee of the New Hampshire Dem
+ ocratic Party has created the following procedure to bring forth ideas for 
+ the 2008 Party Platform.  The Committee will hold hearings around New Hamps
+ hire to gather possible planks from as many Democrats as possible.  The Com
+ mittee will then draft a Platform\, which will then be voted on at the Stat
+ e Convention in May.  Below are the scheduled dates and locations for Platf
+ orm Committee Hearings.  Procedures for proposing amendments to the Platfor
+ m will follow.\n \nI.  Hearing Procedure\nadopted by the Platform Committee
+  February 13\, 2008\n \n \n1.             Democrats are invited to attend o
+ pen hearings around the state to provide representatives of the Platform Co
+ mmittee with comments on what the Platform should include.  The 2006 Platfo
+ rm is available on the State Party website for reference and will be availa
+ ble at hearings.\n \n2.             Proposed planks must address State of N
+ ew Hampshire matters.  National matters will be referred to the Resolutions
+  Committee of the State Convention.\n \n3.             The Committee reques
+ ts that any proposed planks be in writing\, one plank per page\, so that it
+  may give all plank ideas careful consideration during the drafting stage.\
+ n \n4.             The following is a sketch of broad themes and planks the
+  platform might include which are meant to promote thought and discussion. 
+  This list is not final or all-inclusive and is provided as an outline of p
+ ossible topics Democrats may want the Platform to address.\n \n \nPossible 
+ Themes and Planks\n \n \n1. Strong Families\n§  Education\n§  Healthcare\n§
+   Childcare\n§  Housing\n§  Retirement Security\n \n2. Strong Economy\n§  J
+ obs\n§  Diversification\n§  Rural Development\n§  Business Investment\n \n3
+ . Strong Communities\n§  Energy Policy\n§  Emergency Preparedness\n§  Publi
+ c Safety\n§  Environment\n \n4. Live Free or Die Tradition\n§  Civil Rights
+ \n§  Equality\n§  Privacy\n§  Reproductive Rights\n§  First in the Nation P
+ rimary\n \nWe look forward to a good attendance at the Cheshire County Head
+ quarters located at one Eagle Court in Keene.\n \nAnn Heffernon\, CCD Secre
+ tary\n \n\nThank you\n
+LAST-MODIFIED:20080228T021808Z
+LOCATION:2 Eagle Court\, Keene\, NH 03431
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Cheshire County Democrats monthly meeting
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20080213
+DTEND;VALUE=DATE:20080214
+DTSTAMP:20130224T083846Z
+UID:g7sjenun6qb97b7dhh5r4dvu9k@google.com
+CREATED:20080213T172758Z
+DESCRIPTION:Former Candidate Jay Buckey will not be at the Westmoreland Dem
+ ocrats meeting this evening.\nDr. Buckey is no longer running for the Senat
+ e due to financial and job commitments.\nHe kindly offered to appear regard
+ less\, but it was deemed too much to ask given the weather.
+LAST-MODIFIED:20080213T172758Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Jay Buckey will not be attending Westmoreland Democrats meeting thi
+ s evening
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20080210T223000Z
+DTEND:20080211T000000Z
+DTSTAMP:20130224T083846Z
+UID:t1m0om93q7e56lnea23d7il3bg@google.com
+CREATED:20080130T143855Z
+DESCRIPTION:Please join the Cheshire County Democrats for our monthly meeti
+ ng on February 10th.  (Please note that our meeting has been delayed by one
+  week due to the enormous popularity of the Superbowl).\n \nWe will have th
+ e pleasure of being joined by Esther Kane Dickinson who will be teaching us
+  the ins and outs of using the Voter File.  This is a very important tool t
+ hat we will be employing in the upcoming election\, and your participation 
+ is both desired and welcome.\n \nOur meeting will be held at our Headquarte
+ rs located at 2 Eagle Court in Keene\, located behind the Works on Main Str
+ eet.\n \nAs always\, we look forward to seeing you!
+LAST-MODIFIED:20080130T143855Z
+LOCATION:2 Eagle Court\, Keene\, NH
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:CCD Monthly Meeting with Guest Esther Kane Dickinson
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20080113T223000Z
+DTEND:20080114T000000Z
+DTSTAMP:20130224T083846Z
+UID:vvmvdvspi9ogoh20i9d85lstkk@google.com
+CREATED:20080112T161411Z
+LAST-MODIFIED:20080112T161446Z
+LOCATION:2 Eagle Court\, Keene\, NH
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:CCD Meeting
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20080106T170000Z
+DTEND:20080106T190000Z
+DTSTAMP:20130224T083846Z
+UID:ieunimct4e31alehvp8d4nc29g@google.com
+CREATED:20080106T002023Z
+DESCRIPTION:Join GOVERNOR RICHARDSON as he returns to New Hampshire for the
+  final "Get Out the Vote Roundup" and "Job Interviews" before the New Hamps
+ hire Primary.\n\nWHEN: Sunday\, January 6th - 12:00 NOON\nWHAT: Keene "Get 
+ Out the Vote Roundup"\nWHERE: Central Square Bandstand\, 10 Central Square\
+ , Keene\nhttp://action.richardsonforpresident.com/page/event/detail/officia
+ lcampaignevent/4v7zp
+LAST-MODIFIED:20080106T002330Z
+LOCATION:Central Square Bandstand\, 10 Central Square\, Keene
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:BILL RICHARDSON - Keene
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20080106T201500Z
+DTEND:20080106T221500Z
+DTSTAMP:20130224T083846Z
+UID:684e87nse05jf1n122ltj3veos@google.com
+CREATED:20080106T002129Z
+DESCRIPTION:Town Hall with JOHN EDWARDS  "Education and College for Everyon
+ e"\n\nWHEN: Sunday January 6th\, 2008 - 3:15pm\nWHERE:    Keene State - Mab
+ le Brown Room Student Center 229 Main St. Keene\, NH 03435\nRSVPV http://ww
+ w.johnedwards.com/nh/events/rsvp/20080106-keene
+LAST-MODIFIED:20080106T002259Z
+LOCATION:Keene State - Mable Brown Room Student Center 229 Main St. Keene\,
+  NH 03435
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:JOHN EDWARDS - Keene
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20080106T234500Z
+DTEND:20080107T014500Z
+DTSTAMP:20130224T083846Z
+UID:q95l6he741cgbo16kee3pmctng@google.com
+CREATED:20080106T002249Z
+DESCRIPTION:KEENE RALLY WITH BARACK OBAMA\nBarack Obama’s experience is roo
+ ted in the lives of the men and women on the South Side of Chicago who he f
+ ought for as an organizer when the local steel plant closed. It's rooted in
+  an understanding of how the world sees America that he gained from living\
+ , traveling\, and having family beyond our shores - an understanding that l
+ ed him to oppose this war in Iraq from the start.\n\nIt's experience rooted
+  in the real lives of real people\, and it's the kind of experience Washing
+ ton needs right now.\nCome see for yourself one last time before Primary Da
+ y.\n\nWHERE: Keene High School\, Cafeteria 43 Arch St. Keene\, NH\nWHEN: Su
+ nday\, January 6 -- Doors open at 6:45 pm. Event lasts for 2 hours.\nRSVP  
+   http://nh.barackobama.com/page/event/detail/officialevent/4vp3p
+LAST-MODIFIED:20080106T002249Z
+LOCATION:Keene High School\, Cafeteria 43 Arch St. Keene\, NH
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:BARACK OBAMA - Keene
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20080106
+DTEND;VALUE=DATE:20080107
+DTSTAMP:20130224T083846Z
+UID:in8aa8jk9nt34vajpu7khl3a18@google.com
+CREATED:20080104T203401Z
+DESCRIPTION:
+LAST-MODIFIED:20080104T203402Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:CCD Meeting Cancelled for Obama event
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20080108
+DTEND;VALUE=DATE:20080109
+DTSTAMP:20130224T083846Z
+UID:i88dqe0ru1jbsp0d7p6jv2ds9c@google.com
+CREATED:20071129T020152Z
+DESCRIPTION:Polling Places and Hours for 2006 State Elections\, Cheshire Co
+ unty   \n\nTOWN/CITY CLERKS     2008CONTACTPOLLING PLACE \n    \n    \nKeen
+ e - Patricia Little 352-0133  \nWard 1 Wheelock School \nWard 2 Keene Parks
+  and Recreation \nWard 3 Fuller School \nWard 4 First Baptist Church\, Mapl
+ e Avenue \nWard 5 Trinity Lutheran Church \n    \nAlstead - Gloria Seddon 8
+ 35-2242Town Hall\, 9 Main Street \nChesterfield - Shirley Philbrick 363-807
+ 1Town Hall-520 Route 63 \nDublin - Barbara Sovik 563-8859Town Hall-1120 Mai
+ n Street \nFitzwilliam - Jane Wright 585-7791Town Hall-Lower Hall \nGilsum 
+ - Robin Reed 357-0320Community Center \nHarrisville - Donna Stone 827-5546T
+ own Office\, 705 Chesham Road \nHinsdale - Tammy-Jean Akeley 336-5719Town H
+ all -11 Main Street \nJaffrey532-7861Pratt Auditorium\, Conway Way \nMarlbo
+ rough - Ellen Orkins 876-4529Marlborough Community House\, 160 Main Street 
+ \nMarlow - Mary Avery 446-2245John D. Perkins School\, 919 NH Rte 10 \nNels
+ on - Theresa Upton 847-9043Town Hall \nRichmond - Pamela Goodell 239-6202Ve
+ teran's Hall-150 Old Homestead Hwy \nRindge - Nancy Martin 899-5181Rindge M
+ emorial School \nRoxbury - Marika Stuhlstaz 352-4903Town Hall \nStoddard - 
+ Joan Read 446-2214Town Hall\, 2175 Route 9 \nSullivan - Mary Hull 352-1495T
+ own Hall\, 452 Centre Street \nSurry - Darlene Clark 352-3075Town Hall \nSw
+ anzey - Dierdre A. Geer 352-7411Christian Life Fellowship Church\, 211 Whit
+ comb Road \nTroy - Marcy Johnson 242-3845Troy Elementary School \nWalpole -
+  Sandra Smith 756-3514Town Hall/Fire Station \nWestmoreland - Cindi Alder 3
+ 99-7211Town Hall\, 780 Rte. 63 \nWinchester - James M. Tetreault 239-6233To
+ wn Hall\, 1 Richmond Road \n
+LAST-MODIFIED:20080103T173323Z
+LOCATION:Cheshire County
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Primary VOTE!
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20071218T211500Z
+DTEND:20071218T224500Z
+DTSTAMP:20130224T083846Z
+UID:7a3qkjuk19831ivqp4thfm91no@google.com
+CREATED:20071217T182257Z
+DESCRIPTION:Keene Democrats: The John Edwards campaign invites you to an ev
+ ent with a performance\n\n\nTown Hall with John Edwards\, Bonnie Raitt and 
+ Jackson Browne\n\nDec 18\, 2007 12:00 PM \nTuesday\, Dec 18th - 4:15 PM\nKe
+ ene State College\nMabel Brown Room\n229 Main Street\nKeene\, NH\nfor more 
+ info contact:\nKeene Regional\nEmily Nowlin\, Keene Regional Director\nAddr
+ ess: 428 Main Street\, Keene\, NH 03431\nPhone: 603-354-7826\nEmail: enowli
+ n@johnedwards.com
+LAST-MODIFIED:20071217T182257Z
+LOCATION:Keene State College\, Mabel Brown Room\, 229 Main Street\, Keene\,
+  NH
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:John Edwards campaign invites you to an event with a performance\, 
+ Bonnie Raitt and Jackson Browne
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20071202T223000Z
+DTEND:20071202T233000Z
+DTSTAMP:20130224T083846Z
+UID:t6cq3pur1okt068tm4lvf9fq2k@google.com
+CREATED:20071130T141852Z
+DESCRIPTION:Please join the Cheshire County Democrats at our last monthly m
+ eeting of 2007.\n \nSunday December 2nd at our headquarters located at 2 Ea
+ gle Court in Keene.\n \nWe look forward to seeing you-
+LAST-MODIFIED:20071130T141902Z
+LOCATION:our last monthly meeting of 2007.
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Meeting: Please join the Cheshire County Democrats at our last mont
+ hly meeting of 2007.
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20071130T000000Z
+DTEND:20071130T020000Z
+DTSTAMP:20130224T083846Z
+UID:tb7v4qofgdnoe1t937t7dfqkn8@google.com
+CREATED:20071127T211230Z
+DESCRIPTION:Granite State Fair Tax Film at KP Library\n \n You are cordiall
+ y invited to attend a pre-release screening of our\nnew video - "Property T
+ ax Relief vs 'The Pledge' - The NH Tax Story".\n\nThis is a very powerful v
+ ideo that will have a major impact across\nthe state once it is widely dist
+ ributed. Here is a chance for you to be\none of the first to see it!\n\nI h
+ ope you can make it.\n\nHere are the times and places of the showings:\n\nT
+ uesday November 27 at 5:30pm\nRed River Theatres\nCapital Commons Building\
+ n11 S. Main Street\nConcord\n\nThursday November 29 7pm\nKeene Public Libra
+ ry\n60 Winter Street\nKeene\n\nPlease join us and celebrate the launch!
+LAST-MODIFIED:20071127T211230Z
+LOCATION:Keene Public Library\, 60 Winter Street\, Keene\, NH 03431
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Granite State Fair Tax Film at KP Library
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20071111T180000Z
+DTEND:20071111T210000Z
+DTSTAMP:20130224T083846Z
+UID:kpngcsjopv1tq01au79rp90vbo@google.com
+CREATED:20071029T193024Z
+DESCRIPTION:All County Democrats Welcome!!\nCheshire County Summit\n\nIn an
+  effort to start early on the hard\, but exciting work for 2008\, each of t
+ he 10 democratic county committees will hold a county summit before the end
+  of November. On Sunday\, November 11th from 1:00pm-4:00pm at Keene High Sc
+ hool\, the Cheshire County Committee\, local elected officials\, and activi
+ sts from across the county will come together for a County Summit. We have 
+ scheduled this Summit to strategically plan our efforts to turn our county 
+ Solid Blue in 2008! With a lot of hard work we made huge gains for Cheshire
+  County in 2006 and we have a lot to be proud of. However\, if we want to h
+ old our majorities and elect more Democrats we have to start now. Join us a
+ t the County Summit on the 11 th and as we work to build the grassroots tha
+ t will secure victory in Cheshire County in 2008!\n\nPlease contact Esther 
+ Dickinson (edickinson@nhdp.org) or 717-0294\, Ellen Clement (399-4923) or A
+ nn Heffernon at ( akheff@gmail.com) with any questions.\n\nPlease see the b
+ elow agenda for additional information:\n\nAgenda - Cheshire County Summit\
+ n\nSunday\, November 11\, 2007\n\n1:00-4:15 pm Keene High School\n\n1:00 Op
+ ening Speaker\n\n1:30 Solid Blue- Ian Graves\, NHDP Field Director\nThis pr
+ esentation lays out the accomplishments of 2006 and what we need to focus o
+ n to win in 2008\, from the local level to electing a Democrat president.\n
+ \n2:00 Tools to Win\nThe new voter file will be featured and other resource
+ s that town/county committees will be able to use to maximize efforts in 20
+ 08.\n\n2:30 Building and maintaining a successful town committee\nTown Chai
+ rs from across the county will offer useful advice and insight about organi
+ zing and growing a successful town committee.\n\n3:00 Adopt a Town\nIn this
+  session folks from towns with strong town committees will sit with folks f
+ rom towns who either don't have a committee or need help with the\ncommitte
+ e they do have. The towns will discuss ways in which the committees can wor
+ k together to help strengthen the weaker committees and\nmaintain the succe
+ ss of the functioning ones.\n\n3:40 Discussion\nThe town committee teams wi
+ ll share what they discussed and what their plan is going forward.\n\n4:00 
+ Closing Remarks\n\nThe success of the Cheshire County Summit hinges on peop
+ le from all over the county coming together to talk about strengthening the
+  grassroots. Please forward this e-mail to as many people as you can. ALL A
+ RE WELCOME!\n\nEsther Kane Dickinson\n\n2nd Congressional District Coordina
+ tor\n\nNew Hampshire Democratic Party\n\nedickinson@nhdp.org /603-717-0294
+LAST-MODIFIED:20071102T202408Z
+LOCATION:Keene High School 43 Arch St.\, Keene
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Cheshire County Democrats Summit
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20071103T223000Z
+DTEND:20071104T010000Z
+DTSTAMP:20130224T083846Z
+UID:get7p52nvvtohcrqlbtu6hvbtc@google.com
+CREATED:20070926T173941Z
+DESCRIPTION:Spaghetti Dinner - This Saturday Night\n \nThe Cheshire County 
+ Democrats' Annual Spaghetti Dinner is this Saturday night\, November 3rd\, 
+ at Keene High School\, 6:30 PM\, doors open at 6:00.  The keynote speaker i
+ s Senator Chris Dodd.  It's always a great evening.  We hope to see you the
+ re. Tickets are $20.00 and can be purchased from Eddie Albert at 352-4050\,
+  or from any of the following people:\n \n\n    * Alstead - Dale Woodruff\n
+     * Chesterfield - Tim Butterworth\n    * Gilsum - Barbara Bryce\n    * K
+ eene - Kathy O'Donnell\, Del Burridge\, Suzanne or Larry Butcher\, Chuck We
+ ed\, Melissa Laughner\, Greg Martin\, Eddie Albert\n    * Marlborough - Ann
+ a Tilton\n    * Nelson - Michael Cornog\, Mike Demartelly\n    * Richmond -
+  Barbara Hull Richardson\n    * Stoddard - Bob Englund\n    * Swanzey - Ann
+  Heffernon\n    * Walpole - Tara Sad\, Lucy Weber\, Sue & Pete Hocking\n   
+  * Westmoreland - Ellen Clement\n    * Winchester - Harriet Charland\n    *
+  Tickets are also available at the door\, but you are encouraged to purchas
+ e the tickets ahead of time.\n\n*The dinner will be preceded by a Reception
+  with Senator Dodd\, at 5:00 PM\, at the home of Delmar and Nancy Burridge 
+ at 7 Starlight Drive in Keene.  Tickets for the Reception are $35.00.*
+LAST-MODIFIED:20071031T131411Z
+LOCATION:Keene High School\, Keene\, NH
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Annual Spaghetti Dinner  Cheshire County Democrats
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20071113T233000Z
+DTEND:20071114T010000Z
+DTSTAMP:20130224T083846Z
+UID:6ja5pbng3fabinrjl90sqe8g98@google.com
+CREATED:20071029T192813Z
+DESCRIPTION: Cheshire County Democrats Book Club\n\nFor November\, we are r
+ eading Don't Let's Go to the Dogs Tonight\, by Alexandra Fuller. It's a mem
+ oir of a childhood in apartheid Africa. We will meet on Tuesday\, November 
+ 13\, at 6:30 PM\, in the Green room at the Keene Public Library.\n\nWe hope
+  you can join us.\n\nLinda\n\nFrom Publishers WeeklyA classic is born in th
+ is tender\, intensely moving and even delightful journey through a white Af
+ rican girl's childhood. Fuller was conceived and bred on African soil durin
+ g the Rhodesian civil war (1971-1979)\, a world where children over five "l
+ earn how to load an FN rifle magazine\, strip and clean all the guns in the
+  house\, and ultimately\, shoot-to-kill." With a unique and subtle sensitiv
+ ity to racial issues\, Fuller describes her parents' racism and the wartime
+  relationships between blacks and whites through a child's watchful eyes. C
+ urfews and war\, mosquitoes\, land mines\, ambushes and "an abundance of le
+ opards" are the stuff of this childhood. "Dad has to go out into the bush..
+ . and find terrorists and fight them"\; Mum saves the family from an Egypti
+ an spitting cobra\; they both fight "to keep one country in Africa white-ru
+ n." The "A" schools ("with the best teachers and facilities") are for white
+  children\; "B" schools serve "children who are neither black nor white"\; 
+ and "C" schools are for black children. Fuller's world is marked by sudden\
+ , drastic changes: the farm is taken away for "land redistribution"\; one t
+ erm at school\, five white students are "left in the boarding house... amon
+ g two hundred African students"\; three of her four siblings die in infancy
+ \; the family constantly sets up house in hostile\, desolate environments a
+ s they move from Rhodesia to Zambia to Malawi and back to Zambia. But Fulle
+ r's remarkable affection for her parents (who are racists) and her homeland
+  (brutal under white and black rule) shines through. This affection\, in sp
+ ite of its subjects' prominent flaws\, reveals their humanity and allows th
+ e reader direct entry into her world. Fuller's book has the promise of bein
+ g widely read and remaining of interest for years to come.
+LAST-MODIFIED:20071029T192835Z
+LOCATION:Green room at the Keene Public Library
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Book Club - Cheshire County Democrats Book Club
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20071009T230000Z
+DTEND:20071010T010000Z
+DTSTAMP:20130224T083846Z
+UID:6b4ig0642858bcaqrtbuqes60k@google.com
+CREATED:20071009T142527Z
+DESCRIPTION:Run\, Granny\, Run\n78 minutes\, not rated\, ADMISSION IS FREE 
+ but reservations are required (call 866/203-8482)\nTUE\, OCT 9 at 7PM\n\nDo
+ ris Granny D Haddock is the nations oldest political newcomer. At 90\, she 
+ laced up her sneakers and walked across America to rally against the influe
+ nce of big money in electionsmaking both friends and enemies inside the Was
+ hington beltway. Now 94 and still fed up with politics as usual\, she jumps
+  at an unexpected chance to run for U.S. Senate. With just four months unti
+ l Election Day\, Doris and her motley crew of political aces and amateurs c
+ raft a feisty campaign that personifies her democratic ideals of a governme
+ nt of\, by and for the people. A tale of doggedness versus dollars\, grit a
+ gainst greenbacks\, RUN GRANNY RUN is an unlikely portrait of a remarkable 
+ activist and an exploration of our fragile democracy in the corporate age.\
+ n\nhttp://www.thecolonial.org/Film.htm\nThe Colonial Theatre\, P.O. Box 77\
+ , 95 Main Street\, Keene\, NH  03431\n603-352-2033
+LAST-MODIFIED:20071009T142601Z
+LOCATION:The Colonial Theatre\, P.O. Box 77\, 95 Main Street\, Keene\, NH  
+ 03431
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:"Run\, Granny\, Run" premiere at the Colonial Theatre
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20070929T220000Z
+DTEND:20070930T003000Z
+DTSTAMP:20130224T083846Z
+UID:0jot92qbsvnuc6u9cmf7bkp4lk@google.com
+CREATED:20070926T173816Z
+DESCRIPTION:Meet fellow Bill Richardson supporters and learn more about Gov
+ ernor Richardson's platform and his background as four-time Nobel Peace Pri
+ ze Nominee\, seven-term Congressman\, Ambassador to the United Nations\, En
+ ergy Secretary\, and two-term Governor of New Mexico\n\nAt the Richardson f
+ or President\, Keene HQ Grand Opening\n\nSaturday\, September 29th\n6:00 - 
+ 8:30 pm\n46 Main Street\, Keene\n(above Keene Fresh Salad)\nRefreshments Pr
+ ovided\nFor more information contact\nJake Dilemani\, Keene Office @ 505-22
+ 8-5162/603-296-9670 \njdilemani@richardsonforpresident.com or\n\n      NEWH
+ AMPSHIRE.RICHARDSONFORPRESIDENT.COM\n
+LAST-MODIFIED:20070926T173816Z
+LOCATION:46 Main Street\, Keene 03431
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Meet fellow Bill Richardson supporters
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20070929T200000Z
+DTEND:20070929T213000Z
+DTSTAMP:20130224T083846Z
+UID:0q3kmm5e6svkjgduhsgebbt56g@google.com
+CREATED:20070926T173655Z
+DESCRIPTION:Please join Dita and Bob Englund on Saturday\, September 29th a
+ t 4:00 for a reception to meet JAY BUCKEY.  Jay\,a physician at DHMC\, Leba
+ non\, and former astronaut\, is a candidate for the US Senate.\n\nDirection
+ s:  Take Route 9 east from Keene.  Exit at signs for Nelson/Harrisville and
+  Munsonville/Granite Lake.  Turn left and proceed one mile to Munsonville V
+ illage\, and then turn left on West Shore Road (with Granite Lake on your r
+ ight.)  Turn right at the Englund driveway which is seven tenths of a mile 
+ from the village.\n\nRSVP at 847-9727 or e-mail at englund@worldpath.net.\n
+LAST-MODIFIED:20070926T173655Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:JAY BUCKEY hosted by Dita and Bob Englund
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20070916T200000Z
+DTEND:20070916T220000Z
+DTSTAMP:20130224T083846Z
+UID:khnlmdltanbookrm6f4mt0iruc@google.com
+CREATED:20070906T142938Z
+DESCRIPTION:PRESS RELEASE PRESS RELEASE PRESS RELEASE\n\n\nCHESTERFIELD DEM
+ OCRATIC COMMITTEE ANNOUNCES MEET THE CANDIDATES EVENT\n\nChesterfield - The
+  Chesterfield Democratic Committee will sponsor a Meet the Candidates event
+  on Sunday\, September 16th\, from 4:00 to 6:00 PM at the Chesterfield Town
+  Hall\, with featured guest\, Congressman Paul Hodes (NH-2).  Democratic Se
+ natorial candidates Jay Buckey\, Steve Marchand and Katrina Swett have also
+  been invited to speak. Refreshments will be served.\n\nThe event is part o
+ f the Chesterfield Democratic Committee’s continuing effort to encourage mo
+ re citizen participation in politics and face-to-face contact between local
+  voters and their state and national candidates. The public is invited to c
+ ome to get to know the Democratic candidates running for the U.S. Senate\, 
+ so voters can express their opinions and make a more informed decision in t
+ he primary elections.\n\nCongressman Hodes\, who is currently serving his f
+ irst term in Washington\, will discuss some of his experiences there\, and 
+ introduce the other candidates\, who will each give a short speech. There w
+ ill be time to chat and ask questions before and after the speeches. Repres
+ entatives of the presidential primary campaigns will also be present at the
+  event. \n\nCandidates Jay Buckey\, Steve Marchand and Katrina Swett are ea
+ ch hoping to win the primary and represent the Democrats in the 2008 Senate
+  race against Republican John Sununu. \n\nJay Buckey\, of Hanover\, is curr
+ ently a professor of medicine and an adjunct professor of engineering at Da
+ rtmouth College. He worked as a physician specializing in space research. H
+ e also served as a major in the U.S. Air Force Reserve and flew as a Payloa
+ d Specialist Astronaut on the STS-90 Neurolab mission.\n\nSteve Marchand is
+  the Mayor of Portsmouth\, NH. He is the former Northeast Director of the C
+ oncord Coalition and Associate State Director of AARP New Hampshire. Strong
+ ly against the Iraq War\, Marchand has received praise from liberals and co
+ nservatives alike for his work on taxes\, the environment and healthcare.\n
+ \nKatrina Swett\, of Bow\, was the Democratic candidate for Congress in 200
+ 2\, served on the Executive Committee of the NH Democratic Party’s Finance 
+ Committee\, was the Director of New England College’s Graduate Program in P
+ ublic Policy and recently completed her Ph. D. in history with a focus on h
+ uman rights and US foreign policy. \n\nKatrina Swett\, of Bow\, was the Dem
+ ocratic candidate for Congress in 2002\, served on the Executive Committee 
+ of the NH Democratic Party’s Finance Committee\, was the Director of New En
+ gland College’s Graduate Program in Public Policy and recently completed he
+ r Ph. D. in history with a focus on human rights and US foreign policy. \n\
+ n\n\nTim Butterworth\n603/363-8076\n timandkay@sugarbush.mv.com
+LAST-MODIFIED:20070906T142938Z
+LOCATION:Chesterfield Town Hall
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:CHESTERFIELD DEMOCRATIC COMMITTEE ANNOUNCES MEET THE CANDIDATES EVE
+ NT
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20070909T213000Z
+DTEND:20070909T230000Z
+DTSTAMP:20130224T083846Z
+UID:0ktc4f8ln2nnivu75a0l37j1c0@google.com
+CREATED:20070830T140648Z
+DESCRIPTION:
+LAST-MODIFIED:20070830T140648Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:MONTHLY MEETING CCD
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20070902
+DTEND;VALUE=DATE:20070903
+DTSTAMP:20130224T083846Z
+UID:3bfnndh7amvjpgd9ur9m3dc43k@google.com
+CREATED:20070830T140601Z
+DESCRIPTION:The Cheshire County Democrats will be postponing their monthly 
+ meeting on September 2nd and will instead hold our meeting on September 9th
+ .  As always\, the meeting will be held at our headquarters located at 2 Ea
+ gle Court in Keene\, behind Bagleworks.\n \nPlease join us at 5:30.\n \nHav
+ e a happy and safe Labour Day weekend-\nAnn 
+LAST-MODIFIED:20070830T140601Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:MEETING POSTPONED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20070824T220000Z
+DTEND:20070825T010000Z
+DTSTAMP:20130224T083846Z
+UID:081hbovv1k59gomopf7gn93qrg@google.com
+CREATED:20070823T142330Z
+DESCRIPTION:YOU’RE INVITED!\nKeene City Democrats Present:\nGov. Bill Richa
+ rdson\n\nWhat: Presidential "Job Interview" & Family Barbecue\nLive Music a
+ nd Activities for Kids!\nWhiffle Ball\, Kick Ball\, Hula Hoops and MORE!\n\
+ nWhen: Friday August 24th 6pm- Kick-off\, 6:30 - food\, 7:30 - Gov. Richard
+ son Arrives\, ends at 9\n\nWhere: The Horseshoe Pavilion at Wheelock Park\n
+ \nWhy: Meet Gov. Bill Richardson\, Hear him speak and Ask him questions.\n\
+ n***Join the Keene Community at a barbecue for the whole family!***\n\nHotd
+ ogs\, Hamburgers and Veggie Burgers provided.  A dish to pass and donations
+  are welcome but not required.\n\nFor more information\, call Kathy O'Donne
+ ll at 357-6103 or Jamie Judd at 296-9670\nPaid for by Richardson for Presid
+ ent\, Inc.
+LAST-MODIFIED:20070823T142330Z
+LOCATION:Wheelock Park\, Keene\, NH
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Keene City Democrats present: Gov. Bill Richardson
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20070823T201500Z
+DTEND:20070823T214500Z
+DTSTAMP:20130224T083846Z
+UID:0cckq5l74drngkackif388k2rs@google.com
+CREATED:20070815T192851Z
+DESCRIPTION:Senator Edwards will be coming to New Hampshire as part of his 
+ Road to One America Bus Tour. There will be 2 stops in the Monadnock region
+ . The first stop will be in Keene on August 23rd at 1:30 p.m. at Alumni Fie
+ ld (77 Arch Street)\, and the second stop will be in Peterborough on August
+  23rd at 4:15 at Depot Square on the river (School Street). With any questi
+ ons\, please contact our Keene HQ (428 Main\, Keene)at 354-7826 or email en
+ owlin@johnedwards.
+LAST-MODIFIED:20070815T192851Z
+LOCATION:Depot Square on the river\, School Street\, Peterborough
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Senator Edwards visits Peterborough
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20070823T173000Z
+DTEND:20070823T190000Z
+DTSTAMP:20130224T083846Z
+UID:obeevd2dn9of3th8lh0sjldsro@google.com
+CREATED:20070815T192624Z
+DESCRIPTION:Senator Edwards will be coming to New Hampshire as part of his 
+ Road to One America Bus Tour. There will be 2 stops in the Monadnock region
+ . The first stop will be in Keene on August 23rd at 1:30 p.m. at Alumni Fie
+ ld (77 Arch Street)\, and the second stop will be in Peterborough on August
+  23rd at 4:15 at Depot Square on the river (School Street). With any questi
+ ons\, please contact our Keene HQ (428 Main\, Keene)at 354-7826 or email en
+ owlin@johnedwards.
+LAST-MODIFIED:20070815T192624Z
+LOCATION:Alumni Field\, 77 Arch Street\, Keene\, nh
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Senator Edwards visits Keene
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20070813T173000Z
+DTEND:20070813T190000Z
+DTSTAMP:20130224T083846Z
+UID:msp17jq08pq6dek6nb1hbni2ng@google.com
+CREATED:20070810T180319Z
+DESCRIPTION:Barack Obama is returning to Keene this Monday afternoon\, Augu
+ st 13th\, at 1:30 pm.\n \nKeene Recreation Center (Keene\, NH)\n312 Washing
+ ton St.\nKeene\, NH 03431 \n\nClick here for details and to RSVP:\n\nhttp:/
+ /nh.barackobama.com/RSVPKeene\n\nBarack Obama is the one candidate whose pr
+ esidency won’t just change the party in the White House\, but the lobbyist-
+ driven politics in Washington that has blocked progress on the issues most 
+ important to working men and women -- issues like health care\, the environ
+ ment\, and education.\n\nBarack will bring about this change because\, unli
+ ke other candidates\, he actually believes that Washington lobbyists wield 
+ too much influence and don’t represent the interests of working Americans.\
+ n\nThat's why he's spent his career passing historic ethics reform in both 
+ Illinois and in Washington\, and that's why he's offered the most sweeping 
+ ethics reform proposals of any candidate in this race.\n\nBut you don't hav
+ e to take our word for it -- come see him for yourself:\n\nhttp://nh.barack
+ obama.com/RSVPKeene\n\nDue to space restrictions\, an RSVP is required. We 
+ hope to see you there!\n\nHeather\n\nHeather Quinn\nNew Hampshire Director 
+ of Scheduling\nObama for America
+LAST-MODIFIED:20070810T180319Z
+LOCATION:Keene Recreation Center. 312 Washington Street\, Keene\, NH 03431
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Barack Obama is returning to Keene this Monday afternoon\, August 1
+ 3th\, at 1:30 pm.
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20070809T213000Z
+DTEND:20070809T230000Z
+DTSTAMP:20130224T083846Z
+UID:i92afdijj1l2cb6igia8o24apg@google.com
+CREATED:20070804T173144Z
+DESCRIPTION:Please Join the Nelson Democrats and Presidential Candidate\nCH
+ RIS DODD\nfor an Evening at Greengate in Nelson\, New Hampshire \n\nThursda
+ y\, August 9th 5:30 pm\n\nLight Refreshments will be Served\n\nGreengate is
+  located on Osgood Mountain with spectacular views of Monadnock and the Sup
+ ersanctuary protected lands.\n\nFollow the signs to Greengate from Harrisvi
+ lle or Nelson Village\n\nFor directions and to RSVP please visit – http://c
+ hrisdodd.com/greengatehouseparty  \n\nRSVP: Elena DiTraglia\neditraglia@chr
+ isdodd.com\, or 603-668-DODD (3633)
+LAST-MODIFIED:20070804T173144Z
+LOCATION:Greengate in Nelson\, New Hampshire 
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Chris Dodd and presented by Nelson Democrats
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20070805T200000Z
+DTEND:20070805T220000Z
+DTSTAMP:20130224T083846Z
+UID:6jf5n7b3njab04tojlgqn98cco@google.com
+CREATED:20070804T172854Z
+DESCRIPTION:On Sunday\, Aug. 5th\, from 4 to 6 p.m. at Burdick's restaurant
+  in Walpole\, Dianne Duncan will be hosting an informal get-together for wo
+ men who either want more information about Barack Obama\, or who are intere
+ sted in volunteering.  It is not a fundraiser.  The national and state coor
+ dinators of Women for Obama will be on hand to answer any questions partici
+ pants have.\n\nWhile this overlaps with the regularly scheduled county Demo
+ crats meeting\;  perhaps some women would like to come out for light refres
+ hments at 4 and then head into Keene for the monthly  meeting at 5:30.  Gue
+ sts are not obligated to stay at Burdick's the entire two hours.   \n\nIf y
+ ou have questions regarding this event please contact:\n\nDianne Duncan\ndu
+ ncandr@sover.net\n756-4567
+LAST-MODIFIED:20070804T172854Z
+LOCATION:Burdick's Restaurant\, Walpole\, NH
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Women for Obama
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20070805T213000Z
+DTEND:20070805T230000Z
+DTSTAMP:20130224T083846Z
+UID:m6p2lajbo3t9fqpvl3ihsn3rog@google.com
+CREATED:20070802T135351Z
+DESCRIPTION:Please join the Cheshire County Democrats for our monthly meeti
+ ng to be held Sunday August 5th.  The meeting will take place at our headqu
+ arters located at 2 Eagle Court located behind Bagleworks in Keene.\n \nWe 
+ look forward to seeing you there-\nAnn
+LAST-MODIFIED:20070802T135351Z
+LOCATION:2 Eagle Ct.\, Keene\, NH 03431
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:CCD Monthly Meeting
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20070719T204500Z
+DTEND:20070719T224500Z
+DTSTAMP:20130224T083846Z
+UID:hvda80jf4h552q6fttfb7a8acs@google.com
+CREATED:20070718T135220Z
+DESCRIPTION:Ice Cream Social with Barack Obama (Official Event)\n\n    When
+ : Ice cream will be served at 4:45 pm on Thursday\, July 19\n\n    Where: B
+ en Mere Bandstand and Park\, Corner of Lake and River Streets\, Sunapee\, N
+ H\n\n    How: The event is free and open to the public. An RSVP is not requ
+ ired but strongly encouraged due to space limitations and food purchases. P
+ lease call Abby at (603) 355-2008 to let us know if you will attend.\n\n   
+  Anyone interested in volunteering please give us a call and plan on being 
+ at the park at 2:45.  Thanks!\n\n    http://nh.barackobama.com/page/event/d
+ etail/officialevent/4v82g\n\n
+LAST-MODIFIED:20070718T135220Z
+LOCATION:Ben Mere Bandstand and Park\, Corner of Lake and River Streets\, S
+ unapee\, NH
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Ice Cream Social with Barack Obama (Official Event)
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20070705T224500Z
+DTEND:20070706T000000Z
+DTSTAMP:20130224T083846Z
+UID:e96j3inqbagjl6n7hs4hasonc0@google.com
+CREATED:20070630T220803Z
+DESCRIPTION:The Stoddard Democrats present Governor Bill Richardson at Lake
+ falls Lodge!\n\nYou are invited to join Governor Bill Richardson and the St
+ oddard Democrats on July 5th at 6:45 p.m.\n\nThis is a great opportunity to
+  see for yourself why the Governor is building momentum and gaining new sup
+ port across the country! \n\nLakefalls Lodge\, also known as "Shinbone Shac
+ k" is a beautiful site with its own pond\, waterfall\, lovely grounds and u
+ nique buildings in Stoddard New Hampshire.  \n\nDirections:  From Keene\, e
+ xit Route 9 when you see signs for Nelson/Harrisville and Granite Lake/Muns
+ onville.   Turn left and proceed to Munsonville one mile ahead.  When you s
+ ee the church\, turn left on West Shore Road (with the lake on your right).
+    After passing the lake and the intersection of North Shore Road\, procee
+ d straight ahead to the end of Aten Road.   Proceed even when you see signs
+  saying "private road".  We will have someone located at Munsonville Villag
+ e beside "Stoddard Democrats" sign to confirm directions.\n\nHandicapped pa
+ rking will be available\, but there will be a short walk for most.  Please 
+ car pool as much as possible.\n\nFor more information\, call Jamie Judd at 
+ 505-917-1562 or Bob Englund  at  847-9727.
+LAST-MODIFIED:20070630T220803Z
+LOCATION:Lakefalls Lodge
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:The Stoddard Democrats present Governor Bill Richardson at Lakefall
+ s Lodge!
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20070701T190000Z
+DTEND:20070701T210000Z
+DTSTAMP:20130224T083846Z
+UID:9m1mlh9k1476mt3om86v0kspjo@google.com
+CREATED:20070630T220444Z
+DESCRIPTION:After months of scouting locations and getting settled\, we're 
+ ready for our grand opening!\n\nIn honor of our office being officially rea
+ dy for business\, we'll be hosting a potluck lunch Sunday July 1st at 3:00P
+ M and would love to have you join us.  We're hoping this will be a way for 
+ us to meet many of you whom we haven't yet and for you to more closely conn
+ ect with us\, the campaign\, the movement for Obama '08 within the Keene co
+ mmunity.\n\nOur office is located at 170 Emerald Street\, across from the C
+ enter at Keene\, and three blocks past Blueberry Fields.  For further infor
+ mation\, we can be reached at (603) 355-2008.\n\nPlease don't hesitate to b
+ e in touch with any questions\, feel free to bring family and friends\, and
+  we look forward to meeting you!\n\nBest\,\n\nYour Obama for America Keene 
+ Staff \n\nAbby Witt\n\nBrandon Riker\n\nJake Heller
+LAST-MODIFIED:20070630T220444Z
+LOCATION:170 Emerald Street\, Keene\, NH 03431
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Obama office opens in Keene!
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20070703
+DTEND;VALUE=DATE:20070720
+DTSTAMP:20130224T083846Z
+UID:si8vaq1d96bh9e4nmdest08cjk@google.com
+CREATED:20070628T192706Z
+DESCRIPTION:Sicko\n(documentary) Directed by Michael Moore\; 113 minutes\; 
+ rated PG-13 for brief strong language.\nA documentary comparing the highly 
+ profitable American health care industry to other nations\, and HMO horror 
+ stories.\nTUE 7/3 - THU 7/5 7PM\nFRI\, 7/6 7 & 9:15PM\nSAT\, 7/7 4:30\,7:15
+  & 9:30PM\nSUN\, 7/8 4:30 & 7:15PM\nMON\, 7/9 - FRI\, 7/13 7PM\nSAT 7/14 & 
+ SUN7/15 4:30 & 7:15PM\nMON 7/16 - THU 7/19 7PM
+LAST-MODIFIED:20070628T192826Z
+LOCATION:COLONIAL THEATRE\, Main Street\, Keene\, NH  03431
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:"SICKO" Playing at Colonial Theatre\, Michael Moore's new film comp
+ aring the highly profitable American health care industry to other nations
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20070626T230000Z
+DTEND:20070627T000000Z
+DTSTAMP:20130224T083846Z
+UID:cgiml1u7q59fv3he9t0t9qsmeg@google.com
+CREATED:20070626T160457Z
+DESCRIPTION:(A) PUBLIC HEARING  - The purpose of a Public Hearing is to pro
+ vide an opportunity for the public to make comments to the negotiated Teach
+ ers Contract. These hearings afford citizens an opportunity to have their v
+ iews heard on this Unratified Teachers Contract.\n\nATTENTION: Since ballot
+  voting comes just prior to the Labor Day Weekend ABSENTEE BALLOTS should b
+ e obtained if there is ANY chance you will be unable to attend the ballot v
+ ote.  Please make sure to do this early and pass it on to other Registered 
+ voters. Call SAU 29 at 357-9002 for details.
+LAST-MODIFIED:20070626T161457Z
+LOCATION:KEENE HIGH SCHOOL - LGIA ROOM
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:School Board Forum - PUBLIC HEARING
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20070724T230000Z
+DTEND:20070725T000000Z
+DTSTAMP:20130224T083846Z
+UID:58a94mf56bjsdtc9b4lof3jigs@google.com
+CREATED:20070626T160709Z
+DESCRIPTION:MODERATOR: FRED PARCELLS\n\n(B) FIRST SESSION - The details of 
+ the Teacher's Contract will be presented to the Public by the Keene School 
+ Board along with its impact on Keene Citizens. It is also a forum for furth
+ er public debate and questions. This meeting is normally much larger than t
+ he Public Hearing and\, therefore\, will take place in the Keene High Schoo
+ l Auditorium.\n\nATTENTION: Since ballot voting comes just prior to the Lab
+ or Day Weekend ABSENTEE BALLOTS should be obtained if there is ANY chance y
+ ou will be unable to attend the ballot vote.  Please make sure to do this e
+ arly and pass it on to other Registered voters. Call SAU 29 at 357-9002 for
+  details.
+LAST-MODIFIED:20070626T161343Z
+LOCATION:Keene High School  - Auditorium
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:School Board Forum - FIRST SESSION
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20070828T113000Z
+DTEND:20070828T230000Z
+DTSTAMP:20130224T083846Z
+UID:c7rg8g5n8cucttjd4op0nkjgig@google.com
+CREATED:20070626T161214Z
+DESCRIPTION:(C) SECOND SESSION -  Keene Citizens will have a BALLOT VOTE on
+  the Teacher's Contract\n\nATTENTION: Since ballot voting comes just prior 
+ to the Labor Day Weekend ABSENTEE BALLOTS should be obtained if there is AN
+ Y chance you will be unable to attend the ballot vote.  Please make sure to
+  do this early and pass it on to other Registered voters. Call SAU 29 at 35
+ 7-9002 for details.
+LAST-MODIFIED:20070626T161214Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:TEACHERS CONTRACT BALLOT VOTE!
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20070731
+DTEND;VALUE=DATE:20070806
+DTSTAMP:20130224T083846Z
+UID:4hkck5p17n0r5jm595nq876nvk@google.com
+CREATED:20070625T132157Z
+DESCRIPTION:We welcome volunteers to help staff our table!  Please contact 
+ ann@cheshiredemocrats.org\n
+LAST-MODIFIED:20070625T132222Z
+LOCATION:Cheshire Fair Grounds\, 247 MONADNOCK HIGHWAY\, SWANZEY\, NH 03446
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Cheshire County Fair - We welcome volunteers to help staff our tabl
+ e!
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20070705T200000Z
+DTEND:20070705T210000Z
+DTSTAMP:20130224T083846Z
+UID:epu48bpcdf9jjr9u0pgqg8pjq4@google.com
+CREATED:20070625T132015Z
+DESCRIPTION:The Marlow Historical Society will host a history-making event.
+  On that date Bill Richardson will be the first presidential candidate to v
+ isit Marlow. Everyone is invited to attend and will have an opportunity to 
+ meet and ask questions of Gov. Richardson in an informal setting. He is exp
+ ected to arrive at Jones Hall at 4 PM and will stay for about an hour.\nWe 
+ hope that all who can will come to greet Governor Richardson. For those who
+  are interested in learning more about Bill Richardson you may access his w
+ ebsite at www.richardsonforpresident.com/ *\n\nMary Blank\nPresident\, Marl
+ ow Historical Society\n
+LAST-MODIFIED:20070625T132015Z
+LOCATION:Jones Hall\, 12 Church St\, Marlow\, NH 03456
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Gov. Bill Richardson to visit Marlow
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20070701T213000Z
+DTEND:20070701T230000Z
+DTSTAMP:20130224T083846Z
+UID:lnfkjll2kuuf5er7949d6dbqr4@google.com
+CREATED:20070625T131424Z
+DESCRIPTION:The Cheshire County Democrats invite you to join us for our mon
+ thly meeting on Sunday July 1st at 5:30 at our headquarters.  We are locate
+ d at 2 Eagle Court\, behind Bagleworks in Keene.  Please remember that ther
+ e is much construction\, so you may have to plan on a new route.
+LAST-MODIFIED:20070625T131424Z
+LOCATION:2 Eagle Ct.\, Keene\, nh 03431
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:MONTHLY MEETING - Cheshire County Democrats
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20070602
+DTEND;VALUE=DATE:20070603
+DTSTAMP:20130224T083846Z
+UID:u38grgt1f7ir5k27v0ia9dlpqk@google.com
+CREATED:20070531T190009Z
+DESCRIPTION:2007 Midterm Convention\n \nWe want you to be a part of the New
+  Hampshire Democratic Party 2007\nMidterm State Convention on Saturday June
+  2nd at Rundlett Middle\nSchool. \n\nRegister Now Online! http://www.nhdp.o
+ rg/\n \nWe are going to have some really exciting speakers at the conventio
+ n\nthis year\, including several of the candidates for President including\
+ nSenator Joe Biden\, Senator Chris Dodd\, Congressman Dennis Kucinich and\n
+ Governor Bill Richardson. The other Presidential campaigns are sending\nrep
+ resentatives on their behalf\, including Governor Martin O'Malley of\nSenat
+ or Hillary Clinton's campaign\, Congressman David Bonior of John\nEdwards c
+ ampaign and Michelle Obama from Senator Barack Obama's\ncampaign.\n \nAlso\
+ , we will hear from Governor John Lynch\, Congresswoman Carol Shea-\nPorter
+ \, Congressman Paul Hodes\,  Senate President Sylvia Larsen\, House\nMajori
+ ty Leader Mary Jane Wallner\, and our candidates for US Senate\nJay Buckey\
+ , Steve Marchand and Katrina Swett.
+LAST-MODIFIED:20070601T210630Z
+LOCATION:Rundlett Middle School\, 144 South St.\, Concord\, NH 03301
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:2007 Midterm Convention
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20070603T230000Z
+DTEND:20070604T010000Z
+DTSTAMP:20130224T083846Z
+UID:tc21i3k7aqvqmi076mid0moll4@google.com
+CREATED:20070531T185845Z
+DESCRIPTION: This Sunday\, June 3 at 7:00 p.m.\, Saint Anselm College in Ma
+ nchester\nwill host the first Presidential Debate of the 2008 campaign.\n\n
+ ALL EIGHT DEMOCRATIC CANDIDATES will attend.  
+LAST-MODIFIED:20070531T185845Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:FIRST NH PRESIDENTIAL DEBATE
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20070603
+DTEND;VALUE=DATE:20070604
+DTSTAMP:20130224T083846Z
+UID:t2elpq4t2eco366oqi7vd328i0@google.com
+CREATED:20070531T185749Z
+LAST-MODIFIED:20070531T185749Z
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:CCD Meeting CANCELLED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20070504T213000Z
+DTEND:20070504T223000Z
+DTSTAMP:20130224T083846Z
+UID:3pgfsdvnr9e5t4covj9hsv25co@google.com
+CREATED:20070529T190943Z
+DESCRIPTION:
+LAST-MODIFIED:20070529T190943Z
+LOCATION:2 Eagle Court in Keene\, NH 03431
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:CCD Monthly meeting
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20070521T163000Z
+DTEND:20070521T180000Z
+DTSTAMP:20130224T083846Z
+UID:agrikjd78ap5eq08m3924ja3rg@google.com
+CLASS:PUBLIC
+CREATED:20070517T143753Z
+DESCRIPTION:Sen. John Edwards will be  speaking at Keene State College\nMon
+ day\, May 21st\,  at 12:30 p.m.\nin the  Mabel Brown Room at the Young Stud
+ ent Center.\nThis event is open to the public.\nFor additional information 
+ please contact: Gabe Gopen at (603) 738-5027 or ggopen@johnedwads.com
+LAST-MODIFIED:20070517T143754Z
+LOCATION:Keene State College
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Sen. John Edwards will be speaking at Keene State College
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20070506T213000Z
+DTEND:20070506T230000Z
+DTSTAMP:20130224T083846Z
+UID:4f4q54acn2ipgnecbq1r5mmqd8@google.com
+CREATED:20070502T152008Z
+DESCRIPTION:Please join the Cheshire County Democrats for our monthly meeti
+ ng this Sunday\, May 6th at 5:30 P.M.  The meeting will be held out our off
+ ice at 2 Eagle Court in Keene\, behind Bagelworks.\n \nWe look forward to s
+ eeing you-\n \nAnn\n
+LAST-MODIFIED:20070502T152008Z
+LOCATION:2 Eagle Court\, Keene 03431
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Cheshire County Democrats Monthly Meeting
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20070501T220000Z
+DTEND:20070501T233000Z
+DTSTAMP:20130224T083846Z
+UID:acnm5msboo3vddvlee0aqva0q4@google.com
+CREATED:20070430T150327Z
+DESCRIPTION:The Cheshire County Democrats will be holding a "Lick & Stick" 
+ party Tuesday May 1st at 6:00 at our Headquarters located at 2 Eagle Court 
+ in Keene.  Please join us to help us put together this fund raising mailing
+ .\n \nWe appreciate your assistance!
+LAST-MODIFIED:20070430T150327Z
+LOCATION:2 Eagle Court\, Keene\, NH 03431
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:"Lick & Stick" party
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20070422T160000Z
+DTEND:20070422T170000Z
+DTSTAMP:20130224T083846Z
+UID:3fermb3s7cfkqd4ohpkcblfkb4@google.com
+CREATED:20070418T162943Z
+DESCRIPTION:12:15 p.m.Speech regarding "The New American Prosperity: Innova
+ tion and Energy Independence in the 21st Century"\nHistorical Society of Ch
+ eshire County\, 246 Main StreetKeene\, NH
+LAST-MODIFIED:20070418T162943Z
+LOCATION:Historical Society of Cheshire County\, 246 Main Street\, Keene\, 
+ NH\, 03431
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Senatore Dodd to Visit Keene April 22nd
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20070313T113000Z
+DTEND:20070313T230000Z
+DTSTAMP:20130224T083846Z
+UID:d3c11gjjn1se0cg049vjl9brk4@google.com
+CREATED:20070313T142414Z
+DESCRIPTION:Today is Election Day for Voting on the School District ballot.
+  The voters will decide on: upgrading the Alumni field complex\, approval o
+ f 4 negotiated contracts\, approval of the overall budget\, and 3 school bo
+ ard seats.  Details of the individual warrant items are in the Special Budg
+ et Publication of the Keene School District.\n\nLocations:\n  \nWards 1\, 2
+  & 3\nKeene Recreation Center\n312 Washington Street\n  \nWards 4 & 5 \nFir
+ st Baptist Church\n105 Maple Avenue\n(next to bypass)\n  \nHOURS:  7:30 a.m
+ . to 7 p.m.\n  
+LAST-MODIFIED:20070313T142414Z
+LOCATION:See details
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Election Day for Voting on the School District ballot
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20070316T223000Z
+DTEND:20070317T003000Z
+DTSTAMP:20130224T083846Z
+UID:2kog620pb62urnuhll42qcfgjs@google.com
+CREATED:20070313T133823Z
+DESCRIPTION:Town Hall Forum with Senator Barack Obama\n\nWhen: Friday March
+  16 -- Doors open at 6:30 PM\n\nWhere: Keene High School Gymnasium\, 43 Arc
+ h Street\, Keene\, NH\n\nHow: The event is free and open to the public.\nTo
+  get a ticket go to:\nhttp://my.barackobama.com/page/s/keene0316
+LAST-MODIFIED:20070313T133823Z
+LOCATION:Keene High School Gymnasium\, 43 Arch Street\, Keene\, NH
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Senator Barack Obama Town Hall Forum
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20070216T183000Z
+DTEND:20070216T193000Z
+DTSTAMP:20130224T083846Z
+UID:7s6fht4g1ebb7v8m9quh5co68k@google.com
+CREATED:20070215T171722Z
+DESCRIPTION:"Presidential candidate\, Senator Chris Dodd (D-CT) will hold a
+ n Educational Policy Roundtable with any and all interested participants in
+  the Keene Public Library\, on Friday\, February 16\, at 1:30pm.  Senator D
+ odd has been an advocate of quality public education throughout his long ca
+ reer. What will be the fate of “No Child Left Behind” in the New Congress? 
+ Senator Dodd should have some insights.\n\nA 5-term Senator from Connecticu
+ t\, Senator Dodd's legislative accomplishments include the Family and Medic
+ al Leave Act\, the Help America Vote Act and a law extending health insuran
+ ce to an additional 5-7 million children. Senator Dodd has devoted his life
+  to public service. After graduating from Providence College in 1966\, Sena
+ tor Dodd served in the Peace Corps for two years followed by a seven-year s
+ tint in the U.S. Army. In 1975 he was elected to Congress. In 1980\, he was
+  elected to the United States Senate. During President Bill Clinton's re-el
+ ection campaign in 1996\, Senator Dodd served as the General Chairman of th
+ e Democratic National Committee.\n\nA strong advocate of progressive values
+  and human rights\, Senator Dodd has earned a reputation as a fair and deci
+ sive leader in our nation's capitol. In the 110th Congress\, Senator Dodd i
+ s Chairman of the Banking\, Housing and Urban Affairs Committee and a membe
+ r of the Senate Foreign Relations Committee\, the Committee on Health\, Edu
+ cation\, Labor and Pensions\, and the Rules Committee."\n\nwritten by: Fran
+ k Murphy
+LAST-MODIFIED:20070216T141828Z
+LOCATION:Keene Public Library\, 60 Winter Street\, Keene\, NH 03431
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:(EVENT CANCELLED DUE TO DEATH OF CLOSE FRIEND) Sen. Chris Dodd to v
+ isit Keene
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20070211T210000Z
+DTEND:20070211T230000Z
+DTSTAMP:20130224T083846Z
+UID:ca5v9c0437k4ml69dl9mi569k4@google.com
+CREATED:20070208T152359Z
+DESCRIPTION:When: \nSunday\, February 11\, 2007\n4:00 PM - 6:00 PM\n\nWhere
+ :\nKeene High School Cafeteria\n43 Arch Street\nKeene\, NH 03431\n\nWhy: Sh
+ e's not just starting a campaign\;\nshe's beginning a conversation. Join Hi
+ llary Clinton in Keene on her\nfirst trip to New Hampshire. Bring your frie
+ nds and family and join the\nconversation.\n\nParking is limited at Keene H
+ igh School - plan on carpooling and arriving early.\n\nhttp://www.hillarycl
+ inton.com/
+LAST-MODIFIED:20070208T160242Z
+LOCATION:Keene High School\, 43 Arch Street\, Keene\, NH
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Hillary Clinton to visit Keene
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20070227T233000Z
+DTEND:20070228T010000Z
+DTSTAMP:20130224T083846Z
+UID:ohb7go70d6ummn4shchkut017g@google.com
+CREATED:20070130T154129Z
+DESCRIPTION:In February we will be reading Nine Parts of Desire\, The Hidde
+ n World of\nIslamic Women\, by Geraldine Brooks. The New York Times Book Re
+ view says it\nis "a valid\, entertaining account of women in the Muslim wor
+ ld."  Publishers\nWeekly says "Powerful and enlightening...Brooks presents 
+ stunning vignettes\nof Muslim women."  The book is in paperback\, 239 pages
+ \, available for $14.00\nat Toadstool. (Coincidently\, the author is marrie
+ d to Tony Horwitz\, author\nof Confederates in the Attic\, which we read a 
+ few months ago.)\n \nWe will meet on a Tuesday night this time\, February 2
+ 7\, at 6:30 PM.  The\nFebruary meeting will be at the Keene Public Library\
+ , 60 Winter Street\, in\nthe Trustees Room on the second floor.
+LAST-MODIFIED:20070130T154129Z
+LOCATION:Keene Public Library\, 60 Winter Street
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Book Club Meeting
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20070131T223000Z
+DTEND:20070131T233000Z
+DTSTAMP:20130224T083846Z
+UID:dgpvp01b4vebjuu5g21oo2cdps@google.com
+CREATED:20070130T154008Z
+DESCRIPTION:The Keene City Dems will be meeting on Wednesday January 31 at 
+ 5:30-6:30 at\nthe Cheshire Dems HQ.  There will be discussion about setting
+  an agenda for\nthe coming year.  Please come and be a part- contact kodonn
+ ell@ne.rr.com if\nthere are any questions.
+LAST-MODIFIED:20070130T154008Z
+LOCATION:Cheshire Dems HQ #2 Eagle Court (Behind Bagel Works)
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Keene City Democrats Meeting
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20070203T170000Z
+DTEND:20070203T190000Z
+DTSTAMP:20130224T083846Z
+UID:ejlvcth69gnv8kdiieuc4soa3o@google.com
+CREATED:20070130T153302Z
+DESCRIPTION:On Saturday\, February 3 at noon\, the Keene City Dems will hos
+ t Presidential\ncandidate\, Dennis Kucinich\, at the Cheshire Co. Dems HQ\,
+  so you can do a\nfirst-in-the-nation job of evaluating his candidacy. It i
+ s a new day in D.C.\nand this is a "New" Kucinich\, one that can make his v
+ iews count unhindered\nby funding limits. \n\nDennis is now the Chairman of
+  the Domestic Policy Subcommittee of the House\nCommittee on Government Ove
+ rsight. This is a new sub-committee giving him\noversight powers for every 
+ federal Department\, Agency and Board. If you have\nconcerns over the recen
+ t roll back of federal regulations\, this is the\nCongressman to talk to. T
+ he Federal Election Commission\, the Nuclear\nRegulatory Commission\, the F
+ ederal Communications Commission\, the\nEnvironmental Protection Agency\, e
+ tc.\, are under his jurisdiction. For\nvoters that may be tired of sound bi
+ tes\, he has a thorough plan for dealing\nwith the multiple problems in Ira
+ q. The details on the subcommittee and the\nIraq Plan are at: Kucinich.us. 
+ Even if you can't come\, this material is\nworth looking at. \n\nCongressma
+ n Kucinich will make a short presentation and afterwards there\nshould be a
+ s much Q & A as you want. Hope you take advantage of this\nopportunity\, th
+ at the other 49 states are fighting to get. \n \nContact info-Kathy O'Donne
+ ll-357-6103 EVERYONE WELCOME!
+LAST-MODIFIED:20070130T153813Z
+LOCATION:Cheshire County Democrats Headquarters at 2 Eagle Court (Behind Ba
+ gel Works)
+SEQUENCE:2
+STATUS:CONFIRMED
+SUMMARY:Dennis Kucinich to visit Keene
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20061107
+DTEND;VALUE=DATE:20061108
+DTSTAMP:20130224T083846Z
+UID:3glopmt6bus60psqjiigfi9234@google.com
+CREATED:20060829T022557Z
+DESCRIPTION:WHERE DO I VOTE IN CHESHIRE COUNTY?\nhttp://www.cheshiredemocra
+ ts.org/polls.htm
+LAST-MODIFIED:20061103T044947Z
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Election
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20061016T230000Z
+DTEND:20061017T010000Z
+DTSTAMP:20130224T083846Z
+UID:qsemk5g07lkdtc6b0608ove3o0@google.com
+CREATED:20061020T162707Z
+DESCRIPTION:You are invited to a Forum for candidates of both parties for t
+ he New\nHampshire House of Representatives to be held at KUUC Parish Hall\,
+ \nMonday evening\, October 16\, 7 p.m. It is cosponsored by the KUUC Social
+ \nConcerns Council and the Keene branch of the American Association of\nUni
+ versity Women\, a nonpartisan organization that fosters education and\nequi
+ ty for women as well as involvement in government at all levels for\npositi
+ ve societal change.\n\nThe candidates comprising the panel will be:\nRep. D
+ an Eaton (D) – Stoddard\nCandidate Tara Sad (D) – Walpole\nRep. Judson Dext
+ er (R) – Swanzey\nCandidate Marilyn Huston (R) –Keene\n\nModerator: Jane Ki
+ rk\n\nTopic: Four Issues:\nHome of the County Jail\nEducation\nThe Environm
+ ent/Development\nHuman Resources\n\nColor-coded cards\, keyed to the issues
+  of where to\nplace the proposed county jail\, education\, the\nenvironment
+ /development issue\, and the issue of\nhuman resources\, will be distribute
+ d so that members\nof the audience may write focused question for the\nmode
+ rator to ask the panelists. By using different\ncolored cards for the four 
+ issues\, we will assist our\nmoderator in balancing the issues to be discus
+ sed.\nAfter the discussion\, refreshments will be served.\n\nFor informatio
+ n contact Dick Segal 352-8409 or Carolyn Allen 827-5530.
+LAST-MODIFIED:20061020T162707Z
+LOCATION:KUUC Parish Hall
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:CANDIDATE FORUM
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20061011T223000Z
+DTEND:20061012T013000Z
+DTSTAMP:20130224T083846Z
+UID:iljn7nno24u6rct5ut3kjtn1eo@google.com
+CREATED:20061006T185249Z
+DESCRIPTION:The Keene Democrats will be meeting on Wednesday October 11 at 
+ 6:30. All are invited to attend\, and there will be light refreshments-\n\n
+ The same night at 7:30\, there will be a showing of Iraq for Sale: The War 
+ Profiteers" about the "story of everyday Americans when corporations go to 
+ war". There has been a great deal of buzz about this firm- please check it 
+ out at the following link\, and please register to attend so we can get a h
+ ead count:\n\nhttp://iraqforsale.bravenewtheaters.com/screenings?zip=03431\
+ n\nPlease contact kodonnell@ne.rr.com for any questions-
+LAST-MODIFIED:20061006T202817Z
+LOCATION:CCD Headquarters
+SEQUENCE:2
+STATUS:CONFIRMED
+SUMMARY:Keene Democrats Meeting
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20061014T220000Z
+DTEND:20061015T010000Z
+DTSTAMP:20130224T083846Z
+UID:fli7bjusnb7fphftkff3280drc@google.com
+CREATED:20061006T190023Z
+DESCRIPTION:The Cheshire County Democrats plan to hold their Annual Spaghet
+ ti Dinner on Saturday\, October 14\, 2006 at Keene High School. The fundrai
+ sing event gives the opportunity for Democrats and other like minded indivi
+ duals to gather for good food and company and to raise money in support of 
+ local Democratic candidates.\n\nThis year the Cheshire County Democrats wil
+ l welcome Senator Joseph Biden of Delaware\, who will address the group. Se
+ nator Biden is the Ranking Member of the Foreign Relations Committee\, and 
+ also serves on the Judiciary Committee.\n\nThe Dinner is scheduled for betw
+ een 6:30 p.m. and 9 p.m. at the Keene High School Cafeteria located at 43 A
+ rch Street in Keene. The Dinner is open to the general public. The doors op
+ en at 6:00 pm. Tickets are $15.00 a person. A Pre-Dinner Cocktail Party wil
+ l be held at the home of Delmar and Nancy Burridge at 7 Starlight Drive\, K
+ eene from 5:00 p.m. until 6:00 p.m. Tickets for the Cocktail Party are $35.
+ 00 a person. \n\nFor further information or to purchase tickets\, please co
+ ntact:\n\nMelissa Laughner at 603-357-2174\, or Harriet Charland at 603 239
+ -6521.
+LAST-MODIFIED:20061006T202734Z
+LOCATION:Keene High School
+SEQUENCE:6
+STATUS:CONFIRMED
+SUMMARY:Annual Spaghetti Dinner Keene High School
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20061105
+DTEND;VALUE=DATE:20061106
+DTSTAMP:20130224T083846Z
+UID:5equjje0hhnjnso8i0osaeo3bg@google.com
+CREATED:20061006T191044Z
+DESCRIPTION:Please join the Cheshire County Democrats for our Monthly Meeti
+ ng! Sunday November 5th at 5:30 P.M.\nat our headquarters located at 2 Eagl
+ e Court (behind Bagleworks) in Keene. All are welcome!
+LAST-MODIFIED:20061006T191044Z
+LOCATION:2 Eagle Court
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Cheshire County Democrats November Meeting
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20061008
+DTEND;VALUE=DATE:20061009
+DTSTAMP:20130224T083846Z
+UID:64ng85mob02uekjlh5i5h635ec@google.com
+CREATED:20061006T185458Z
+DESCRIPTION:On October 8\, at 3 PM\, the Mountain View Express will pull in
+ to Central Square in Keene. Granny D's Bus will deliver the Democratic Slat
+ e\, Paul Hodes\, Gov. John Lynch (schedule permitting)\, Molly Kelly\, our 
+ great State Reps\,Anna Tilton\, etc.\, for the kick-off to the last month o
+ f their campaigns. Meet\, greet\, and cheer on these fine people who have g
+ enerously given of their time to bring our voices to Concord and to Washing
+ ton\, D.C\, Granny D. is sending her bus to carry these faithful servants o
+ f civilzation into Central Square on what we hope will be a beautiful\, Oct
+ ober day\, celebrating the New Hampshire tradition of grassroots politics. 
+ \n\nIf you vote in Dublin\, the first stop on the bus tour is Dan Burnam's 
+ Great Monadnock Farm at 12 noon. Bring a picnic lunch. \n\nIf you vote west
+  of Keene\, the last stop on the Mountain View Express will be Chesterfield
+ 's Town Hall. For more event information\, call Tim Butterworth\, 363-8076.
+LAST-MODIFIED:20061006T190551Z
+LOCATION:
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:The Mountain View Express
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20060912
+DTEND;VALUE=DATE:20060913
+DTSTAMP:20130224T083846Z
+UID:grsnqttbef22diirsad9lgefn4@google.com
+CREATED:20060829T022524Z
+LAST-MODIFIED:20060829T022524Z
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Primary
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20060906T223000Z
+DTEND:20060907T000000Z
+DTSTAMP:20130224T083846Z
+UID:25ogopjuir25s30tu89rq8sfb0@google.com
+CREATED:20060807T030108Z
+DESCRIPTION:Cheshire County Democrats Book club has selected the following 
+ title for the September meeting: \n\nPolitics Lost: How American Democracy 
+ was Trivialized by People Who Think You're Stupid\, by Joe Klein. We will m
+ eet to discuss it on Wednesday\, September 6 at 6:30 PM in the Democratic O
+ ffice at 2 Eagle Court in Keene. I hope you'll join us.\n\nPlease contact L
+ inda Cates with any questions\;\nlindacates@mindspring.com
+LAST-MODIFIED:20060807T030108Z
+LOCATION:Democratic Office at 2 Eagle Court in Keene
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:CCD Book Club
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20060806T213000Z
+DTEND:20060806T233000Z
+DTSTAMP:20130224T083846Z
+UID:3ordv5e9h241gqisnlhqb9bl5g@google.com
+CREATED:20060731T210629Z
+DESCRIPTION:Please join the Cheshire County Democrats for our Monthly Meeti
+ ng! Sunday August 6th at 5:30 P.M. at our headquarters located at 2 Eagle C
+ ourt (behind Bagleworks) in Keene.
+LAST-MODIFIED:20060731T210629Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Cheshire Democrats Monthly Meeting
+TRANSP:OPAQUE
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,794 @@
+BEGIN:VCALENDAR
+PRODID:-//Google Inc//Google Calendar 70.9054//EN
+VERSION:2.0
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:moon@aveo.org
+X-WR-TIMEZONE:America/New_York
+X-WR-CALDESC:Ashuelot Valley Environmental Observatory's workshops\, traini
+ ng sessions\, classes and celebrations.
+BEGIN:VTIMEZONE
+TZID:America/New_York
+X-LIC-LOCATION:America/New_York
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0400
+TZNAME:EDT
+DTSTART:19700308T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0400
+TZOFFSETTO:-0500
+TZNAME:EST
+DTSTART:19701101T020000
+RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+DTSTART:20091021T130000Z
+DTEND:20091021T140000Z
+DTSTAMP:20130224T083757Z
+ORGANIZER;CN=mike.hoefer@lucidus.net:mailto:mike.hoefer@lucidus.net
+UID:g0so8i7km097pkgure70di2npo@google.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;CN=David 
+ Moon;X-NUM-GUESTS=0:mailto:moon@aveo.org
+CREATED:20091014T180620Z
+DESCRIPTION:
+LAST-MODIFIED:20091116T063108Z
+LOCATION:Lucidus
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:AVEO Pre-PROPOSAL
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20091013T153000Z
+DTEND:20091013T160000Z
+DTSTAMP:20130224T083757Z
+ORGANIZER;CN=mike.hoefer@lucidus.net:mailto:mike.hoefer@lucidus.net
+UID:sc17hboir45rmbfu8jumgvalok@google.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;CN=David 
+ Moon;X-NUM-GUESTS=0:mailto:moon@aveo.org
+CREATED:20091012T165725Z
+DESCRIPTION:David Looking forward to chatting with your about the proposal 
+ for the project.
+LAST-MODIFIED:20091031T084839Z
+LOCATION:@ Lucidus
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:AVEO Pre-Proposal Input
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20090418T130000Z
+DTEND:20090418T160000Z
+DTSTAMP:20130224T083757Z
+UID:ge6r7hev4g8gnu2np1uc64ter4@google.com
+CREATED:20090407T165808Z
+DESCRIPTION:Inge Seaboyer and Bryan Comeau of the New Hampshire Division of
+  Forests & Lands will give a presentation on their wildlife habitat managem
+ ent efforts at Pisgah State Park\, and discuss opportunities for funding ha
+ bitat improvement on private lands.  To register or for more information\, 
+ contact Amanda Costello at the Cheshire County Conservation District: 756-2
+ 988 x 116.
+LAST-MODIFIED:20090407T165808Z
+LOCATION:Pisgah State Park
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Looking Beyond the Trees: Early Successional Habitat\, Wildlife Ope
+ nings\, and Managing Habitat Diversity in Forested Landscapes
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20090524T190000Z
+DTEND:20090524T200000Z
+DTSTAMP:20130224T083757Z
+UID:9lkdhkuobjgav9045kfrbssp1k@google.com
+CREATED:20090407T165052Z
+DESCRIPTION:A documentary film on the history of Pisgah State Park\, compil
+ ed as part of the Oral History Project at the Monadnock Institute of Nature
+ \, Place & Cultures at Franklin Pierce University. FREE and open to the pub
+ lic! For more information contact John Harris at harrisjr@franklinpierce.ed
+ u.\n
+LAST-MODIFIED:20090407T165052Z
+LOCATION:Colonial Theater\, Keene.
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Pisgah: A Place Apart
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20090424T230000Z
+DTEND:20090425T013000Z
+DTSTAMP:20130224T083757Z
+UID:a81tlmn9brb68f2jsedcvvgc2o@google.com
+CREATED:20090217T195855Z
+DESCRIPTION:AVEO\, the Harris Center for Conservation\, and Antioch Univers
+ ity New England proudly present an entertaining talk on vernal pool ecology
+  -- and nighttime walk to a local pool -- with the wildly funny\, well-reno
+ wned herpetologist Tom Tyning.
+LAST-MODIFIED:20090407T164522Z
+LOCATION:Antioch University New England Community Room
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Wood Frog Frolic and Salamander Safari with Tom Tyning.
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20090324T230000Z
+DTEND:20090325T003000Z
+DTSTAMP:20130224T083757Z
+UID:84brpsvo2aplcvo9dv160emo3g@google.com
+CREATED:20090217T200527Z
+DESCRIPTION:Visit http://keeneweb.org/aveo/citizen-science/salamander-cross
+ ing-brigades/ for more information on AVEO's Salamander Crossing Brigades!
+LAST-MODIFIED:20090217T200527Z
+LOCATION:Keene State College Science Center
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Salamander Crossing Guard training
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20090320T230000Z
+DTEND:20090321T003000Z
+DTSTAMP:20130224T083757Z
+UID:dpj8b47jvncf248b4vjfts62jk@google.com
+CREATED:20090217T200500Z
+DESCRIPTION:Visit http://keeneweb.org/aveo/citizen-science/salamander-cross
+ ing-brigades/ for more information on AVEO's Salamander Crossing Brigades!
+LAST-MODIFIED:20090217T200500Z
+LOCATION:Keene State College Science Center
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Salamander Crossing Guard training
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20090321T140000Z
+DTEND:20090321T153000Z
+DTSTAMP:20130224T083757Z
+UID:s77f7g0f4vap0jf80uiron2qlk@google.com
+CREATED:20090217T200329Z
+DESCRIPTION:Visit http://keeneweb.org/aveo/citizen-science/salamander-cross
+ ing-brigades/ for more information on AVEO's Salamander Crossing Brigades!
+LAST-MODIFIED:20090217T200356Z
+LOCATION:Keene State College Science Center
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:Salamander Crossing Guard training
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20090422T140000Z
+DTEND:20090422T180000Z
+DTSTAMP:20130224T083757Z
+UID:kplm0bmc8s6r0hqs29t3oq6cps@google.com
+CREATED:20090217T195541Z
+DESCRIPTION:
+LAST-MODIFIED:20090217T195541Z
+LOCATION:Keene State College Student Center lawn
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:AVEO at Keene State College Earth Day
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20090131T130000Z
+DTEND:20090131T210000Z
+DTSTAMP:20130224T083757Z
+UID:9dfmidtu5c8fgv779dso1etaks@google.com
+CREATED:20090108T152930Z
+DESCRIPTION:AVEO invites you to join us at the Monadnock Region Land Summit
+ \, hosted by The Monadnock Conservancy.  For more information\, see http://
+ www.monadnockconservancy.org/html/what_news.html
+LAST-MODIFIED:20090108T152930Z
+LOCATION:Keene High School
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Monadnock Region Land Summit
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20081002T230000Z
+DTEND:20081003T010000Z
+DTSTAMP:20130224T083757Z
+UID:ibhunk83s3uvad6sjdt43ih0eo@google.com
+CREATED:20080926T184944Z
+DESCRIPTION:Do you hike\, ride\, ski\, snowshoe\, botanize\, birdwatch\, sw
+ im\, or otherwise recreate in Pisgah State Park? Tell the Pisgah State Park
+  Steering Committee what the park means to you at one of two Recreation For
+ ums: Saturday\, September 27 from 10 am — 12 noon at Fox State Forest in Hi
+ llsboro or Thursday\, October 2 from 7 - 9 pm at Antioch University New Eng
+ land in Keene.  For questions about these forums\, please contact Cynthia N
+ ichols at cynthia_nichols@antiochne.edu.
+LAST-MODIFIED:20080926T185006Z
+LOCATION:Antioch University New England\, Keene
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:Pisgah State Park Recreation Forum
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20080927T140000Z
+DTEND:20080927T160000Z
+DTSTAMP:20130224T083757Z
+UID:8dft8tjgr8ncko3r7entce787o@google.com
+CREATED:20080926T184927Z
+DESCRIPTION:Do you hike\, ride\, ski\, snowshoe\, botanize\, birdwatch\, sw
+ im\, or otherwise recreate in Pisgah State Park? Tell the Pisgah State Park
+  Steering Committee what the park means to you at one of two Recreation For
+ ums: Saturday\, September 27 from 10 am — 12 noon at Fox State Forest in Hi
+ llsboro or Thursday\, October 2 from 7 - 9 pm at Antioch University New Eng
+ land in Keene.  For questions about these forums\, please contact Cynthia N
+ ichols at cynthia_nichols@antiochne.edu.
+LAST-MODIFIED:20080926T184927Z
+LOCATION:Fox State Forest\, Hillsboro
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Pisgah State Park Recreation Forum
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20090325T220000Z
+DTEND:20090326T000000Z
+DTSTAMP:20130224T083757Z
+UID:pimddeejbg8libmkp3cnpgoo6g@google.com
+CREATED:20080905T150748Z
+DESCRIPTION:This spring field course explores the spring migration of salam
+ anders and frogs\, with special focus on their ephemeral breeding habitat: 
+ the vernal pool.  For more information\, visit http://keeneweb.org/aveo/fie
+ ld-studies-program/vernal-pool-ecology-conservation/\n\nTo register\, conta
+ ct Keene State College Continuing Education at (603) 358-2290.
+LAST-MODIFIED:20080905T150748Z
+LOCATION:Keene State College
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Vernal Pool Ecology & Conservation course begins
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20090305T210000Z
+DTEND:20090306T000000Z
+DTSTAMP:20130224T083757Z
+UID:qfa75949hctjuaieohncckgu90@google.com
+CREATED:20080905T150612Z
+DESCRIPTION:This workshop answers the question: what digital mapping softwa
+ re is available for free\, and what can it do? This workshop is designed fo
+ r people with minimal to no prior GIS experience. For more information\, vi
+ sit http://keeneweb.org/aveo/field-studies-program/beginners-gps-workshops/
+ \n\nTo register\, contact KSC Continuing Education at (603) 358-2290.
+LAST-MODIFIED:20080905T150612Z
+LOCATION:Keene State College
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Intro to GIS
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20090221T140000Z
+DTEND:20090221T170000Z
+DTSTAMP:20130224T083757Z
+UID:0k7n8pi7mioiskujt9mhv3ekh4@google.com
+CREATED:20080905T150518Z
+DESCRIPTION:Participants in this workshop learn how to track their travel r
+ outes using handheld GPS units and to upload waypoints and routes into Goog
+ le Earth. Pre-requisite: Introduction to GPS I. For more information\, visi
+ t http://keeneweb.org/aveo/field-studies-program/beginners-gps-workshops/\n
+ \nTo register\, contact KSC Continuing Education at (603) 358-2290.
+LAST-MODIFIED:20080905T150518Z
+LOCATION:Keene State College
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Intro to GPS III: Routes
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20090214T140000Z
+DTEND:20090214T180000Z
+DTSTAMP:20130224T083757Z
+UID:8avrs1212pce7n7n2vs9acltc4@google.com
+CREATED:20080905T150308Z
+DESCRIPTION:Participants in this workshop learn how to link digital photogr
+ aphs with corresponding GPS points for use in digital mapping. Pre-requisit
+ e: Introduction to GPS I. For more information\, visit http://keeneweb.org/
+ aveo/field-studies-program/beginners-gps-workshops/\n\nTo register\, contac
+ t KSC Continuing Education at (603) 358-2290.
+LAST-MODIFIED:20080905T150308Z
+LOCATION:Keene State College
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Intro to GPS II: Pictures & Points
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20090207T140000Z
+DTEND:20090207T170000Z
+DTSTAMP:20130224T083757Z
+UID:jivghj6n7lou56fg8mc1p7ptbo@google.com
+CREATED:20080905T150202Z
+DESCRIPTION:This workshop provides a basic introduction to using handheld G
+ PS units for navigation and marking points of interest. It is designed for 
+ people with minimal to no GPS experience.  For more information\, visit htt
+ p://keeneweb.org/aveo/field-studies-program/beginners-gps-workshops/\n\nTo 
+ register\, contact KSC Continuing Education at (603) 358-2290.
+LAST-MODIFIED:20080905T150202Z
+LOCATION:Keene State College
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Intro to GPS I: Navigation
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20090120T130000Z
+DTEND:20090120T160000Z
+DTSTAMP:20130224T083757Z
+UID:2m2is95ret72lev8474v2sdbd4@google.com
+CREATED:20080905T131727Z
+DESCRIPTION:This winter field course combines natural history of local mamm
+ als with hands-on instruction in scientific methods for mammal inventory an
+ d monitoring.  For more information\, visit http://keeneweb.org/aveo/field-
+ studies-program/mammal-population-inventory/
+LAST-MODIFIED:20080905T131727Z
+LOCATION:Keene State College
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Mammal Population Inventory begins
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20080926T200000Z
+DTEND:20080926T223000Z
+DTSTAMP:20130224T083757Z
+UID:c6rspkvnprc2llcpetvmf65tms@google.com
+CREATED:20080904T184921Z
+DESCRIPTION:This training will teach volunteers how to survey roads and tra
+ ils throughout Pisgah State Park for the presence (and\, hopefully\, absenc
+ e!) of select invasive plant species\, in order to help track and control t
+ he introduction and spread of these harmful non-native plants.  For more in
+ formation\, visit http://keeneweb.org/aveo/citizen-science/invasives-at-pis
+ gah/
+LAST-MODIFIED:20080904T185656Z
+LOCATION:Keene State College
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Pisgah State Park Invasive Plant Survey training
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20080930T200000Z
+DTEND:20080930T223000Z
+DTSTAMP:20130224T083757Z
+UID:7d544a1l4vu39ljp1k3ukf4ku4@google.com
+CREATED:20080904T184938Z
+DESCRIPTION:This training will teach volunteers how to survey roads and tra
+ ils throughout Pisgah State Park for the presence (and\, hopefully\, absenc
+ e!) of select invasive plant species\, in order to help track and control t
+ he introduction and spread of these harmful non-native plants.  For more in
+ formation\, visit http://keeneweb.org/aveo/citizen-science/invasives-at-pis
+ gah/
+LAST-MODIFIED:20080904T185638Z
+LOCATION:Keene State College
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:Pisgah State Park Invasive Plant Survey training
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20081004T130000Z
+DTEND:20081004T170000Z
+DTSTAMP:20130224T083757Z
+UID:fvh78fmja6r0s8poel7g478b5c@google.com
+CREATED:20080904T185611Z
+DESCRIPTION:Help clean up the Ashuelot River and Beaver Brook as part of th
+ e Connecticut River Source to Sea Cleanup!  For more information or to regi
+ ster\, contact the Cheshire County Conservation District at amanda.costello
+ @nh.nacdnet.net or 603.756.2988 x116.
+LAST-MODIFIED:20080904T185611Z
+LOCATION:Ashuelot River Park & Beaver Brook at Water Street
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Source to Sea Cleanup
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20080812T200000Z
+DTEND:20080812T220000Z
+DTSTAMP:20130224T083757Z
+UID:5gsk5g1c617clp4fkgfo8ffp54@google.com
+CREATED:20080804T203657Z
+DESCRIPTION:David Foster\, world-renowned forest ecologist and Director of 
+ the Harvard Forest Research Station\, will speak about the significance of 
+ Pisgah State Park’s forests in the regional landscape\, with emphasis on cl
+ imate change mitigation\, timber production\, and land use history.   He wi
+ ll also describe Pisgah’s unique role in the field of forest ecology.  For 
+ more information\, visit http://keeneweb.org/aveo/pisgah-state-park/
+LAST-MODIFIED:20080804T203657Z
+LOCATION:Keene State College Science Center 101
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:David Foster presents at Pisgah State Park Steering Committee
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20080925T200000Z
+DTEND:20080925T230000Z
+DTSTAMP:20130224T083757Z
+UID:6klctnal5kiiquu3m8f5g0ugmo@google.com
+CREATED:20080723T214507Z
+DESCRIPTION:This workshop will answer the question: what digital mapping so
+ ftware is available for free\, and what can it do? This workshop is designe
+ d for people with minimal to no prior GIS experience. Cost: $35.\n\nFor mor
+ e information\, visit http://keeneweb.org/aveo/field-studies-program/beginn
+ ers-gps-workshops/\nTo register\, contact KSC Continuing Education at (603)
+  358-2290.
+LAST-MODIFIED:20080723T214507Z
+LOCATION:Keene State College
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Intro to GIS
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20080913T130000Z
+DTEND:20080913T170000Z
+DTSTAMP:20130224T083757Z
+UID:m9ja0mo1mr7mq4jfbfiuppqhl4@google.com
+CREATED:20080723T214248Z
+DESCRIPTION:Participants in this workshop will learn how to link digital ph
+ otographs with corresponding GPS points for use in digital mapping. Pre-req
+ uisite: Introduction to GPS I. Cost: $45.\n\nFor more information\, visit h
+ ttp://keeneweb.org/aveo/field-studies-program/beginners-gps-workshops/\nTo 
+ register\, contact KSC Continuing Education at (603) 358-2290.
+LAST-MODIFIED:20080723T214416Z
+LOCATION:Keene State College
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Intro to GPS II: Pictures and Points
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20080904T200000Z
+DTEND:20080904T230000Z
+DTSTAMP:20130224T083757Z
+UID:1063ptnko49ap5cskbki010cl8@google.com
+CREATED:20080723T210313Z
+DESCRIPTION:This workshop will provide a basic introduction to using handhe
+ ld GPS units for navigation and marking points of interest. It is designed 
+ for people with minimal to no prior GPS experience. Cost: $35.\n\nFor more 
+ information\, visit http://keeneweb.org/aveo/field-studies-program/beginner
+ s-gps-workshops/\nTo register\, contact KSC Continuing Education at (603) 3
+ 58-2290.
+LAST-MODIFIED:20080723T214407Z
+LOCATION:Keene State College
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Intro to GPS I: Navigation
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20080918T200000Z
+DTEND:20080918T230000Z
+DTSTAMP:20130224T083757Z
+UID:ghmc5b9jide1gt4tesnejou448@google.com
+CREATED:20080723T214339Z
+DESCRIPTION:Participants in this workshop will learn how to track their tra
+ vel routes using handheld GPS units and to upload waypoints and routes into
+  Google Earth. Pre-requisite: Introduction to GPS I. Cost: $35\n\nFor more 
+ information\, visit http://keeneweb.org/aveo/field-studies-program/beginner
+ s-gps-workshops/\nTo register\, contact KSC Continuing Education at (603) 3
+ 58-2290.
+LAST-MODIFIED:20080723T214400Z
+LOCATION:Intro to GPS III: Routes
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:Intro to GPS III: Routes
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20080826T120000Z
+DTEND:20080826T140000Z
+DTSTAMP:20130224T083757Z
+UID:c0ii72oh6fc6us9jicd7rhh2o8@google.com
+CREATED:20080723T211600Z
+DESCRIPTION:This field-based course provides an introduction to identifying
+  woody plant and eco-indicator species\, with a focus on the community ecol
+ ogy of common tree species. Cost: $175.  For more information\, visit http:
+ //keeneweb.org/aveo/field-studies-program/forest-community-inventory/\n\nTo
+  register\, contact KSC Continuing Education at (603) 358-2290.
+LAST-MODIFIED:20080723T211636Z
+LOCATION:Keene State College
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Forest Community Inventory course begins
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20080828T230000Z
+DTEND:20080829T003000Z
+DTSTAMP:20130224T083757Z
+UID:g31odit8pns8qa180hdprg5ff8@google.com
+CREATED:20080703T173516Z
+DESCRIPTION:“For 80 million years\, birds have ruled the skies\, seas\, and
+  earth. Each spring\, they fly vast distances. Each fall\, they fly the sam
+ e route back. This film is the result of four years of following their amaz
+ ing odysseys in the northern hemisphere and then the south\, species by spe
+ cies\, flying over seas and continents.” \n\n-- Jacques Perrin\, director o
+ f Winged Migration\n\nPlease join AVEO and the Keene State College Film Soc
+ iety for a showing of this Oscar-nominated documentary!
+LAST-MODIFIED:20080703T173557Z
+LOCATION:Putnam Arts Lecture Hall\, Keene State College
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Winged Migration film showing to benefit AVEO
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20080625T200000Z
+DTEND:20080625T233000Z
+DTSTAMP:20130224T083757Z
+UID:uacv2qm534ts8r0c6n8in762ok@google.com
+CREATED:20080623T153313Z
+DESCRIPTION:Sponsored by the Friends of Pisgah State Park.  For more inform
+ ation\, see http://keeneweb.org/aveo/pisgah-state-park/
+LAST-MODIFIED:20080623T153313Z
+LOCATION:Pisgah State Park.
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:hike to Pisgah State Park old-growth forest with Tom Wessels!
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20080814T210000Z
+DTEND:20080815T000000Z
+DTSTAMP:20130224T083757Z
+UID:03qta527sd2igggsbodj39pi94@google.com
+CREATED:20080611T155502Z
+DESCRIPTION:This workshop will answer the question: what digital mapping so
+ ftware is available for free\, and what can it do? This workshop is designe
+ d for people with minimal to no prior GIS experience. Cost: $35.\n\nFor mor
+ e information\, visit http://keeneweb.org/aveo/field-studies-program/beginn
+ ers-gps-workshops/\nTo register\, contact KSC Continuing Education at (603)
+  358-2290.
+LAST-MODIFIED:20080611T155502Z
+LOCATION:Keene State College
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Intro to GIS
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20080802T130000Z
+DTEND:20080802T170000Z
+DTSTAMP:20130224T083757Z
+UID:vp9s267a7s221k33p83agkc9t0@google.com
+CREATED:20080611T155405Z
+DESCRIPTION:Participants in this workshop will learn how to link digital ph
+ otographs with corresponding GPS points for use in digital mapping. Pre-req
+ uisite: Introduction to GPS I. Cost: $45.\n\nFor more information\, visit h
+ ttp://keeneweb.org/aveo/field-studies-program/beginners-gps-workshops/\nTo 
+ register\, contact KSC Continuing Education at (603) 358-2290.
+LAST-MODIFIED:20080611T155427Z
+LOCATION:Keene State College
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Intro to GPS II: Pictures and Points
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20080807T210000Z
+DTEND:20080808T000000Z
+DTSTAMP:20130224T083757Z
+UID:hc1796rhh0jsru4rm4lrdhohio@google.com
+CREATED:20080611T155311Z
+DESCRIPTION:Participants in this workshop will learn how to track their tra
+ vel routes using handheld GPS units and to upload waypoints and routes into
+  Google Earth. Pre-requisite: Introduction to GPS I. Cost: $32.\n\nFor more
+  information\, visit http://keeneweb.org/aveo/field-studies-program/beginne
+ rs-gps-workshops/\nTo register\, contact KSC Continuing Education at (603) 
+ 358-2290.
+LAST-MODIFIED:20080611T155418Z
+LOCATION:Keene State College
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Intro to GPS III: Routes
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20080731T210000Z
+DTEND:20080801T000000Z
+DTSTAMP:20130224T083757Z
+UID:5rvldel3d1l135t5mh0jhtl88c@google.com
+CREATED:20080611T155226Z
+DESCRIPTION:This workshop will provide a basic introduction to using handhe
+ ld GPS units for navigation and marking points of interest. It is designed 
+ for people with minimal to no prior GPS experience. Cost: $32.\n\nFor more 
+ information\, visit http://keeneweb.org/aveo/field-studies-program/beginner
+ s-gps-workshops/\nTo register\, contact KSC Continuing Education at (603) 3
+ 58-2290.
+LAST-MODIFIED:20080611T155226Z
+LOCATION:Keene State College
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Intro to GPS I: Navigation
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20080714T123000Z
+DTEND:20080714T140000Z
+DTSTAMP:20130224T083757Z
+UID:s5ic4pca0hjt9nhgs3rqdrd55o@google.com
+CREATED:20080611T154320Z
+DESCRIPTION:Come join the Keene bird banding crew for an up-close-and-perso
+ nal look at songbirds in the hand!  For more information\, including AVEO's
+  Bird of the Week\, visit http://keeneweb.org/aveo/citizen-science/maps-bir
+ d-banding/
+LAST-MODIFIED:20080611T154320Z
+LOCATION:park benches outside the Keene Housing Authority mill buildings on
+  Castle Street
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Bird Banding demonstration
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20080604T193000
+DTEND;TZID=America/New_York:20080604T213000
+RRULE:FREQ=WEEKLY;BYDAY=WE;UNTIL=20080730T233000Z;WKST=SU
+DTSTAMP:20130224T083757Z
+UID:9snjhtvr45r9m6rahfeo43chfg@google.com
+CREATED:20080514T142342Z
+DESCRIPTION:Nighthawk Patrol volunteers meet every Wednesday evening in Jun
+ e and July to monitor state-threatened Common Nighthawks in Keene.  Volunte
+ ers meet at the AVEO offices in the Keene State College Science Center to s
+ ynchronize their watches (seriously!) and get their assigned territory for 
+ the evening before heading out to the streets of Keene to look and listen f
+ or these dynamic birds.  For information\, check out: http://keeneweb.org/a
+ veo/citizen-science/nighthawk-patrol-2/
+LAST-MODIFIED:20080514T142342Z
+LOCATION:Keene
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Nighthawk Patrol
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20080510T233000Z
+DTEND:20080511T013000Z
+DTSTAMP:20130224T083757Z
+UID:v7g4msf44slfl2mjdigqci1u5o@google.com
+CLASS:PUBLIC
+CREATED:20080430T192213Z
+DESCRIPTION:This lovely annual event will contribute proceeds to AVEO. Tick
+ ets: $10. Adults\, $8. Seniors & Students.
+LAST-MODIFIED:20080506T180437Z
+LOCATION:Keene Unitarian Universalist Church
+SEQUENCE:2
+STATUS:CONFIRMED
+SUMMARY:Animaterra Women's Chorus Concert to benefit AVEO
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20080527T210000Z
+DTEND:20080527T230000Z
+DTSTAMP:20130224T083757Z
+UID:289n20uqjjp1eihdk01oj9kjqg@google.com
+CLASS:PUBLIC
+CREATED:20080430T190848Z
+DESCRIPTION:This course is an introduction to wetlands and to wetland habit
+ at identification for volunteers\, and meets on Tuesday evenings and some S
+ aturdays. For more information see http://keeneweb.org/aveo/field-studies-p
+ rogram/wetlands-ecology/
+LAST-MODIFIED:20080506T180420Z
+LOCATION:Keene State College
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:AVEO Wetland Ecology Class begins
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20080527T230000Z
+DTEND:20080528T010000Z
+DTSTAMP:20130224T083757Z
+UID:bc2g0crggai7l7b2sfi0t6nij0@google.com
+CLASS:PUBLIC
+CREATED:20080506T170644Z
+DESCRIPTION:This workshop will train folks to help monitor the Common Night
+ hawk\, a state-threatened bird species\, on summer evenings in Keene.  For 
+ more information on Project Nighthawk in Keene\, see http://keeneweb.org/av
+ eo/citizen-science/nighthawk-patrol-2/
+LAST-MODIFIED:20080506T170908Z
+LOCATION:Keene State College Science Center
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:Nighthawk Patrol training
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20080530T230000Z
+DTEND:20080531T010000Z
+DTSTAMP:20130224T083757Z
+UID:9cordqqc439qkv43jmager4qqc@google.com
+CLASS:PUBLIC
+CREATED:20080506T170834Z
+DESCRIPTION:This workshop will train folks to help monitor the Common Night
+ hawk\, a state-threatened bird species\, on summer evenings in Keene.  For 
+ more information on Project Nighthawk in Keene\, see http://keeneweb.org/av
+ eo/citizen-science/nighthawk-patrol-2/
+LAST-MODIFIED:20080506T170834Z
+LOCATION:Keene State College Science Center
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Nighthawk Patrol training
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20080521T230000Z
+DTEND:20080522T010000Z
+DTSTAMP:20130224T083757Z
+UID:arrc7ceerrpc9ojdsb4job3vvg@google.com
+CLASS:PUBLIC
+CREATED:20080506T170636Z
+DESCRIPTION:This workshop will train folks to help monitor the Common Night
+ hawk\, a state-threatened bird species\, on summer evenings in Keene.  For 
+ more information on Project Nighthawk in Keene\, see http://keeneweb.org/av
+ eo/citizen-science/nighthawk-patrol-2/
+LAST-MODIFIED:20080506T170749Z
+LOCATION:Keene State College Science Center
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Nighthawk Patrol training
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20080523T110000Z
+DTEND:20080523T130000Z
+DTSTAMP:20130224T083757Z
+UID:gd6o4dsa22jcab2908210ekij8@google.com
+CLASS:PUBLIC
+CREATED:20080430T191048Z
+DESCRIPTION:Birding By Ear teaches how to recognize bird songs and calls\, 
+ and will run on four Friday mornings and Saturday\, June 7. For more info\,
+  see http://keeneweb.org/aveo/field-studies-program/birding-by-ear/
+LAST-MODIFIED:20080506T170251Z
+LOCATION:Keene State College
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:AVEO Birding By Ear Class begins
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20080507T230000Z
+DTEND:20080508T010000Z
+DTSTAMP:20130224T083757Z
+UID:eafim1n0q5hp6vvdukg2q3u4a4@google.com
+CLASS:PUBLIC
+CREATED:20080430T191856Z
+DESCRIPTION:AVEO staff will join Ecologist Jeff Littleton to discuss Natura
+ l Resource Inventory\, hosted by the Friends of Open Space in Keene.
+LAST-MODIFIED:20080506T170201Z
+LOCATION:Stonewall Farm
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:AVEO speaks at Friends of Open Space in Keene
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20080501T210000Z
+DTEND:20080502T000000Z
+DTSTAMP:20130224T083757Z
+UID:n2k59tbitj8s4p8s0b14ml9doo@google.com
+CLASS:PUBLIC
+CREATED:20080430T182929Z
+DESCRIPTION:See http://keeneweb.org/aveo/citizen-science/vernal-pools/ for 
+ information. Lots of Spotted Salamanders migrated on Monday night\, so ther
+ e should be plenty of eggs to see.
+LAST-MODIFIED:20080430T191910Z
+LOCATION:Keene State College
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:AVEO Vernal Pool Ecology and Identification Workshop
+TRANSP:OPAQUE
+END:VEVENT
+END:VCALENDAR

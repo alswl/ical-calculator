@@ -1,0 +1,5 @@
+{datetime-start: 20050411, summary: RFC5545 5.2, uid: SCM5545_5.2_1@1-annum.com}
+{datetime-start: 20050412, summary: RFC5545 5.2, uid: SCM5545_5.2_1@1-annum.com}
+{datetime-start: 20050413, summary: RFC5545 5.2, uid: SCM5545_5.2_1@1-annum.com}
+{datetime-start: 20050414, summary: RFC5545 5.2, uid: SCM5545_5.2_1@1-annum.com}
+{datetime-start: 20050415, summary: RFC5545 5.2, uid: SCM5545_5.2_1@1-annum.com}
