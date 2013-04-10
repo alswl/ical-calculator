@@ -1,4 +1,9 @@
 # -*- coding:utf-8 -*-
+'''
+Created on Jan 2, 2013
+
+@author: Oberron
+'''
 
 CRLF= "\r\n"
 
@@ -14,6 +19,7 @@ RFC5545_SCM = {
                "3.1.1_1":"§3.1.1_1 COMMA ',' character as list Separators",
                "3.3.5_1":"§3.3.5 that DATE-TIME follows ISO8601-2004 which makes dates prior to 1875/may/20 bounded to prior agreement between sender and receiver",
                "3.3.5_2":"§3.3.5 that DATE-TIME is DATE (8 numbers as yyyymmdd), then 'T', then TIME (6 numbers HHMMSS), possibly followed by character 'Z'",
+               "3.3.5_3":"§3.3.5 The \"TZID\" property parameter MUST NOT be applied to DATE-TIME properties whose time values are specified in UTC.",
                "3.3.6_1": "§3.3.6 that DURATION field doesn't support the \"Y\" and \"M\" designators from ISO8601",
                "3.3.8_1":"§3.3.8 The valid range for \"integer\" is -2147483648 to 2147483647.",
                "3.3.9_1":"§3.3.9 There are two forms of a period of time. First, a period of time is identified by its start and its end. Second, a period of time can also be defined by a start and a positiveduration of time.", 
@@ -39,7 +45,9 @@ RFC5545_SCM = {
                "3.3.10_18":"§3.3.10 Recurrence rules may generate recurrence instances with an invalid date (e.g., February 30) or nonexistent local time (e.g., 1:30 AM on a day where the local time is moved forward by an hour at 1:00 AM).  Such recurrence instances MUST be ignored and MUST NOT be counted as part of the recurrence set.",
                "3.3.12_1":"§3.3.12 The form of time with UTC offset MUST NOT be used: 230000-0800        ;Invalid time format",
                
-               "3.4_1":"§3.4 : The first line and last line of the iCalendar object MUST contain a pair of iCalendar object delimiter strings.",
+               "3.4_1":"§3.4 : The first line of the iCalendar object MUST contain the first of the pair of iCalendar object delimiter strings: BEGIN:VCALENDAR+CRLF",
+               "3.4_2":"§3.4 : The last line of the iCalendar object MUST contain the last of the pair of iCalendar object delimiter strings: END:VCALENDAR+CRLF",
+               
                "3.6_1":"§3.6 :PRODID property of iCalendar MUST be present",
                "3.6_2":"§3.6 :VERSION property of iCalendar MUST be present",
                "3.6_3":"§3.6 :at least on object of iCalendar MUST be present",
@@ -55,6 +63,7 @@ RFC5545_SCM = {
                "3.8.4.7_1": "§3.8.4.7 \"UID\" itself MUST be a globally unique identifier",
                "3.8.5.1_0": "§3.8.5.1 does not specify but implies that value type of EXDATE matches DTSTART value type",
                "3.8.5.2_0": "§3.8.5.2 does not specify but implies that value type of RDATE matches DTSTART value type",
+               "3.8.5.3_1": "§3.8.5.3 RRULE SHOULD NOT be specified more than once. The recurrence set generated with multiple \"RRULE\" properties is undefined.", 
                "6_1":"Applications MUST generate iCalendar streams in the UTF-8 charset and MUST accept an iCalendar stream in the UTF-8 or US-ASCII charset.",
                "8.3.2_1": "§8.3.2 speficies valid properties"
                }
@@ -65,6 +74,18 @@ RFC5545_FREQ = {"SECONDLY" , "MINUTELY" , "HOURLY" , "DAILY",
 RFC5545_Components = {"VCALENDAR","VEVENT","VTODO","VJOURNAL","VFREEBUSY","VTIMEZONE",
                       "VALARM","STANDARD","DAYLIGHT"
                       }
+
+RFC5545_eventprop_count = {
+                  "1": ["DTSTAMP ", "UID" , "DTSTART" ],
+                  "01": ["CLASS" , "CREATED" , "DESCRIPTION" , "GEO" ,
+                  "LAST-MOD" , "LOCATION" , "ORGANIZER" , "PRIORITY" ,
+                  "SEQ" , "STATUS" , "SUMMARY" , "TRASP" ,
+                  "URL" , "RECURID" ,"DTEND" , "DURATION" ],
+                  "0+" : ["RRULE", "ATTACH" , "ATTENDEE" , "CATEGORIES" , "COMMENT" ,
+                  "CONTACT" , "EXDATE" , "RSTATUS" , "RELATED" ,
+                  "RESSOURCES" , "RDATE" , "X-PROP" , "IANA-PROP"]
+                  }
+
 RFC5545_Properties = {'CALSCALE':"TEXT", #3.7.1.  Calendar Scale
                         'METHOD':"TEXT",
                         'PRODID':"TEXT",
