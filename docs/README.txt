@@ -41,6 +41,10 @@ Future developments
 1. handle of datetime (currently only handles dates)
 2. handle of multiple EXRULE,  RRULE as per icalendar spec
 
+Package release
+---------------
+1. update README.txt
+
 Thanks
 -------
 * http://pydev.org/updates
@@ -48,3 +52,4 @@ Thanks
 * http://guide.python-distribute.org/contributing.html: registering a package on pypi and password information
 * http://guide.python-distribute.org/creation.html: uploading a package to pypi
 * http://blog.msbbc.co.uk/2007/06/using-googles-free-svn-repository-with.html: how to use google codes, subclipse and eclipse
+* http://sphinx-doc.org/tutorial.html
