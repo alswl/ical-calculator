@@ -8,7 +8,7 @@ from distutils.core import setup
 
 setup(
     name = 'pyICSParser',
-    version = '0.6.1y1',
+    version = '0.6.1y3',
     author = 'Oberron',
     author_email = 'one.annum@gmail.com',
     packages=['pyICSParser'],
