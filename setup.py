@@ -8,7 +8,7 @@ from distutils.core import setup
 
 setup(
     name = 'pyICSParser',
-    version = '0.6.1y3',
+    version = '0.6.1y4',
     author = 'Oberron',
     author_email = 'one.annum@gmail.com',
     packages=['pyICSParser'],
@@ -17,8 +17,8 @@ setup(
     license = 'LICENSE.txt',
     keywords = 'iCalendar ical ics parser validator generator events enumerator rfc5545 rfc2445 vcal',
     description='iCalendar parser, validator, generator, events enumerator',
-    long_description=open('docs/README.txt','rt').read(),
-    package_dir={'pyICSParser': 'src'},
+    long_description='README.txt',
+    package_dir={'pyICSParser':".\src"},
     classifiers=[
         "Development Status :: 3 - Alpha",
         "Topic :: Utilities",
