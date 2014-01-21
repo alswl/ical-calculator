@@ -598,7 +598,7 @@ class iCalendar:
 
 
     """
-    version = "0.6.1y4"
+    version = "0.6.1y5"
     OccurencesWindowStartDate = ""
     """ Date from which occurences of iCalendar events should be returned by the enumerator"""
     OccurencesWindowEndDate = ""
@@ -831,8 +831,16 @@ class iCalendar:
         """ parse loaded ical from file to array of typed data: self.events"""
         VCALENDAR_Components = {"VEVENT","VTIMEZONE","VTODO","VFREEBUSY","VJOURNAL"}
         Component_Name = ""
+        Component_Stack =[]
+        print "temp 835 - entering parse loaded"
+        import sys,traceback
+        for thread, frame in sys._current_frames().items():
+            print('Thread 0x%x' % thread)
+            traceback.print_stack(frame)
+
         self._log("\t\tentering loader",[])
         invevent = 0
+        LineCountBE = 0 #Line count at which the Begin:VEVENT was found
         if self.ical_loaded == 0:
             self._log("error ",[RFC5545_SCM["3_1"]])
             self.Validator("3_1", level=1) #("VCALENDAR VALIDATOR","no vCALENDAR loaded")
@@ -852,6 +860,7 @@ class iCalendar:
                     new_Component_Name= self._propval_line_split(line.replace("\n",""),line_count)[2] # ":".join(line.split(":")[1:]).replace("\n","")
                     if new_Component_Name in VCALENDAR_Components:
                         self._log("found new component: LN / line / name",[line_count,line,new_Component_Name])
+                        Component_Stack.append(Component_Name)
                         Component_Name = new_Component_Name 
                         if (invevent == 0):
                             invevent = 1
@@ -877,6 +886,7 @@ class iCalendar:
                             self._log("event is", self.lVEVENT,2)
                             if Component_Name == "VEVENT":
                                 self._addEvent(self.lVEVENT,LineCountBE)
+                                Component_Name = Component_Stack.pop()
                             elif Component_Name == "VTIMEZONE":
                                 #FIXME: add the function pointer here
                                 pass
@@ -919,6 +929,7 @@ class iCalendar:
         self.events which is an array of python types
         """
         self._log("\t\tentering event_load",[])
+        self._log("list of vevents when entering",[self.events])
         dVevent = {}
         vevent_load = { "TEXT": self.vevent.string_load,
                    "DATE-TIME-LIST": self.vevent.datelist_load,
@@ -973,6 +984,8 @@ class iCalendar:
 
             
         self.events.append(dVevent)
+        self._log("*** VEVENT ADDED",[dVevent])
+        self._log("list VEVENT so far: ",[self.events])
 #        self.event = []
         return dVevent
     def _pythonindex_to_icalindex(self,indexes,isDOW=False):
@@ -984,6 +997,11 @@ class iCalendar:
             ret_val=ret_val[:-1]
         return ret_val
     def _flatten(self,slot_dur=timedelta(days=1)):
+#        print "entering flatten"
+#        import sys,traceback
+#        for thread, frame in sys._current_frames().items():
+#            print('Thread 0x%x' % thread)
+#            traceback.print_stack(frame)
         """ goes over self.events and compute list of their instances"""
         self._log("******************\t\t\t entering _flatten",[])
         self.events_instances = []
@@ -1089,9 +1107,10 @@ class iCalendar:
                 THIS IS WHERE WE MAKE THE CALL TO ENUMERATE ALL INSTANCES
                 **********************************************************
             """
+            self._log("temp 1092",[self.events_instances])
             t_res = self._flatten_rrule(tmp_event,WindowStart,WindowEnd)
 
-            self._log("*****************dates returned from _flatten",[t_res])
+            self._log("*****************dates returned from _flatten_rrule",[t_res])
                 
             """
                 ***********************************************************
@@ -1183,13 +1202,16 @@ class iCalendar:
             t_res = sorted(t_res)
 
             
+            self._log("temp 1186: self.events_instances:",[self.events_instances])
             for t_date in t_res:
+                self._log("adding events description for",[[t_date,summary,tmp_event["UID"]["val"]]])
                 if len(self.events_instances)==0:
                     #if events_instances is empty
                     self.events_instances=[[t_date,summary,tmp_event["UID"]["val"]]]
                 else:
                     #if already instances in the list
                     self.events_instances.append([t_date,summary,tmp_event["UID"]["val"]])
+        self._log("*****************self.events_instances returned from _flatten",[self.events_instances])
     def _flatten_rrule(self,event,WindowStart,WindowEnd):
         """ where the actual algorithm for unrolling the rrule lies  
         
@@ -1724,9 +1746,20 @@ class iCalendar:
         self.OccurencesWindowEndDate = datetime.strptime(end,"%Y%m%d")+timedelta(days =1)
         self.parse_loaded()
         self._flatten()
-        #FIXME: bug when the list has DATE and DATETIME
-        self.events_instances = sorted(self.events_instances)
+        import operator
+        try:
+            self.events_instances = sorted(self.events_instances,key = lambda dateeve: operator.itemgetter(0).date() if type(operator.itemgetter(0)) == type(datetime.now()) else operator.itemgetter(0) )
+        except:
+            print self.events_instances
+#            print self.events_instances[0][0]
+#            print type(self.events_instances[0][0])
+#            print datetime(2015,1,1,11,11)
+#            print datetime(2015,1,1,11,11).date()
+#            print datetime(2015,1,1,11,11).date().date()
+#            print self.events_instances[0][0].date()
+            raise
         return self.events_instances
+
     def Gen_iCalendar(self,append = False,method=""):
         """ takes the self.dVCALENDAR and generates an icalendar string """
         
